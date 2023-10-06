@@ -8,9 +8,8 @@
   icon: 'fas fa-envelope'
   noblank: true            # open link in current tab
 -
-  type: wechat
+  type: weixin
   icon: 'fab fa-weixin'
-  noblank: true
 -
   type: mastodon
   icon: 'fab fa-mastodon'   # icons powered by <https://fontawesome.com/>
