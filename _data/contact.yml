@@ -9,7 +9,7 @@
   noblank: true            # open link in current tab
 -
   type: wechat
-  icon: 'fab fa-weixin'
+  icon: 'fab fa-wechat'
   noblank: true
 -
   type: mastodon
