@@ -8,6 +8,9 @@
   icon: 'fas fa-envelope'
   noblank: true            # open link in current tab
 -
+  type: wechat
+  icon: 'fas fa-weixin'
+-
   type: rss
   icon: 'fas fa-rss'
   noblank: true
