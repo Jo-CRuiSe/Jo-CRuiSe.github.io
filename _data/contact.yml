@@ -9,7 +9,7 @@
   noblank: true            # open link in current tab
 -
   type: weixin
-  icon: 'fab fa-weixin'
+  icon: 'fa-brands fa-weixin'
 -
   type: mastodon
   icon: 'fab fa-mastodon'   # icons powered by <https://fontawesome.com/>
