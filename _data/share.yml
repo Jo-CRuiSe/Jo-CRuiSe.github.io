@@ -3,6 +3,10 @@
 
 platforms:
   -
+    type: WeChat
+    icon: "fab fa-weixin"
+    link: "weixin://d1/moments"
+  -
     type: Twitter
     icon: "fab fa-twitter"
     link: "https://twitter.com/intent/tweet?text=TITLE&url=URL"
