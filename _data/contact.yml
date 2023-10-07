@@ -9,7 +9,8 @@
   noblank: true            # open link in current tab
 - 
   type: twitter 
-  icon: 'fa-brands fa-weixin'
+  icon: 'fab fa-weixin'
+  url: 'baidu.com'
 -
   type: mastodon
   icon: 'fab fa-mastodon'   # icons powered by <https://fontawesome.com/>
