@@ -3,9 +3,9 @@
 
 platforms:
   -
-    type: Weixin
+    type: WeChat
     icon: "fab fa-weixin"
-    link: "https://baidu.com"
+    link: "weixin://d1/moments"
   -
     type: Twitter
     icon: "fab fa-twitter"
