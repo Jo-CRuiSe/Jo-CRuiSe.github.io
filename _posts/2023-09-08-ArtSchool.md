@@ -11,8 +11,10 @@ commments: true
 typora-root-url: ../../Jo-CRuiSe.github.io/
 math: false
 mermaid: true
+img_path: /assets/blog_res/2023-09-08-ArtSchool.assets/
 ---
 
+![ArtSchool](ArtSchool.gif){: width="500" height="500"}
 
 ## 概述
 
@@ -31,5 +33,7 @@ mermaid: true
 ## 渲染
 此次渲染使用了物理渲染器，添加全局光照。摄像机使用平行视图避免边缘畸变。
 
+![ArtSchoolUnrendered](ArtSchoolUnrendered.png)
 
+_未渲染场景_
 
