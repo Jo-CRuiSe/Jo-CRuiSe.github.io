@@ -12,7 +12,7 @@ typora-root-url: ../../Jo-CRuiSe.github.io/
 math: false
 mermaid: true
 ---
-![Artschool](/assets/blog_res/2023-10-8-test.assets/Artschool.gif){: width="300" height="300"}
+![Artschool](/assets/blog_res/2023-10-8-ArtSchool.assets/Artschool.gif){: width="300" height="300"}
 ## 概述
 
 - 整个工程制作用时2小时。
