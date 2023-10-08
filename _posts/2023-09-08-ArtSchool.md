@@ -2,7 +2,7 @@
 title: Art School 动画
 date: 2022-09-08 12:27:00 +0800
 categories: [影视后期]
-tags: [Cinema 4D]     
+tags: [Cinema 4D, Animation]
 pin: false
 author: jo
 
