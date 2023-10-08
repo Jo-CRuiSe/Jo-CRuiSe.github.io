@@ -18,11 +18,13 @@ img_path: /assets/blog_res/2023-09-08-ArtSchool.assets/
 
 ## 概述
 
-- 整个工程制作用时2小时。
+- 整个工程制作用时约2小时。
 
 - 使用的工具：MacBook Air、Cinema 4D。
 
-- 该动画按照[李翔SCU](https://www.bilibili.com/video/BV177411P7d1/?spm_id_from=333.999.0.0&vd_source=27f8535b972612917de0cca10f45313f教程制作)
+- 原视频分辨率为`720x720`
+
+- 该动画按照[李翔SCU](https://www.bilibili.com/video/BV177411P7d1/?spm_id_from=333.999.0.0&vd_source=27f8535b972612917de0cca10f45313f)教程制作
 
 ## 建模过程
 
