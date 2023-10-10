@@ -22,7 +22,7 @@ img_path: /assets/blog_res/2023-09-10-RocketLaunch.assets/
 - 这是我第一个完全用AE制作的作品
 - 该动画按照[李翔SCU](https://www.bilibili.com/video/BV1hi4y1s7Rm/?spm_id_from=333.999.0.0&vd_source=27f8535b972612917de0cca10f45313f)教程制作
 
-![RocketLaunch](RocketLaunch.gif){: width="500" height="500"}
+![RocketLaunch](RocketLaunch.gif){: width="500" height="500" .rounded-10}
 
 ## 制作过程
 

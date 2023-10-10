@@ -14,7 +14,7 @@ mermaid: true
 img_path: /assets/blog_res/2023-09-08-ArtSchool.assets/
 ---
 
-![ArtSchool](ArtSchool.gif){: width="500" height="500"}
+![ArtSchool](ArtSchool.gif){: width="500" height="500" .rounded-10}
 
 ## 概述
 
