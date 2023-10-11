@@ -14,9 +14,7 @@ mermaid: true
 img_path: /assets/blog_res/2023-01-21-HappyNewYear.assets/
 ---
 
-![SceneLight](/SceneLight.png){: width="400" height="400" .light .rounded-10}
-
-![SceneDark](/SceneDark.png){: width="400" height="400" .dark .rounded-10}
+![Scene](/Scene.png)
 
 ## 概述
 
