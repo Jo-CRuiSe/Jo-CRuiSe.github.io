@@ -6,5 +6,5 @@ order: 4
 ### Hi there 👋, I'm Jo Crusie!
 
 - 🏫 A student major in electronic science and technology at Shanghai Jiao Tong University
-- 💻 I'm studying C++, SwiftUI, Python, AppleScript.
+- 💻 I'm studying C++, SwiftUI, Python, AppleScript, Markdown, HTML and CSS.
 - 🎨 I like art-related fields.
