@@ -5,7 +5,6 @@ categories: [软件应用]
 tags: [Shortcuts]
 pin: false
 author: jo
-layout: _drafts
 toc: true
 commments: true
 typora-root-url: ../../Jo-CRuiSe.github.io/
