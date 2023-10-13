@@ -11,7 +11,6 @@ commments: true
 typora-root-url: ../../Jo-CRuiSe.github.io/
 math: false
 mermaid: true
-img_path: /assets/blog_res/2023-09-10-RocketLaunch.assets/
 image: 
   path: /assets/blog_res/title/RocketLaunch.png
 ---
@@ -24,7 +23,7 @@ image:
 - 这是我第一个完全用AE制作的作品
 - 该动画按照[李翔SCU](https://www.bilibili.com/video/BV1hi4y1s7Rm/?spm_id_from=333.999.0.0&vd_source=27f8535b972612917de0cca10f45313f)教程制作
 
-![RocketLaunch](RocketLaunch.gif){: width="500" height="500"}
+![RocketLaunch](/assets/blog_res/2023-09-10-RocketLaunch.assets/RocketLaunch.gif){: width="500" height="500"}
 
 ## 制作过程
 
@@ -32,7 +31,7 @@ image:
 
 火焰需要复制四个图层并缩放、打关键帧使其异步放大缩小并更改颜色由内到外逐渐变深。复制一团添加到机身尾部形成光晕效果。
 
-![RocketLayer](RocketLayer.png)
+![RocketLayer](/assets/blog_res/2023-09-10-RocketLaunch.assets/RocketLayer.png)
 _火箭图层_
 
 月亮制作稍需要技巧，因为月亮虽在一直旋转但是其暗部位置始终不变。故应该在主合成中为月亮的预合成添加内阴影，调整角度与透明度使其自然。
