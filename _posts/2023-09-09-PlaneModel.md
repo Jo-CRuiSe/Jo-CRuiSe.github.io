@@ -11,10 +11,12 @@ commments: true
 typora-root-url: ../../Jo-CRuiSe.github.io/
 math: false
 mermaid: true
-img_path: /assets/blog_res/2023-09-09-PlaneModel.assets/
+image:
+  path: /assets/blog_res/2023-09-09-PlaneModel.assets/PlaneModel.gif
+  lqip: /assets/blog_res/2023-09-09-PlaneModel.assets/PlaneModel.gif
 ---
 
-![PlaneModel](PlaneModel.gif){: width="500" height="281.25"}
+![PlaneModel](/assets/blog_res/2023-09-09-PlaneModel.assets/PlaneModel.gif){: width="500" height="281.25"}
 
 ## 概述
 
