@@ -10,7 +10,6 @@ commments: true
 typora-root-url: ../../Jo-CRuiSe.github.io/
 math: false
 mermaid: true
-img_path: /assets/blog_res/2023-08-20-MoneyTrackerShortcuts.assets/
 ---
 
 ## 概述
@@ -32,7 +31,12 @@ img_path: /assets/blog_res/2023-08-20-MoneyTrackerShortcuts.assets/
 ## 使用方法
 
 1. 从 App Store 上下载 [Shortcuts](https://apps.apple.com/cn/app/shortcuts/id1462947752?l=en-GB) 和 [Numbers](https://apps.apple.com/cn/app/numbers/id361304891?l=en-GB)，macOS的[Numbers在此](https://apps.apple.com/cn/app/numbers/id409203825?l=en-GB&mt=12);
-2. 导入 [Numbers 模板]()，如果想要使用云功能和多设备互联功能，请将此文件放到 iCloud 文件夹下；
+2. 导入 [Numbers 模板](https://github.com/Jo-CRuiSe/Jo-CRuiSe.github.io/blob/main/assets/blog_res/Budget%20Table%20Template%202.zip)，如果想要使用云功能和多设备互联功能，请将此文件放到 iCloud 文件夹下；
 3. 导入 [Shortcuts 快捷指令](https://www.icloud.com/shortcuts/2c80885bdc6c4396a19559d645ae7c5f)，如果显示“不允许不受信任的快捷指令”，请查看此[相关文章](https://jiejingku.net/2445.html)；
-4. 演示视频：
+4. 演示图片：
 
+![MoneyTrackerShotsGroup1](/assets/blog_res/2023-08-20 MoneyTrackerShortcuts.assets/MoneyTrackerShotsGroup1.PNG)
+
+![MoneyTrackerShotsGroup2](/assets/blog_res/2023-08-20 MoneyTrackerShortcuts.assets/MoneyTrackerShotsGroup2.PNG)
+
+![MoneyTrackerShotsGroup3](/assets/blog_res/2023-08-20 MoneyTrackerShortcuts.assets/MoneyTrackerShotsGroup3.PNG)
