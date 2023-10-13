@@ -11,6 +11,9 @@ commments: true
 typora-root-url: ../../Jo-CRuiSe.github.io/
 math: false
 mermaid: true
+image: 
+  path: /assets/blog_res/title/ArtSchool.png
+  lqip: /assets/blog_res/title/ArtSchool.png
 ---
 ## 概述
 

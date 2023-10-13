@@ -13,6 +13,7 @@ math: false
 mermaid: true
 image: 
   path: /assets/blog_res/title/RocketLaunch.png
+  lqip: /assets/blog_res/title/RocketLaunch.png
 ---
 
 ## 概述
