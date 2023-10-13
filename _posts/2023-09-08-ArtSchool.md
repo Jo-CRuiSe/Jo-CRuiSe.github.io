@@ -11,11 +11,7 @@ commments: true
 typora-root-url: ../../Jo-CRuiSe.github.io/
 math: false
 mermaid: true
-img_path: /assets/blog_res/2023-09-08-ArtSchool.assets/
 ---
-
-![ArtSchool](ArtSchool.gif){: width="500" height="500"}
-
 ## 概述
 
 - 整个工程制作用时约2小时。
@@ -25,6 +21,8 @@ img_path: /assets/blog_res/2023-09-08-ArtSchool.assets/
 - 原视频分辨率为`720x720`
 
 - 该动画按照[李翔SCU](https://www.bilibili.com/video/BV177411P7d1/?spm_id_from=333.999.0.0&vd_source=27f8535b972612917de0cca10f45313f)教程制作
+
+![ArtSchool](/assets/blog_res/2023-09-08-ArtSchool.assets/ArtSchool.gif){: width="500" height="500"}
 
 ## 建模过程
 
@@ -38,6 +36,6 @@ img_path: /assets/blog_res/2023-09-08-ArtSchool.assets/
 
 该项目采用了物理渲染器进行渲染，并添加了全局光照效果。为了避免边缘畸变，摄像机使用了平行视图。
 
-![ArtSchoolUnrendered](ArtSchoolUnrendered.png)
+![ArtSchoolUnrendered](/assets/blog_res/2023-09-08-ArtSchool.assets/ArtSchoolUnrendered.png)
 _未渲染场景_
 
