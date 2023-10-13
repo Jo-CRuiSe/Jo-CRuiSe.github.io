@@ -11,10 +11,12 @@ commments: true
 typora-root-url: ../../Jo-CRuiSe.github.io/
 math: false
 mermaid: true
-img_path: /assets/blog_res/2023-01-21-HappyNewYear.assets/
+image:
+  path: /assets/blog_res/title/HappyNewYear2023.png
+  lqip: /assets/blog_res/title/HappyNewYear2023.png
 ---
 
-![Scene](/Scene.png)
+![Scene](/assets/blog_res/2023-01-21-HappyNewYear.assets/Scene.png)
 
 ## 概述
 
@@ -43,25 +45,25 @@ img_path: /assets/blog_res/2023-01-21-HappyNewYear.assets/
 
 所有的模型都是我自己制作的，上面的贴图也是我用 PS 加工过的。比如礼盒的条纹、金带、书本封面等。每个模型都是先独立建造再导入到工程中的，细节刻画可以说是相当多的（虽然放在动画里看不清了）。
 
-![iMac](iMac.png)
+![iMac](/assets/blog_res/2023-01-21-HappyNewYear.assets/iMac.png)
 _iMac_
 
-![Book](Book.png)
+![Book](/assets/blog_res/2023-01-21-HappyNewYear.assets/Book.png)
 _书_
 
-![Notebook](Notebook.png)
+![Notebook](/assets/blog_res/2023-01-21-HappyNewYear.assets/Notebook.png)
 _笔记本_
 
-![Keyboard](Keyboard.png)
+![Keyboard](/assets/blog_res/2023-01-21-HappyNewYear.assets/Keyboard.png)
 _Magic Keyboard_
 
-![Mouse](Mouse.png)
+![Mouse](/assets/blog_res/2023-01-21-HappyNewYear.assets/Mouse.png)
 _Magic Mouse_
 
-![Base](Base.png)
+![Base](/assets/blog_res/2023-01-21-HappyNewYear.assets/Base.png)
 _展示台_
 
-![PresentCase](PresentCase.png)
+![PresentCase](/assets/blog_res/2023-01-21-HappyNewYear.assets/PresentCase.png)
 _礼盒_
 
 ### 动画制作
