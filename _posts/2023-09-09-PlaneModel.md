@@ -12,12 +12,9 @@ typora-root-url: ../../Jo-CRuiSe.github.io/
 math: false
 mermaid: true
 image:
-  path: /assets/blog_res/2023-09-09-PlaneModel.assets/PlaneModel.gif
-  lqip: /assets/blog_res/2023-09-09-PlaneModel.assets/PlaneModel.gif
+  path: /assets/blog_res/title/PlaneModel.gif
+  lqip: /assets/blog_res/title/PlaneModel.gif
 ---
-
-![PlaneModel](/assets/blog_res/2023-09-09-PlaneModel.assets/PlaneModel.gif){: width="500" height="281.25"}
-
 ## 概述
 
 - 整个工程制作用时约2小时。

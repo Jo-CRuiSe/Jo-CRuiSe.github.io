@@ -12,6 +12,8 @@ typora-root-url: ../../Jo-CRuiSe.github.io/
 math: false
 mermaid: true
 img_path: /assets/blog_res/2023-09-10-RocketLaunch.assets/
+image: 
+  path: /assets/blog_res/title/RocketLaunch.png
 ---
 
 ## 概述
