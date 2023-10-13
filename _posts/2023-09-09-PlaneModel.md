@@ -14,7 +14,7 @@ mermaid: true
 img_path: /assets/blog_res/2023-09-09-PlaneModel.assets/
 ---
 
-![PlaneModel](PlaneModel.gif){: width="500" height="281.25" .rounded-10}
+![PlaneModel](PlaneModel.gif){: width="500" height="281.25"}
 
 ## 概述
 
