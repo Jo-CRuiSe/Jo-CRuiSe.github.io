@@ -36,7 +36,16 @@ image:
 1. 从 App Store 上下载 [Shortcuts](https://apps.apple.com/cn/app/shortcuts/id1462947752?l=en-GB) 和 [Numbers](https://apps.apple.com/cn/app/numbers/id361304891?l=en-GB)，macOS的[Numbers在此](https://apps.apple.com/cn/app/numbers/id409203825?l=en-GB&mt=12);
 2. 导入 [Numbers 模板](https://easylink.cc/z5a67l)（如果链接失效了，请[在此](https://github.com/Jo-CRuiSe/Jo-CRuiSe.github.io/blob/main/assets/blog_res/Budget%20Table%20Template%202.zip)下载），如果想要使用云功能和多设备互联功能，请将此文件放到 iCloud 文件夹下；
 3. 导入 [Shortcuts 快捷指令](https://www.icloud.com/shortcuts/2c80885bdc6c4396a19559d645ae7c5f)，如果显示“不允许不受信任的快捷指令”，请查看此[相关文章](https://jiejingku.net/2445.html)；
-4. 演示图片：
+4. 按图示配置文件：
+
+![SetupStep1](/assets/blog_res/2023-08-20-MoneyTrackerShortcuts.assets/SetupStep1.png)
+
+![SetupStep2](/assets/blog_res/2023-08-20-MoneyTrackerShortcuts.assets/SetupStep2.png)
+
+![SetupStep3](/assets/blog_res/2023-08-20-MoneyTrackerShortcuts.assets/SetupStep3.png)
+
+
+5. 演示图片：
 
 ![MoneyTrackerShotsGroup1](/assets/blog_res/2023-08-20 MoneyTrackerShortcuts.assets/MoneyTrackerShotsGroup1.PNG)
 
@@ -47,7 +56,8 @@ image:
 ## 注意事项
 - 请勿随意更改快捷指令中的程序；
 - 目前 Numbers 模板未汉化，但请不要自己汉化，因为牵涉到快捷指令中的逻辑；
-- 当前 Numbers 限制无法将表格长度自动延伸，如有需要请手动延长。
+- 当前 Numbers 限制无法将表格长度自动延伸，如有需要请手动延长；
+- 如果已导入模板，下次想通过模板创建新的表格时，请记得在快捷指令中按照图片第6、7步重新修改文件位置，否则新数据会写入原有文件。
 
 ## 最后
 
