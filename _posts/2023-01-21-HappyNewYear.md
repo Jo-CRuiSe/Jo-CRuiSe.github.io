@@ -16,14 +16,14 @@ image:
   lqip: /assets/blog_res/title/HappyNewYear2023.png
 ---
 
-![Scene](/assets/blog_res/2023-01-21-HappyNewYear.assets/Scene.png){: w="500" h="500"}
-
 ## 概述
 
 - 整个工程制作用时约1个月。
 - 使用的工具：MacBook Air、Cinema 4D、After Effects、PhotoShop、Final Cut Pro、 Keynote。
 - 原视频分辨率为`1920x1080`
 - 独立策划、制作3D动画初体验
+
+![Scene](/assets/blog_res/2023-01-21-HappyNewYear.assets/Scene.png){: w="500" h="500"}
 
 ## 创作过程
 
