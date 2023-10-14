@@ -10,12 +10,15 @@ commments: true
 typora-root-url: ../../Jo-CRuiSe.github.io/
 math: false
 mermaid: true
+image:
+  path: /assets/blog_res/title/MoneyTracker.png
+  lqip:  /assets/blog_res/title/MoneyTracker.png
 ---
 
 ## 概述
 
 - 编译环境：iOS 17.0
-- 程序支持的设备：支持 iOS、iPadOS、macOS 的所有设备。建议设备系统：iOS 16 及以上、iPadOS 16 及以上、macOS Ventura 及以上。
+- 程序支持的设备：运行 iOS、iPadOS、macOS 的所有设备。建议设备系统：iOS 16 及以上、iPadOS 16 及以上、macOS Ventura 及以上。
 
 ## 灵感来源
 
