@@ -47,11 +47,11 @@ image:
 
 5. 演示图片：
 
-![MoneyTrackerShotsGroup1](/assets/blog_res/2023-08-20-MoneyTrackerShortcuts.assets/MoneyTrackerShotsGroup1.PNG)
+![MoneyTrackerShotsGroup1](/assets/blog_res/2023-08-20-MoneyTrackerShortcuts.assets/MoneyTrackerShotsGroup1.png)
 
-![MoneyTrackerShotsGroup2](/assets/blog_res/2023-08-20-MoneyTrackerShortcuts.assets/MoneyTrackerShotsGroup2.PNG)
+![MoneyTrackerShotsGroup2](/assets/blog_res/2023-08-20-MoneyTrackerShortcuts.assets/MoneyTrackerShotsGroup2.png)
 
-![MoneyTrackerShotsGroup3](/assets/blog_res/2023-08-20-MoneyTrackerShortcuts.assets/MoneyTrackerShotsGroup3.PNG)
+![MoneyTrackerShotsGroup3](/assets/blog_res/2023-08-20-MoneyTrackerShortcuts.assets/MoneyTrackerShotsGroup3.png)
 
 ## 注意事项
 - 请勿随意更改快捷指令中的程序；
