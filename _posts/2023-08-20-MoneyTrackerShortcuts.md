@@ -12,7 +12,7 @@ math: false
 mermaid: true
 image:
   path: /assets/blog_res/title/MoneyTracker.png
-  lqip:  /assets/blog_res/title/MoneyTracker.png
+  lqip: /assets/blog_res/title/MoneyTracker.png
 ---
 
 ## 概述
