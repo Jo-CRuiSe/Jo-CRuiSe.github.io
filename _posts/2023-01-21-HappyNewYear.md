@@ -16,7 +16,7 @@ image:
   lqip: /assets/blog_res/title/HappyNewYear2023.png
 ---
 
-![Scene](/assets/blog_res/2023-01-21-HappyNewYear.assets/Scene.png)
+![Scene](/assets/blog_res/2023-01-21-HappyNewYear.assets/Scene.png){: w="500" h="500"}
 
 ## 概述
 

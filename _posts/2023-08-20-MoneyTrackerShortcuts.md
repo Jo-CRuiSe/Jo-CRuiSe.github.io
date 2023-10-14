@@ -40,3 +40,7 @@ mermaid: true
 ![MoneyTrackerShotsGroup2](/assets/blog_res/2023-08-20 MoneyTrackerShortcuts.assets/MoneyTrackerShotsGroup2.PNG)
 
 ![MoneyTrackerShotsGroup3](/assets/blog_res/2023-08-20 MoneyTrackerShortcuts.assets/MoneyTrackerShotsGroup3.PNG)
+
+## 注意事项
+- 请勿随意更改快捷指令中的程序；
+- 目前 Numbers 模板未汉化，但请不要自己汉化，因为牵涉到快捷指令中的逻辑；
