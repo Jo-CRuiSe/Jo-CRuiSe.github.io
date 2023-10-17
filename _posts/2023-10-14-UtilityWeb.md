@@ -22,4 +22,4 @@ published: false
 
 ### 艺术创作
 
-[ClipDrop](https://clipdrop.co/uncrop): AI创程式填充
+[ClipDrop](https://clipdrop.co/uncrop): 一站式移除图片背景，扩充图片等
