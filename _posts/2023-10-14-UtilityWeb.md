@@ -23,3 +23,7 @@ published: false
 ### 艺术创作
 
 [ClipDrop](https://clipdrop.co/uncrop): 一站式移除图片背景，扩充图片等
+
+### 隐私
+
+[各国信息生成器](https://www.meiguodizhi.com/)：可以生成各国虚拟的人物相关信息，帮助你应对特定网站的注册要求
