@@ -12,8 +12,8 @@ typora-root-url: ../../Jo-CRuiSe.github.io/
 math: false
 mermaid: true
 image:
-  path: /assets/blog_res/title/HappyNewYear2023.png
-  lqip: /assets/blog_res/title/HappyNewYear2023.png
+  path: /assets/blog_res/title/HappyNewYear2023.jpg
+  lqip: /assets/blog_res/title/HappyNewYear2023.jpg
 ---
 
 ## 概述
