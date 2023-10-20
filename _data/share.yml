@@ -8,7 +8,7 @@ platforms:
     link: "http://service.weibo.com/share/share.php?title=TITLE&url=URL"
   -
     type: Twitter
-    icon: "fab fa-twitter"
+    icon: "fab fa-x-twitter"
     link: "https://twitter.com/intent/tweet?text=TITLE&url=URL"
   -
     type: Facebook
