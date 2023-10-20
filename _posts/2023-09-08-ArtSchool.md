@@ -26,6 +26,7 @@ image:
 - 该动画按照[李翔SCU](https://www.bilibili.com/video/BV177411P7d1/?spm_id_from=333.999.0.0&vd_source=27f8535b972612917de0cca10f45313f)教程制作
 
 ![ArtSchool](/assets/blog_res/2023-09-08-ArtSchool.assets/ArtSchool.gif){: width="500" height="500"}
+_效果图_
 
 ## 建模过程
 

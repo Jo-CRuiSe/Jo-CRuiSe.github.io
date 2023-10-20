@@ -24,6 +24,7 @@ image:
 - 独立策划、制作3D动画初体验
 
 ![Scene](/assets/blog_res/2023-01-21-HappyNewYear.assets/Scene.png){: w="500" h="500"}
+_效果图_
 
 ## 创作过程
 
