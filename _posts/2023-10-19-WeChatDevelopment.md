@@ -16,18 +16,28 @@ published: false
 
 ## 准备阶段
 
-### UI/功能准备
+### UI准备
 
 - [ ] UI图标素材：https://github.com/weui/weui-design，Figma
 - [ ] 分割各个部分控件：Navigation Bar, Chat List, Tab Bar, Chat Window, Menu, Emoji panel, Tool Bar, Input Box
 
-<img src="/assets/blog_res/2023-10-19-WeChatDevelopment.assets/ChatList.jpg" alt="ChatList" style="zoom:50%;" />
+![ChatList](/assets/blog_res/2023-10-19-WeChatDevelopment.assets/ChatList.jpg)
+_Chat List_
 
-<img src="/assets/blog_res/2023-10-19-WeChatDevelopment.assets/ChatWindow.jpg" alt="ChatWindow" style="zoom:50%;" />
+![ChatWindow](/assets/blog_res/2023-10-19-WeChatDevelopment.assets/ChatWindow.jpg)
+_Chat Window_
 
 
+### 功能设计
+
+- [ ] 用户第一次打开需要注册（虚拟账号）
+- [ ] 长按 “+” 可以添加新账号
+- [ ] 通知推送（本地）
+- [ ] Settings 里输入验证码打开隐藏功能：更改转账界面、更改红包界面、更改零钱数额、允许截屏/录屏
 
 ### 代码准备
 
-- [ ] Navigation Bar
+- [ ] Navigation Bar etc & Notification: Swift Learning
+- [ ] Assets Folder 层级建立方法
+- [ ] Forbid Screen Shot/Recording: Bilibili
 
