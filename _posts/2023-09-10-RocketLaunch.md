@@ -25,7 +25,7 @@ image:
 - 该动画按照[李翔SCU](https://www.bilibili.com/video/BV1hi4y1s7Rm/?spm_id_from=333.999.0.0&vd_source=27f8535b972612917de0cca10f45313f)教程制作
 
 ![RocketLaunch](/assets/blog_res/2023-09-10-RocketLaunch.assets/RocketLaunch.gif){: width="500" height="500"}
-_效果图_
+_效果图（动画加载较慢，请稍等）_
 
 ## 制作过程
 
