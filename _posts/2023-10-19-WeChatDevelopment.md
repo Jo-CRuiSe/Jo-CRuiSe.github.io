@@ -16,11 +16,18 @@ published: false
 
 ## 准备阶段
 
-### UI准备
+### UI/功能准备
 
-UI图标素材：https://github.com/weui/weui-design，Figma
+- [ ] UI图标素材：https://github.com/weui/weui-design，Figma
+- [ ] 分割各个部分控件：Navigation Bar, Chat List, Tab Bar, Chat Window, Menu, Emoji panel, Tool Bar, Input Box
+
+<img src="/assets/blog_res/2023-10-19-WeChatDevelopment.assets/ChatList.jpg" alt="ChatList" style="zoom:50%;" />
+
+<img src="/assets/blog_res/2023-10-19-WeChatDevelopment.assets/ChatWindow.jpg" alt="ChatWindow" style="zoom:50%;" />
 
 
 
 ### 代码准备
+
+- [ ] Navigation Bar
 
