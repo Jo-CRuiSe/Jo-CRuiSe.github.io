@@ -23,7 +23,7 @@ image:
 - 这是我第一个完全用AE制作的作品
 - 该动画按照[李翔SCU](https://www.bilibili.com/video/BV177411P7d1/?spm_id_from=333.999.0.0&vd_source=27f8535b972612917de0cca10f45313f)教程制作
 
-![PlaneModel](/assets/blog_res/2023-09-09-PlaneModel.assets/PlaneModel.gif)
+![PlaneModel](https://gitee.com/jo-cruise/Jo-CRuiSe/raw/main/assets/blog_res/2023-09-09-PlaneModel.assets/PlaneModel.gif)
 
 ## 建模过程
 
