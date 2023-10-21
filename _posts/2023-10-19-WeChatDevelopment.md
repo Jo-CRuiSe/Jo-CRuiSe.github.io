@@ -18,7 +18,8 @@ published: false
 
 ### UI准备
 
-- [ ] UI图标素材：https://github.com/weui/weui-design，Figma
+- [ ] UI图标素材：https://github.com/weui/weui-design ，Figma
+- [ ] avatar：https://zhuanlan.zhihu.com/p/203173866
 - [ ] 分割各个部分控件：Navigation Bar, Chat List, Tab Bar, Chat Window, Menu, Emoji panel, Tool Bar, Input Box
 
 ![ChatList](/assets/blog_res/2023-10-19-WeChatDevelopment.assets/ChatList.jpg)

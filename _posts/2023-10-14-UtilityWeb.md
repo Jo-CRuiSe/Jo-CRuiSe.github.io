@@ -24,7 +24,9 @@ published: false
 
 [ClipDrop](https://clipdrop.co/uncrop): 一站式移除图片背景，扩充图片等
 
-[FreeCompress](https://freecompress.com/zh-cn/compress-gif): 在线压缩jpg/png/bmp/gif
+[FreeCompress](https://freecompress.com/zh-cn/compress-gif): 压缩 jpg/png/bmp/gif
+
+[TinyPNG](https://tinypng.com): 压缩 webp/png/jpeg
 
 ### 隐私
 
