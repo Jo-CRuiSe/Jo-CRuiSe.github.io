@@ -16,8 +16,6 @@ published: true
 
 ## SwiftUI 小功能实现
 
-1. Lock SwiftUI View With Biometric/Custom Number Lock - Local Authentication
-
-{% include embed/youtube.html id='H7LH5xYUn6s' %}
+1. [Lock SwiftUI View With Biometric/Custom Number Lock - Local Authentication](https://www.youtube.com/watch?v=H7LH5xYUn6s)
 
 ![LockSwiftUIView](/assets/blog_res/2023-10-21-SwiftUILearning.assets/LockSwiftUIView.png){: w="300" h="300"}
