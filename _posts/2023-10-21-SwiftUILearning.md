@@ -11,7 +11,7 @@ commments: true
 typora-root-url: ../../Jo-CRuiSe.github.io/
 math: false
 mermaid: true
-published: true
+published: false
 ---
 
 ## SwiftUI 小功能实现
