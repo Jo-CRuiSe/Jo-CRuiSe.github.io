@@ -39,9 +39,11 @@ published: false
 
 [TinyPNG](https://tinypng.com): 压缩 webp/png/jpeg
 
-### 隐私
+### 隐私与安全
 
 [各国信息生成器](https://www.meiguodizhi.com/)：可以生成各国虚拟的人物相关信息，帮助你应对特定网站的注册要求
+
+[Where Is My IP Address](https://whatismyipaddress.com): 根据 IPv4 和 IPv6 查询国家及地区
 
 ### 文件传输
 
