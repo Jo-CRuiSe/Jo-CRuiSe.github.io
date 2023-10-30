@@ -27,7 +27,11 @@ published: false
 
 [AppIconGenerator](https://www.appicon.co/): 一站式生成适用于 iOS & Android 各尺寸的应用图标
 
-### 艺术创作
+### 设计素材
+
+[iOS Icon Gallery](https://www.iosicongallery.com): 包含高分辨率的 iOS App 图标， 收录几乎所有的 iOS 应用图标（watchOS/macOS 只需将网址相应修改）
+
+### 图像处理
 
 [ClipDrop](https://clipdrop.co/uncrop): 一站式移除图片背景，扩充图片等
 
