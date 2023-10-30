@@ -108,7 +108,7 @@ comments:
     lang:             # optional, default to the value of `site.lang`
   # Valine
   valine:
-    enable: true  #是否启用valine
+    enable: false  #是否启用valine
     leancloud_appid: rzV27a2iZkM3qCAIMnz2u6pO-9Nh9j0Va  #LeanCloud应用的AppID
     leancloud_appkey: 6sPXQuSvQBiMk60c7sFhRPVz  #LeanCloud应用的AppKey
     placeholder: "点击发表一条评论："  #评论区的占位文本
