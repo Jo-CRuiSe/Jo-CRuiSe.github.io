@@ -112,9 +112,9 @@ valine_comment:
   enable: true  #是否启用valine
   leancloud_appid: rzV27a2iZkM3qCAIMnz2u6pO-9Nh9j0Va  #LeanCloud应用的AppID
   leancloud_appkey: 6sPXQuSvQBiMk60c7sFhRPVz  #LeanCloud应用的AppKey
-  placeholder: "点击发表一条评论："  #评论区的占位文本
-  avatar: wavatar  #评论用户的头像
-  requiredFields: ['nick']
+  placeholder: "快来发表一条评论🥳（允许匿名评论）"  #评论区的占位文本
+  avatar: monsterid  #评论用户的头像
+  enableQQ: true
   serverURLs: 'https://rzv27a2i.lc-cn-e1-shared.com'  #LeanCloud应用的REST API 服务器地址
 
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
