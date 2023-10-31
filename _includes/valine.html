@@ -1,58 +1,16 @@
 {% if site.valine_comment.enable %}
 <div id="comments"></div>
-<script src="<%- theme.jsDelivr.url %>/libs/valine/av-min.js"></script>
-<script src="<%- theme.jsDelivr.url %><%- theme.libs.js.valine %>"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 <script>
-    new Valine({
-        el: '#vcomments',
-        appId: '<%- theme.valine.appId %>',
-        appKey: '<%- theme.valine.appKey %>',
-        visitor: '<%- theme.valine.visitor %>' === 'true',
-        avatar: '<%- theme.valine.avatar %>',
-        pageSize: '<%- theme.valine.pageSize %>',
-        lang: '<% if (config.language == "zh-CN") {  %>zh-cn<% } else { %>en<% } %>',
-        placeholder: '<%= theme.valine.placeholder %>',
-        enableQQ: '<%= theme.valine.enableQQ %>',
-        meta : ['nick'],
-        requiredFields: ['nick'],
-        emojiCDN: 'https://cdn.jsdelivr.net/gh/ccjpro/storage/emofaces/',
-        emojiMaps: {
-        "tv2": "[tv_doge].png",
-        "tv3": "[tv_亲亲].png",
-        "tv4": "[tv_偷笑].png",
-        "tv5": "[tv_再见].png",
-        "tv6": "[tv_冷漠].png",
-        "tv7": "[tv_发怒].png",
-        "tv8": "[tv_发财].png",
-        "tv9": "[tv_可爱].png",
-        "tv10": "[tv_吐血].png",
-        "tv11": "[tv_呆].png",
-        "tv12": "[tv_呕吐].png",
-        "tv13": "[tv_困].png",
-        "tv14": "[tv_坏笑].png",
-        "tv15": "[tv_大佬].png",
-        "tv16": "[tv_大哭].png",
-        "tv17": "[tv_委屈].png",
-        "tv18": "[tv_害羞].png",
-        "tv19": "[tv_尴尬].png",
-        "tv20": "[tv_微笑].png",
-        "tv21": "[tv_思考].png",
-        "tv22": "[tv_惊吓].png",
-        "tv23": "[tv_打脸].png",
-        "tv24": "[tv_抓狂].png",
-        "tv25": "[tv_抠鼻].png",
-        "tv26": "[tv_斜眼笑].png",
-        "tv27": "[tv_无奈].png",
-        "tv28": "[tv_晕].png",
-        "tv29": "[tv_流汗].png",
-        "tv30": "[tv_流泪].png",
-        "tv31": "[tv_流鼻血].png",
-        "tv32": "[tv_点赞].png",
-        "tv33": "[tv_生气].png",
-        "tv34": "[tv_生病].png",
-        "tv35": "[tv_疑问].png",
-        "tv36": "[tv_白眼].png"
-}
-    });
+  new Valine({
+    el: '#comments',
+    app_id: '{{ site.valine_comment.leancloud_appid }}',
+    app_key: '{{ site.valine_comment.leancloud_appkey }}',
+    placeholder: '{{ site.valine_comment.placeholder }}',
+    avatar: '{{ site.valine_comment.avatar }}',
+    serverURLs: '{{ site.valine_comment.serverURLs }}',
+    visitor: true
+  });
 </script>
 {% endif %}
