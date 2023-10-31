@@ -31,6 +31,8 @@ published: false
 
 [iOS Icon Gallery](https://www.iosicongallery.com): 包含高分辨率的 iOS App 图标， 收录几乎所有的 iOS 应用图标（watchOS/macOS 只需将网址相应修改）
 
+[Aspose](https://products.aspose.app/3d/conversion/usdz-to-obj): 支持3DS/AMF/RVM/GTF/GLB/PDF/HTML/DRC/DAE/FBX/OBJ/STL/U3D/PLY/USD/USDZ/DOCX/XLSX/PPTX 的在线格式转换器
+
 ### 图像处理
 
 [ClipDrop](https://clipdrop.co/uncrop): 一站式移除图片背景，扩充图片等
