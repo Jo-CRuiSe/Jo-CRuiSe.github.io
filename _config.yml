@@ -112,7 +112,7 @@ valine_comment:
   enable: true  #是否启用valine
   leancloud_appid: rzV27a2iZkM3qCAIMnz2u6pO-9Nh9j0Va  #LeanCloud应用的AppID
   leancloud_appkey: 6sPXQuSvQBiMk60c7sFhRPVz  #LeanCloud应用的AppKey
-  placeholder: "快来发表一条评论🥳（允许匿名评论）"  #评论区的占位文本
+  placeholder: "🥳快来发表一条评论吧！（允许匿名评论）\n\📨呢称填入QQ号可以自动补全邮箱和显示头像\n\📝请遵守网络文明"  #评论区的占位文本
   avatar: monsterid  #评论用户的头像
   enableQQ: true
   serverURLs: 'https://rzv27a2i.lc-cn-e1-shared.com'  #LeanCloud应用的REST API 服务器地址
