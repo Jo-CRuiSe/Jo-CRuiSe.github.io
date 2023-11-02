@@ -23,13 +23,13 @@ image:
 
 1. [Lock SwiftUI View With Biometric/Custom Number Lock - Local Authentication](https://www.youtube.com/watch?v=H7LH5xYUn6s)
 
-![LockSwiftUIView](/assets/blog_res/2023-10-21-SwiftUILearning.assets/LockSwiftUIView.png){: w="300" }
+![LockSwiftUIView](/assets/blog_res/2023-10-21-SwiftUILearning.assets/LockSwiftUIView.png){: w="400" }
 
 2. [Prevent Screenshot](https://www.youtube.com/watch?v=viao1kTWBoY)
 
 
-![PreventScreenshot](/assets/blog_res/2023-10-21-SwiftUILearning.assets/PreventScreenshot.png){: w="300" }
+![PreventScreenshot](/assets/blog_res/2023-10-21-SwiftUILearning.assets/PreventScreenshot.png){: w="400" }
 
 3. [Custom In-App Custom Notification's](https://www.youtube.com/watch?v=MPp7b9bIUPY)
 
-![InApp Notifications](/assets/blog_res/2023-10-21-SwiftUILearning.assets/InApp Notifications.png){: w="300"}
+![InApp Notifications](/assets/blog_res/2023-10-21-SwiftUILearning.assets/InApp Notifications.png){: w="400"}
