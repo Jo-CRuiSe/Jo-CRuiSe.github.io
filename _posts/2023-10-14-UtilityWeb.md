@@ -11,21 +11,20 @@ commments: true
 typora-root-url: ../../Jo-CRuiSe.github.io/
 math: false
 mermaid: true
-published: false
+published: true
 ---
 
 ## 实用网站合集
 
 **在这篇文章中我将持续更新分享一些实用网站**
 
->`🪜`代表需要连接国际互联网以访问或获得更好体验
-{: .prompt-info}
-
 ### 开发
 
 [ab173](http://www.ab173.com/gongju/convert/rgbhex.php): 包含网络、前端、后端等多种实用工具
 
 [AppIconGenerator](https://www.appicon.co/): 一站式生成适用于 iOS & Android 各尺寸的应用图标
+
+[HTML在线预览](https://uutool.cn/html/): 填入需要预览的HTML即可预览结果
 
 ### 设计素材
 
