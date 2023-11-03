@@ -1,19 +1,559 @@
 ---
 layout: default
 ---
-<div style="background-color:white;border-top:2px solid #12ADDB;box-shadow:0 1px 3px #AAAAAA;line-height:180%;padding:0 15px 12px;width:500px;margin:50px auto;color:#555555;font-family:'Times New Roman','Helvetica',sans-serif;font-size:12px;border-radius: 10px;">
-    <h2 style="border-bottom:1px solid #DDD;font-size:14px;font-weight:normal;padding:13px 0 10px 8px;">
-        <span style="color: #12ADDB;font-weight:bold;">
-            上有一条新评论，内容如下：
-        </span>
-    </h2>
-        <div style="padding:0 12px 0 12px; margin-top:18px;">
-            <p>
-                评论说：
-            </p>
-            <div style="background-color: #f5f5f5;padding: 10px 15px;margin:18px 0;word-wrap:break-word;border-radius: 10px;">
-                
+<body>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="HTMLPAGE - 专业高效的在线HTML构建器|网页模板|网站模板|网页设计|网页开发|HTML生成工具|在线制作网页"/>
+  <meta name="keywords" content="网页设计,HTML在线构建器,HTMLPAGE,HTML5在线构建器,HTML在线编辑,拖拽网页生成,网页构建工具,网页制作,网页开发,在线制作网页,html编辑器,免费网页,制作网页,网页设计制作,响应式网页,交互设计,企业宣传册,企业网站,名片设计,响应式,在线做图,平面设计,思维导图,用户体验设计,网站设计,网站风格,网络拓扑图,网页设计,软件架构"/>
+  <meta name="author" content="Lapus"/>
+  <title>HTMLPAGE.CN会员单页面模板 - 企业网站
+  </title>
+  <link rel="shortcut icon" href="https://htmlpage.cn/favicon.png"/>
+  <link rel="stylesheet" href="https://template-1253409072.cos.ap-guangzhou.myqcloud.com/sandbox/assets/css/plugins.css"/>
+  <link rel="stylesheet" href="https://template-1253409072.cos.ap-guangzhou.myqcloud.com/sandbox/assets/css/style.css"/>
+  <nav id="sticky-navbar" class="navbar navbar-expand-lg classic transparent navbar-light navbar-clone fixed">
+    <div class="container flex-lg-row flex-nowrap align-items-center">
+      <div class="navbar-brand w-100">
+        <a href="https://htmlpage.cn"><img src="https://template-1253409072.cos.ap-guangzhou.myqcloud.com/logos/logo-small-svg.svg" alt=""/></a>
+      </div>
+      <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+        <div class="offcanvas-header d-lg-none">
+          <h3 class="text-white fs-30 mb-0">HTMLPAGE.CN
+          </h3>
+          <button type="button" data-bs-dismiss="offcanvas" aria-label="Close" class="btn-close btn-close-white"></button>
+        </div>
+        <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="https://htmlpage.cn" class="nav-link">首页</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">业内资讯</a>
+              <ul class="dropdown-menu">
+                <li class="dropdown dropdown-submenu dropend">
+                  <a href="#" data-bs-toggle="dropdown" class="dropdown-item dropdown-toggle">用户体验</a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a href="./services.html" class="dropdown-item">交互体验设计</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="./services2.html" class="dropdown-item">体验与用户行为</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown dropdown-submenu dropend">
+                  <a href="#" data-bs-toggle="dropdown" class="dropdown-item dropdown-toggle">视觉设计</a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a href="./about.html" class="dropdown-item">界面设计</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="./about2.html" class="dropdown-item">平面设计</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="./pricing.html" class="dropdown-item">架构设计</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">成功案例</a>
+              <div class="dropdown-menu dropdown-lg">
+                <div class="dropdown-lg-content">
+                  <div>
+                    <h6 class="dropdown-header">体验设计
+                    </h6>
+                    <ul class="list-unstyled">
+                      <li>
+                        <a href="./projects.html" class="dropdown-item">某电商平台</a>
+                      </li>
+                      <li>
+                        <a href="./projects2.html" class="dropdown-item">某电商平台</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- /.column -->
+                  <div>
+                    <h6 class="dropdown-header">交互设计
+                    </h6>
+                    <ul class="list-unstyled">
+                      <li>
+                        <a href="./single-project.html" class="dropdown-item">某游戏平台</a>
+                      </li>
+                      <li>
+                        <a href="./single-project2.html" class="dropdown-item">某游戏平台</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- /.column -->
+                </div>
+                <!-- /auto-column -->
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">加入我们</a>
+              <ul class="dropdown-menu">
+                <li class="nav-item">
+                  <a href="./blog.html" class="dropdown-item">企业介绍</a>
+                </li>
+                <li class="nav-item">
+                  <a href="./blog2.html" class="dropdown-item">企业文化</a>
+                </li>
+                <li class="dropdown dropdown-submenu dropend">
+                  <a href="#" data-bs-toggle="dropdown" class="dropdown-item dropdown-toggle">联系方式</a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a href="./blog-post.html" class="dropdown-item">联系电话</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="./blog-post2.html" class="dropdown-item">电子邮件</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <!-- /.navbar-nav -->
+          <div class="offcanvas-footer d-lg-none">
+            <div>
+              <a href="mailto:first.last@email.com" class="link-inverse">help@lapus.cn</a>
+              <br/> 00 (123) 456 78 90
+              <br/>
+              <nav class="nav social social-white mt-4">
+                <a href="#"><i class="uil uil-twitter">
+                  </i></a>
+                <a href="#"><i class="uil uil-facebook-f">
+                  </i></a>
+                <a href="#"><i class="uil uil-dribbble">
+                  </i></a>
+                <a href="#"><i class="uil uil-instagram">
+                  </i></a>
+                <a href="#"><i class="uil uil-youtube">
+                  </i></a>
+              </nav>
+              <!-- /.social -->
             </div>
-            <p> 查看 </p>
+          </div>
+          <!-- /.offcanvas-footer -->
+        </div>
+        <!-- /.offcanvas-body -->
+      </div>
+      <!-- /.navbar-collapse -->
+      <div class="navbar-other ms-lg-4">
+        <ul class="navbar-nav flex-row align-items-center ms-auto">
+          <li class="nav-item">
+            <a data-bs-toggle="offcanvas" data-bs-target="#offcanvas-info" class="nav-link"><i class="uil uil-info-circle">
+              </i></a>
+          </li>
+          <li class="nav-item">
+            <a data-bs-toggle="offcanvas" data-bs-target="#offcanvas-search" class="nav-link"><i class="uil uil-search">
+              </i></a>
+          </li>
+          <li class="nav-item d-lg-none">
+            <button class="hamburger offcanvas-nav-btn"><span></span></button>
+          </li>
+        </ul>
+        <!-- /.navbar-nav -->
+      </div>
+      <!-- /.navbar-other -->
     </div>
-</div>
+    <!-- /.container -->
+  </nav>
+  <div class="content-wrapper">
+    <header class="wrapper bg-gray">
+      <nav class="navbar navbar-expand-lg center-nav navbar-light navbar-bg-light">
+        <div class="container flex-lg-row flex-nowrap align-items-center">
+          <div class="navbar-brand w-100">
+            <a href="https://htmlpage.cn"><img src="https://template-1253409072.cos.ap-guangzhou.myqcloud.com/logos/logo-small-svg.svg" alt="htmlpage.cn"/></a>
+          </div>
+          <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+            <div class="offcanvas-header d-lg-none">
+              <h3 class="text-white fs-30 mb-0">HTMLPAGE.CN
+              </h3>
+              <button type="button" data-bs-dismiss="offcanvas" aria-label="Close" class="btn-close btn-close-white"></button>
+            </div>
+            <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a href="https://htmlpage.cn" class="nav-link">首页</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">业内资讯</a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown dropdown-submenu dropend">
+                      <a href="#" data-bs-toggle="dropdown" class="dropdown-item dropdown-toggle">用户体验</a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a href="./services.html" class="dropdown-item">交互体验设计</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="./services2.html" class="dropdown-item">体验与用户行为</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown dropdown-submenu dropend">
+                      <a href="#" data-bs-toggle="dropdown" class="dropdown-item dropdown-toggle">视觉设计</a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a href="./about.html" class="dropdown-item">界面设计</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="./about2.html" class="dropdown-item">平面设计</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="./pricing.html" class="dropdown-item">架构设计</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">成功案例</a>
+                  <div class="dropdown-menu dropdown-lg">
+                    <div class="dropdown-lg-content">
+                      <div>
+                        <h6 class="dropdown-header">体验设计
+                        </h6>
+                        <ul class="list-unstyled">
+                          <li>
+                            <a href="./projects.html" class="dropdown-item">某电商平台</a>
+                          </li>
+                          <li>
+                            <a href="./projects2.html" class="dropdown-item">某电商平台</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- /.column -->
+                      <div>
+                        <h6 class="dropdown-header">交互设计
+                        </h6>
+                        <ul class="list-unstyled">
+                          <li>
+                            <a href="./single-project.html" class="dropdown-item">某游戏平台</a>
+                          </li>
+                          <li>
+                            <a href="./single-project2.html" class="dropdown-item">某游戏平台</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- /.column -->
+                    </div>
+                    <!-- /auto-column -->
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">加入我们</a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a href="./blog.html" class="dropdown-item">企业介绍</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="./blog2.html" class="dropdown-item">企业文化</a>
+                    </li>
+                    <li class="dropdown dropdown-submenu dropend">
+                      <a href="#" data-bs-toggle="dropdown" class="dropdown-item dropdown-toggle">联系方式</a>
+                      <ul class="dropdown-menu">
+                        <li class="nav-item">
+                          <a href="./blog-post.html" class="dropdown-item">联系电话</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="./blog-post2.html" class="dropdown-item">电子邮件</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <!-- /.navbar-nav -->
+              <div class="offcanvas-footer d-lg-none">
+                <div>
+                  <a href="mailto:first.last@email.com" class="link-inverse">help@lapus.cn</a>
+                  <br/> 00 (123) 456 78 90
+                  <br/>
+                  <nav class="nav social social-white mt-4">
+                    <a href="#"><i class="uil uil-twitter">
+                      </i></a>
+                    <a href="#"><i class="uil uil-facebook-f">
+                      </i></a>
+                    <a href="#"><i class="uil uil-dribbble">
+                      </i></a>
+                    <a href="#"><i class="uil uil-instagram">
+                      </i></a>
+                    <a href="#"><i class="uil uil-youtube">
+                      </i></a>
+                  </nav>
+                  <!-- /.social -->
+                </div>
+              </div>
+              <!-- /.offcanvas-footer -->
+            </div>
+            <!-- /.offcanvas-body -->
+          </div>
+          <!-- /.navbar-collapse -->
+          <div class="navbar-other w-100 d-flex ms-auto">
+            <ul class="navbar-nav flex-row align-items-center ms-auto">
+              <li class="nav-item dropdown language-select text-uppercase">
+                <a href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-item dropdown-toggle">中文</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item">
+                    <a href="#" class="dropdown-item">英语</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="dropdown-item">德语</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="dropdown-item">法语</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item d-none d-md-block">
+                <a href="./contact.html" class="btn btn-sm btn-primary rounded-pill">联系我们</a>
+              </li>
+              <li class="nav-item d-lg-none">
+                <button class="hamburger offcanvas-nav-btn"><span></span></button>
+              </li>
+            </ul>
+            <!-- /.navbar-nav -->
+          </div>
+          <!-- /.navbar-other -->
+        </div>
+        <!-- /.container -->
+      </nav>
+      <!-- /.navbar -->
+    </header>
+    <!-- /header -->
+    <section data-image-src="https://template-1253409072.cos.ap-guangzhou.myqcloud.com/sandbox/assets/img/photos/pp23.jpg" class="wrapper image-wrapper bg-image bg-cover bg-height">
+    </section>
+    <section class="wrapper bg-light wrapper-border">
+      <div class="container py-14 py-md-16">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1 class="display-4 mb-4">在线网页制作工具
+            </h1>
+            <div class="row gx-0 mb-12">
+              <div class="col-md-9 text-justify">
+                <p>您是否曾经因为繁琐的代码而浪费了无数宝贵的时间？您是否曾经因为设计不美观而影响了您网页的效果？现在，这些烦恼都将不复存在。
+                </p>
+                <p>HTMLPage.cn是一款在线制作HTML页面的工具网站，它为您提供了一种简单、快捷的方法，让您不再为繁琐的代码而烦恼。您可以通过简单的拖拽和点击操作，轻松地制作出专业美观的HTML页面。
+                </p>
+              </div>
+              <!--/column -->
+              <div class="col-md-2 ms-auto">
+                <ul class="list-unstyled">
+                  <li>
+                    <h5 class="mb-1">日期
+                    </h5>
+                    <p>17 May 2023
+                    </p>
+                  </li>
+                  <li>
+                    <h5 class="mb-1">项目名称
+                    </h5>
+                    <p>在线网页构建器
+                    </p>
+                  </li>
+                </ul>
+                <a href="https://htmlpage.cn" class="more hover">查看项目</a>
+              </div>
+              <!--/column -->
+            </div>
+            <!--/.row -->
+          </div>
+          <!--/column -->
+        </div>
+        <!--/.row -->
+        <div class="row gy-6 mb-12">
+          <div class="col-md-12">
+            <figure class="hover-scale rounded cursor-dark">
+              <a href="https://template-1253409072.cos.ap-guangzhou.myqcloud.com/sandbox/assets/img/photos/pp24@2x.jpg"><img src="https://template-1253409072.cos.ap-guangzhou.myqcloud.com/sandbox/assets/img/photos/pp24.jpg" alt=""/></a>
+            </figure>
+          </div>
+          <!-- /column -->
+          <div class="col-md-6">
+            <figure class="hover-scale rounded cursor-dark">
+              <a href="https://template-1253409072.cos.ap-guangzhou.myqcloud.com/sandbox/assets/img/photos/pp25@2x.jpg"><img src="https://template-1253409072.cos.ap-guangzhou.myqcloud.com/sandbox/assets/img/photos/pp25.jpg" alt=""/></a>
+            </figure>
+          </div>
+          <!-- /column -->
+          <div class="col-md-6">
+            <figure class="hover-scale rounded cursor-dark">
+              <a href="https://template-1253409072.cos.ap-guangzhou.myqcloud.com/sandbox/assets/img/photos/pp26@2x.jpg"><img src="https://template-1253409072.cos.ap-guangzhou.myqcloud.com/sandbox/assets/img/photos/pp26.jpg" alt=""/></a>
+            </figure>
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+        <div class="row mb-12">
+          <div class="col-lg-10 mx-auto">
+            <h2 class="display-6 mb-4">关于项目
+            </h2>
+            <p>您是否曾经因为繁琐的代码而浪费了无数宝贵的时间？您是否曾经因为设计不美观而影响了您网页的效果？现在，这些烦恼都将不复存在。
+              HTMLPage.cn是一款在线制作HTML页面的工具网站，它为您提供了一种简单、快捷的方法，让您不再为繁琐的代码而烦恼。您可以通过简单的拖拽和点击操作，轻松地制作出专业美观的HTML页面。
+            </p>
+          </div>
+          <!--/column -->
+        </div>
+        <!--/.row -->
+        <div class="row gy-6">
+          <div class="col-md-12">
+            <figure class="hover-scale rounded cursor-dark">
+              <a href="https://template-1253409072.cos.ap-guangzhou.myqcloud.com/sandbox/assets/img/photos/pp27@2x.jpg"><img src="https://template-1253409072.cos.ap-guangzhou.myqcloud.com/sandbox/assets/img/photos/pp27.jpg" alt=""/></a>
+            </figure>
+          </div>
+          <!-- /column -->
+          <div class="col-md-12">
+            <figure class="hover-scale rounded cursor-dark">
+              <a href="https://template-1253409072.cos.ap-guangzhou.myqcloud.com/sandbox/assets/img/photos/pp28@2x.jpg"><img src="https://template-1253409072.cos.ap-guangzhou.myqcloud.com/sandbox/assets/img/photos/pp28.jpg" alt=""/></a>
+            </figure>
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            <figure class="hover-scale rounded cursor-dark">
+              <a href="https://template-1253409072.cos.ap-guangzhou.myqcloud.com/sandbox/assets/img/photos/pp29@2x.jpg"><img src="https://template-1253409072.cos.ap-guangzhou.myqcloud.com/sandbox/assets/img/photos/pp29.jpg" alt=""/></a>
+            </figure>
+          </div>
+          <!-- /column -->
+          <div class="col-md-8">
+            <figure class="hover-scale rounded cursor-dark">
+              <a href="https://template-1253409072.cos.ap-guangzhou.myqcloud.com/sandbox/assets/img/photos/pp30@2x.jpg"><img src="https://template-1253409072.cos.ap-guangzhou.myqcloud.com/sandbox/assets/img/photos/pp30.jpg" alt=""/></a>
+            </figure>
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+    <section class="wrapper bg-light">
+      <div class="container py-10">
+        <div class="row gx-md-6 gy-3 gy-md-0">
+          <div class="col-md-8 align-self-center text-center text-md-start navigation">
+            <a href="" class="btn btn-soft-ash rounded-pill btn-icon btn-icon-start mb-0 me-1"><i class="uil uil-arrow-left">
+              </i> 前一个</a>
+            <a href="" class="btn btn-soft-ash rounded-pill btn-icon btn-icon-end mb-0">后一个 <i class="uil uil-arrow-right">
+              </i></a>
+          </div>
+          <!--/column -->
+          <aside class="col-md-4 sidebar text-center text-md-end">
+            <div class="dropdown share-dropdown btn-group">
+              <button data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-red rounded-pill btn-icon btn-icon-start dropdown-toggle mb-0 me-0"><i class="uil uil-share-alt">
+                </i> 分享 </button>
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-item"><i class="uil uil-twitter">
+                  </i>Twitter</a>
+                <a href="#" class="dropdown-item"><i class="uil uil-facebook-f">
+                  </i>Facebook</a>
+                <a href="#" class="dropdown-item"><i class="uil uil-linkedin">
+                  </i>Linkedin</a>
+              </div>
+              <!--/.dropdown-menu -->
+            </div>
+            <!--/.share-dropdown -->
+          </aside>
+          <!-- /column .sidebar -->
+        </div>
+        <!--/.row -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="bg-dark text-inverse">
+    <div class="container py-13 py-md-15">
+      <div class="row gy-6 gy-lg-0">
+        <div class="col-md-4 col-lg-3">
+          <div class="widget">
+            <img src="https://template-1253409072.cos.ap-guangzhou.myqcloud.com/logos/logo-small-white.svg" alt="" class="mb-4"/>
+            <p class="mb-4">© 2022 Lapus.
+              <br class="d-none d-lg-block"/>All rights reserved.
+            </p>
+            <nav class="nav social social-white">
+              <a href="#"><i class="uil uil-twitter">
+                </i></a>
+              <a href="#"><i class="uil uil-facebook-f">
+                </i></a>
+              <a href="#"><i class="uil uil-dribbble">
+                </i></a>
+              <a href="#"><i class="uil uil-instagram">
+                </i></a>
+              <a href="#"><i class="uil uil-youtube">
+                </i></a>
+            </nav>
+            <!-- /.social -->
+          </div>
+          <!-- /.widget -->
+        </div>
+        <!-- /column -->
+        <div class="col-md-4 col-lg-3">
+          <div class="widget">
+            <h4 class="widget-title text-white mb-3">联系我们
+            </h4>
+            <address class="pe-xl-15 pe-xxl-17">福建省厦门市同安区
+            </address>
+            <a href="mailto:#">help@lapus.cn</a>
+            <br/> 00 (123) 456 78 90
+          </div>
+          <!-- /.widget -->
+        </div>
+        <!-- /column -->
+        <div class="col-md-4 col-lg-3">
+          <div class="widget">
+            <h4 class="widget-title text-white mb-3">了解更多
+            </h4>
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#">关于我们</a>
+              </li>
+              <li>
+                <a href="#">解决方案</a>
+              </li>
+              <li>
+                <a href="#">项目案例</a>
+              </li>
+              <li>
+                <a href="#">隐私条款</a>
+              </li>
+              <li>
+                <a href="#">相关法规</a>
+              </li>
+            </ul>
+          </div>
+          <!-- /.widget -->
+        </div>
+        <!-- /column -->
+        <div class="col-md-12 col-lg-3">
+          <div class="widget">
+            <h4 class="widget-title text-white mb-3">联系我们
+            </h4>
+            <p class="mb-5">您可以发送邮件与我们联系
+            </p>
+            <div class="newsletter-wrapper">
+              <!-- Begin Mailchimp Signup Form -->
+              <div id="mc_embed_signup2">
+                <form action="https://elemisfreebies.us20.list-manage.com/subscribe/post?u=aa4947f70a475ce162057838d&id=b49ef47a9a" method="post" id="mc-embedded-subscribe-form2" name="mc-embedded-subscribe-form" target="_blank" novalidate="" class="validate dark-fields">
+                  <div id="mc_embed_signup_scroll2">
+                    <div class="mc-field-group input-group form-floating">
+                      <label for="mce-EMAIL2">邮件地址：help@lapus.cn</label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!--End mc_embed_signup-->
+            </div>
+            <!-- /.newsletter-wrapper -->
+          </div>
+          <!-- /.widget -->
+        </div>
+        <!-- /column -->
+      </div>
+      <!--/.row -->
+    </div>
+    <!-- /.container -->
+  </footer>
+  <script src="https://template-1253409072.cos.ap-guangzhou.myqcloud.com/sandbox/assets/js/plugins.js"></script>
+  <script src="https://template-1253409072.cos.ap-guangzhou.myqcloud.com/sandbox/assets/js/theme.js"></script>
+</body>
