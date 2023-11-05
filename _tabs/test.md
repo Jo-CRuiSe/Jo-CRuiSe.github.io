@@ -1,6 +1,6 @@
 ---
 layout: test
 title: Test
-icon: fas fa-tags
+icon: fas fa-screwdriver-wrench
 order: 5
 ---
