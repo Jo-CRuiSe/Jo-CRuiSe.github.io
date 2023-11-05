@@ -1,175 +1,49 @@
 ---
 layout: default
 ---
-<canvas id="canvas" width="400" height="400" style="background-color:#333"></canvas>
-    <script>
-        /*第一部分 - 创建画布*/
-        // 通过canvas元素创建一个canvas对象(var canvas):
-        let canvas = document.getElementById("canvas");
-        //为canvas对象创建一个2D绘图对象(var context)：
-        let context = canvas.getContext("2d");
-        //使用画布的高度计算时钟半径：
-        let radius = canvas.height / 2;
-        //将（0,0）位置（绘图对象）重新映射到画布的中心：
-        context.translate(radius, radius);
-        //减少时钟半径（至90％）以在画布内绘制时钟：
-        radius = radius * 0.90;
-        //每隔一秒(1000毫秒)调用一次drawClock()函数
-        setInterval(drawClock, 1000);
-        
-        //创建一个绘制时钟的函数：
-        function drawClock() {
-            /*
-            //画一个圆形
-            context.arc(0, 0, radius, 0, 2 * Math.PI);
-            context.fillStyle = "white";
-            context.fill();*/
-            drawFace(context, radius);
-            drawNumbers(context, radius);
-            drawLine(context, radius);
-            drawTime(context, radius);
+<div class="taiji"></div>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        background-color: #ccc;
+    }
+    
+    .taiji {
+        width: 150px;
+        height: 300px;
+        margin: 100px auto;
+        border-right: 150px solid #000;
+        background-color: #fff;
+        border-radius: 150px;
+        animation: rotate 2s infinite linear;
+    }
+    
+    .taiji::before,
+    .taiji::after {
+        content: '';
+        margin-left: 50%;
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+        border: 50px solid #000;
+        border-radius: 75px;
+    }
+    
+    .taiji::after {
+        background-color: #000;
+        border: 50px solid #fff;
+    }
+    
+    @keyframes rotate {
+        from {}
+    
+        to {
+            transform: rotate(-360deg);
         }
-        
-        /***
-        第二部分 - 画一个钟面
-        * @param context -2D绘图对象
-        * @param radius -时钟半径
-        */
-        function drawFace(context, radius) {
-            let gradient;
-            //起始一条路径，或重置当前路径
-            context.beginPath();
-            //画出白色圆圈：
-            context.arc(0, 0, radius, 0, 2 * Math.PI);
-            //设置或返回用于填充绘画的颜色、渐变或模式
-            context.fillStyle = "#f2ffe5";
-            //填充当前绘图（路径）
-            context.fill();
-            //创建径向渐变（原始时钟半径的95％和105％）：
-            gradient = context.createRadialGradient( 0, 0, radius * 0.95, 0, 0, radius * 1.05  );
-            //创建3个颜色停止点，对应于弧的内边，中边和外边：
-            //颜色停止会产生3D效果
-            gradient.addColorStop(0, '#333');
-            gradient.addColorStop(0.5, 'white');
-            gradient.addColorStop(1, '#333');
-            //将渐变定义为绘图对象的笔触样式：
-            context.strokeStyle = gradient;
-            //定义图纸对象的线宽（半径的10％）：
-            context.lineWidth = radius * 0.1;
-            //画圆圈：
-            context.stroke();
-            //画时钟中心：
-            context.beginPath();
-            //创建弧/曲线（用于创建圆形或部分圆）
-            context.arc(0, 0, radius * 0.06, 0, 2 * Math.PI);
-            context.fillStyle = '#333';
-            context.fill();
-        }
-        
-        /**
-        * 第三部分 - 绘制时钟数
-        * @param context -2D绘图对象
-        * * @param radius -时钟半径
-        */
-        function drawNumbers(context, radius) {
-            let angle;
-            let num;
-            //将（绘图对象的）字体大小设置为半径的15％：
-            context.font = radius * 0.15 + "px arial";
-            //设置或返回在绘制文本时使用的当前文本基线
-            context.textBaseline = "middle";
-            //设置或返回文本内容的当前对齐方式。
-            context.textAlign = "center";
-            //计算打印位置（12个数字）到半径的85％，每个数字旋转（PI / 6）：
-            for (num = 1; num <= 12; num++) {
-                angle = num * Math.PI / 6;
-                context.rotate(angle);
-                //重新映射画布上的 (0,0) 位置
-                context.translate(0, -radius * 0.85);
-                context.rotate(-angle);
-                //在画布上绘制"被填充的"文本
-                context.fillText(num.toString(), 0, 0);
-                context.rotate(angle);
-                context.translate(0, radius * 0.85);
-                context.rotate(-angle);
-            }
-        }
-        
-        /**
-        * 第四部分 -画时钟表格线
-        * @param context -2D绘图对象
-        * @param radius -时钟半径
-        */
-        function drawLine(context, radius) {
-            let i;
-            for (i = 1; i <= 60; i++) {
-                if (i % 5 == 0) {
-                    context.strokeStyle = "red";
-                } else {
-                    context.strokeStyle = "black";
-                }
-                context.beginPath();
-                context.lineWidth = radius * 0.02;
-                context.rotate(i * Math.PI / 30);
-                context.moveTo(0, -radius * 1.05);
-                context.lineTo(0, -radius * 0.95);
-                context.stroke();
-                context.rotate(-i * Math.PI / 30);
-            }
-        }
-        
-        /**
-        * 第五部分 - 画时钟指针
-        * @param context -2D绘图对象
-        * @param radius -时钟半径
-        */
-        function drawTime(context, radius) {
-            //使用日期获取小时，分钟，秒：
-            let date = new Date();
-            let hours = date.getHours();
-            let minutes = date.getMinutes();
-            let seconds = date.getSeconds();
-            //绘制时针
-            hours = hours % 12;
-            // 计算时针的角度
-            hours = (hours * Math.PI / 6) +
-                (minutes * Math.PI / (6 * 60)) +
-                (seconds * Math.PI / (6 * 60 * 60));
-            //绘制一个长度（半径的50％）和宽度（半径的5％）的时针：
-            drawHand(context, hours, radius * 0.4, radius * 0.05, "green");
-            //绘制分针
-            minutes = (minutes * Math.PI / 30) + (seconds * Math.PI / (30 * 60));
-            drawHand(context, minutes, radius * 0.7, radius * 0.04, "blue");
-            // 绘制秒针
-            seconds = (seconds * Math.PI / 30);
-            drawHand(context, seconds, radius * 0.8, radius * 0.02, "red");
-        
-        }
-        
-        /**
-        * 绘制一条给定长度和宽度,并指定颜色的线,用来画各种表针
-        * @param context -2D绘图对象
-        * @param pos -旋转角度
-        * @param length -长度
-        * @param width -宽度
-        */
-        function drawHand(context, pos, length, width, color) {
-            //起始一条路径，或重置当前路径
-            context.beginPath();
-            //设置或返回当前的线条宽度
-            context.lineWidth = width;
-            //设置或返回线条的结束端点样式
-            //round    向线条的每个末端添加圆形线帽
-            context.lineCap = "round";
-            //把路径移动到画布中的指定点，不创建线条
-            context.moveTo(0, 0);
-            //旋转当前绘图
-            context.rotate(pos);
-            //添加一个新点，然后在画布中创建从该点到最后指定点的线条
-            context.lineTo(0, -length);
-            context.strokeStyle = color;
-            //绘制已定义的路径
-            context.stroke();
-            context.rotate(-pos);
-        }
-    </script>
+    }
+</style>
