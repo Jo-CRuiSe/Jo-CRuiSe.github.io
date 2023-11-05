@@ -1,0 +1,99 @@
+---
+layout: default
+---
+<html>
+
+<head></head>
+
+<body>
+    <div class="container">
+        <div class="output" id="output">10</div>
+        <button class="button" onclick="clearOutput()" id="clear">C</button>
+        <button class="button" onclick="appendToOutput('%')">%</button>
+        <button class="button" onclick="appendToOutput('/')">/</button>
+        <button class="button" onclick="appendToOutput('*')">*</button>
+        <button class="button" onclick="appendToOutput('7')">7</button>
+        <button class="button" onclick="appendToOutput('8')">8</button>
+        <button class="button" onclick="appendToOutput('9')">9</button>
+        <button class="button" onclick="appendToOutput('-')">-</button>
+        <button class="button" onclick="appendToOutput('4')">4</button>
+        <button class="button" onclick="appendToOutput('5')">5</button>
+        <button class="button" onclick="appendToOutput('6')">6</button>
+        <button class="button" onclick="appendToOutput('+')">+</button>
+        <button class="button" onclick="appendToOutput('1')">1</button>
+        <button class="button" onclick="appendToOutput('2')">2</button>
+        <button class="button" onclick="appendToOutput('3')">3</button>
+        <button class="button equals" onclick="calculate()">=</button>
+        <button class="button" onclick="appendToOutput('0')">0</button>
+        <button class="button" onclick="appendToOutput('.')">.</button>
+    </div>
+    <style>
+        body {
+          background-color: #f2f2f2;
+          font-family: Arial, sans-serif;
+        }
+        
+        .container {
+          margin: auto;
+          margin-top: 100px;
+          width: 300px;
+          padding: 10px;
+          border: 1px solid #ccc;
+          background-color: #fff;
+          box-shadow: 0px 0px 10px #ccc;
+        }
+        
+        .output {
+          font-size: 2em;
+          text-align: right;
+          padding: 10px;
+          background-color: #eee;
+          border: 1px solid #ccc;
+        }
+        
+        .button {
+          font-size: 1.5em;
+          margin: 5px;
+          width: 50px;
+          height: 50px;
+          border: none;
+          background-color: #ccc;
+          color: #fff;
+          cursor: pointer;
+        }
+        
+        .button:hover {
+          background-color: #999;
+        }
+        
+        .clear {
+          background-color: #ff6666;
+        }
+        
+        .equals {
+          background-color: #66cc66;
+        }
+    </style>
+
+    <script>
+        let output = document.getElementById("output");
+        
+        function appendToOutput(value) {
+          if (output.innerHTML === "0") {
+            output.innerHTML = value;
+          } else {
+            output.innerHTML += value;
+          }
+        }
+        
+        function clearOutput() {
+          output.innerHTML = "0";
+        }
+        
+        function calculate() {
+          output.innerHTML = eval(output.innerHTML);
+        }
+    </script>
+</body>
+
+</html>
