@@ -1,12 +1,5 @@
 ---
 layout: default
-refactor: true
-panel_includes:
-  - toc
-tail_includes:
-  - related-posts
-  - post-nav
-  - comments
 ---
 <body>
     <div class="container">
@@ -77,25 +70,5 @@ tail_includes:
           background-color: #66cc66;
         }
     </style>
-
-    <script>
-        let output = document.getElementById("output");
-        
-        function appendToOutput(value) {
-          if (output.innerHTML === "0") {
-            output.innerHTML = value;
-          } else {
-            output.innerHTML += value;
-          }
-        }
-        
-        function clearOutput() {
-          output.innerHTML = "0";
-        }
-        
-        function calculate() {
-          output.innerHTML = eval(output.innerHTML);
-        }
-    </script>
 </body>
 
