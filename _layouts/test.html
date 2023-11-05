@@ -1,69 +1,22 @@
 ---
 layout: default
 ---
-<ul>
-    <li>
-        <a href="#home" class="active">
-            主页
-        </a>
-    </li>
-    <li>
-        <a href="#news">
-            新闻
-        </a>
-    </li>
-    <li>
-        <div class="dropdown">
-            <a href="#" class="dropbtn">
-                下拉菜单
-            </a>
-            <div class="dropdown-content">
-                <a href="#">
-                    链接 1
-                </a>
-                <a href="#">
-                    链接 2
-                </a>
-                <a href="#">
-                    链接 3
-                </a>
+<div style="background-color:white;border-top:2px solid #12ADDB;box-shadow:0 1px 3px #AAAAAA;line-height:180%;padding:0 15px 12px;width:500px;margin:50px auto;color:#555555;font-family:'Times New Roman','Helvetica',sans-serif;font-size:12px;border-radius: 10px;">
+    <h2 style="border-bottom:1px solid #DDD;font-size:14px;font-weight:normal;padding:13px 0 10px 8px;">
+        <span style="color: #12ADDB;font-weight:bold;">
+            <%=siteName%> 上有一条新评论，内容如下：
+        </span>
+    </h2>
+        <div style="padding:0 12px 0 12px; margin-top:18px;">
+            <p>
+                <strong><%=name%></strong>&nbsp;评论说：
+            </p>
+            <div style="background-color: #f5f5f5;padding: 10px 15px;margin:18px 0;word-wrap:break-word;border-radius: 10px;">
+                <%-text%>
             </div>
-        </div>
-    </li>
-    <li>
-        <a href="#about">
-            关于
-        </a>
-    </li>
-</ul>
-<h3>
-    导航栏上的下拉菜单
-</h3>
-<p>
-    鼠标移动到 "下拉菜单" 链接先显示下拉菜单。
-</p>
-<style>
-    ul { list-style-type: none; margin: 0; padding: 0; background-color: #999;
-    overflow: hidden; /* 注意: overflow:hidden 添加到 ul 元素,以防止 li 元素列表的外出(当li{float:left}时)。
-    来源链接：https://www.runoob.com/try/try.php?filename=trycss_navbar_horizontal_float&basepath=0
-    */ } li { float: left; } li a { color: white; padding: 14px 16px; display:
-    inline-block; text-decoration: none; } li>a.active { background-color:
-    green; } li>a:hover:not(a.active), .dropbtn:hover { background-color: #555;
-    } .dropdown-content { display: none; position: absolute; /* 默认相对于
-    <html>
-        进行绝对定位 */ background-color: #f9f9f9; min-width: 100px; box-shadow: 0 8px
-        16px 0 rgba(0, 0, 0, .2); } .dropdown-content a { color: black; display:
-        block; /* 因为
-        <a>
-            标签不是块元素，min-width:100px不会生效 */ } .dropdown-content a:hover { background-color:
-            #f1f1f1; color: deepskyblue; } .dropdown:hover .dropdown-content { display:
-            block; } /* 中间的空格表示，鼠标悬念在.dropdown上时，dropdown的子元素.dropdown-content变为块元素
-            */ /* ### 待完善 ### 因为.dropdown只用过一次，觉得可以删除
-            <div class="dropdown">
-            </div>
-            来减少代码量，尝试 将.dropdown:hover .dropdown-content {display: block;} 修改为.dropbtn:hover+.dropdown-content
-            {display: block;} 并删除
-            <div class="dropdown">
-            </div>
-            后，鼠标悬停在“下拉菜单”上，会显示下拉菜单， 但无法选中菜单中的“链接 x”， ### 为什么？该如何完善？ ### */
-</style>
+            <p>
+                <a style="text-decoration:none; color:#12addb" href="<%=url%>#comments" target="_blank">点击前往查看
+                </a>
+            </p>
+    </div>
+</div>
