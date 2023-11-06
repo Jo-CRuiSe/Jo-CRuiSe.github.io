@@ -19,18 +19,3 @@ layout: default
         </video>
     </div>
 </div>
-
-<script>
-    // 获取所有的 gallery-item 元素
-    var items = document.getElementsByClassName('gallery-item');
-
-    // 为每个元素添加鼠标悬停事件
-    for (var i = 0; i < items.length; i++) {
-        items[i].addEventListener('mouseover', function () {
-            this.style.transform = 'scale(1.2)';
-        });
-        items[i].addEventListener('mouseout', function () {
-            this.style.transform = 'scale(1)';
-        });
-    }
-</script>
