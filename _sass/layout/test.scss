@@ -1,65 +1,124 @@
 $color_1: #fff;
-$background-color_1: #222;
-$background-color_2: #1b1b1c;
+$color_2: #4267B2;
+$color_3: #1DA1F2;
+$color_4: #E1306C;
+$color_5: #333;
+$color_6: #ff0000;
+$font-family_1: 'Poppins', sans-serif;
 
-@property {
-	--d {
-		syntax: '<angle>';
-		inherits: true;
-		initial-value: 0deg;
-	}
+@import "https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap";
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: $font-family_1;
 }
-button {
-	width: 200px;
-	aspect-ratio: 1;
-	font-size: 30px;
-	color: $color_1;
-	background: none;
-	border: none;
-	border-radius: 20px;
-	position: relative;
-	z-index: 0;
-	transition: .3s;
-	cursor: pointer;
-	&:before {
-		content: "";
-		position: absolute;
-		inset: -8px;
-		padding: 8px;
-		border-radius: 28px;
-		background: conic-gradient(from var(--d,0deg), #21D4FD , #0000 30deg 120deg, #B721FF 150deg 180deg, #0000 210deg 300deg, #21D4FD 330deg );
-		-webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-		-webkit-mask-composite: xor;
-		mask-composite: intersect;
-		transition: .5s, 99999s 99999s transform, 99999s 99999s --d;
-	}
-	&:after {
-		content: "";
-		position: absolute;
-		inset: -100px;
-		background: radial-gradient(80px at left 150px top 120px,#21D4FD 98%,#0000), radial-gradient(80px at right 150px bottom 120px,#B721FF 98%,#0000);
-		filter: blur(60px);
-		opacity: .5;
-		transition: .5s, 99999s 99999s transform, 99999s 99999s --d;
-	}
-	&:hover {
-		box-shadow: 0 0 0 1px #666;
-		&:after {
-			transform: rotate(3600deg);
-			transition: .5s,60s linear transform;
-		}
-		&:before {
-			--d: 3600deg;
-			transition: .5s,60s linear --d;
-			background-color: $background-color_1;
-		}
-	}
+html {
+	display: grid;
+	height: 100%;
+	width: 100%;
+	place-items: center;
+	background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
 }
 body {
-	margin: 0;
-	min-height: 100vh;
 	display: grid;
-	place-content: center;
-	grid-auto-flow: column;
-	background-color: $background-color_2;
+	height: 100%;
+	width: 100%;
+	place-items: center;
+	background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+}
+.wrapper {
+	.button {
+		display: inline-block;
+		height: 60px;
+		width: 60px;
+		float: left;
+		margin: 0 5px;
+		overflow: hidden;
+		background: #fff;
+		border-radius: 50px;
+		cursor: pointer;
+		box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+		transition: all 0.3s ease-out;
+		&:hover {
+			width: 200px;
+			.icon {
+				i {
+					color: $color_1;
+				}
+			}
+		}
+		.icon {
+			display: inline-block;
+			height: 60px;
+			width: 60px;
+			text-align: center;
+			border-radius: 50px;
+			box-sizing: border-box;
+			line-height: 60px;
+			transition: all 0.3s ease-out;
+			i {
+				font-size: 25px;
+				line-height: 60px;
+				transition: all 0.3s ease-out;
+			}
+		}
+		&:nth-child(1) {
+			&:hover {
+				.icon {
+					background: #4267B2;
+				}
+			}
+			span {
+				color: $color_2;
+			}
+		}
+		&:nth-child(2) {
+			&:hover {
+				.icon {
+					background: #1DA1F2;
+				}
+			}
+			span {
+				color: $color_3;
+			}
+		}
+		&:nth-child(3) {
+			&:hover {
+				.icon {
+					background: #E1306C;
+				}
+			}
+			span {
+				color: $color_4;
+			}
+		}
+		&:nth-child(4) {
+			&:hover {
+				.icon {
+					background: #333;
+				}
+			}
+			span {
+				color: $color_5;
+			}
+		}
+		&:nth-child(5) {
+			&:hover {
+				.icon {
+					background: #ff0000;
+				}
+			}
+			span {
+				color: $color_6;
+			}
+		}
+		span {
+			font-size: 20px;
+			font-weight: 500;
+			line-height: 60px;
+			margin-left: 10px;
+			transition: all 0.3s ease-out;
+		}
+	}
 }
