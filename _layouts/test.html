@@ -1,6 +1,58 @@
 ---
 layout: default
 ---
-<div>
-    <h1> UNDERDEVELOPMENT </h1>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Media Gallery</title>
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery-item {
+            margin: 10px;
+            transition: transform 0.5s;
+        }
+        .gallery-item:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>My Media Gallery</h1>
+    <div class="gallery">
+        <!-- 图片 -->
+        <div class="gallery-item">
+            <img src="" alt="Image 1" width="300">
+        </div>
+        <div class="gallery-item">
+            <img src="" alt="Image 2" width="300">
+        </div>
+
+        <!-- 视频 -->
+        <div class="gallery-item">
+            <video width="320" height="240" controls>
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        // 获取所有的 gallery-item 元素
+        var items = document.getElementsByClassName('gallery-item');
+
+        // 为每个元素添加鼠标悬停事件
+        for (var i = 0; i < items.length; i++) {
+            items[i].addEventListener('mouseover', function() {
+                this.style.transform = 'scale(1.2)';
+            });
+            items[i].addEventListener('mouseout', function() {
+                this.style.transform = 'scale(1)';
+            });
+        }
+    </script>
+</body>
+</html>
