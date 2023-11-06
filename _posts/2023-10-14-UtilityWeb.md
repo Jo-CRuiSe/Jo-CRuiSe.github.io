@@ -50,6 +50,9 @@ image:
 [Where Is My IP Address](https://whatismyipaddress.com): 根据 IPv4 和 IPv6 查询国家及地区
 
 [SCAMALYTICS](https://scamalytics.com/ip): 查询IP纯净度
+
+[腾讯安全-网址安全中心](https://urlsec.qq.com/check.html): 检测网址是否可能为钓鱼链接
+
 ### 文件传输
 
 [SnapDrop](https://snapdrop.net): 通过相同局域网传输文件，打破生态壁垒，适用于 iOS/Android/macOS/Windows/Linux等
