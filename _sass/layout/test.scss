@@ -1,124 +1,28 @@
-$color_1: #fff;
-$color_2: #4267B2;
-$color_3: #1DA1F2;
-$color_4: #E1306C;
-$color_5: #333;
-$color_6: #ff0000;
-$font-family_1: 'Poppins', sans-serif;
+$color_1: white;
+$background-color_1: #007BFF;
+$background-color_2: #0069D9;
+$background-color_3: #0062CC;
 
-@import "https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap";
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: $font-family_1;
-}
-html {
-	display: grid;
-	height: 100%;
-	width: 100%;
-	place-items: center;
-	background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
-}
-body {
-	display: grid;
-	height: 100%;
-	width: 100%;
-	place-items: center;
-	background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
-}
-.wrapper {
-	.button {
-		display: inline-block;
-		height: 60px;
-		width: 60px;
-		float: left;
-		margin: 0 5px;
-		overflow: hidden;
-		background: #fff;
-		border-radius: 50px;
-		cursor: pointer;
-		box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
-		transition: all 0.3s ease-out;
-		&:hover {
-			width: 200px;
-			.icon {
-				i {
-					color: $color_1;
-				}
-			}
-		}
-		.icon {
-			display: inline-block;
-			height: 60px;
-			width: 60px;
-			text-align: center;
-			border-radius: 50px;
-			box-sizing: border-box;
-			line-height: 60px;
-			transition: all 0.3s ease-out;
-			i {
-				font-size: 25px;
-				line-height: 60px;
-				transition: all 0.3s ease-out;
-			}
-		}
-		&:nth-child(1) {
-			&:hover {
-				.icon {
-					background: #4267B2;
-				}
-			}
-			span {
-				color: $color_2;
-			}
-		}
-		&:nth-child(2) {
-			&:hover {
-				.icon {
-					background: #1DA1F2;
-				}
-			}
-			span {
-				color: $color_3;
-			}
-		}
-		&:nth-child(3) {
-			&:hover {
-				.icon {
-					background: #E1306C;
-				}
-			}
-			span {
-				color: $color_4;
-			}
-		}
-		&:nth-child(4) {
-			&:hover {
-				.icon {
-					background: #333;
-				}
-			}
-			span {
-				color: $color_5;
-			}
-		}
-		&:nth-child(5) {
-			&:hover {
-				.icon {
-					background: #ff0000;
-				}
-			}
-			span {
-				color: $color_6;
-			}
-		}
-		span {
-			font-size: 20px;
-			font-weight: 500;
-			line-height: 60px;
-			margin-left: 10px;
-			transition: all 0.3s ease-out;
-		}
+/* Darker blue when mouse is over */
+button {
+	background-color: $background-color_1;
+	border: none;
+	color: $color_1;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 12px;
+	box-shadow: 0 9px #999;
+	&:hover {
+		background-color: $background-color_2;
+	}
+	&:active {
+		background-color: $background-color_3;
+		box-shadow: 0 5px #666;
+		transform: translateY(4px);
 	}
 }
