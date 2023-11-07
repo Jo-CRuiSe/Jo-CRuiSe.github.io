@@ -1,7 +1,7 @@
 .portfolio {
 	margin-top: 4rem;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+	grid-template-columns: repeat(2, minmax(200px, auto));
 	align-items: center;
 	gap: 2rem;
 	padding: 1rem;
