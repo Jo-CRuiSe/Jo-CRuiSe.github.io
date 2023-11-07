@@ -28,7 +28,7 @@
 .layer {
 	width: 100%;
 	height: 0;
-	background: linear-gradient(rgba(0, 0, 0, 0.3), var(--second-color));
+	background: linear-gradient(rgba(0, 0, 0, 0.3), #171f26);
 	position: absolute;
 	left: 0;
 	bottom: 0;
@@ -50,8 +50,8 @@
 }
 
 .layer i {
-	color: var(--bg-color);
-	background-color: var(--main-color);
+	color: #0c151d;
+	background-color: #ffe071;
 	font-size: 18px;
 	width: 38px;
 	height: 38px;
