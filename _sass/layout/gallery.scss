@@ -5,16 +5,18 @@
 	align-items: center;
 	gap: 2rem;
 	padding: 1rem;
+
 	@media screen and (min-width: 600px) {
 		grid-template-columns: repeat(2, minmax(200px, auto));
-	  }
 	}
 }
+
 .portfolio-content {
 	position: relative;
 	overflow: hidden;
 	cursor: pointer;
 	border-radius: 10px;
+
 	img {
 		width: 100%;
 		border-radius: 10px;
