@@ -18,9 +18,28 @@ layout: compress
 
   <body>
     {% include sidebar.html lang=lang %}
-    <div>
-      <img src="https://jo-cruise.github.io/assets/blog_res/title/UtilityWeb.jpg" alt="img">
-    </div>
+    <div id="main-wrapper" class="d-flex justify-content-center">
+      <div class="container d-flex flex-column px-xxl-5">
+        {% include topbar.html lang=lang %}
+
+        <div>
+          <img src="https://jo-cruise.github.io/assets/blog_res/title/UtilityWeb.jpg" alt="img">
+        </div>
+
+        <div class="row">
+          <!-- tail -->
+          <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            {% for _include in layout.tail_includes %}
+              {% assign _include_path = _include | append: '.html' %}
+              {% include {{ _include_path }} lang=lang %}
+            {% endfor %}
+
+            {% include_cached footer.html lang=lang %}
+          </div>
+        </div>
+
+        {% include_cached search-results.html lang=lang %}
+      </div>
 
     <div id="mask"></div>
 
