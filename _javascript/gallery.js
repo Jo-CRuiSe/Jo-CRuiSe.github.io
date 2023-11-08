@@ -4,4 +4,4 @@ const sr = ScrollReveal ({
     reset: true
   });
   
-  sr.reaveal('.portfolio-container', {delay: 210, origin: 'left'});
+  sr.reaveal('.portfolio-container', {delay: 210, origin: 'bottom'});
