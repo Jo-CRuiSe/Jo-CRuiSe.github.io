@@ -1,12 +1,14 @@
 .portfolio {
- display: flex;
- justify-content: center;
- flex-direction: column;
-	margin: 4rem;
+	margin-top: 4rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, auto));
 	align-items: center;
+	gap: 2rem;
 	padding: 1rem;
- columns: 5 300px;
- column-gap: 1.5rem;
+
+	@media screen and (min-width: 600px) {
+		grid-template-columns: repeat(2, minmax(200px, auto));
+	}
 }
 
 .portfolio-content {
