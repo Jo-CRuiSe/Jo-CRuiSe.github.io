@@ -201,7 +201,7 @@
 	overflow: hidden;
 	cursor: pointer;
 	border-radius: 10px;
-	
+
 	img {
 		width: 100%;
 		border-radius: 10px;
@@ -229,4 +229,23 @@
 
 .portfolio-item:hover .portfolio-layer {
 		height: 100%;
+}
+
+.portfolio-layer h5 {
+	color: antiquewhite;
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
+.portfolio-layer i {
+	color: #0c151d;
+	background-color: #ffe071;
+	font-size: 18px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 }
