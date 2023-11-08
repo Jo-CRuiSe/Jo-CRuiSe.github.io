@@ -74,48 +74,48 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Popins', sans-serif;
-  }
-  
-  .container {
+}
+
+.container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
 	margin: 40px 20px 0 20px;
-  }
-  
-  .container .heading {
+}
+
+.container .heading {
 	width: 50%;
 	padding-bottom: 50px;
-  }
-  
-  .container .heading h3 {
+}
+
+.container .heading h3 {
 	font-size: 3em;
 	font-weight: bolder;
 	padding-bottom: 3px;
 	border-bottom: 3px solid #222;
-  }
-  
-  .container .heading h3 span{
+}
+
+.container .heading h3 span {
 	font-weight: 100;
-  }
-  
-  .container box {
+}
+
+.container box {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-  }
-  
-  .container .box .dream {
+}
+
+.container .box .dream {
 	display: flex;
 	flex-direction: column;
 	width: 32.5%;
-  }
-  
-  .container .box .dream img {
+}
+
+.container .box .dream img {
 	width: 100%;
 	padding-bottom: 15px;
 	border-radius: 10px;
-  }
+}
