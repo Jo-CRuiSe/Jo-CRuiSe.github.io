@@ -2,11 +2,8 @@
 	margin-top: 4rem;
 	align-items: center;
 	padding: 1rem;
- columns: 5 200px;
+ columns: 5 300px;
  column-gap: 1.5rem;
-	@media screen and (min-width: 600px) {
-		grid-template-columns: repeat(2, minmax(200px, auto));
-	}
 }
 
 .portfolio-content {
