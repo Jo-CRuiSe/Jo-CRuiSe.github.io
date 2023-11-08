@@ -1,4 +1,7 @@
 .portfolio {
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
 	margin: 4rem;
 	align-items: center;
 	padding: 1rem;
