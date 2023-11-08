@@ -201,6 +201,7 @@
 	overflow: hidden;
 	cursor: pointer;
 	border-radius: 15px;
+	margin-bottom: 15px;
 
 	img {
 		width: 100%;
@@ -226,6 +227,7 @@
 	padding: 0 40px;
 	transition: height 0.5s;
 	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
 }
 
 .portfolio-item:hover .portfolio-layer {
