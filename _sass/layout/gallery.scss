@@ -42,15 +42,15 @@
 // 	object-fit: cover;
 // }
 
-@media only screen and (min-width: 642px) and (max-width: 769px) {
-	.portfolio-container .portfolio-box {
-		flex-direction: row;
-	}
+@media only screen and (min-width: 643px) and (max-width: 769px) {
+	// .portfolio-container .portfolio-box {
+	// 	flex-direction: row;
+	// }
 
 	.portfolio-container .portfolio-box .portfolio-dream {
 		display: flex;
 		flex-direction: column;
-		width: 50%;
+		width: 49%;
 	}
 }
 
