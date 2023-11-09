@@ -42,7 +42,7 @@
 // 	object-fit: cover;
 // }
 
-@media only screen and (max-width: 642px) {
+@media only screen and (max-width: 643px) {
 	.portfolio-container .portfolio-box {
 		flex-direction: column;
 	}
@@ -62,7 +62,7 @@
 	.portfolio-container .portfolio-box .portfolio-dream {
 		display: flex;
 		flex-direction: column;
-		width: 49%;
+		width: 48%;
 	}
 }
 
