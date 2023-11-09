@@ -38,7 +38,7 @@ layout: compress
                   alt="1">
                 <div class="portfolio-layer">
                   <h4>Mooncake</h4>
-                  <button><i class="fa-solid fa-photo-film"></i></button>
+                  <button class="flip-button"><i class="fa-solid fa-photo-film"></i></button>
                 </div>
               </div>
               <div class="portfolio-item-back">
@@ -169,10 +169,18 @@ layout: compress
   </script>
 
   <script>
-    document.getElementById('flip-button').addEventListener('click', function () {
-      const portfolioCard = document.getElementById('portfolio-card');
-      portfolioCard.classList.toggle('flipped');
+    // 获取所有的卡片和按钮
+    const portfolioItems = document.querySelectorAll(".portfolio-item");
+    const flipButtons = document.querySelectorAll(".flip-button");
+
+    // 为每个按钮添加点击事件处理程序
+    flipButtons.forEach((button, index) => {
+      button.addEventListener("click", () => {
+        // 切换卡片的翻转类
+        portfolioItems[index].classList.toggle("flipped");
+      });
     });
+
   </script>
 </body>
 
