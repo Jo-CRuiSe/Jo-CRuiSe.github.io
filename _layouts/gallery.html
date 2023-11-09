@@ -167,21 +167,6 @@ layout: compress
     sr.reveal('.portfolio-item', { delay: 210, origin: 'bottom' });
     sr.reveal('.portfolio-heading', { delay: 410, origin: 'top' }); 
   </script>
-
-  <script>
-    // 获取所有的卡片和按钮
-    const portfolioItems = document.querySelectorAll(".portfolio-item");
-    const flipButtons = document.querySelectorAll(".flip-button");
-
-    // 为每个按钮添加点击事件处理程序
-    flipButtons.forEach((button, index) => {
-      button.addEventListener("click", () => {
-        // 切换卡片的翻转类
-        portfolioItems[index].classList.toggle("flipped");
-      });
-    });
-
-  </script>
 </body>
 
 </html>
