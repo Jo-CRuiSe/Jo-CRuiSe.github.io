@@ -175,37 +175,3 @@
 	justify-content: center;
 }
 
-
-.portfolio-item {
-	width: 200px;
-	/* 调整卡片宽度 */
-	height: 300px;
-	/* 调整卡片高度 */
-	perspective: 1000px;
-	position: relative;
-}
-
-.portfolio-item-front,
-.portfolio-item-back {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	backface-visibility: hidden;
-	transition: transform 0.5s;
-}
-
-.portfolio-item-front {
-	transform: rotateY(0deg);
-}
-
-.portfolio-item-back {
-	transform: rotateY(180deg);
-}
-
-.portfolio-item.flipped .portfolio-item-front {
-	transform: rotateY(180deg);
-}
-
-.portfolio-item.flipped .portfolio-item-back {
-	transform: rotateY(0deg);
-}
