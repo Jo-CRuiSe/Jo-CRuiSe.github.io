@@ -131,6 +131,9 @@
 		display: block;
 		transition: transform 0.6s;
 	}
+
+	transition: trasform 1500ms;
+	transform-style: preserve-3d;
 }
 
 .portfolio-layer {
@@ -175,3 +178,10 @@
 	justify-content: center;
 }
 
+.portfolio-item-front, 
+.portfolio-item-back{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
