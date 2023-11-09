@@ -12,7 +12,7 @@
 	padding-bottom: 50px;
 }
 
-.container .portfolio-heading h3 {
+.portfolio-container .portfolio-heading h3 {
 	font-size: 3em;
 	font-weight: bolder;
 	padding-bottom: 3px;
@@ -42,39 +42,39 @@
 // 	object-fit: cover;
 // }
 
-@media only screen and (max-width: 769px) {
+@media only screen and (min-width: 643px) and (max-width: 769px) {
 	.portfolio-container .portfolio-box {
-		flex-direction: column;
+		flex-direction: row;
 	}
 
 	.portfolio-container .portfolio-box .portfolio-dream {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-	}
-}
-
-@media only screen and (max-width: 642px) {
-	.portfolio-container .portfolio-heading {
-		width: 100%;
-	}
-
-	.container .portfolio-heading h3 {
-		font-size: 3em;
-	}
-}
-
-@media only screen and (max-width: 600px) {
-	.portfolio-container .portfolio-box {
-		flex-direction: column;
-	}
-
-	.portfolio-container .portfolio-box .portfolio-dream {
-		display: flex;
-		flex-direction: column;
 		width: 48%;
 	}
 }
+
+// @media only screen and (max-width: 642px) {
+// 	.portfolio-container .portfolio-heading {
+// 		width: 100%;
+// 	}
+
+// 	.container .portfolio-heading h3 {
+// 		font-size: 3em;
+// 	}
+// }
+
+@media only screen and (max-width: 642px) {
+	.portfolio-container .portfolio-box {
+		flex-direction: row;
+	}
+
+	.portfolio-container .portfolio-box .portfolio-dream {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+}
+
+
 
 .portfolio-card-body {
 	width: 100%;
