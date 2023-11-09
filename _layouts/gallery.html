@@ -33,16 +33,24 @@ layout: compress
             <!-- item1 -->
             <div class="portfolio-item">
               <div class="portfolio-item-front">
-                <img src="https://imglf3.lf127.net/img/35614c31f5294bcd/UFZTUldOYTRpNnlENTlPZklGeFdGVUdXelFKL1F4VURkMnpFemFGNHBPZz0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg" alt="1">
+                <img
+                  src="https://imglf3.lf127.net/img/35614c31f5294bcd/UFZTUldOYTRpNnlENTlPZklGeFdGVUdXelFKL1F4VURkMnpFemFGNHBPZz0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg"
+                  alt="1">
+                <div class="portfolio-layer">
+                  <h4>Mooncake</h4>
+                  <button><i class="fa-solid fa-photo-film"></i></button>
+                </div>
               </div>
-              <div class="portfolio-layer">
-                <h4>Mooncake</h4>
-                <button><i class="fa-solid fa-photo-film"></i></button>
+              <div class="portfolio-item-back">
+                <h3>Back of Card</h3>
+                <p>Additiondl info on the back of the card</p>
               </div>
             </div>
             <!-- item2 -->
             <div class="portfolio-item">
-              <img src="https://imglf4.lf127.net/img/256828d4a62caa2d/UFZTUldOYTRpNnlENTlPZklGeFdGWllyeVlvcVdkY1F3ZG5DZWRqeW13MD0.gif" loop="true" autoplay="true" alt="1">
+              <img
+                src="https://imglf4.lf127.net/img/256828d4a62caa2d/UFZTUldOYTRpNnlENTlPZklGeFdGWllyeVlvcVdkY1F3ZG5DZWRqeW13MD0.gif"
+                loop="true" autoplay="true" alt="1">
               <div class="portfolio-layer">
                 <h4>Art School</h4>
                 <a href="#"><i class="fa-solid fa-photo-film"></i></a>
@@ -62,7 +70,9 @@ layout: compress
           <div class="portfolio-dream">
             <!-- item1 -->
             <div class="portfolio-item">
-              <img src="https://imglf3.lf127.net/img/d1390542d3530149/UFZTUldOYTRpNnlENTlPZklGeFdGZlNadjJjeXl0Y29uYkE1bk1xY04vUT0.gif" loop="true" autoplay="true" alt="2">
+              <img
+                src="https://imglf3.lf127.net/img/d1390542d3530149/UFZTUldOYTRpNnlENTlPZklGeFdGZlNadjJjeXl0Y29uYkE1bk1xY04vUT0.gif"
+                loop="true" autoplay="true" alt="2">
               <div class="portfolio-layer">
                 <h4>Rocket Launching</h4>
                 <a href="#"><i class="fa-solid fa-photo-film"></i></a>
@@ -70,7 +80,9 @@ layout: compress
             </div>
             <!-- item2 -->
             <div class="portfolio-item">
-              <img src="https://imglf3.lf127.net/img/dbf0f88f75de8082/UFZTUldOYTRpNnlENTlPZklGeFdGUjBHWmw3V0dHZG43VU11UzhvQUk0WT0.png?imageView&thumbnail=1680x0&quality=96&stripmeta=0" alt="2">
+              <img
+                src="https://imglf3.lf127.net/img/dbf0f88f75de8082/UFZTUldOYTRpNnlENTlPZklGeFdGUjBHWmw3V0dHZG43VU11UzhvQUk0WT0.png?imageView&thumbnail=1680x0&quality=96&stripmeta=0"
+                alt="2">
               <div class="portfolio-layer">
                 <h4>Cake</h4>
                 <a href="#"><i class="fa-solid fa-photo-film"></i></a>
@@ -83,7 +95,9 @@ layout: compress
           <div class="portfolio-dream">
             <!-- item1 -->
             <div class="portfolio-item">
-              <img src="https://imglf3.lf127.net/img/bb789a89de6c47f2/UFZTUldOYTRpNnlENTlPZklGeFdGUm5uNHZoYTFvR2s3V0xwallpcEFWWT0.gif" loop="true" autoplay="true" alt="3">
+              <img
+                src="https://imglf3.lf127.net/img/bb789a89de6c47f2/UFZTUldOYTRpNnlENTlPZklGeFdGUm5uNHZoYTFvR2s3V0xwallpcEFWWT0.gif"
+                loop="true" autoplay="true" alt="3">
               <div class="portfolio-layer">
                 <h4>Plane Model</h4>
                 <a href="#"><i class="fa-solid fa-photo-film"></i></a>
@@ -97,7 +111,7 @@ layout: compress
                 <a href="#"><i class="fa-solid fa-photo-film"></i></a>
               </div>
             </div>
-            
+
           </div>
 
 
@@ -144,14 +158,21 @@ layout: compress
 
   <!--- js file link -->
   <script>
-    const sr = ScrollReveal ({
+    const sr = ScrollReveal({
       distance: '35px',
       duration: 2400,
       reset: true
     });
 
-    sr.reveal('.portfolio-item', { delay: 210, origin: 'bottom' }); 
+    sr.reveal('.portfolio-item', { delay: 210, origin: 'bottom' });
     sr.reveal('.portfolio-heading', { delay: 410, origin: 'top' }); 
+  </script>
+
+  <script>
+    document.getElementById('flip-button').addEventListener('click', function () {
+      const portfolioCard = document.getElementById('portfolio-card');
+      portfolioCard.classList.toggle('flipped');
+    });
   </script>
 </body>
 
