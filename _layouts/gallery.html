@@ -213,7 +213,7 @@ layout: compress
   var layerViews = document.querySelectorAll('.portfolio-layer');
 
 
-  //javascript for quick view button
+  
   var popup = function (popupClick) {
     popupViews[popupClick].classList.add('active');
     layerViews[popupClick].classList.add('deactive');
@@ -225,7 +225,7 @@ layout: compress
     });
   });
 
-  //javascript for close button
+  
   closeBtns.forEach((closeBtn) => {
     closeBtn.addEventListener("click", () => {
       popupViews.forEach((popupView) => {
