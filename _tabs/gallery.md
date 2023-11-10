@@ -1,6 +1,6 @@
 ---
 layout: gallery
-title: Gallery
+title: 画廊
 icon: fas fa-photo-film
 order: 5
 ---
