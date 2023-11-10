@@ -141,27 +141,31 @@
     transition: height 0.5s;
 }
 
+// 悬停显示简介
 .portfolio-item:hover .portfolio-layer {
     height: 100%;
 }
 
+// 展示详细资料时禁止悬停
 .portfolio-item .portfolio-layer.deactive {
     height: 0;
 }
 
-
+// 悬停放大 item
 /* .portfolio-item:hover {
     transform: scale(1.02);
     transition: 0.5s;
 } */
 
+// layer 简介标题
 .portfolio-layer h4 {
     color: antiquewhite;
-    font-size: 20px;
+    font-size: 3rem;
     font-weight: 600;
     align-items: center;
 }
 
+// 废弃
 .portfolio-layer i {
     color: #0c151d;
     background-color: #ffe071;
@@ -179,6 +183,9 @@
 .popup-btn {
     position: relative;
     overflow: hidden;
+	margin: 15px;
+	font-size: 2rem;
+	font-weight: 300;
     /* padding: 10px; */
     outline: none;
     cursor: pointer;
@@ -189,7 +196,7 @@
 
 .portfolio-item .popup-view {
     z-index: 1;
-    background: rgba(31, 31, 31, 0.5);
+    // background: rgba(31, 31, 31, 0.5);
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
     position: fixed;
