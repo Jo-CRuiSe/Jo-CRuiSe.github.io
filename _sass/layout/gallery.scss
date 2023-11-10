@@ -285,7 +285,6 @@
     box-shadow: -40px 50px 30px rgba(0, 0, 0, 0.5);
     /* transform: skewX(10deg); */
     transition: 0.4s ease-in-out;
-    color: white;
     transform: skew(0deg);
 
 }
@@ -345,7 +344,7 @@
     font-size: 3rem;
     line-height: 20px;
     margin: 10px;
-    text-shadow: -15px 20px 15px rgba(0, 0, 0, 0.5);
+    text-shadow: -15px 20px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* .portfolio-item .popup-card .info h2 span {
@@ -359,7 +358,7 @@
     font-size: 1.5rem;
     margin: 10px;
     text-align: left;
-    text-shadow: -15px 20px 15px rgba(0, 0, 0, 0.5);
+    // text-shadow: -15px 20px 15px rgba(0, 0, 0, 0.5);
     overflow: scroll;
     
 }
@@ -389,4 +388,20 @@
     text-align: center;
     font-weight: 600;
     text-transform: uppercase;
+}
+
+// 适配深浅色模式
+@media (prefers-color-scheme: light){
+	.portfolio-item .popup-card .info{
+		background: rgba(198, 198, 198, 0.7);
+		border: 3px solid rgba(210, 210, 210, 0.43);
+	}
+    .portfolio-item .popup-card .info h2 {
+        color: #171717cb;
+    }
+
+    .portfolio-item .popup-card .info p {
+        /* padding: 10px; */
+        color: #000;
+    }
 }
