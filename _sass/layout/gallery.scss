@@ -217,6 +217,34 @@
     visibility: visible;
 }
 
+@keyframes dropin {
+    from{
+        transform: translateY(-400px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes dismiss {
+    from{
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-400px);
+    }
+}
+
+.portfolio-item .popup-view.active .popup-card{
+    opacity: 1;
+    visibility: visible;
+    animation: dropin 0.4s ease;
+}
+
+.portfolio-item .popup-view .popup-card {
+    animation: dismiss 0.4s ease;
+}
+
 .portfolio-item .popup-card {
     position: relative;
     display: flex;
