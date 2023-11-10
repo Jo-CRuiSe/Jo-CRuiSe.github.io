@@ -301,6 +301,7 @@
 }
 
 
+/* 废弃 */
 .portfolio-item .popup-card .close-btn {
     color: #555;
     z-index: 3;
@@ -312,21 +313,27 @@
 }
 
 .portfolio-item .popup-card .info h2 {
+    color: #fff;
     font-size: 3rem;
     line-height: 20px;
     margin: 10px;
+    text-shadow: -15px 20px 15px rgba(0, 0, 0, 0.5);
 }
 
-.portfolio-item .popup-card .info h2 span {
+/* .portfolio-item .popup-card .info h2 span {
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-}
+} */
 
 .portfolio-item .popup-card .info p {
+    color: #fff;
     font-size: 1.5rem;
     margin: 10px;
+    text-align: left;
+    text-shadow: -15px 20px 15px rgba(0, 0, 0, 0.5);
     overflow: scroll;
+    
 }
 
 .portfolio-item .popup-card .info .price {
