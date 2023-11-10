@@ -169,7 +169,7 @@
 .portfolio-layer i {
     color: #0c151d;
     background-color: #ffe071;
-    font-size: 18px;
+    font-size: 10px;
     width: 38px;
     height: 38px;
     border-radius: 50%;
@@ -184,7 +184,7 @@
     position: relative;
     overflow: hidden;
 	margin: 15px;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-weight: 300;
     /* padding: 10px; */
     outline: none;
@@ -248,13 +248,14 @@
     z-index: -10;
     pointer-events: none;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
-    background: rgba(198, 198, 198, 0.34);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-bottom: 3px solid rgba(255, 255, 255, 0.440);
-    border-left: 2px rgba(255, 255, 255, 0.545) outset;
-    box-shadow: -40px 50px 30px rgba(0, 0, 0, 0.280);
-    transform: skewX(10deg);
+    background: rgba(31, 31, 31, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    /* border-bottom: 3px solid rgba(255, 255, 255, 0.440);
+    border-left: 2px rgba(255, 255, 255, 0.545) outset; */
+    border: 3px solid rgba(198, 198, 198, 0.8);
+    box-shadow: -40px 50px 30px rgba(0, 0, 0, 0.5);
+    /* transform: skewX(10deg); */
     transition: .4s;
     color: white;
     transform: skew(0deg);
