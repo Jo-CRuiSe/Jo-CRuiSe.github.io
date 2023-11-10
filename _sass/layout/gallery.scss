@@ -13,7 +13,7 @@
 }
 
 .portfolio-container .portfolio-heading h3 {
-	font-family: 'Galada', cursive;
+	font-family: 'Times New Roman', Times, serif;
     font-size: 3em;
     font-weight: bolder;
     padding-bottom: 3px;
@@ -167,17 +167,13 @@
 }
 
 // 废弃
-// .portfolio-layer i {
-//     color: #0c151d;
-//     background-color: #ffe071;
-//     font-size: 10px;
-//     width: 38px;
-//     height: 38px;
-//     border-radius: 50%;
-//     display: inline-flex;
-//     align-items: center;
-//     justify-content: center;
-// }
+.portfolio-layer i {
+    font-size: 15px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: end;
+    justify-content: end;
+}
 
 /* Style for pop up view */
 
