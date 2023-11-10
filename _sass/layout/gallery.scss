@@ -18,7 +18,7 @@
     font-size: 3em;
     font-weight: bolder;
     padding-bottom: 3px;
-    border-bottom: 3px solid #222;
+    border-bottom: 2px solid #545454;
 	text-align: center;
 }
 
@@ -417,4 +417,8 @@
         /* padding: 10px; */
         color: #000;
     }
+
+	.portfolio-container .portfolio-heading h3 {
+		border-bottom: 2px solid #303030;
+	}
 }
