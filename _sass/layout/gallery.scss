@@ -13,6 +13,7 @@
 }
 
 .portfolio-container .portfolio-heading h3 {
+	font-family: 'Meie Script', cursive;
     font-size: 3em;
     font-weight: bolder;
     padding-bottom: 3px;
@@ -183,7 +184,7 @@
 .popup-btn {
     position: relative;
     overflow: hidden;
-	margin: 15px;
+	font-family: inherit;
 	font-size: 1.5rem;
 	font-weight: 300;
     /* padding: 10px; */
