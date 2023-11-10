@@ -195,174 +195,152 @@
 }
 
 
-/* Style for pop up view */
+//Style for pop up view 
+
+$color_1: white;
+$color_2: #555;
+$color_3: #fff;
+$color_4: #009DD2;
+$background-color_1: hsl(216, 73%, 57%);
+$background-color_2: #ff605c;
+$background-color_3: #ffbd44;
+$background-color_4: #00ca4e;
 
 .popup-btn {
-    position: relative;
-    overflow: hidden;
-    /* padding: 10px; */
-    outline: none;
-    cursor: pointer;
-    border-radius: 50px;
-    background-color: hsl(216, 73%, 57%);
-    border: solid 2px rgba(0, 0, 0, 0.3);
+	position: relative;
+	overflow: hidden;
+	outline: none;
+	cursor: pointer;
+	border-radius: 50px;
+	background-color: $background-color_1;
+	border: solid 2px rgba(0, 0, 0, 0.3);
 }
-
-.portfolio-item .popup-view {
-    z-index: 1;
-    background: rgba(255, 255, 255, 0.5);
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.5s;
+.portfolio-item {
+	.popup-view {
+		z-index: 1;
+		background: rgba(255, 255, 255, 0.5);
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		opacity: 0;
+		visibility: hidden;
+		transition: 0.5s;
+	}
+	.popup-view.active {
+		opacity: 1;
+		visibility: visible;
+	}
+	.popup-card {
+		position: relative;
+		display: flex;
+		width: 500px;
+		height: 500px;
+		margin: 20px;
+		.info {
+			z-index: 1;
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			height: 100%;
+			box-sizing: border-box;
+			padding: 40px;
+			border-radius: 15px;
+			background: rgba(198, 198, 198, 0.34);
+			backdrop-filter: blur(5px);
+			-webkit-backdrop-filter: blur(5px);
+			border-bottom: 3px solid rgba(255, 255, 255, 0.440);
+			border-left: 2px rgba(255, 255, 255, 0.545) outset;
+			box-shadow: -40px 50px 30px rgba(0, 0, 0, 0.280);
+			transform: skewX(10deg);
+			transition: .4s;
+			color: $color_1;
+			transform: skew(0deg);
+			h2 {
+				font-size: 3rem;
+				line-height: 20px;
+				margin: 10px;
+				span {
+					font-size: 2rem;
+					text-transform: uppercase;
+					letter-spacing: 2px;
+				}
+			}
+			p {
+				font-size: 1.5rem;
+				margin: 10px;
+				overflow: scroll;
+			}
+			.price {
+				font-size: 45px;
+				font-weight: 300;
+				margin: 10px;
+			}
+			.add-cart-btn {
+				color: $color_3;
+				background: #009DD2;
+				font-size: 16px;
+				font-weight: 600;
+				text-align: center;
+				text-decoration: none;
+				text-transform: uppercase;
+				margin: 10px auto;
+				padding: 10px 50px;
+				border-radius: 20px;
+			}
+			.add-wish {
+				color: $color_4;
+				font-size: 16px;
+				text-align: center;
+				font-weight: 600;
+				text-transform: uppercase;
+			}
+		}
+		.close-btn {
+			color: $color_2;
+			z-index: 3;
+			position: absolute;
+			right: 0;
+			font-size: 20px;
+			margin: 20px;
+			cursor: pointer;
+		}
+	}
 }
-
-.portfolio-item .popup-view.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.portfolio-item .popup-card {
-    position: relative;
-    display: flex;
-    width: 500px;
-    height: 500px;
-    margin: 20px;
-}
-
-.portfolio-item .popup-card .info {
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    padding: 40px;
-    border-radius: 15px;
-    /* Glass */
-    /* background-color: rgba(255, 255, 255, 0.074);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    border-radius: .8rem;
-    transition: all ease .3s;
-    box-shadow: 0px 0px 20px 1px #ffbb763f;
-    border: 2px solid rgba(255, 255, 255, 0.454); */
-    /* Glow */
-    /* border-radius: 10px;
-    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
-    z-index: -10;
-    pointer-events: none;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
-    background: rgba(198, 198, 198, 0.34);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-bottom: 3px solid rgba(255, 255, 255, 0.440);
-    border-left: 2px rgba(255, 255, 255, 0.545) outset;
-    box-shadow: -40px 50px 30px rgba(0, 0, 0, 0.280);
-    transform: skewX(10deg);
-    transition: .4s;
-    color: white;
-    transform: skew(0deg);
-
-}
-
 .popup-align {
-    z-index: 3;
-    position: absolute;
-    left: 0;
-    font-size: 20px;
-    margin: 20px;
-    cursor: pointer;
-    /* padding: 1rem; */
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-self: flex-start;
+	z-index: 3;
+	position: absolute;
+	left: 0;
+	font-size: 20px;
+	margin: 20px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	align-self: flex-start;
 }
-
 .popup-red {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #ff605c;
-    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: $background-color_2;
+	box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
 }
-
 .popup-yellow {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #ffbd44;
-    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: $background-color_3;
+	box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
 }
-
 .popup-green {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #00ca4e;
-    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
-}
-
-
-.portfolio-item .popup-card .close-btn {
-    color: #555;
-    z-index: 3;
-    position: absolute;
-    right: 0;
-    font-size: 20px;
-    margin: 20px;
-    cursor: pointer;
-}
-
-.portfolio-item .popup-card .info h2 {
-    font-size: 3rem;
-    line-height: 20px;
-    margin: 10px;
-}
-
-.portfolio-item .popup-card .info h2 span {
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.portfolio-item .popup-card .info p {
-    font-size: 1.5rem;
-    margin: 10px;
-    overflow: scroll;
-}
-
-.portfolio-item .popup-card .info .price {
-    font-size: 45px;
-    font-weight: 300;
-    margin: 10px;
-}
-
-.portfolio-item .popup-card .info .add-cart-btn {
-    color: #fff;
-    background: #009DD2;
-    font-size: 16px;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    margin: 10px auto;
-    padding: 10px 50px;
-    border-radius: 20px;
-}
-
-.portfolio-item .popup-card .info .add-wish {
-    color: #009DD2;
-    font-size: 16px;
-    text-align: center;
-    font-weight: 600;
-    text-transform: uppercase;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: $background-color_4;
+	box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
 }
