@@ -178,11 +178,24 @@
 /* Style for pop up view */
 
 .popup-btn {
+	content: "查看更多";
     position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+    background-color: rgb(0 107 179);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffff;
+    gap: 10px;
+    font-weight: bold;
+    border: 3px solid #ffffff4d;
+    outline: none;
     overflow: hidden;
-	font-family: inherit;
-	font-size: 1.5rem;
-	font-weight: 300;
+    font-size: 15px;
     /* padding: 10px; */
     // outline: none;
     // cursor: pointer;
