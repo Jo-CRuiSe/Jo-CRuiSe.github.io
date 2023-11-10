@@ -204,7 +204,6 @@ layout: compress
     sr.reveal('.portfolio-heading', { delay: 410, origin: 'top' }); 
   </script> -->
 
-
 </body>
 <script>
   var popupViews = document.querySelectorAll('.popup-view');
@@ -217,8 +216,7 @@ layout: compress
   var popup = function (popupClick) {
     popupViews[popupClick].classList.add('active');
     layerViews[popupClick].classList.add('deactive');
-  }
-
+  } ;
   popupBtns.forEach((popupBtn, i) => {
     popupBtn.addEventListener("click", () => {
       popup(i);
