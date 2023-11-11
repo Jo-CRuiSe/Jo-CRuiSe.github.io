@@ -414,9 +414,9 @@
 // 桌面端
 
 
-@media only screen and (min-width: 850px) and (max-width: 1030px) {
+@media only screen and (min-width: 850px) and (max-width: 1236px) {
 	.portfolio-item .popup-card{
-		transform: translateX(100px);
+		margin-inline-start: 250px;
 	}
 
 	@keyframes dropin {
