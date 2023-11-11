@@ -418,6 +418,28 @@
 	.portfolio-item .popup-card{
 		transform: translateX(100px);
 	}
+
+	@keyframes dropin {
+		from{
+			transform: translateX(100px);
+			transform: translateY(-400px);
+		}
+		to {
+			transform: translateX(100px);
+			transform: translateY(0);
+		}
+	}
+	
+	@keyframes dismiss {
+		from{
+			transform: translateX(100px);
+			transform: translateY(0px);
+		}
+		to {
+			transform: translateX(100px);
+			transform: translateY(-400px);
+		}
+	}
 }
 
 
