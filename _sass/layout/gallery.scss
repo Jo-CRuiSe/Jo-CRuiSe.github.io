@@ -241,7 +241,8 @@
 .portfolio-item .popup-card {
     position: relative;
     display: flex;
-    width: 500px;
+ 	max-width: 500px;
+	max-height: 500px;
     margin: 20px;
 }
 
@@ -448,9 +449,6 @@
         width: 100%;
     }
 
-	.portfolio-item .popup-card {
-		width: 300px;
-	}
 	
 	.portfolio-item .popup-card .info h2 {
 		color: #fff;
