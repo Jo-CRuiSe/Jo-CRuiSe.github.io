@@ -414,8 +414,8 @@
 // 桌面端
 
 
-@media only screen and (max-width: 1030px) {
-	.portfolio-item .popup-card .info{
+@media only screen and (min-width: 850px) and (max-width: 1030px) {
+	.portfolio-item .popup-card{
 		transform: translateX(100px);
 	}
 }
@@ -430,7 +430,7 @@
 }
 
 @media only screen and (max-width: 850px) {
-	.portfolio-item .popup-card .info{
+	.portfolio-item .popup-card {
 		position: relative;
 	}
 }
