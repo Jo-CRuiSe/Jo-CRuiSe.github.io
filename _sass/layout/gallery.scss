@@ -168,7 +168,7 @@
     align-items: center;
 }
 
-// 废弃
+// 查看更多箭头标志
 .portfolio-layer i {
     font-size: 15px;
     border-radius: 50%;
@@ -341,15 +341,15 @@
 
 
 /* 废弃 */
-.portfolio-item .popup-card .close-btn {
-    color: #555;
-    z-index: 3;
-    position: absolute;
-    right: 0;
-    font-size: 20px;
-    margin: 20px;
-    cursor: pointer;
-}
+// .portfolio-item .popup-card .close-btn {
+//     color: #555;
+//     z-index: 3;
+//     position: absolute;
+//     right: 0;
+//     font-size: 20px;
+//     margin: 20px;
+//     cursor: pointer;
+// }
 
 .portfolio-item .popup-card .info h2 {
     color: #fff;
@@ -373,6 +373,7 @@
     text-align: left;
     // text-shadow: -15px 20px 15px rgba(0, 0, 0, 0.5);
     overflow: scroll;
+	word-wrap: break-word;
     
 }
 
