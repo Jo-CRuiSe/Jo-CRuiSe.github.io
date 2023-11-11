@@ -357,6 +357,7 @@
     line-height: 20px;
     margin: 20px;
     text-shadow: -15px 20px 15px rgba(0, 0, 0, 0.3);
+	word-wrap: break-word;
 }
 
 /* .portfolio-item .popup-card .info h2 span {
@@ -373,7 +374,7 @@
     text-align: left;
     // text-shadow: -15px 20px 15px rgba(0, 0, 0, 0.5);
     overflow: scroll;
-	word-wrap: break-word;
+	
     
 }
 
