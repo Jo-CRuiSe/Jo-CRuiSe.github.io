@@ -416,9 +416,7 @@
 
 @media only screen and (max-width: 1030px) {
 	.portfolio-item .popup-card .info{
-		position: fixed;
-		transform: translateX(0);
-		transform: translateY(0);
+		transform: translateX(100px);
 	}
 }
 
