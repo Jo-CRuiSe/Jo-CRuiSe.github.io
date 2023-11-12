@@ -135,18 +135,13 @@
     height: 0;
 }
 
-// 悬停放大 item
-/* .portfolio-item:hover {
-    transform: scale(1.02);
-    transition: 0.5s;
-} */
-
 // layer 简介标题
 .portfolio-layer h4 {
     color: antiquewhite;
-    font-size: 3rem;
-    font-weight: 600;
+    font-size: 2rem;
+    font-weight: 400;
     align-items: center;
+    padding-bottom: auto 0;
 }
 
 // 查看更多箭头标志
@@ -174,12 +169,12 @@
     justify-content: center;
     color: #ffff;
     gap: 10px;
-    font-weight: bold;
+    // font-weight: bold;
+    font-size: 15px;
     border: 3px solid #ffffff4d;
     outline: none;
     overflow: hidden;
-    font-size: 15px;
-    /* padding: 10px; */
+    padding: auto 0;
     // outline: none;
     // cursor: pointer;
     // border-radius: 50px;
@@ -449,7 +444,7 @@
 	}
 }
 
-
+// 两列显示
 @media only screen and (max-width: 950px) {
     .portfolio-container .portfolio-box .portfolio-dream {
         display: flex;
