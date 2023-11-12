@@ -211,10 +211,13 @@
 }
 
 @keyframes dropin {
-    from{
+    0%{
         transform: translateY(-400px);
     }
-    to {
+    60% {
+        transform: translateY(10px);
+    }
+    100% {
         transform: translateY(0);
     }
 }
