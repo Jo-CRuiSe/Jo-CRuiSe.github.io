@@ -102,10 +102,10 @@
 
   /* Gallery */
   --gallery-card-bg: rgba(31, 31, 31, 0.7);
-  --gallery-card-border-top-color: rgba(255, 255, 255, 0.2);
-  --gallery-card-border-right-color: rgba(255, 255, 255, 0.2);
-  --gallery-card-border-bottom-color: rgba(255, 255, 255, 0.1);
-  --gallery-card-border-left-color: rgba(255, 255, 255, 0.1);
+  --gallery-card-border-top: rgba(255, 255, 255, 0.2);
+  --gallery-card-border-right: rgba(255, 255, 255, 0.2);
+  --gallery-card-border-bottom: rgba(255, 255, 255, 0.1);
+  --gallery-card-border-left: rgba(255, 255, 255, 0.1);
 
   .light {
     display: none;
