@@ -408,11 +408,11 @@
     }
 
     .portfolio-item .popup-card .info h2 {
-        color: #171717cb;
+        color: var(--heading-color);
     }
 
     .portfolio-item .popup-card .info p {
-        color: #000;
+        color: var(--text-color);
     }
 }
 
