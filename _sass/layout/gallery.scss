@@ -139,9 +139,9 @@
 .portfolio-layer h4 {
     color: antiquewhite;
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 500;
     align-items: center;
-    padding-bottom: auto 0;
+    margin-bottom: auto;
 }
 
 // 查看更多箭头标志
@@ -160,8 +160,8 @@
     position: relative;
     transition: all 0.3s ease-in-out;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-    padding-block: 0.5rem;
-    padding-inline: 1.25rem;
+    padding-block: 0.3rem;
+    padding-inline: 1rem;
     background-color: rgb(0 107 179);
     border-radius: 9999px;
     display: flex;
@@ -174,7 +174,7 @@
     border: 3px solid #ffffff4d;
     outline: none;
     overflow: hidden;
-    padding: auto 0;
+    margin: auto;
     // outline: none;
     // cursor: pointer;
     // border-radius: 50px;
