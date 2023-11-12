@@ -138,7 +138,7 @@
 // layer 简介标题
 .portfolio-layer h4 {
     color: antiquewhite;
-    font-size: 2rem;
+    font-size: clamp(2rem, 0.019rem + 9.91vw, 4rem);
     font-weight: 500;
     align-items: center;
     margin: auto;
