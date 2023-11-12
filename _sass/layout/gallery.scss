@@ -138,10 +138,13 @@
 // layer 简介标题
 .portfolio-layer h4 {
     color: antiquewhite;
-    font-size: clamp(2rem, 0.019rem + 9.91vw, 4rem);
+    font-size: xxx-large;
+    font-size: -webkit-xxx-large;
     font-weight: 500;
     align-items: center;
     margin: auto;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 // 查看更多箭头标志
