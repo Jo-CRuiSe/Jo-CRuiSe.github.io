@@ -223,11 +223,15 @@
 }
 
 @keyframes dismiss {
-    from{
+    0%{
         transform: translateY(0px);
     }
-    to {
+    60% {
+        opacity: 0;
+    }
+    100% {
         transform: translateY(-400px);
+        opacity: 0;
     }
 }
 
