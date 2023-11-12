@@ -437,8 +437,6 @@
 
 // dream 展示形式
 // 桌面端
-
-
 @media only screen and (min-width: 850px) and (max-width: 1236px) {
     .portfolio-item .popup-card {
         margin-inline-start: 250px;
@@ -498,10 +496,8 @@
 
 
     .portfolio-item .popup-card .info h2 {
-        color: #fff;
         font-size: 2.5rem;
         margin: 10px;
-        text-shadow: -15px 20px 15px rgba(0, 0, 0, 0.5);
         word-wrap: break-word;
     }
 
