@@ -285,11 +285,11 @@
     /* border-bottom: 3px solid rgba(255, 255, 255, 0.440);
     border-left: 2px rgba(255, 255, 255, 0.545) outset; */
     /* border: 3px solid rgba(198, 198, 198, 0.8); */
-    border-top-color: rgba(255, 255, 255, 0.2);
-    border-right-color: rgba(255, 255, 255, 0.2);
-    border-bottom-color: rgba(255, 255, 255, 0.1);
-    border-left-color: rgba(255, 255, 255, 0.1);
-    box-shadow: -40px 50px 30px rgba(0, 0, 0, 0.5);
+    // border-top-color: rgba(255, 255, 255, 0.2);
+    // border-right-color: rgba(255, 255, 255, 0.2);
+    // border-bottom-color: rgba(255, 255, 255, 0.1);
+    // border-left-color: rgba(255, 255, 255, 0.1);
+    // box-shadow: -40px 50px 30px rgba(0, 0, 0, 0.5);
     /* transform: skewX(10deg); */
     transition: .4s;
     transform: skew(0deg);
@@ -347,7 +347,7 @@
 // }
 
 .portfolio-item .popup-card .info h2 {
-    color: #fff;
+    // color: #fff;
     font-size: 3rem;
     margin: 20px;
     text-shadow: -15px 20px 15px rgba(0, 0, 0, 0.5);
@@ -361,7 +361,7 @@
 } */
 
 .portfolio-item .popup-card .info p {
-    color: #fff;
+    // color: #fff;
     font-size: 1.5rem;
     margin: 10px;
     margin-top: 0;
