@@ -101,11 +101,11 @@
   --timeline-year-dot-color: var(--timeline-color);
 
   /* Gallery */
-  --gallery-card-bg: rgba(198, 198, 198, 0.7);
-  --gallery-card-border-top-color: rgba(255, 255, 255, 0.5);
-  --gallery-card-border-right-color: rgba(255, 255, 255, 0.5);
-  --gallery-card-border-bottom-color: rgba(255, 255, 255, 0.3);
-  --gallery-card-border-left-color: rgba(255, 255, 255, 0.3);
+  --gallery-card-bg: rgba(31, 31, 31, 0.7);
+  --gallery-card-border-top-color: rgba(255, 255, 255, 0.2);
+  --gallery-card-border-right-color: rgba(255, 255, 255, 0.2);
+  --gallery-card-border-bottom-color: rgba(255, 255, 255, 0.1);
+  --gallery-card-border-left-color: rgba(255, 255, 255, 0.1);
 
   .light {
     display: none;
