@@ -27,12 +27,10 @@
   --checkbox-color: rgb(118, 120, 121);
   --checkbox-checked-color: var(--link-color);
   --img-bg: radial-gradient(circle, rgb(22, 22, 24) 0%, rgb(32, 32, 32) 100%);
-  --shimmer-bg: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(58, 55, 55, 0.4) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  --shimmer-bg: linear-gradient(90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(58, 55, 55, 0.4) 50%,
+      rgba(255, 255, 255, 0) 100%);
 
   /* Sidebar */
   --site-title-color: #717070;
@@ -61,8 +59,10 @@
   /* Posts */
   --toc-highlight: rgb(116, 178, 243);
   --tag-hover: rgb(43, 56, 62);
-  --tb-odd-bg: #252526; /* odd rows of the posts' table */
-  --tb-even-bg: rgb(31, 31, 34); /* even rows of the posts' table */
+  --tb-odd-bg: #252526;
+  /* odd rows of the posts' table */
+  --tb-even-bg: rgb(31, 31, 34);
+  /* even rows of the posts' table */
   --tb-border-color: var(--tb-odd-bg);
   --footnote-target-bg: rgb(63, 81, 181);
   --btn-share-color: #6c757d;
@@ -100,6 +100,13 @@
   --timeline-color: rgb(63, 65, 68);
   --timeline-year-dot-color: var(--timeline-color);
 
+  /* Gallery */
+  --gallery-card-bg: rgba(198, 198, 198, 0.7);
+  --gallery-card-border-top-color: rgba(255, 255, 255, 0.5);
+  --gallery-card-border-right-color: rgba(255, 255, 255, 0.5);
+  --gallery-card-border-bottom-color: rgba(255, 255, 255, 0.3);
+  --gallery-card-border-left-color: rgba(255, 255, 255, 0.3);
+
   .light {
     display: none;
   }
@@ -132,14 +139,12 @@
   }
 
   #archives li:nth-child(odd) {
-    background-image: linear-gradient(
-      to left,
-      rgb(26, 26, 30),
-      rgb(39, 39, 45),
-      rgb(39, 39, 45),
-      rgb(39, 39, 45),
-      rgb(26, 26, 30)
-    );
+    background-image: linear-gradient(to left,
+        rgb(26, 26, 30),
+        rgb(39, 39, 45),
+        rgb(39, 39, 45),
+        rgb(39, 39, 45),
+        rgb(26, 26, 30));
   }
 
   color-scheme: dark;
@@ -148,4 +153,6 @@
   #disqus_thread {
     color-scheme: none;
   }
-} /* dark-scheme */
+}
+
+/* dark-scheme */

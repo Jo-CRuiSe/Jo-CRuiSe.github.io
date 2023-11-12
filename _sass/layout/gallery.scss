@@ -400,11 +400,16 @@
 // 适配深浅色模式
 @media (prefers-color-scheme: light) {
     .portfolio-item .popup-card .info {
-        background: rgba(198, 198, 198, 0.7);
-        border-top-color: rgba(255, 255, 255, 0.5);
-        border-right-color: rgba(255, 255, 255, 0.5);
-        border-bottom-color: rgba(255, 255, 255, 0.3);
-        border-left-color: rgba(255, 255, 255, 0.3);
+        background: var(--gallery-card-bg);
+        border-top-color: var(----gallery-card-border-top);
+        border-right-color: var(----gallery-card-border-right);
+        border-bottom-color: var(----gallery-card-border-bottom);
+        border-left-color: var(----gallery-card-border-left);
+        // background: rgba(198, 198, 198, 0.7);
+        // border-top-color: rgba(255, 255, 255, 0.5);
+        // border-right-color: rgba(255, 255, 255, 0.5);
+        // border-bottom-color: rgba(255, 255, 255, 0.3);
+        // border-left-color: rgba(255, 255, 255, 0.3);
     }
 
     .portfolio-item .popup-card .info h2 {
