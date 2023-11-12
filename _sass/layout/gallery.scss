@@ -285,10 +285,10 @@
     border-left: 2px rgba(255, 255, 255, 0.545) outset; */
     /* border: 3px solid rgba(198, 198, 198, 0.8); */
     background: var(--gallery-card-bg);
-    border-top-color: var(----gallery-card-border-top);
-    border-right-color: var(----gallery-card-border-right);
-    border-bottom-color: var(----gallery-card-border-bottom);
-    border-left-color: var(----gallery-card-border-left);
+    border-top-color: var(--gallery-card-border-top);
+    border-right-color: var(--gallery-card-border-right);
+    border-bottom-color: var(--gallery-card-border-bottom);
+    border-left-color: var(--gallery-card-border-left);
     // box-shadow: -40px 50px 30px rgba(0, 0, 0, 0.5);
     /* transform: skewX(10deg); */
     transition: .4s;
