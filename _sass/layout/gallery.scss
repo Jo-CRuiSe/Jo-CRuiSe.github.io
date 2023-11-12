@@ -14,12 +14,12 @@
 
 // GALLERY Title
 .portfolio-container .portfolio-heading h3 {
-	font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 3em;
     font-weight: bolder;
     padding-bottom: 3px;
     border-bottom: 2px solid #545454;
-	text-align: center;
+    text-align: center;
 }
 
 .portfolio-container .portfolio-heading h3 span {
@@ -159,7 +159,7 @@
 /* Style for pop up view */
 
 .popup-btn {
-	content: "查看更多";
+    content: "查看更多";
     position: relative;
     transition: all 0.3s ease-in-out;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
@@ -188,8 +188,8 @@
 .portfolio-item .popup-view {
     z-index: 1;
     // background: rgba(31, 31, 31, 0.5);
-	backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     position: fixed;
     top: 0;
     right: 0;
@@ -209,31 +209,35 @@
 }
 
 @keyframes dropin {
-    0%{
+    0% {
         transform: translateY(-400px);
     }
+
     60% {
         transform: translateY(10px);
     }
+
     100% {
         transform: translateY(0);
     }
 }
 
 @keyframes dismiss {
-    0%{
+    0% {
         transform: translateY(0px);
     }
+
     60% {
         opacity: 0;
     }
+
     100% {
         transform: translateY(-400px);
         opacity: 0;
     }
 }
 
-.portfolio-item .popup-view.active .popup-card{
+.portfolio-item .popup-view.active .popup-card {
     opacity: 1;
     visibility: visible;
     animation: dropin 0.4s ease;
@@ -246,8 +250,8 @@
 .portfolio-item .popup-card {
     position: relative;
     display: flex;
- 	max-width: 500px;
-	max-height: 500px;
+    max-width: 500px;
+    max-height: 500px;
     margin: 20px;
 }
 
@@ -347,7 +351,7 @@
     font-size: 3rem;
     margin: 20px;
     text-shadow: -15px 20px 15px rgba(0, 0, 0, 0.5);
-	word-wrap: break-word;
+    word-wrap: break-word;
 }
 
 /* .portfolio-item .popup-card .info h2 span {
@@ -360,7 +364,7 @@
     color: #fff;
     font-size: 1.5rem;
     margin: 10px;
-	margin-top: 0;
+    margin-top: 0;
     text-align: left;
     // text-shadow: -15px 20px 15px rgba(0, 0, 0, 0.5);
     overflow: scroll;
@@ -394,22 +398,38 @@
 }
 
 // 适配深浅色模式
-@media (prefers-color-scheme: light){
-	.portfolio-item .popup-card .info{
-		border: 1px solid transparent;
+@media (prefers-color-scheme: light) {
+    .portfolio-item .popup-card .info {
         background: rgba(198, 198, 198, 0.7);
         border-top-color: rgba(255, 255, 255, 0.5);
         border-right-color: rgba(255, 255, 255, 0.5);
         border-bottom-color: rgba(255, 255, 255, 0.3);
         border-left-color: rgba(255, 255, 255, 0.3);
-	}
+    }
+
     .portfolio-item .popup-card .info h2 {
         color: #171717cb;
     }
 
     .portfolio-item .popup-card .info p {
-        /* padding: 10px; */
         color: #000;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .portfolio-item .popup-card .info {
+        border-top-color: rgba(255, 255, 255, 0.2);
+        border-right-color: rgba(255, 255, 255, 0.2);
+        border-bottom-color: rgba(255, 255, 255, 0.1);
+        border-left-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .portfolio-item .popup-card .info h2 {
+        color: #fff
+    }
+
+    .portfolio-item .popup-card .info p {
+        color: #fff;
     }
 }
 
@@ -420,31 +440,33 @@
 
 
 @media only screen and (min-width: 850px) and (max-width: 1236px) {
-	.portfolio-item .popup-card{
-		margin-inline-start: 250px;
-	}
+    .portfolio-item .popup-card {
+        margin-inline-start: 250px;
+    }
 
-	@keyframes dropin {
-		from{
-			transform: translateX(100px);
-			transform: translateY(-400px);
-		}
-		to {
-			transform: translateX(100px);
-			transform: translateY(0);
-		}
-	}
-	
-	@keyframes dismiss {
-		from{
-			transform: translateX(100px);
-			transform: translateY(0px);
-		}
-		to {
-			transform: translateX(100px);
-			transform: translateY(-400px);
-		}
-	}
+    @keyframes dropin {
+        from {
+            transform: translateX(100px);
+            transform: translateY(-400px);
+        }
+
+        to {
+            transform: translateX(100px);
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes dismiss {
+        from {
+            transform: translateX(100px);
+            transform: translateY(0px);
+        }
+
+        to {
+            transform: translateX(100px);
+            transform: translateY(-400px);
+        }
+    }
 }
 
 // 两列显示
@@ -457,9 +479,9 @@
 }
 
 @media only screen and (max-width: 850px) {
-	.portfolio-item .popup-card {
-		position: relative;
-	}
+    .portfolio-item .popup-card {
+        position: relative;
+    }
 }
 
 // 手机端
@@ -474,18 +496,17 @@
         width: 100%;
     }
 
-	
-	.portfolio-item .popup-card .info h2 {
-		color: #fff;
-		font-size: 2.5rem;
-		margin: 10px;
-		text-shadow: -15px 20px 15px rgba(0, 0, 0, 0.5);
-		word-wrap: break-word;
-	}
-	
-	.portfolio-item .popup-card .info p {
-		font-size: 1.3rem;
-		margin: 10px;
-	}
-}
 
+    .portfolio-item .popup-card .info h2 {
+        color: #fff;
+        font-size: 2.5rem;
+        margin: 10px;
+        text-shadow: -15px 20px 15px rgba(0, 0, 0, 0.5);
+        word-wrap: break-word;
+    }
+
+    .portfolio-item .popup-card .info p {
+        font-size: 1.3rem;
+        margin: 10px;
+    }
+}
