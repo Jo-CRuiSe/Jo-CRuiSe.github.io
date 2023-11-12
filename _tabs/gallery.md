@@ -2,5 +2,5 @@
 layout: gallery
 title: 画廊
 icon: fas fa-photo-film
-order: 2
+order: 1
 ---
