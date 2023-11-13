@@ -15,7 +15,7 @@
 // GALLERY Title
 .portfolio-container .portfolio-heading h3 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 3em;
+    font-size: 4em;
     font-weight: bolder;
     padding-bottom: 3px;
     border-bottom: 2px solid #545454;
@@ -511,5 +511,9 @@
     .portfolio-item .popup-card .info p {
         font-size: 1.3rem;
         margin: 10px;
+    }
+
+    .portfolio-container .portfolio-heading h3 {
+        font-size: 3.5em;
     }
 }
