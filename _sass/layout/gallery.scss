@@ -1,3 +1,4 @@
+// Gallery Page
 .portfolio-container {
     display: flex;
     flex-direction: column;
@@ -7,6 +8,7 @@
     margin: 40px 20px 0 20px;
 }
 
+// Gallery Heading
 .portfolio-container .portfolio-heading {
     width: 100%;
     padding-bottom: 50px;
@@ -22,10 +24,7 @@
     text-align: center;
 }
 
-.portfolio-container .portfolio-heading h3 span {
-    font-weight: 100;
-}
-
+// Gallery 容器，里面装有不同列
 .portfolio-container .portfolio-box {
     display: flex;
     flex-direction: row;
@@ -33,66 +32,14 @@
     justify-content: space-between;
 }
 
+// 列
 .portfolio-container .portfolio-box .portfolio-dream {
     display: flex;
     flex-direction: column;
     width: 32.5%;
 }
 
-
-// .portfolio-card-body {
-//     width: 100%;
-//     height: 100%;
-//     top: 0;
-//     right: -100%;
-//     position: absolute;
-//     background: #1f3d4738;
-//     backdrop-filter: blur(5px);
-//     border-radius: 15px;
-//     color: #fff;
-//     padding: 30px;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     transition: 2s;
-// }
-
-// .portfolio-card:hover .portfolio-card-body {
-//     right: 0;
-// }
-
-// .portfolio-card-title {
-//     text-transform: uppercase;
-//     font-size: 50px;
-//     font-weight: 500;
-// }
-
-// .portfolio-card-sub-title {
-//     text-transform: capitalize;
-//     font-size: 14px;
-//     font-weight: 300;
-// }
-
-// .portfolio-card-info {
-//     font-size: 16px;
-//     line-height: 25px;
-//     margin: 40px 0;
-//     font-weight: 400;
-// }
-
-// .portfolio-card-btn {
-//     color: #1f3d47;
-//     background: #8fabba;
-//     padding: 10px 20px;
-//     width: 120px;
-//     border-radius: 5px;
-//     text-transform: capitalize;
-//     border: none;
-//     outline: none;
-//     font-weight: 500;
-//     cursor: pointer;
-// }
-
+// 每个最小展示单元
 .portfolio-item {
     position: relative;
     overflow: hidden;
@@ -101,6 +48,7 @@
     margin-bottom: 15px;
 }
 
+// Image
 .portfolio-item img {
     width: 100%;
     border-radius: 15px;
@@ -108,6 +56,7 @@
     transition: transform 0.6s;
 }
 
+// 悬停的弹出遮罩
 .portfolio-layer {
     width: 100%;
     height: 0;
@@ -185,6 +134,7 @@
     // border: solid 2px rgba(0, 0, 0, 0.3);
 }
 
+// 背景模糊遮罩
 .portfolio-item .popup-view {
     z-index: 1;
     // background: rgba(31, 31, 31, 0.5);
@@ -203,11 +153,13 @@
     transition: 0.5s;
 }
 
+// 触发按钮变为 active
 .portfolio-item .popup-view.active {
     opacity: 1;
     visibility: visible;
 }
 
+// Animation
 @keyframes dropin {
     0% {
         transform: translateY(-400px);
@@ -237,6 +189,7 @@
     }
 }
 
+// 弹出卡片动画
 .portfolio-item .popup-view.active .popup-card {
     opacity: 1;
     visibility: visible;
@@ -247,6 +200,7 @@
     animation: dismiss 0.4s ease;
 }
 
+// Popup Card
 .portfolio-item .popup-card {
     position: relative;
     display: flex;
@@ -255,6 +209,7 @@
     margin: 20px;
 }
 
+// Popup Card， 层级位于上一个之下，方便之间添加图片等其他样式
 .portfolio-item .popup-card .info {
     z-index: 1;
     display: flex;
@@ -264,38 +219,20 @@
     box-sizing: border-box;
     padding: 40px;
     border-radius: 15px;
-    /* Glass */
-    /* background-color: rgba(255, 255, 255, 0.074);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    border-radius: .8rem;
-    transition: all ease .3s;
-    box-shadow: 0px 0px 20px 1px #ffbb763f;
-    border: 2px solid rgba(255, 255, 255, 0.454); */
-    /* Glow */
-    /* border-radius: 10px;
-    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
-    z-index: -10;
-    pointer-events: none;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
     border: 1px solid transparent;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    /* border-bottom: 3px solid rgba(255, 255, 255, 0.440);
-    border-left: 2px rgba(255, 255, 255, 0.545) outset; */
-    /* border: 3px solid rgba(198, 198, 198, 0.8); */
     background: var(--gallery-card-bg);
     border-top-color: var(--gallery-card-border-top);
     border-right-color: var(--gallery-card-border-right);
     border-bottom-color: var(--gallery-card-border-bottom);
     border-left-color: var(--gallery-card-border-left);
-    // box-shadow: -40px 50px 30px rgba(0, 0, 0, 0.5);
-    /* transform: skewX(10deg); */
     transition: .4s;
     transform: skew(0deg);
 
 }
 
+// 仿 macOS 红绿灯按钮
 .popup-align {
     z-index: 3;
     position: absolute;
@@ -334,18 +271,7 @@
     box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
 }
 
-
-/* 废弃 */
-// .portfolio-item .popup-card .close-btn {
-//     color: #555;
-//     z-index: 3;
-//     position: absolute;
-//     right: 0;
-//     font-size: 20px;
-//     margin: 20px;
-//     cursor: pointer;
-// }
-
+// Popup Card Heading
 .portfolio-item .popup-card .info h2 {
     // color: #fff;
     color: var(--heading-color);
@@ -356,90 +282,15 @@
     word-wrap: break-word;
 }
 
-/* .portfolio-item .popup-card .info h2 span {
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-} */
-
+// Popup Card Paragraph
 .portfolio-item .popup-card .info p {
-    // color: #fff;
     color: var(--text-color);
     font-size: 1.5rem;
     margin: 10px;
     margin-top: 0;
     text-align: left;
-    // text-shadow: -15px 20px 15px rgba(0, 0, 0, 0.5);
     overflow: scroll;
 }
-
-.portfolio-item .popup-card .info .price {
-    font-size: 45px;
-    font-weight: 300;
-    margin: 10px;
-}
-
-.portfolio-item .popup-card .info .add-cart-btn {
-    color: #fff;
-    background: #009DD2;
-    font-size: 16px;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    margin: 10px auto;
-    padding: 10px 50px;
-    border-radius: 20px;
-}
-
-.portfolio-item .popup-card .info .add-wish {
-    color: #009DD2;
-    font-size: 16px;
-    text-align: center;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-// // 适配深浅色模式
-// @media (prefers-color-scheme: light) {
-//     // .portfolio-item .popup-card .info {
-//     //     background: var(--gallery-card-bg);
-//     //     border-top-color: var(----gallery-card-border-top);
-//     //     border-right-color: var(----gallery-card-border-right);
-//     //     border-bottom-color: var(----gallery-card-border-bottom);
-//     //     border-left-color: var(----gallery-card-border-left);
-//     //     // background: rgba(198, 198, 198, 0.7);
-//     //     // border-top-color: rgba(255, 255, 255, 0.5);
-//     //     // border-right-color: rgba(255, 255, 255, 0.5);
-//     //     // border-bottom-color: rgba(255, 255, 255, 0.3);
-//     //     // border-left-color: rgba(255, 255, 255, 0.3);
-//     // }
-
-//     .portfolio-item .popup-card .info h2 {
-//         color: var(--heading-color);
-//     }
-
-//     .portfolio-item .popup-card .info p {
-//         color: var(--text-color);
-//     }
-// }
-
-// @media (prefers-color-scheme: dark) {
-//     // .portfolio-item .popup-card .info {
-//     //     border-top-color: rgba(255, 255, 255, 0.2);
-//     //     border-right-color: rgba(255, 255, 255, 0.2);
-//     //     border-bottom-color: rgba(255, 255, 255, 0.1);
-//     //     border-left-color: rgba(255, 255, 255, 0.1);
-//     // }
-
-//     .portfolio-item .popup-card .info h2 {
-//         color: #fff
-//     }
-
-//     .portfolio-item .popup-card .info p {
-//         color: #fff;
-//     }
-// }
 
 // 适配不同显示器大小
 
