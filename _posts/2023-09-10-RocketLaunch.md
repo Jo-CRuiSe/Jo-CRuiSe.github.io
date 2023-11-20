@@ -8,6 +8,7 @@ author: jo
 
 toc: true
 commments: true
+published: false
 typora-root-url: ../../Jo-CRuiSe.github.io/
 math: false
 mermaid: true
