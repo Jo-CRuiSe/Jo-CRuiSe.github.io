@@ -98,6 +98,6 @@ end tell
 
 保存为“Application”即可
 
-![image-20231120212741939](/assets/blog_res/2023-11-20-CheckDiskLife.assets/Automator-SaveAsApplication.png){: .shadow .rounded-10}
+![image-20231120212741939](/assets/blog_res/2023-11-20-CheckDiskLife.assets/Automator-SaveAsApplication.png){: w="400" .shadow .rounded-10}
 
 现在我们已经将这个脚本封装成软件了，下次直接双击运行就可以查看了
