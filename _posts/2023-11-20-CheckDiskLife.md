@@ -1,5 +1,5 @@
 ---
-title: macOS硬盘健康查询——Smartmontools
+title: macOS硬盘健康查询
 date: 2023-10-21 21:30:00 +0800
 categories: [实用工具]
 tags: [macOS]
