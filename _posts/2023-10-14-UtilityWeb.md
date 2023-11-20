@@ -49,6 +49,9 @@ image:
 
 [TinyPNG](https://tinypng.com): 压缩 webp/png/jpeg
 
+### 图书
+[Zlibrary](https://zlibrary-east.se): 丰富的电子书网站
+
 ### 隐私与安全
 
 [各国信息生成器](https://www.meiguodizhi.com/)：可以生成各国虚拟的人物相关信息，帮助你应对特定网站的注册要求
