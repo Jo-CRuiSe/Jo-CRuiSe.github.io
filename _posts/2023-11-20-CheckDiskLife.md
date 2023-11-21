@@ -1,6 +1,6 @@
 ---
 title: macOS硬盘健康查询工具——Smartmontools
-date: 2023-10-21 21:30:00 +0800
+date: 2023-11-20 20:30:00 +0800
 categories: [实用工具]
 tags: [macOS]
 pin: false
@@ -16,7 +16,7 @@ image:
   lqip: /assets/blog_res/title/CheckDiskLife.png
 ---
 
-很多 Mac 用户担心自己的 Mac 的硬盘寿命，想查看硬盘的读写量，接下来就来介绍Smartmontools这款软件。
+**很多 Mac 用户担心自己的 Mac 的硬盘寿命，想查看硬盘的读写量，接下来就来介绍Smartmontools这款软件。**
 
 ## 安装 Homebrew
 
