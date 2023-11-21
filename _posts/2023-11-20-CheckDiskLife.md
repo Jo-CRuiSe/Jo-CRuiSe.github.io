@@ -16,9 +16,7 @@ image:
   lqip: /assets/blog_res/title/CheckDiskLife.png
 ---
 
-## 问题来源
-
-很多网友担心自己的 Mac 的硬盘寿命，想查看硬盘的读写量，这就不得不介绍一个实用的工具了——Smartmontools。
+很多 Mac 用户担心自己的 Mac 的硬盘寿命，想查看硬盘的读写量，接下来就来介绍Smartmontools这款软件。
 
 ## 安装 Homebrew
 
@@ -70,7 +68,7 @@ smartctl -a disk0
 
 ![image-20231120201850804](/assets/blog_res/2023-11-20-CheckDiskLife.assets/ChooseAppleScript.png){: w="300"}
 
-```AppleScript
+```shell
 tell application "Terminal" to activate
 tell application "Terminal"
 	do script "smartctl -s on disk0"
@@ -94,7 +92,7 @@ end tell
 
 将里面的文字替换为
 
-```AppleScript
+```shell
 tell application "Terminal" to activate
 tell application "Terminal"
 	do script "smartctl -s on disk0"
