@@ -56,6 +56,13 @@
     transition: transform 0.6s;
 }
 
+.portfolio-item video {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+    transition: transform 0.6s;
+}
+
 // 悬停的弹出遮罩
 .portfolio-layer {
     width: 100%;
