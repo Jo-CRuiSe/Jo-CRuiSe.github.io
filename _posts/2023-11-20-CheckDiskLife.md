@@ -18,11 +18,7 @@ image:
 
 **很多 Mac 用户担心自己的 Mac 的硬盘寿命，想查看硬盘的读写量，接下来就来介绍Smartmontools这款软件。**
 
-## 安装 Homebrew
-
-官方文档：https://brew.sh
-
-### 快速上手
+## 安装 [Homebrew](https://brew.sh)
 
 复制以下代码框中的命令，粘贴到“终端”（Terminal） 中，回车运行
 
