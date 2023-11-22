@@ -12,8 +12,8 @@ math: false
 mermaid: true
 published: true
 image:
-  path: /assets/blog_res/title/CheckDiskLife.png
-  lqip: /assets/blog_res/title/CheckDiskLife.png
+  path: /assets/blog_res/title/AuthorizeUnknownDevelopers.png
+  lqip: /assets/blog_res/title/AuthorizeUnknownDevelopers.png
 ---
 
 ## 问题来源
