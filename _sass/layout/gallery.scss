@@ -229,6 +229,7 @@
     border-left-color: var(--gallery-card-border-left);
     transition: .4s;
     transform: skew(0deg);
+    box-shadow:  5px 10px 3px rgba(0,0,0,0.2)
 
 }
 
@@ -252,6 +253,7 @@
     height: 18px;
     border-radius: 50%;
     background-color: #ff605c;
+    border: 0.5px solid #b3423f;
     // box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
 }
 
@@ -260,6 +262,8 @@
     height: 18px;
     border-radius: 50%;
     background-color: #ffbd44;
+    border: 0.5px solid #c29138;
+
     // box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
 }
 
@@ -268,6 +272,7 @@
     height: 18px;
     border-radius: 50%;
     background-color: #00ca4e;
+    border: 0.5px solid #359058;
     // box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
 }
 
