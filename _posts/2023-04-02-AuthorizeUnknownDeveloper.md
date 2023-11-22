@@ -1,5 +1,5 @@
 ---
-title: macOS无法验证App
+title: 解决macOS无法验证App等问题
 date: 2023-04-02 10:01:00 +0800
 categories: [实用工具]
 tags: [macOS]
