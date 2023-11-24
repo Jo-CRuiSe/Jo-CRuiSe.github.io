@@ -24,6 +24,77 @@
     text-align: center;
 }
 
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+  }
+  
+  /* button styling */
+  .button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(201, 187, 187, 0.6);
+    --animation-color: #8806df;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+    font-size: 6vw;
+  }
+  /* this is the text, when you hover on button */
+  @keyframes blink {
+    0% { border-color: var(--animation-color); }
+    50% { border-color: transparent; }
+    100% { border-color: var(--animation-color); }
+  }
+  
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    font-size: 6vw;
+    -webkit-text-stroke: 1px var(--animation-color);
+    animation: blink 1s infinite; /* Apply the blink animation */
+  }
+  /* hover */
+  /* .button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  } */
+
+.button.clicked .hover-text{
+    width: 100%;
+    -webkit-backdrop-filter: drop-shadow(0 0 23px var(--animation-color));
+    backdrop-filter: drop-shadow(0 0 23px var(--animation-color));
+    filter: drop-shadow(0 0 23px var(--animation-color));
+    animation: none;
+    border-right: 0 solid var(--animation-color);
+}
+
+.portfolio-container .portfolio-heading .overlaytext {
+    position: absolute;
+    box-sizing: border-box;
+    color: #8806df;
+    width: 0%;
+    inset: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px#8806df;
+}
+
 // Gallery 容器，里面装有不同列
 .portfolio-container .portfolio-box {
     display: flex;
