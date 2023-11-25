@@ -369,11 +369,11 @@ layout: compress
 
 <script>
   var colors = ["rgba(213, 132, 51, 0.872)", "rgba(29, 152, 232, 0.87)", "rgba(125, 12, 254, 1)", "rgba(19, 236, 221, 0.87)", "rgba(228, 49, 161, 0.9)"]; // 颜色数组
-  var i = 0; // 初始化颜色索引
+  var i = 0; 
 
   document.querySelector('.button').addEventListener('click', function () {
-    this.style.setProperty('--animation-color', colors[i % colors.length]); // 更新自定义属性
-    i++; // 增加颜色索引
+    this.style.setProperty('--animation-color', colors[i % colors.length]);
+    i++;
   });
 </script>
 
