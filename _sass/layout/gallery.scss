@@ -381,6 +381,20 @@
     }
 }
 
+// iPad 字体展示形式
+@media only screen and (min-width: 950px) and (max-width:1128px) {
+    .portfolio-layer h4 {
+        font-size: 2.2rem;
+    }
+    .popup-btn {
+        padding-block: 0;
+        font-size: 12px;
+        border: 2px solid rgba(255,255,255,.3019607843);
+        padding-inline: 0.5rem;
+        gap: 5px;
+    }
+}
+
 // 两列显示
 @media only screen and (max-width: 950px) {
     .portfolio-container .portfolio-box .portfolio-dream {
