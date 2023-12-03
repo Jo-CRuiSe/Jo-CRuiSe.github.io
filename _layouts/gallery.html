@@ -334,7 +334,7 @@ layout: compress
   var popupBtns = document.querySelectorAll('.popup-btn');
   var closeBtns = document.querySelectorAll('.popup-red');
   var genieBtns = document.querySelectorAll('.popup-yellow');
-  var scaleBtns = document.querySelectorAll('.popup-green')
+  var scaleBtns = document.querySelectorAll('.popup-green');
   var layerViews = document.querySelectorAll('.portfolio-layer');
 
 
@@ -349,6 +349,7 @@ layout: compress
     });
   });
 
+  //javascript for close button
   closeBtns.forEach((closeBtn) => {
     closeBtn.addEventListener("click", () => {
       popupViews.forEach((popupView) => {
