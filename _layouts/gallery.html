@@ -342,7 +342,7 @@ layout: compress
   var popup = function (popupClick) {
     popupViews[popupClick].classList.add('active');
     layerViews[popupClick].classList.add('deactive');
-  }
+  };
 
   popupBtns.forEach((popupBtn, i) => {
     popupBtn.addEventListener("click", () => {
@@ -358,7 +358,7 @@ layout: compress
       });
       layerViews.forEach((layerViews) => {
         layerViews.classList.remove('deactive');
-      })
+      });
     });
   });
   genieBtns.forEach((genieBtn) => {
@@ -369,7 +369,7 @@ layout: compress
       });
       layerViews.forEach((layerViews) => {
         layerViews.classList.remove('deactive');
-      })
+      });
     });
   });
   scaleBtns.forEach((scaleBtn) => {
@@ -380,7 +380,7 @@ layout: compress
       });
       layerViews.forEach((layerViews) => {
         layerViews.classList.remove('deactive');
-      })
+      });
     });
   });
 </script>
