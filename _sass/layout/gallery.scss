@@ -259,6 +259,7 @@
     }
 }
 
+// Close 
 @keyframes dismiss {
     0% {
         transform: translateY(0px);
@@ -268,6 +269,14 @@
         opacity: 0;
     }
 }
+
+// Genie Minimize
+@keyframes genie {
+    to {
+        transform: translate(0, -140%) scale(0.1)  rotateX(40deg) ;
+    }
+}
+
 
 // 弹出卡片动画
 .portfolio-item .popup-view.active .popup-card {
