@@ -49,6 +49,8 @@ image:
 
 [TinyPNG](https://tinypng.com): 压缩 webp/png/jpeg
 
+[SVG 在线编辑器)](https://c.runoob.com/more/svgeditor/): 在线编辑 SVG 文件并导出
+
 ### 图书
 [Zlibrary](https://zlibrary-east.se): 丰富的电子书网站
 

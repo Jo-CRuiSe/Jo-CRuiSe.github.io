@@ -158,6 +158,12 @@
     height: 100%;
 }
 
+// 悬停放大啊图片
+.portfolio-item:hover img {
+    transition-duration: 0.3s ease;
+    transform: scale(1.05);
+}
+
 // 展示详细资料时禁止悬停
 .portfolio-item .portfolio-layer.deactive {
     height: 0;
