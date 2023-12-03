@@ -158,7 +158,7 @@
     height: 100%;
 }
 
-// 悬停放大啊图片
+// 悬停放大图片
 .portfolio-item:hover img {
     transition-duration: 0.3s ease;
     transform: scale(1.05);
@@ -409,7 +409,7 @@
     font-size: 1.5rem;
     margin: 10px;
     margin-top: 0;
-    text-align: left;
+    text-align: justify;
     overflow: scroll;
 }
 
@@ -473,7 +473,7 @@
 
     .portfolio-item .popup-card .info p {
         font-size: 1.3rem;
-        margin: 10px;
+        margin: 0;
     }
 
     .portfolio-container .portfolio-heading h3 {
