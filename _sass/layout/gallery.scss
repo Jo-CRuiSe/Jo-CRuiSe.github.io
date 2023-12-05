@@ -221,7 +221,7 @@
 
 // 背景模糊遮罩
 .portfolio-item .popup-view {
-    z-index: 1;
+    z-index: 999;
     // background: rgba(31, 31, 31, 0.5);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
