@@ -19,6 +19,8 @@ image:
 
 ## SwiftUI 小功能实现
 
+> 我学习 Swift 过程中练习的小项目
+
 **持续更新中...**
 
 1. [Lock SwiftUI View With Biometric/Custom Number Lock - Local Authentication](https://www.youtube.com/watch?v=H7LH5xYUn6s)
