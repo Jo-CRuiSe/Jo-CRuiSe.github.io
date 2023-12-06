@@ -17,7 +17,7 @@ $(window).on("load", function(){
     $("body").addClass("loading");
     setTimeout(function(){
         $(".loader-wrapper").fadeOut("slow", function(){
-            $("body").removeClass("loading");
+            $("#main-wrapper").removeClass("loading");
         });
     }, 1000);
 });
