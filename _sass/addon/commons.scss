@@ -37,6 +37,10 @@ body {
   font-family: $font-family-base;
 }
 
+body.loading {
+  overflow: hidden;
+}
+
 /* --- Typography --- */
 
 @for $i from 1 through 5 {
