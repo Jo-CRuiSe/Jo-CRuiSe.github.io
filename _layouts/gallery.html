@@ -20,79 +20,100 @@ layout: compress
   {% include sidebar.html lang=lang %}
 
   <div id="main-wrapper" class="d-flex justify-content-center">
-    <div class="container d-flex flex-column px-xxl-5">
 
-      <div class="portfolio-container">
-        <div class="portfolio-heading">
-          <button class="button" data-text="Awesome">
-            <span class="actual-text">&nbsp;GALLERY&nbsp;</span>
-            <span aria-hidden="true" class="hover-text">&nbsp;GALLERY&nbsp;</span>
-          </button>
-        </div>
-        <div class="portfolio-box">
-          <!-- column1 -->
-          <div class="portfolio-dream">
-            <!-- item1 -->
-            <div class="portfolio-item">
-              <img
-                src="https://imglf3.lf127.net/img/4b226ab19e4a6163/UFZTUldOYTRpNnlENTlPZklGeFdGV2s2L0t4NTVteC9RaEVoTU5ZNlA2RT0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg"
-                alt="Mooncake">
-              <div class="portfolio-layer">
-                <h4>Mooncake</h4>
-                <button class="popup-btn">查看更多<i class="fa-solid fa-arrow-right"></i></button>
-              </div>
-              <div class="popup-view">
-                <div class="popup-card">
-                  <div class="popup-align">
-                    <a class="popup-red"></a>
-                    <span class="popup-yellow"></span>
-                    <span class="popup-green"></span>
-                  </div>
-                  <div class="info">
-                    <h2>月饼建模+渲染</h2>
-                    <p>
-                      这是我第一次独立地使用Octane渲染器尝试完成一张静态图片。由于没有实景参考，我需要自己构想一个位置并且在建模阶段将所有模型位置摆放正确。制作过程中我也尽量还原模型的实际大小，1：1进行建模。其他制作细节我放在博客里进行介绍。
-                    </p>
+    <header id="topbar-wrapper" aria-label="Top Bar">
+      <div id="topbar" class="d-flex align-items-center justify-content-between px-lg-3 h-100">
+        <button type="button" id="sidebar-trigger" class="btn btn-link">
+          <i class="fas fa-bars fa-fw"></i>
+        </button>
+        <div id="topbar-title"></div>
+        <button type="button" id="search-trigger" class="btn btn-link">
+          <i class="fas fa-search fa-fw"></i>
+        </button>
+        <search class="align-items-center ms-3 ms-lg-0">
+          <i class="fas fa-search fa-fw"></i>
+          <input class="form-control" id="search-input" type="search" aria-label="search" autocomplete="off"
+            placeholder="{{ site.data.locales[include.lang].search.hint | capitalize }}...">
+        </search>
+        <button type="button" class="btn btn-link text-decoration-none" id="search-cancel">
+          {{- site.data.locales[include.lang].search.cancel -}}
+        </button>
+      </div>
+    </header>
+
+      <div class="container d-flex flex-column px-xxl-5">
+
+        <div class="portfolio-container">
+          <div class="portfolio-heading">
+            <button class="button" data-text="Awesome">
+              <span class="actual-text">&nbsp;GALLERY&nbsp;</span>
+              <span aria-hidden="true" class="hover-text">&nbsp;GALLERY&nbsp;</span>
+            </button>
+          </div>
+          <div class="portfolio-box">
+            <!-- column1 -->
+            <div class="portfolio-dream">
+              <!-- item1 -->
+              <div class="portfolio-item">
+                <img
+                  src="https://imglf3.lf127.net/img/4b226ab19e4a6163/UFZTUldOYTRpNnlENTlPZklGeFdGV2s2L0t4NTVteC9RaEVoTU5ZNlA2RT0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg"
+                  alt="Mooncake">
+                <div class="portfolio-layer">
+                  <h4>Mooncake</h4>
+                  <button class="popup-btn">查看更多<i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                <div class="popup-view">
+                  <div class="popup-card">
+                    <div class="popup-align">
+                      <a class="popup-red"></a>
+                      <span class="popup-yellow"></span>
+                      <span class="popup-green"></span>
+                    </div>
+                    <div class="info">
+                      <h2>月饼建模+渲染</h2>
+                      <p>
+                        这是我第一次独立地使用Octane渲染器尝试完成一张静态图片。由于没有实景参考，我需要自己构想一个位置并且在建模阶段将所有模型位置摆放正确。制作过程中我也尽量还原模型的实际大小，1：1进行建模。其他制作细节我放在博客里进行介绍。
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- item2 -->
-            <div class="portfolio-item">
-              <img
-                src="https://imglf4.lf127.net/img/256828d4a62caa2d/UFZTUldOYTRpNnlENTlPZklGeFdGWllyeVlvcVdkY1F3ZG5DZWRqeW13MD0.gif"
-                loop="true" autoplay="true" alt="1">
-              <div class="portfolio-layer">
-                <h4>Art School</h4>
-                <!-- <a class="popup-btn">See More</a> -->
-                <button class="popup-btn">查看更多<i class="fa-solid fa-arrow-right"></i></button>
-              </div>
-              <div class="popup-view">
-                <div class="popup-card">
-                  <div class="popup-align">
-                    <a class="popup-red"></a>
-                    <span class="popup-yellow"></span>
-                    <span class="popup-green"></span>
-                  </div>
-                  <!-- <a><i class="fas fa-times close-btn"></i></a> -->
-                  <div class="info">
-                    <h2>轻量化的C4D动画</h2>
-                    <p>使用全局光照会严重减慢渲染速度，这个动画总渲染时间却不到十分钟。得益于低多边形和零玻璃材质，整体画风表现为卡通动画的同时让动画更加灵动。动画“烘焙”能力++ ！</p>
+              <!-- item2 -->
+              <div class="portfolio-item">
+                <img
+                  src="https://imglf4.lf127.net/img/256828d4a62caa2d/UFZTUldOYTRpNnlENTlPZklGeFdGWllyeVlvcVdkY1F3ZG5DZWRqeW13MD0.gif"
+                  loop="true" autoplay="true" alt="1">
+                <div class="portfolio-layer">
+                  <h4>Art School</h4>
+                  <!-- <a class="popup-btn">See More</a> -->
+                  <button class="popup-btn">查看更多<i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                <div class="popup-view">
+                  <div class="popup-card">
+                    <div class="popup-align">
+                      <a class="popup-red"></a>
+                      <span class="popup-yellow"></span>
+                      <span class="popup-green"></span>
+                    </div>
+                    <!-- <a><i class="fas fa-times close-btn"></i></a> -->
+                    <div class="info">
+                      <h2>轻量化的C4D动画</h2>
+                      <p>使用全局光照会严重减慢渲染速度，这个动画总渲染时间却不到十分钟。得益于低多边形和零玻璃材质，整体画风表现为卡通动画的同时让动画更加灵动。动画“烘焙”能力++ ！</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- item3 -->
-            <div class="portfolio-item">
-              <img
-                src="https://imglf5.lf127.net/img/d3d037e1dff56dd5/UFZTUldOYTRpNnlENTlPZklGeFdGZkhoR3NxbllHYWUzV3N0bU5laEcvUT0.jpeg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg"
-                alt="AMBPOEIAl">
-              <div class="portfolio-layer">
-                <h4>AMBPOEIAl</h4>
-                <!-- <a class="popup-btn">See More</a> -->
-                <!-- <button class="popup-btn">查看更多<i class="fa-solid fa-arrow-right"></i></button> -->
-              </div>
-              <!-- <div class="popup-view">
+              <!-- item3 -->
+              <div class="portfolio-item">
+                <img
+                  src="https://imglf5.lf127.net/img/d3d037e1dff56dd5/UFZTUldOYTRpNnlENTlPZklGeFdGZkhoR3NxbllHYWUzV3N0bU5laEcvUT0.jpeg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg"
+                  alt="AMBPOEIAl">
+                <div class="portfolio-layer">
+                  <h4>AMBPOEIAl</h4>
+                  <!-- <a class="popup-btn">See More</a> -->
+                  <!-- <button class="popup-btn">查看更多<i class="fa-solid fa-arrow-right"></i></button> -->
+                </div>
+                <!-- <div class="popup-view">
                 <div class="popup-card">
                   <div class="popup-align">
                     <a class="popup-red"></a>
@@ -107,75 +128,76 @@ layout: compress
                   </div>
                 </div>
               </div> -->
+              </div>
             </div>
-          </div>
 
-          <!-- column2 -->
-          <div class="portfolio-dream">
-            <!-- item1 -->
-            <div class="portfolio-item">
-              <img
-                src="https://imglf3.lf127.net/img/d1390542d3530149/UFZTUldOYTRpNnlENTlPZklGeFdGZlNadjJjeXl0Y29uYkE1bk1xY04vUT0.gif"
-                loop="true" autoplay="true" alt="Rocket Launching">
-              <div class="portfolio-layer">
-                <h4>Rocket Launching</h4>
-                <!-- <a class="popup-btn">See More</a> -->
-                <button class="popup-btn">查看更多<i class="fa-solid fa-arrow-right"></i></button>
-              </div>
-              <div class="popup-view">
-                <div class="popup-card">
-                  <div class="popup-align">
-                    <a class="popup-red"></a>
-                    <span class="popup-yellow"></span>
-                    <span class="popup-green"></span>
-                  </div>
-                  <!-- <a><i class="fas fa-times close-btn"></i></a> -->
-                  <div class="info">
-                    <h2>浅试 AE 动画</h2>
-                    <p>
-                      虽然之前我做后期偶尔会用到AE，但我对其界面布局和操作并不熟悉，大多数情况只是用于去黑色背景、分离alpha通道等。这次是我系统学习AE的一个开始，我也逐渐对其用户界面熟悉并能轻松完成一些基本效果。
-                    </p>
+            <!-- column2 -->
+            <div class="portfolio-dream">
+              <!-- item1 -->
+              <div class="portfolio-item">
+                <img
+                  src="https://imglf3.lf127.net/img/d1390542d3530149/UFZTUldOYTRpNnlENTlPZklGeFdGZlNadjJjeXl0Y29uYkE1bk1xY04vUT0.gif"
+                  loop="true" autoplay="true" alt="Rocket Launching">
+                <div class="portfolio-layer">
+                  <h4>Rocket Launching</h4>
+                  <!-- <a class="popup-btn">See More</a> -->
+                  <button class="popup-btn">查看更多<i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                <div class="popup-view">
+                  <div class="popup-card">
+                    <div class="popup-align">
+                      <a class="popup-red"></a>
+                      <span class="popup-yellow"></span>
+                      <span class="popup-green"></span>
+                    </div>
+                    <!-- <a><i class="fas fa-times close-btn"></i></a> -->
+                    <div class="info">
+                      <h2>浅试 AE 动画</h2>
+                      <p>
+                        虽然之前我做后期偶尔会用到AE，但我对其界面布局和操作并不熟悉，大多数情况只是用于去黑色背景、分离alpha通道等。这次是我系统学习AE的一个开始，我也逐渐对其用户界面熟悉并能轻松完成一些基本效果。
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- item2 -->
-            <div class="portfolio-item">
-              <img
-                src="https://imglf3.lf127.net/img/dbf0f88f75de8082/UFZTUldOYTRpNnlENTlPZklGeFdGUjBHWmw3V0dHZG43VU11UzhvQUk0WT0.png?imageView&thumbnail=1680x0&quality=96&stripmeta=0"
-                alt="2">
-              <div class="portfolio-layer">
-                <h4>Cake</h4>
-                <!-- <a class="popup-btn">See More</a> -->
-                <button class="popup-btn">查看更多<i class="fa-solid fa-arrow-right"></i></button>
-              </div>
-              <div class="popup-view">
-                <div class="popup-card">
-                  <div class="popup-align">
-                    <a class="popup-red"></a>
-                    <span class="popup-yellow"></span>
-                    <span class="popup-green"></span>
-                  </div>
-                  <!-- <a><i class="fas fa-times close-btn"></i></a> -->
-                  <div class="info">
-                    <h2>Octane——初试锋芒</h2>
-                    <p>当我入手Octane渲染器后，我首先尝试了它的输出质感。不得不说，明显比自带的标准渲染器和物理渲染器输出的质感好得太多。光影、虚实、滤镜所有都可以在OC摄像机中调整；丰富的材质简化了创作过程。
-                    </p>
+              <!-- item2 -->
+              <div class="portfolio-item">
+                <img
+                  src="https://imglf3.lf127.net/img/dbf0f88f75de8082/UFZTUldOYTRpNnlENTlPZklGeFdGUjBHWmw3V0dHZG43VU11UzhvQUk0WT0.png?imageView&thumbnail=1680x0&quality=96&stripmeta=0"
+                  alt="2">
+                <div class="portfolio-layer">
+                  <h4>Cake</h4>
+                  <!-- <a class="popup-btn">See More</a> -->
+                  <button class="popup-btn">查看更多<i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                <div class="popup-view">
+                  <div class="popup-card">
+                    <div class="popup-align">
+                      <a class="popup-red"></a>
+                      <span class="popup-yellow"></span>
+                      <span class="popup-green"></span>
+                    </div>
+                    <!-- <a><i class="fas fa-times close-btn"></i></a> -->
+                    <div class="info">
+                      <h2>Octane——初试锋芒</h2>
+                      <p>
+                        当我入手Octane渲染器后，我首先尝试了它的输出质感。不得不说，明显比自带的标准渲染器和物理渲染器输出的质感好得太多。光影、虚实、滤镜所有都可以在OC摄像机中调整；丰富的材质简化了创作过程。
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- item3 -->
-            <div class="portfolio-item">
-              <img
-                src="https://imglf5.lf127.net/img/b59100c3727980d4/UFZTUldOYTRpNnlENTlPZklGeFdGZmswbUE4RkNxRU93Zng2V0J1UnEvYz0.gif"
-                alt="Solor System">
-              <div class="portfolio-layer">
-                <h4>Solor System</h4>
-                <!-- <a class="popup-btn">See More</a> -->
-                <!-- <button class="popup-btn">查看更多<i class="fa-solid fa-arrow-right"></i></button> -->
-              </div>
-              <!-- <div class="popup-view">
+              <!-- item3 -->
+              <div class="portfolio-item">
+                <img
+                  src="https://imglf5.lf127.net/img/b59100c3727980d4/UFZTUldOYTRpNnlENTlPZklGeFdGZmswbUE4RkNxRU93Zng2V0J1UnEvYz0.gif"
+                  alt="Solor System">
+                <div class="portfolio-layer">
+                  <h4>Solor System</h4>
+                  <!-- <a class="popup-btn">See More</a> -->
+                  <!-- <button class="popup-btn">查看更多<i class="fa-solid fa-arrow-right"></i></button> -->
+                </div>
+                <!-- <div class="popup-view">
                 <div class="popup-card">
                   <div class="popup-align">
                     <a class="popup-red"></a>
@@ -190,23 +212,23 @@ layout: compress
                   </div>
                 </div>
               </div> -->
+              </div>
+
             </div>
 
-          </div>
-
-          <!-- column3 -->
-          <div class="portfolio-dream">
-            <!-- item1 -->
-            <div class="portfolio-item">
-              <img
-                src="https://imglf3.lf127.net/img/bb789a89de6c47f2/UFZTUldOYTRpNnlENTlPZklGeFdGUm5uNHZoYTFvR2s3V0xwallpcEFWWT0.gif"
-                loop="true" autoplay="true" alt="3">
-              <div class="portfolio-layer">
-                <h4>Plane Model</h4>
-                <!-- <a class="popup-btn">See More</a> -->
-                <!-- <button class="popup-btn">查看更多<i class="fa-solid fa-arrow-right"></i></button> -->
-              </div>
-              <!-- <div class="popup-view">
+            <!-- column3 -->
+            <div class="portfolio-dream">
+              <!-- item1 -->
+              <div class="portfolio-item">
+                <img
+                  src="https://imglf3.lf127.net/img/bb789a89de6c47f2/UFZTUldOYTRpNnlENTlPZklGeFdGUm5uNHZoYTFvR2s3V0xwallpcEFWWT0.gif"
+                  loop="true" autoplay="true" alt="3">
+                <div class="portfolio-layer">
+                  <h4>Plane Model</h4>
+                  <!-- <a class="popup-btn">See More</a> -->
+                  <!-- <button class="popup-btn">查看更多<i class="fa-solid fa-arrow-right"></i></button> -->
+                </div>
+                <!-- <div class="popup-view">
                 <div class="popup-card">
                   <div class="popup-align">
                     <a class="popup-red"></a>
@@ -221,17 +243,17 @@ layout: compress
                   </div>
                 </div>
               </div> -->
-            </div>
-            <!-- item2 -->
-            <div class="portfolio-item">
-              <img
-                src="https://imglf3.lf127.net/img/83df34c9c785ec13/UFZTUldOYTRpNnlENTlPZklGeFdGVnNoWXdlalYyb3FiQlRiUHFDcURnRT0.jpeg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg"
-                alt="MONIN">
-              <div class="portfolio-layer">
-                <h4>MONIN</h4>
-                <!-- <button class="popup-btn">查看更多<i class="fa-solid fa-arrow-right"></i></button> -->
               </div>
-              <!-- <div class="popup-view">
+              <!-- item2 -->
+              <div class="portfolio-item">
+                <img
+                  src="https://imglf3.lf127.net/img/83df34c9c785ec13/UFZTUldOYTRpNnlENTlPZklGeFdGVnNoWXdlalYyb3FiQlRiUHFDcURnRT0.jpeg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg"
+                  alt="MONIN">
+                <div class="portfolio-layer">
+                  <h4>MONIN</h4>
+                  <!-- <button class="popup-btn">查看更多<i class="fa-solid fa-arrow-right"></i></button> -->
+                </div>
+                <!-- <div class="popup-view">
                 <div class="popup-card">
                   <div class="popup-align">
                     <a class="popup-red"></a>
@@ -246,58 +268,58 @@ layout: compress
                   </div>
                 </div>
               </div> -->
-            </div>
-            <!-- item3 -->
-            <div class="portfolio-item">
-              <img
-                src="https://imglf6.lf127.net/img/143c54c632f31df3/UFZTUldOYTRpNnlENTlPZklGeFdGVVhjeVpjdmZoRGdCV2JySFJILzA0RT0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg"
-                alt="Clock">
-              <div class="portfolio-layer">
-                <h4>Clock</h4>
-                <!-- <a class="popup-btn">See More</a> -->
-                <button class="popup-btn">查看更多<i class="fa-solid fa-arrow-right"></i></button>
               </div>
-              <div class="popup-view">
-                <div class="popup-card">
-                  <div class="popup-align">
-                    <a class="popup-red"></a>
-                    <span class="popup-yellow"></span>
-                    <span class="popup-green"></span>
-                  </div>
-                  <!-- <a><i class="fas fa-times close-btn"></i></a> -->
-                  <div class="info">
-                    <h2>C4D建模——牛刀小试</h2>
-                    <p>闹钟的案例让我开始对默认渲染器所支持的材质制作有了一定的了解，并熟悉了如何从零进行建模、上材质、打光、渲染静态图片，是我以后学习其他案例的基础</p>
+              <!-- item3 -->
+              <div class="portfolio-item">
+                <img
+                  src="https://imglf6.lf127.net/img/143c54c632f31df3/UFZTUldOYTRpNnlENTlPZklGeFdGVVhjeVpjdmZoRGdCV2JySFJILzA0RT0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg"
+                  alt="Clock">
+                <div class="portfolio-layer">
+                  <h4>Clock</h4>
+                  <!-- <a class="popup-btn">See More</a> -->
+                  <button class="popup-btn">查看更多<i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                <div class="popup-view">
+                  <div class="popup-card">
+                    <div class="popup-align">
+                      <a class="popup-red"></a>
+                      <span class="popup-yellow"></span>
+                      <span class="popup-green"></span>
+                    </div>
+                    <!-- <a><i class="fas fa-times close-btn"></i></a> -->
+                    <div class="info">
+                      <h2>C4D建模——牛刀小试</h2>
+                      <p>闹钟的案例让我开始对默认渲染器所支持的材质制作有了一定的了解，并熟悉了如何从零进行建模、上材质、打光、渲染静态图片，是我以后学习其他案例的基础</p>
+                    </div>
                   </div>
                 </div>
               </div>
+
             </div>
 
+
           </div>
-
-
         </div>
-      </div>
-      <div class="row">
-        <!-- tail -->
-        <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
-          {% for _include in layout.tail_includes %}
-          {% assign _include_path = _include | append: '.html' %}
-          {% include {{ _include_path }} lang=lang %}
-          {% endfor %}
+        <div class="row">
+          <!-- tail -->
+          <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            {% for _include in layout.tail_includes %}
+            {% assign _include_path = _include | append: '.html' %}
+            {% include {{ _include_path }} lang=lang %}
+            {% endfor %}
 
-          {% include_cached footer.html lang=lang %}
+            {% include_cached footer.html lang=lang %}
+          </div>
         </div>
+
+        {% include_cached search-results.html lang=lang %}
       </div>
 
-      {% include_cached search-results.html lang=lang %}
-    </div>
-
-    <aside aria-label="Scroll to Top">
-      <button id="back-to-top" type="button" class="btn btn-lg btn-box-shadow">
-        <i class="fas fa-angle-up"></i>
-      </button>
-    </aside>
+      <aside aria-label="Scroll to Top">
+        <button id="back-to-top" type="button" class="btn btn-lg btn-box-shadow">
+          <i class="fas fa-angle-up"></i>
+        </button>
+      </aside>
   </div>
 
   <div id="mask"></div>
