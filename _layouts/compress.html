@@ -13,9 +13,13 @@
     <span class="loader"><span class="loader-inner"></span></span>
 </div>
 <script> 
-$(window).on("load",function(){
+// 加载开始时添加loading类名
+$(window).on("load", function(){
+    $("body").addClass("loading");
     setTimeout(function(){
-        $(".loader-wrapper").fadeOut("slow");
+        $(".loader-wrapper").fadeOut("slow", function(){
+            $("body").removeClass("loading");
+        });
     }, 1000);
 });
 </script>
