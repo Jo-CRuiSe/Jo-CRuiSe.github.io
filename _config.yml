@@ -209,5 +209,5 @@ jekyll-archives:
 
 
 plugins:
-  - jekyll-seo-tag:
-      canonical: false
+  jekyll-seo-tag:
+    canonical: false
