@@ -40,8 +40,8 @@ image:
 
 面元矢量：$$ \begin{array}{l} 
   \left\{\begin{matrix} 
-  d\overrightarrow{S}_{\rho}= \rho d\varphi dz \widehat{e}_{\rho}\\ 
-  d\overrightarrow{S}_{y}= dx dz \widehat{e}_{y}\\ 
-  d\overrightarrow{S}_{z}= dx dy \widehat{e}_{z}
+  d\overrightarrow{S}_{\rho}= \rho d\varphi dz \widehat{e}_{\rho}\\
+  d\overrightarrow{S}_{\varphi}= d\rho dz \widehat{e}_{\varphi}\\
+  d\overrightarrow{S}_{z}= \rho d\rho d\varphi \widehat{e}_{z}
 \end{matrix}\right.    
 \end{array} $$
