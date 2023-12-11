@@ -78,4 +78,4 @@ image:
 \end{matrix}\right.    
 \end{array} $$
 
-体积元：$$ dV = dxdydz $$
+体积元：$$ dV = h_{1} h_{2} h_{3} du_{1} du_{2} du_{3}$$
