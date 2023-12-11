@@ -106,6 +106,21 @@ cos\theta cos\varphi & cos\theta sin\varphi & -sin\theta\\
 \widehat{e}_{x}\\
 \widehat{e}_{y}\\
 \widehat{e}_{z}
-\end{bmatrix} 
-$$
+\end{bmatrix} $$
+
+$$\begin{bmatrix}
+\widehat{e}_{\rho}\\
+\widehat{e}_{\varphi}\\
+\widehat{e}_{z}
+\end{bmatrix} =
+\begin{bmatrix}
+cos\varphi & sin\varphi & 0\\
+-sin\varphi & cos\varphi & 0\\
+0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+\widehat{e}_{x}\\
+\widehat{e}_{y}\\
+\widehat{e}_{z}
+\end{bmatrix} $$
 
