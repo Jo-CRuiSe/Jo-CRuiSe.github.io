@@ -16,7 +16,7 @@ image:
   lqip: /assets/blog_res/title/CheckDiskLife.png
 ---
 
-**很多 Mac 用户担心自己的 Mac 的硬盘寿命，想查看硬盘的读写量，接下来就来介绍Smartmontools这款软件。**
+**很多 Mac 用户担心自己的 Mac 的硬盘寿命，想查看硬盘的读写量，接下来就介绍Smartmontools这款软件。**
 
 ## 安装 [Homebrew](https://brew.sh)
 
