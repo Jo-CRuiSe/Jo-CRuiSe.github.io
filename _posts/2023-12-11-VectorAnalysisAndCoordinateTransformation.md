@@ -20,13 +20,28 @@ image:
 
 ### 直角坐标系
 
-位置矢量：$$ \overrightarrow{r} = x\widehat{e}_{x}  + y\widehat{e}_{y} + z\widehat{e}_{z} $$
-线元矢量：$$ d\overrightarrow{l} = dx\widehat{e}_{x}  + dy\widehat{e}_{y} + dz\widehat{e}_{z} $$
+位置矢量：$$ \overrightarrow{r} = x \widehat{e}_{x}  + y \widehat{e}_{y} + z \widehat{e}_{z} $$
+
+线元矢量：$$ d\overrightarrow{l} = dx \widehat{e}_{x}  + dy \widehat{e}_{y} + dz \widehat{e}_{z} $$
+
 面元矢量：$$ \begin{array}{l} 
   \left\{\begin{matrix} 
-  d\overrightarrow{S}_{x}= dydz\widehat{e}_{x}\\ 
-  d\overrightarrow{S}_{y}= dxdz\widehat{e}_{y}\\ 
-  d\overrightarrow{S}_{z}= dxdy\widehat{e}_{z}
+  d\overrightarrow{S}_{x}= dy dz \widehat{e}_{x}\\ 
+  d\overrightarrow{S}_{y}= dx dz \widehat{e}_{y}\\ 
+  d\overrightarrow{S}_{z}= dx dy \widehat{e}_{z}
 \end{matrix}\right.    
 \end{array} $$
+体积元：$$ dV = dxdydz $$
 
+### 柱坐标系
+位置矢量：$$ \overrightarrow{r} = \rho \widehat{e}_{\rho}  + z \widehat{e}_{z} $$
+
+线元矢量：$$ d\overrightarrow{l} = d \rho \widehat{e}_{\rho}  + \rho dy\widehat{e}_{y} + dz \widehat{e}_{z} $$
+
+面元矢量：$$ \begin{array}{l} 
+  \left\{\begin{matrix} 
+  d\overrightarrow{S}_{\rho}= \rho d\varphi dz \widehat{e}_{\rho}\\ 
+  d\overrightarrow{S}_{y}= dx dz \widehat{e}_{y}\\ 
+  d\overrightarrow{S}_{z}= dx dy \widehat{e}_{z}
+\end{matrix}\right.    
+\end{array} $$
