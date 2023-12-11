@@ -72,10 +72,10 @@ image:
 
 面元矢量：$$ \begin{array}{l} 
   \left\{\begin{matrix} 
-  d\overrightarrow{S}_{\rho}= \rho d\varphi dz \widehat{e}_{\rho}\\
-  d\overrightarrow{S}_{\varphi}= d\rho dz \widehat{e}_{\varphi}\\
-  d\overrightarrow{S}_{z}= \rho d\rho d\varphi \widehat{e}_{z}
+  d\overrightarrow{S}_{1}= h_{2} h_{3} du_{2} du_{3} \widehat{e}_{1}\\ 
+  d\overrightarrow{S}_{2}= dx dz \widehat{e}_{y}\\ 
+  d\overrightarrow{S}_{3}= dx dy \widehat{e}_{z}
 \end{matrix}\right.    
 \end{array} $$
 
-体积元：$$ dV = \rho d\rho d\varphi dz $$
+体积元：$$ dV = dxdydz $$
