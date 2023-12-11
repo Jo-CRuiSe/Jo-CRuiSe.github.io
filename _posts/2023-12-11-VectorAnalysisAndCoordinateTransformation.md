@@ -92,22 +92,6 @@ image:
 
 **坐标变换矩阵：**
 
-$$ \begin{bmatrix}
-\widehat{e}_{\rho}\\
-\widehat{e}_{\theta}\\
-\widehat{e}_{\varphi}
-\end{bmatrix} =
-\begin{bmatrix}
-sin\theta cos\varphi & sin\theta sin\varphi & cos\theta\\
-cos\theta cos\varphi & cos\theta sin\varphi & -sin\theta\\
--sin\theta & cos\varphi & 0
-\end{bmatrix}
-\begin{bmatrix}
-\widehat{e}_{x}\\
-\widehat{e}_{y}\\
-\widehat{e}_{z}
-\end{bmatrix} $$
-
 $$\begin{bmatrix}
 \widehat{e}_{\rho}\\
 \widehat{e}_{\varphi}\\
@@ -117,6 +101,22 @@ $$\begin{bmatrix}
 cos\varphi & sin\varphi & 0\\
 -sin\varphi & cos\varphi & 0\\
 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+\widehat{e}_{x}\\
+\widehat{e}_{y}\\
+\widehat{e}_{z}
+\end{bmatrix} $$
+
+$$ \begin{bmatrix}
+\widehat{e}_{\rho}\\
+\widehat{e}_{\theta}\\
+\widehat{e}_{\varphi}
+\end{bmatrix} =
+\begin{bmatrix}
+sin\theta cos\varphi & sin\theta sin\varphi & cos\theta\\
+cos\theta cos\varphi & cos\theta sin\varphi & -sin\theta\\
+-sin\theta & cos\varphi & 0
 \end{bmatrix}
 \begin{bmatrix}
 \widehat{e}_{x}\\
