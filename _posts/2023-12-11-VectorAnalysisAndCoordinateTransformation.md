@@ -68,13 +68,13 @@ image:
 
 ### 一般正交坐标系
 
-线元矢量：$$ d\overrightarrow{l} = h_{1} du_{1}  \widehat{e}_{{u}_{1}} + h_{2} du_{2}\widehat{e}_{{u}_{2}} + h_{3} du_{3} \widehat{e}_{{u}_{3}} $$
+线元矢量：$$ d\overrightarrow{l} = h_{1} du_{1}  \widehat{e}_{u_{1}} + h_{2} du_{2}\widehat{e}_{u_{2}} + h_{3} du_{3} \widehat{e}_{u_{3}} $$
 
 面元矢量：$$ \begin{array}{l} 
   \left\{\begin{matrix} 
-  d\overrightarrow{S}_{1}= h_{2} h_{3} du_{2} du_{3} \widehat{e}_{1}\\ 
-  d\overrightarrow{S}_{2}= dx dz \widehat{e}_{y}\\ 
-  d\overrightarrow{S}_{3}= dx dy \widehat{e}_{z}
+  d\overrightarrow{S}_{1}= h_{2} h_{3} du_{2} du_{3} \widehat{e}_{u_{1}}\\ 
+  d\overrightarrow{S}_{2}= h_{1} h_{3} du_{1} du_{3} \widehat{e}_{u_{2}}\\ 
+  d\overrightarrow{S}_{3}= h_{1} h_{2} du_{1} du_{2} \widehat{e}_{u_{3}}
 \end{matrix}\right.    
 \end{array} $$
 
