@@ -58,8 +58,10 @@ image:
 
 面元矢量：$$ \begin{array}{l} 
   \left\{\begin{matrix} 
-  d\overrightarrow{S}_{x}= dy dz \widehat{e}_{x}\\ 
-  d\overrightarrow{S}_{y}= dx dz \widehat{e}_{y}\\ 
-  d\overrightarrow{S}_{z}= dx dy \widehat{e}_{z}
+  d\overrightarrow{S}_{\rho}= \rho^{2} sin\theta d\theta d\varphi \widehat{e}_{\rho}\\ 
+  d\overrightarrow{S}_{\theta}= \rho sin\theta d\rho d\varphi \widehat{e}_{\theta}\\ 
+  d\overrightarrow{S}_{\varphi}= \rho d\rho  d\varphi \widehat{e}_{\varphi}
 \end{matrix}\right.    
 \end{array} $$
+
+体积元：$$ dV = \rho ^{2} sin\theta d\rho d\theta d\varphi $$
