@@ -20,9 +20,13 @@ image:
 
 ### 直角坐标系
 
-位置矢量：
-
-$$ \overrightarrow{r} = x\widehat{e}_{x}  + y\widehat{e}_{y} + z\widehat{e}_{z} $$
-
-线元矢量：
+位置矢量：$$ \overrightarrow{r} = x\widehat{e}_{x}  + y\widehat{e}_{y} + z\widehat{e}_{z} $$
+线元矢量：$$ d\overrightarrow{l} = dx\widehat{e}_{x}  + dy\widehat{e}_{y} + dz\widehat{e}_{z} $$
+面元矢量：$$ \begin{array}{l} 
+  \left\{\begin{matrix} 
+  d\overrightarrow{S}_{x}= dydz\widehat{e}_{x}\\ 
+  d\overrightarrow{S}_{y}= dxdz\widehat{e}_{y}\\ 
+  d\overrightarrow{S}_{z}= dxdy\widehat{e}_{z}
+\end{matrix}\right.    
+\end{array} $$
 
