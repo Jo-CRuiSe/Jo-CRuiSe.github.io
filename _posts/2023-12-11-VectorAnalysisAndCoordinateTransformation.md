@@ -38,7 +38,7 @@ image:
 
 位置矢量：$$ \overrightarrow{r} = \rho \widehat{e}_{\rho}  + z \widehat{e}_{z} $$
 
-线元矢量：$$ d\overrightarrow{l} = d \rho \widehat{e}_{\rho}  + \rho dy\widehat{e}_{y} + dz \widehat{e}_{z} $$
+线元矢量：$$ d\overrightarrow{l} = d \rho \widehat{e}_{\rho}  + \rho d\varphi \widehat{e}_{\varphi} + dz \widehat{e}_{z} $$
 
 面元矢量：$$ \begin{array}{l} 
   \left\{\begin{matrix} 
@@ -54,7 +54,7 @@ image:
 
 位置矢量：$$ \overrightarrow{r} =  \rho \widehat{e}_{\rho}  $$
 
-线元矢量：$$ d\overrightarrow{l} = dx \widehat{e}_{x}  + dy \widehat{e}_{y} + dz \widehat{e}_{z} $$
+线元矢量：$$ d\overrightarrow{l} = d\rho \widehat{e}_{\rho}  + \rho d\theta \widehat{e}_{\theta} + \rho sin\theta d\varphi \widehat{e}_{\varphi} $$
 
 面元矢量：$$ \begin{array}{l} 
   \left\{\begin{matrix} 
