@@ -82,7 +82,7 @@ image:
 
 其中 $$ h_{1} ,h_{2}, h_{3} $$ 叫做拉梅系数
 
-不同坐标系下的拉梅系数：
+**不同坐标系下的拉梅系数：**
 
 |      |   $$ h_{1} $$   |   $$ h_{2} $$   |   $$ h_{3} $$   |
 | :--: | :--: | :--: | :--: |
@@ -90,5 +90,22 @@ image:
 | 柱坐标 | 1 | $$ \rho $$ | 1 |
 | 球坐标 | 1 | $$ \rho $$ | $$ \rho sin\theta $$ |
 
+**坐标变换矩阵：**
 
+$$ \begin{bmatrix}
+\widehat{e}_{\rho}\\
+\widehat{e}_{\theta}\\
+\widehat{e}_{\varphi}
+\end{bmatrix} =
+\begin{bmatrix}
+sin\theta cos\varphi & sin\theta sin\varphi & cos\theta\\
+cos\theta cos\varphi & cos\theta sin\varphi & -sin\theta\\
+-sin\theta & cos\varphi & 0
+\end{bmatrix}
+\begin{bmatrix}
+\widehat{e}_{x}\\
+\widehat{e}_{y}\\
+\widehat{e}_{z}
+\end{bmatrix} 
+$$
 
