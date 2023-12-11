@@ -10,5 +10,19 @@ commments: true
 typora-root-url: ../../Jo-CRuiSe.github.io/
 math: true
 mermaid: true
-published: false
+published: true
+image:
+  path: /assets/blog_res/title/VectorAnalysisAndCoordinateTransformation.jpg
+  lqip: /assets/blog_res/title/VectorAnalysisAndCoordinateTransformation.jpg
 ---
+
+## 坐标变换
+
+### 直角坐标系
+
+位置矢量：
+
+$$ \overrightarrow{r} = x\widehat{e}_{x}  + y\widehat{e}_{y} + z\widehat{e}_{z} $$
+
+线元矢量：
+
