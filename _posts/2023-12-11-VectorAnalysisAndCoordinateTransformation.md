@@ -65,3 +65,17 @@ image:
 \end{array} $$
 
 体积元：$$ dV = \rho ^{2} sin\theta d\rho d\theta d\varphi $$
+
+### 一般正交坐标系
+
+线元矢量：$$ d\overrightarrow{l} = h_{1} du_{1}  \widehat{e}_{{u}_{1}} + h_{2} du_{2}\widehat{e}_{{u}_{2}} + h_{3} du_{3} \widehat{e}_{{u}_{3}} $$
+
+面元矢量：$$ \begin{array}{l} 
+  \left\{\begin{matrix} 
+  d\overrightarrow{S}_{\rho}= \rho d\varphi dz \widehat{e}_{\rho}\\
+  d\overrightarrow{S}_{\varphi}= d\rho dz \widehat{e}_{\varphi}\\
+  d\overrightarrow{S}_{z}= \rho d\rho d\varphi \widehat{e}_{z}
+\end{matrix}\right.    
+\end{array} $$
+
+体积元：$$ dV = \rho d\rho d\varphi dz $$
