@@ -12,7 +12,8 @@ math: true
 mermaid: true
 published: true
 image:
-  path: /assets/blog_res/title/VectorAnalysisAndCoordinateTransformation.jpg
+  path: /assets/blog_res/title/VectorAnalysisAndCoordinateTransformation.jpg{: .dark}
+/assets/blog_res/title/VectorAnalysisAndCoordinateTransformation2.jpg{: .light}
   lqip: /assets/blog_res/title/VectorAnalysisAndCoordinateTransformation.jpg
 ---
 
