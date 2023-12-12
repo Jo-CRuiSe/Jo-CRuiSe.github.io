@@ -124,3 +124,9 @@ cos\theta cos\varphi & cos\theta sin\varphi & -sin\theta\\
 \widehat{e}_{z}
 \end{bmatrix} $$
 
+## 梯度 散度 旋度
+
+### 梯度
+
+1. 方向导数：$$ \frac{\partial u}{\partial \overrightarrow{l} } = u_{x} cos\alpha + u_{y} cos\beta + u_{z} cos\gamma $$，其中 $$ cos\alpha, cos\beta, cos\gamma $$ 为 $$ \overrightarrow{l} $$的方向余弦
+2. 符号：记为 $$ gradf $$ 或 $$ \bigtriangledown f $$ ，其中 $$ \bigtriangledown  = \left ( \frac{\partial }{\partial x}, \frac{\partial }{\partial y}  \right ) $$
