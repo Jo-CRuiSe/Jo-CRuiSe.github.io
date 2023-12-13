@@ -130,11 +130,11 @@ cos\theta cos\varphi & cos\theta sin\varphi & -sin\theta\\
 
 1. 方向导数：$$ \frac{\partial u}{\partial \overrightarrow{l} } = u_{x} cos\alpha + u_{y} cos\beta + u_{z} cos\gamma $$，其中 $$ cos\alpha, cos\beta, cos\gamma $$ 为 $$ \overrightarrow{l} $$的方向余弦
 2. 符号：记为 $$ gradf $$ 或 $$ \triangledown f $$ ，其中 $$ \triangledown  = \left ( \frac{\partial }{\partial x}, \frac{\partial }{\partial y}  \right ) $$ 
-3. 梯度与方向导数的联系：$$ \frac{\partial u}{\partial \overrightarrow{l}} = \triangledown u \cdot \overrightarrow{l}=\left| {\triangledown u}\right| \left|\overrightarrow{l} ^{0} \right| cos\varphi  $$ <br> 当 $$ \varphi = 0 $$ 时，$$ \frac{\partial u}{\partial \overrightarrow{l}} $$ 取最大值；当 $$ \varphi = \pi $$ 时，$$ \frac{\partial u}{\partial \overrightarrow{l}} $$ 取最小值
+3. 梯度与方向导数的联系：$$ \frac{\partial u}{\partial \overrightarrow{l}} = \triangledown u \cdot \overrightarrow{l}=\lvert {\triangledown u}\rvert \lvert\overrightarrow{l} ^{0} \rvert  cos\varphi $$ <br> 当 $$ \varphi = 0 $$ 时，$$ \frac{\partial u}{\partial \overrightarrow{l}} $$ 取最大值；当 $$ \varphi = \pi $$ 时，$$ \frac{\partial u}{\partial \overrightarrow{l}} $$ 取最小值
 4. 梯度的旋度恒为0 <br> $$ \triangledown \times \left( \triangledown u \right) = 0 $$
 
 ### 散度
 
 1. 通量：设向量场$$ \overrightarrow{F} = P(x, y, z) \overrightarrow{i} + Q(x, y, z) \overrightarrow{j} + R(x, y, z) \overrightarrow{k} , (x, y, z) \in \Omega $$ ，其中$$ P，Q，R $$具有一阶连续偏导数，$$ \Sigma $$为场中的定侧曲面，则称曲面积分 $$ \Phi = \iint\limits_{\Sigma }^{} \overrightarrow{F} \cdot d\overrightarrow{S} $$ 为向量场$$ \overrightarrow{F} $$通过定侧曲面的$$ \Sigma $$通量
 2. 符号：记为 $$ div \overrightarrow{F} $$ 或 $$ \triangledown \cdot \overrightarrow{F} $$
-3. 在直角坐标系下：<br> $$ \triangledown \overrightarrow{A} = \frac{\partial A_{x}}{\partial x}  + \frac{\partial A_{y}}{\partial y} +\frac{\partial A_{z}}{\partial z} $$ <br> 在柱坐标系下：<br> $$ \triangledown \overrightarrow{A} = \frac{1}{r} \frac{\partial }{\partial r} (rA_{r}) + \frac{1}{r} \frac{\partial }{\partial \varphi} (A_{\varphi}) + \frac{\partial }{\partial z}A_{z} $$ <br> 在球坐标系下：<br> 
+3. 在直角坐标系下：<br> $$ \triangledown \cdot \overrightarrow{A} = \frac{\partial A_{x}}{\partial x}  + \frac{\partial A_{y}}{\partial y} +\frac{\partial A_{z}}{\partial z} $$ <br> 在柱坐标系下：<br> $$ \triangledown \cdot \overrightarrow{A} = \frac{1}{r} \frac{\partial }{\partial r} (rA_{r}) + \frac{1}{r} \frac{\partial }{\partial \varphi} (A_{\varphi}) + \frac{\partial }{\partial z}A_{z} $$ <br> 在球坐标系下：<br> $$ \triangledown \cdot \overrightarrow{A} = \frac{1}{r^{2}} \frac{\partial }{\partial r}(r^{2}A_{r}) + \frac{1}{rsin\theta} \frac{\partial }{\partial \theta}(sinA_{\theta}) + \frac{1}{rsin\theta} \frac{\partial }{\partial \varphi}A_{\varphi} $$
