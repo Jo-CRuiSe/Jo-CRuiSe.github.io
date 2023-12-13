@@ -129,4 +129,6 @@ cos\theta cos\varphi & cos\theta sin\varphi & -sin\theta\\
 ### 梯度
 
 1. 方向导数：$$ \frac{\partial u}{\partial \overrightarrow{l} } = u_{x} cos\alpha + u_{y} cos\beta + u_{z} cos\gamma $$，其中 $$ cos\alpha, cos\beta, cos\gamma $$ 为 $$ \overrightarrow{l} $$的方向余弦
-2. 符号：记为 $$ gradf $$ 或 $$ \bigtriangledown f $$ ，其中 $$ \bigtriangledown  = \left ( \frac{\partial }{\partial x}, \frac{\partial }{\partial y}  \right ) $$
+2. 符号：记为 $$ gradf $$ 或 $$ \triangledown f $$ ，其中 $$ \triangledown  = \left ( \frac{\partial }{\partial x}, \frac{\partial }{\partial y}  \right ) $$ 
+3. 梯度与方向导数的联系：$$ \frac{\partial u}{\partial \overrightarrow{l}} = \triangledown u \cdot \overrightarrow{l}=|\triangledown u||\overrightarrow{l} ^{0}| cos\varphi  $$ <br> 当 $$ \varphi = 0 $$ 时，$$ \frac{\partial u}{\partial \overrightarrow{l}} $$ 取最大值；当 $$ \varphi = \pi $$ 时，$$ \frac{\partial u}{\partial \overrightarrow{l}} $$ 取最小值
+4. 梯度的旋度恒为0 <br> $$ \triangledown \times \left( \triangledown u \right) = 0 $$
