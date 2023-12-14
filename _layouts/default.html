@@ -17,6 +17,10 @@ layout: compress
   {% include head.html %}
 
   <body>
+    <div class="loader-wrapper">
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
     {% include sidebar.html lang=lang %}
 
     <div id="main-wrapper" class="d-flex justify-content-center">
@@ -84,4 +88,11 @@ layout: compress
 
     {% include_cached search-loader.html %}
   </body>
+  <script> 
+    $(window).on("load",function(){
+        setTimeout(function(){
+            $(".loader-wrapper").fadeOut("slow");
+        }, 1000);
+    });
+    </script>
 </html>
