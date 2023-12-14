@@ -141,3 +141,5 @@ cos\theta cos\varphi & cos\theta sin\varphi & -sin\theta\\
 4. 散度定理/高斯定理：<br> $$ \unicode{8751}_{S^{+}} \overrightarrow{F} \cdot d\overrightarrow{S} = \iiint\limits_{\Sigma}^{} div \overrightarrow{F} dV $$ <br> 即矢量场在 $$ S $$ 的通量等于其散度在 $$ S $$ 包围的区域上的三重积分
 
 ### 旋度
+
+1. 环量：设有向量场$$ \overrightarrow{F} = P(x, y, z)\overrightarrow{i} + Q(x, y, z)\overrightarrow{j} + R(x, y, z)\overrightarrow{k}, (x, y, z)\in \Omega $$  ，其中 $$ P, Q, R $$ 具有一阶连续偏导数，$$ L $$ 为场中的定向曲线，称曲线积分$$\int\limits_{L} \overrightarrow{F} \cdot d\overrightarrow{r} = \int\limits_{L}Pdx + Qdy + Rdz$$ 为向量场$$ \overrightarrow{F} $$ 沿定向曲线L的环量
