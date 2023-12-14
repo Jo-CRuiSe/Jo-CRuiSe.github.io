@@ -181,5 +181,6 @@ cos\theta cos\varphi & cos\theta sin\varphi & -sin\theta\\
         & = \triangledown^{2}A_{x}
       \end{alignat} $$
 
+参考
 [^1]:郭旭涵.第8章 矢量分析与坐标变换[Z]，2023.
 [^2]:上海交通大学数学学科学学院微积分课程组.大学数学 微积分[M].北京：高等教育出版社，2017：88-228.
