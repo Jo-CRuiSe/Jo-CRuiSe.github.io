@@ -17,6 +17,10 @@ layout: compress
 {% include head.html %}
 
 <body>
+  <div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+  </div>
+  
   {% include sidebar.html lang=lang %}
 
   <div id="main-wrapper" class="d-flex justify-content-center">
@@ -413,5 +417,12 @@ layout: compress
     i++;
   });
 </script>
+
+<!-- Loader -->
+<script> 
+  $(window).on("load",function(){
+    $(".loader-wrapper").fadeOut("slow");
+  });
+  </script>
 
 </html>
