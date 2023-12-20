@@ -62,7 +62,7 @@
     text-align: center;
 }
 
-.button {
+.titleButton {
     margin: 0;
     height: auto;
     background: transparent;
@@ -71,7 +71,7 @@
 }
 
 /* button styling */
-.button {
+.titleButton {
     --border-right: 6px;
     --text-stroke-color: rgba(201, 187, 187, 0.6);
     // --animation-color: #8806df;
@@ -125,7 +125,7 @@
     filter: drop-shadow(0 0 23px var(--animation-color))
   } */
 
-.button.clicked .hover-text {
+.titleButton.clicked .hover-text {
     width: 100%;
     -webkit-backdrop-filter: drop-shadow(0 0 23px var(--animation-color));
     backdrop-filter: drop-shadow(0 0 23px var(--animation-color));
