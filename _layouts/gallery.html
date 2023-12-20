@@ -39,8 +39,8 @@ layout: compress
             <div class="info-card">
               <div class="info">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati nam illum veritatis, consectetur dolore ullam! Beatae ab, cupiditate deleniti voluptates quo fuga dignissimos et perspiciatis, corporis earum impedit hic neque!</p>
+                <button class="info-dismiss-btn">OK</button>
               </div>
-              <button class="info-dismiss-btn">OK</button>
             </div>
           </div>
         </div>
@@ -361,6 +361,10 @@ layout: compress
   document.querySelector('.gal-info-btn').addEventListener('click',function () {
     infoView.style.setProperty('visibility', 'visible');
     infoView.style.setProperty('opacity', '100');
+  });
+  document.querySelector('.info-dismiss-btn').addEventListener('click',function () {
+    infoView.style.setProperty('visibility', 'hidden');
+    infoView.style.setProperty('opacity', '0');
   });
 </script>
 
