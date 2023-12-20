@@ -25,6 +25,32 @@
     overflow: hidden;
 }
 
+.gal-info {
+    z-index: 999;
+    // background: rgba(31, 31, 31, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.info-card {
+    position: relative;
+    display: flex;
+    max-width: 500px;
+    max-height: 500px;
+    margin: 20px;
+}
+
 
 // GALLERY Title
 .portfolio-container .portfolio-heading h3 {
@@ -356,7 +382,7 @@
 }
 
 // Popup Card， 层级位于上一个之下，方便之间添加图片等其他样式
-.portfolio-item .popup-card .info {
+.info {
     z-index: 1;
     display: flex;
     flex-direction: column;
