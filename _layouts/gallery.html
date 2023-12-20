@@ -369,16 +369,11 @@ layout: compress
   var genieBtns = document.querySelectorAll('.popup-yellow');
   var scaleBtns = document.querySelectorAll('.popup-green');
   var layerViews = document.querySelectorAll('.portfolio-layer');
-  var galInfoBtn = document.querySelectorAll('.gal-info-btn');
 
   var popup = function (popupClick) {
     popupViews[popupClick].classList.add('active');
     layerViews[popupClick].classList.add('deactive');
   };
-
-  galInfoBtn.addEventListener("click", () => {
-    popup(0);
-  });
 
   popupBtns.forEach((popupBtn, i) => {
     popupBtn.addEventListener("click", () => {
