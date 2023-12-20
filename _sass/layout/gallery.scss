@@ -18,42 +18,13 @@
     position: absolute;
     top: auto;
     right: 0;
+    padding: 10px;
+    background-color: transparent;
+    border: transparent;
+    outline: none;
+    overflow: hidden;
 }
 
-.gal-info-btn {
-    --#{$prefix}btn-font-weight: #{$font-weight-normal};
-    --#{$prefix}btn-color: #{$btn-link-color};
-    --#{$prefix}btn-bg: transparent;
-    --#{$prefix}btn-border-color: transparent;
-    --#{$prefix}btn-hover-color: #{$btn-link-hover-color};
-    --#{$prefix}btn-hover-border-color: transparent;
-    --#{$prefix}btn-active-color: #{$btn-link-hover-color};
-    --#{$prefix}btn-active-border-color: transparent;
-    --#{$prefix}btn-disabled-color: #{$btn-link-disabled-color};
-    --#{$prefix}btn-disabled-border-color: transparent;
-    --#{$prefix}btn-box-shadow: 0 0 0 #000; // Can't use `none` as keyword negates all values when used with multiple shadows
-    --#{$prefix}btn-focus-shadow-rgb: #{$btn-link-focus-shadow-rgb};
-  
-    text-decoration: $link-decoration;
-    @if $enable-gradients {
-      background-image: none;
-    }
-  
-    &:hover,
-    &:focus-visible {
-      text-decoration: $link-hover-decoration;
-    }
-  
-    &:focus-visible {
-      color: var(--#{$prefix}btn-color);
-    }
-  
-    &:hover {
-      color: var(--#{$prefix}btn-hover-color);
-    }
-  
-    // No need for an active state here
-}
 
 // GALLERY Title
 .portfolio-container .portfolio-heading h3 {
@@ -71,10 +42,10 @@
     background: transparent;
     padding: 0;
     border: none;
-  }
-  
-  /* button styling */
-  .button {
+}
+
+/* button styling */
+.button {
     --border-right: 6px;
     --text-stroke-color: rgba(201, 187, 187, 0.6);
     // --animation-color: #8806df;
@@ -89,15 +60,24 @@
     color: transparent;
     -webkit-text-stroke: 1px var(--text-stroke-color);
     font-size: 4em;
-  }
-  /* this is the text, when you hover on button */
-  @keyframes blink {
-    0% { border-color: var(--animation-color); }
-    50% { border-color: transparent; }
-    100% { border-color: var(--animation-color); }
-  }
-  
-  .hover-text {
+}
+
+/* this is the text, when you hover on button */
+@keyframes blink {
+    0% {
+        border-color: var(--animation-color);
+    }
+
+    50% {
+        border-color: transparent;
+    }
+
+    100% {
+        border-color: var(--animation-color);
+    }
+}
+
+.hover-text {
     position: absolute;
     box-sizing: border-box;
     content: attr(data-text);
@@ -109,15 +89,17 @@
     transition: 0.5s;
     font-size: 100%;
     -webkit-text-stroke: 1px var(--animation-color);
-    animation: blink 1s infinite; /* Apply the blink animation */
-  }
-  /* hover */
-  /* .button:hover .hover-text {
+    animation: blink 1s infinite;
+    /* Apply the blink animation */
+}
+
+/* hover */
+/* .button:hover .hover-text {
     width: 100%;
     filter: drop-shadow(0 0 23px var(--animation-color))
   } */
 
-.button.clicked .hover-text{
+.button.clicked .hover-text {
     width: 100%;
     -webkit-backdrop-filter: drop-shadow(0 0 23px var(--animation-color));
     backdrop-filter: drop-shadow(0 0 23px var(--animation-color));
@@ -305,6 +287,7 @@
     0% {
         transform: translateY(0px);
     }
+
     100% {
         transform: translateY(-600px);
         opacity: 0;
@@ -314,7 +297,7 @@
 // Genie Minimize
 @keyframes genie {
     to {
-        transform: translate(0, -140%) scale(0.1)  rotateX(40deg) ;
+        transform: translate(0, -140%) scale(0.1) rotateX(40deg);
     }
 }
 
@@ -327,36 +310,42 @@
 
 // 弹出卡片动画
 
-.portfolio-item .popup-view.red.active .popup-card{
-    opacity: 1;
-    visibility: visible;
-    animation: dropin 0.5s ease;
-}
-.portfolio-item .popup-view.yellow.active .popup-card{
-    opacity: 1;
-    visibility: visible;
-    animation: dropin 0.5s ease;
-}
-.portfolio-item .popup-view.green.active .popup-card{
-    opacity: 1;
-    visibility: visible;
-    animation: dropin 0.5s ease;
-}
-.portfolio-item .popup-view.active .popup-card{
+.portfolio-item .popup-view.red.active .popup-card {
     opacity: 1;
     visibility: visible;
     animation: dropin 0.5s ease;
 }
 
-.portfolio-item .popup-view.red .popup-card{
+.portfolio-item .popup-view.yellow.active .popup-card {
+    opacity: 1;
+    visibility: visible;
+    animation: dropin 0.5s ease;
+}
+
+.portfolio-item .popup-view.green.active .popup-card {
+    opacity: 1;
+    visibility: visible;
+    animation: dropin 0.5s ease;
+}
+
+.portfolio-item .popup-view.active .popup-card {
+    opacity: 1;
+    visibility: visible;
+    animation: dropin 0.5s ease;
+}
+
+.portfolio-item .popup-view.red .popup-card {
     animation: dismiss 0.6s ease;
 }
-.portfolio-item .popup-view.yellow .popup-card{
+
+.portfolio-item .popup-view.yellow .popup-card {
     animation: genie 0.6s ease;
 }
-.portfolio-item .popup-view.green .popup-card{
+
+.portfolio-item .popup-view.green .popup-card {
     animation: scale 0.6s ease;
 }
+
 // Popup Card
 .portfolio-item .popup-card {
     position: relative;
@@ -386,8 +375,7 @@
     border-left-color: var(--gallery-card-border-left);
     // transition: .4s;
     transform: skew(0deg);
-    box-shadow: 0 20px 30px 2px rgba(0,0,0,0.2)
-
+    box-shadow: 0 20px 30px 2px rgba(0, 0, 0, 0.2)
 }
 
 // 仿 macOS 红绿灯按钮
@@ -469,10 +457,11 @@
     .portfolio-layer h4 {
         font-size: 2.2rem;
     }
+
     .popup-btn {
         padding-block: 0;
         font-size: 12px;
-        border: 2px solid rgba(255,255,255,.3019607843);
+        border: 2px solid rgba(255, 255, 255, .3019607843);
         padding-inline: 0.5rem;
         gap: 5px;
     }
