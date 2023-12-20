@@ -47,7 +47,7 @@ layout: compress
 
       <div class="portfolio-container">
         <div class="portfolio-heading">
-          <button class="button" data-text="Awesome">
+          <button class="titleButton" data-text="Awesome">
             <span class="actual-text">&nbsp;GALLERY&nbsp;</span>
             <span aria-hidden="true" class="hover-text">&nbsp;GALLERY&nbsp;</span>
           </button>
@@ -354,6 +354,16 @@ layout: compress
 
 </body>
 
+<!-- Info View -->
+<script type="text/javascript">
+  var infoView = document.querySelector('.gal-info');
+  document.querySelector('.gal-info-btn').addEventListener('click',function () {
+    infoView.style.setProperty('visibility', 'visible')
+    infoView.style.setProperty('opacity', '100')
+  })
+</script>
+
+<!-- Popup View -->
 <script type="text/javascript">
   var popupViews = document.querySelectorAll('.popup-view');
   var popupBtns = document.querySelectorAll('.popup-btn');
@@ -411,7 +421,7 @@ layout: compress
 <!-- 以下两个 js 异步进行，不能合并 -->
 <!-- 监听 title 是否被点击 -->
 <script>
-  document.querySelector('.button').addEventListener('click', function () {
+  document.querySelector('.TitleButton').addEventListener('click', function () {
     this.classList.toggle('clicked');
   });
 </script>
@@ -421,7 +431,7 @@ layout: compress
   var colors = ["rgba(213, 132, 51, 0.872)", "rgba(29, 152, 232, 0.87)", "rgba(29, 152, 232, 0.87)", "rgba(125, 12, 254, 1)", "rgba(125, 12, 254, 1)", "rgba(19, 236, 221, 0.87)", "rgba(19, 236, 221, 0.87)", "rgba(228, 49, 161, 0.9)", "rgba(228, 49, 161, 0.9)", "rgba(213, 132, 51, 0.872)"];
   var i = 0;
 
-  document.querySelector('.button').addEventListener('click', function () {
+  document.querySelector('.TitleButton').addEventListener('click', function () {
     this.style.setProperty('--animation-color', colors[i % colors.length]);
     i++;
   });
