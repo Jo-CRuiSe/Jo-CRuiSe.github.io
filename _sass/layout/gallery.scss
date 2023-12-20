@@ -40,7 +40,7 @@
     align-items: center;
     opacity: 0;
     visibility: hidden;
-    transition: 0.5s fadeIn ease;
+    animation: 0.5s fadeIn ease;
 }
 
 .info-card {
@@ -62,7 +62,6 @@
     font-size: 15px;
     width: 10em;
     padding: 0.5em;
-    transition: all 0.4s;
     cursor: pointer;
 }
 
