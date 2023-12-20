@@ -51,6 +51,20 @@
     margin: 20px;
 }
 
+.info-dismiss-btn {
+    display: inline-block;
+    border-radius: 7px;
+    border: none;
+    background: linear-gradient(#498EF7, #3478F6);
+    color: white;
+    font-family: inherit;
+    text-align: center;
+    font-size: 13px;
+    width: 10em;
+    padding: 1em;
+    transition: all 0.4s;
+    cursor: pointer;
+}
 
 // GALLERY Title
 .portfolio-container .portfolio-heading h3 {
