@@ -40,6 +40,17 @@
     align-items: center;
     opacity: 0;
     visibility: hidden;
+    animation: fadeOut 0.5s ease;
+}
+
+.gal-info.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.gal-info.active .info-card{
+    visibility: visible;
+    opacity: 1;
     animation: fadeIn 0.5s ease;
 }
 
@@ -328,6 +339,7 @@
 
     to {
         transform: scale(0.8);
+        opacity: 0;
     }
 }
 

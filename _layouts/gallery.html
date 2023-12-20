@@ -359,12 +359,10 @@ layout: compress
 <script type="text/javascript">
   var infoView = document.querySelector('.gal-info');
   document.querySelector('.gal-info-btn').addEventListener('click',function () {
-    infoView.style.setProperty('visibility', 'visible');
-    infoView.style.setProperty('opacity', '100');
+    infoView.add('active');
   });
   document.querySelector('.info-dismiss-btn').addEventListener('click',function () {
-    infoView.style.setProperty('visibility', 'hidden');
-    infoView.style.setProperty('opacity', '0');
+    infoView.remove('active');
   });
 </script>
 
