@@ -40,7 +40,7 @@
     align-items: center;
     opacity: 0;
     visibility: hidden;
-    transition: 0.5s ease;
+    transition: 0.5s fadeIn ease;
 }
 
 .info-card {
@@ -308,6 +308,26 @@
 }
 
 // Animation
+@keyframes fadeIn {
+    from {
+        transform: scale(0.8);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0.8);
+    }
+}
+
 @keyframes dropin {
     0% {
         transform: translateY(-400px);
