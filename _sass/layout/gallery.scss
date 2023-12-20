@@ -360,7 +360,10 @@
 
 // Genie Minimize
 @keyframes genie {
-    to {
+    10% {
+        transform: translateY(10px);
+    }
+    100% {
         transform: translate(0, -140%) scale(0.1) rotateX(40deg);
     }
 }
