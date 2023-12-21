@@ -378,11 +378,9 @@
 @keyframes genie {
     50% {
         transform: translateY(30px);
-        opacity: 1;
     }
     100% {
         transform: translate(0, -140%) scale(0.1) rotateX(40deg);
-        opacity: 0;
     }
 }
 
