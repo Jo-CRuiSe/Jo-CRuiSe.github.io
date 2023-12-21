@@ -17,7 +17,7 @@
 .gal-info-btn {
     position: absolute;
     top: auto;
-    right: 0;
+    right: 20px;
     padding: 10px;
     background-color: transparent;
     border: transparent;
@@ -616,5 +616,8 @@
 
     .info-card .info p {
         font-size: 1.2rem;
+    }
+    .gal-info-btn {
+        right: 10px;
     }
 }
