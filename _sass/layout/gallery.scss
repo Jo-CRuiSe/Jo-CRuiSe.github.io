@@ -40,6 +40,7 @@
     align-items: center;
     opacity: 0;
     visibility: hidden;
+    transition: 0.5s;
 }
 
 .gal-info.active {
@@ -54,7 +55,7 @@
 }
 
 .gal-info .info-card {
-    animation: dismiss 0.5s ease;
+    animation: fadeOut 0.5s ease;
 }
 
 .info-card {
@@ -311,7 +312,7 @@
     align-items: center;
     opacity: 0;
     visibility: hidden;
-    transition: 0.5s;
+    transition: 0.8s;
 }
 
 // 触发按钮变为 active
