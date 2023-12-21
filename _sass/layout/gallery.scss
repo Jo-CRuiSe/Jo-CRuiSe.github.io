@@ -40,7 +40,7 @@
     align-items: center;
     opacity: 0;
     visibility: hidden;
-    animation: fadeOut 0.5s ease;
+    transition: 0.5s ease;
 }
 
 .gal-info.active {
