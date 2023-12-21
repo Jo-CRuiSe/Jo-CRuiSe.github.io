@@ -40,7 +40,7 @@
     align-items: center;
     opacity: 0;
     visibility: hidden;
-    transition: 0.5s ease;
+    transition: 0.5s;
 }
 
 .gal-info.active {
@@ -55,6 +55,8 @@
 }
 
 .gal-info .info-card {
+    visibility: visible;
+    opacity: 0;
     animation: fadeOut 0.5s ease;
 }
 
