@@ -66,6 +66,21 @@
     margin: 20px;
 }
 
+.info-card .info h2 {
+    color: var(--heading-color);
+    align-self: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px;
+    word-wrap: break-word;
+}
+
+.info-card .info p {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    text-align: justify;
+    overflow: scroll;
+}
 .info-dismiss-btn {
     align-self: center;
     border-radius: 7px;
@@ -421,7 +436,7 @@
 }
 
 .portfolio-item .popup-view.yellow .popup-card {
-    animation: genie 0.6s ease;
+    animation: genie 3s ease;
 }
 
 .portfolio-item .popup-view.green .popup-card {
@@ -504,7 +519,7 @@
 }
 
 // Popup Card Heading
-.info h2 {
+.portfolio-item .popup-card .info h2 {
     // color: #fff;
     color: var(--heading-color);
     font-size: 2.6rem;
@@ -515,7 +530,7 @@
 }
 
 // Popup Card Paragraph
-.info p {
+.portfolio-item .popup-card .info p {
     color: var(--text-color);
     font-size: 1.5rem;
     margin: 10px;
@@ -577,18 +592,27 @@
     }
 
 
-    .info h2 {
+    .portfolio-item .popup-card .info h2 {
         font-size: 2.2rem;
         margin: 10px;
         word-wrap: break-word;
     }
 
-    .info p {
+    .portfolio-item .popup-card .info p {
         font-size: 1.3rem;
         margin: 0;
     }
 
     .portfolio-container .portfolio-heading h3 {
         font-size: 3.5em;
+    }
+
+    .info-card .info h2 {
+        font-size: 1.8rem;
+        word-wrap: break-word;
+    }
+
+    .info-card .info p {
+        font-size: 1.2rem;
     }
 }
