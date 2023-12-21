@@ -374,7 +374,7 @@
 
 // Genie Minimize
 @keyframes genie {
-    50% {
+    10% {
         transform: translateY(30px);
     }
     100% {
@@ -420,7 +420,7 @@
 }
 
 .portfolio-item .popup-view.yellow .popup-card {
-    animation: genie 0.6s ease;
+    animation: genie 3s ease;
 }
 
 .portfolio-item .popup-view.green .popup-card {
