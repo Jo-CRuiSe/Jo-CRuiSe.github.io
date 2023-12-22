@@ -135,52 +135,6 @@ cos\theta cos\varphi & cos\theta sin\varphi & -sin\theta\\
 
 ### 散度
 
-1. 通量：设向量场$$ \overrightarrow{F} = P(x, y, z) \overrightarrow{i} + Q(x, y, z) \overrightarrow{j} + R(x, y, z) \overrightarrow{k} , (x, y, z) \in \Omega $$ ，其中$$ P，Q，R $$具有一阶连续偏导数，$$ \Sigma $$为场中的定侧曲面，则称曲面积分 $$ \Phi = \iint\limits_{\Sigma }^{} \overrightarrow{F} \cdot d\overrightarrow{S} $$ 为向量场$$ \overrightarrow{F} $$通过定侧曲面的$$ \Sigma $$通量
-2. 符号：记为 $$ div \overrightarrow{F} $$ <br>  $$ div \overrightarrow{F} =  \triangledown \cdot \overrightarrow{F} $$
-3. 直角坐标系下：<br> $$ \triangledown \cdot \overrightarrow{A} = \frac{\partial A_{x}}{\partial x}  + \frac{\partial A_{y}}{\partial y} +\frac{\partial A_{z}}{\partial z} $$ <br> 柱坐标系下：<br> $$ \triangledown \cdot \overrightarrow{A} = \frac{1}{r} \frac{\partial }{\partial r} (rA_{r}) + \frac{1}{r} \frac{\partial }{\partial \varphi} A_{\varphi} + \frac{\partial }{\partial z}A_{z} $$ <br> 球坐标系下：<br> $$ \triangledown \cdot \overrightarrow{A} = \frac{1}{r^{2}} \frac{\partial }{\partial r}(r^{2}A_{r}) + \frac{1}{rsin\theta} \frac{\partial }{\partial \theta}(sinA_{\theta}) + \frac{1}{rsin\theta} \frac{\partial }{\partial \varphi}A_{\varphi} $$ <br> 用拉梅系数表示：<br> $$ \triangledown \cdot \overrightarrow{A} = \frac{1}{h_{1}h_{2}h_{3}} \left [ \frac{\partial }{\partial u_{1}} (h_{2}h_{3}A_{1}) + \frac{\partial }{\partial u_{2}} (h_{1}h_{3}A_{2}) + \frac{\partial }{\partial u_{3}} (h_{1}h_{2}A_{3}) \right ]  $$
-4. 散度定理/高斯定理：<br> $$ \unicode{8751}_{S^{+}} \overrightarrow{F} \cdot d\overrightarrow{S} = \iiint\limits_{\Sigma}^{} div \overrightarrow{F} dV $$ <br> 即矢量场在 $$ S $$ 的通量等于其散度在 $$ S $$ 包围的区域上的三重积分
-
-### 旋度
-
-1. 环量：设有向量场$$ \overrightarrow{F} = P(x, y, z)\overrightarrow{i} + Q(x, y, z)\overrightarrow{j} + R(x, y, z)\overrightarrow{k}, (x, y, z)\in \Omega $$  ，其中 $$ P, Q, R $$ 具有一阶连续偏导数，$$ L $$ 为场中的定向曲线，称曲线积分$$\int\limits_{L} \overrightarrow{F} \cdot d\overrightarrow{r} = \int\limits_{L}Pdx + Qdy + Rdz$$ 为向量场$$ \overrightarrow{F} $$ 沿定向曲线L的环量
-2. 符号：记为$$ rot \overrightarrow{F} $$ 或 $$ curl \overrightarrow{F} $$ <br> $$ rot \overrightarrow{F} = \triangledown \times \overrightarrow{F} $$
-3. 直角坐标系下：<br> $$ \triangledown \times \overrightarrow{F} = 
-    \begin{vmatrix}  
-   \widehat{e}_{x} & \widehat{e}_{y} & \widehat{e}_{z}\\
-   \frac{\partial }{\partial x} & \frac{\partial }{\partial y} & \frac{\partial }{\partial z}\\
-   F_{x} & F_{y} & F_{z}
-    \end{vmatrix}  $$ <br> 柱坐标系下：<br> $$ \triangledown \times \overrightarrow{F} = \frac{1}{\rho} 
-    \begin{vmatrix}  
-   \widehat{e}_{\rho} & \rho \widehat{e}_{\varphi} & \widehat{e}_{z}\\
-   \frac{\partial }{\partial \rho} & \frac{\partial }{\partial \varphi} & \frac{\partial }{\partial z}\\
-   F_{\rho} & \rho F_{\varphi} & F_{z}
-    \end{vmatrix} $$ <br> 球坐标系下：<br> $$ \triangledown \times \overrightarrow{F} = \frac{1}{\rho ^{2}sin\theta} 
-    \begin{vmatrix}  
-   \widehat{e}_{\rho} & \rho \widehat{e}_{\theta} & \rho sin\theta\widehat{e}_{\varphi}\\
-   \frac{\partial }{\partial \rho} & \frac{\partial }{\partial \theta} & \frac{\partial }{\partial \varphi}\\
-   F_{\rho} & \rho F_{\varphi} & \rho sin\theta F_{\varphi}
-    \end{vmatrix} $$ <br> 用拉梅系数表示：<br> $$ \triangledown \times \overrightarrow{F} = \frac{1}{h_{1}h_{2}h_{3}} 
-    \begin{vmatrix}  
-   h_{1}\widehat{u}_{1} & h_{2}\widehat{u}_{2} & h_{3}\widehat{u}_{3}\\
-   \frac{\partial }{\partial u_{1}} & \frac{\partial }{\partial u_{2}} & \frac{\partial }{\partial u_{3}}\\
-   h_{1}F_{1} & h_{2} F_{2} & h_{3} F_{3}
-    \end{vmatrix} $$
-4. 旋度的散度恒为0：<br> $$ \triangledown \cdot \triangledown \times \overrightarrow{A} \equiv 0 $$
-5. 斯托克斯定理：<br> $$ \oint_{C} Pdx + Qdy + Rdz = \iint\limits_{\Sigma}\begin{vmatrix} 
-    cos\alpha & cos\beta & cos\gamma\\
-    \frac{\partial }{\partial x} & \frac{\partial }{\partial y} & \frac{\partial }{\partial z}\\
-    P & Q & R   
-    \end{vmatrix}dS $$ <br> $$ (cos\alpha, cos\beta, cos\gamma) $$ 为 $$ \Sigma $$ 上任意指定侧的单位法向量<br> 公式揭示了沿曲面 $$ \Sigma $$ 的曲面积分与其边界曲线 $$ C $$ 的曲线积分间的关系
-
-## 补充知识——拉普拉斯运算
-1. 对标量场：<br> $$ \triangledown^{2}u = \triangledown \cdot (\triangledown u) $$
-2. 对矢量场：<br> $$ \triangledown^{2} \times \overrightarrow{A} = \triangledown (\triangledown \cdot \overrightarrow{A}) - \triangledown \times (\triangledown \times \overrightarrow{A}) $$
-3. 两者联系：<br> $$ \begin{alignat}{3}
-        (\triangledown^{2} \overrightarrow{A}) _{x}& = [\triangledown (\triangledown \cdot \overrightarrow{A})]_{x} - [\triangledown \times (\triangledown \times \overrightarrow{A})]_{x}\\
-        & = \frac{\partial^{2}A_{x}}{\partial x^{2}} + \frac{\partial^{2}A_{x}}{\partial y^{2}} + \frac{\partial^{2}A_{x}}{\partial z^{2}}\\
-        & = \triangledown^{2}A_{x}
-      \end{alignat} $$
-
 参考
 
 [^1]:郭旭涵.第8章 矢量分析与坐标变换[Z]，2023.
