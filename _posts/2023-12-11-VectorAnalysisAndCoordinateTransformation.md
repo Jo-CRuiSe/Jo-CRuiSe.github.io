@@ -135,7 +135,8 @@ cos\theta cos\varphi & cos\theta sin\varphi & -sin\theta\\
 
 ### 散度
 
-1. 通量：设向量场$$ \overrightarrow{F} = P(x, y, z) \overrightarrow{i} + Q(x, y, z) \overrightarrow{j} + R(x, y, z) \overrightarrow{k} , (x, y, z) \in \Omega $$ ，其中$$ P，Q，R $$具有一阶连续偏导数，$$ \Sigma $$为场中的定侧曲面，则称曲面积分 $$ \Phi = \iint\limits_{\Sigma }^{} \overrightarrow{F} \cdot d\overrightarrow{S} $$ 为向量场$$ \overrightarrow{F} $$通过定侧曲面的$$ \Sigma $$通量
+1. 通量：设向量场$$ \overrightarrow{F} = P(x, y, z) \overrightarrow{i} + Q(x, y, z) \overrightarrow{j} + R(x, y, z) \overrightarrow{k} , (x, y, z) \in \Omega $$ 
+其中$$ P，Q，R $$具有一阶连续偏导数，$$ \Sigma $$为场中的定侧曲面，则称曲面积分 $$ \Phi = \iint\limits_{\Sigma }^{} \overrightarrow{F} \cdot d\overrightarrow{S} $$ 为向量场$$ \overrightarrow{F} $$通过定侧曲面的$$ \Sigma $$通量
 
 参考
 
