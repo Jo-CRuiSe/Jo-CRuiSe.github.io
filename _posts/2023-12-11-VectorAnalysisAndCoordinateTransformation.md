@@ -175,7 +175,7 @@ cos\theta cos\varphi & cos\theta sin\varphi & -sin\theta\\
 
 ## 补充知识——拉普拉斯运算
 
-1. 对标量场：<br> $$ \triangledown^{2}u = \triangledown \cdot (\triangledown u) $$
+1. 对标量场：<br> $$ \triangledown^{2}u = \triangledown \cdot (\triangledown u) $$ <br> 使用拉梅系数表示：<br> $$ \triangledown^{2}f = \frac{1}{h_{1}h_{2}h_{3}} \sum_{i=1}^{3} \frac{\partial}{\partial u_{i}}(\frac{h_{1}h_{2}h_{3}}{h_{i}^{2}}\frac{\partial f}{\partial u_{i}}) $$
 2. 对矢量场：<br> $$ \triangledown^{2} \times \overrightarrow{A} = \triangledown (\triangledown \cdot \overrightarrow{A}) - \triangledown \times (\triangledown \times \overrightarrow{A}) $$
 3. 两者联系：<br> $$ \begin{alignat}{3}
        (\triangledown^{2} \overrightarrow{A}) _{x}& = [\triangledown (\triangledown \cdot \overrightarrow{A})]_{x} - [\triangledown \times (\triangledown \times \overrightarrow{A})]_{x}\\
