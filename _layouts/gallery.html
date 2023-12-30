@@ -475,10 +475,18 @@ layout: compress
   $(window).on("load", function () {
     $(".loader-wrapper").fadeOut("slow");
   });
-  setTimeout(function () {
-    alert('检测到当前页面加载时间已超过 10 秒，原因可能是您的网速过慢或系统正在维护，您可继续等待加载或尝试刷新页面以解决。');
-    $(".loader-wrapper").show();
-  }, 10); 
+
 </script>
 
+<script>
+  // 在页面加载完成后执行代码
+  window.addEventListener('load', function() {
+      // 检查页面加载时间是否超过10秒
+      var loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+      if (loadTime > 10) {
+          // 页面加载时间超过10秒，弹出提示框
+          alert('页面加载时间超过10秒，请稍等片刻或尝试刷新页面。');
+      }
+  });
+</script>
 </html>
