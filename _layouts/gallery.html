@@ -479,12 +479,12 @@ layout: compress
 </script>
 
 <script>
-  // 在页面加载完成后执行代码
+
   window.addEventListener('load', function() {
-      // 检查页面加载时间是否超过10秒
+
       var loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
       if (loadTime > 10) {
-          // 页面加载时间超过10秒，弹出提示框
+
           alert('页面加载时间超过10秒，请稍等片刻或尝试刷新页面。');
       }
   });
