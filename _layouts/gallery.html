@@ -471,22 +471,14 @@ layout: compress
 </script>
 
 <!-- Loader -->
-
-
 <script>
-  $(document).ready(function () {
-    $(".loader-wrapper").show();
-    setTimeout(function () {
-      $(".loader-wrapper").fadeIn("slow");
-      alert('检测到页面加载时间已经超过 10 秒，原因可能是您的网速过慢或系统正在维护，您可尝试刷新界面以解决。');
-      setInterval(function () {
-        $(".loader-wrapper").fadeIn("slow");
-      }, 1000);
-    }, 1000);
-    $(window).on("load", function () {
-      $(".loader-wrapper").fadeOut("slow");
-    });
+  $(window).on("load", function () {
+    $(".loader-wrapper").fadeOut("slow");
   });
+  setTimeout(function () {
+    alert('检测到当前页面加载时间已超过 10 秒，原因可能是您的网速过慢或系统正在维护，您可继续等待加载或尝试刷新页面以解决。');
+    $(".loader-wrapper").show();
+  }, 10000); 
 </script>
 
 </html>
