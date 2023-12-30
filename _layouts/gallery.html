@@ -474,12 +474,12 @@ layout: compress
 <script>
   $(window).on("load", function () {
     $(".loader-wrapper").fadeOut("slow");
-    setTimeout(function () {
-      alert('检测到当前页面加载时间已超过 10 秒，原因可能是您的网速过慢或系统正在维护，您可继续等待加载或尝试刷新页面以解决。');
-      $(".loader-wrapper").show();
-    }, 10);
   });
+  setTimeout(function () {
+    if ($(".loader-wrapper").is(":visible")) {
+      alert('检测到当前页面加载时间已超过 10 秒，原因可能是您的网速过慢或系统正在维护，您可继续等待加载或尝试刷新页面以解决。');
+    };
+  }, 10); 
 </script>
-
 
 </html>
