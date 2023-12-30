@@ -20,7 +20,7 @@ layout: compress
   <div class="loader-wrapper">
     <span class="loader"><span class="loader-inner"></span></span>
   </div>
-  
+
   {% include sidebar.html lang=lang %}
 
   <div id="main-wrapper" class="d-flex justify-content-center">
@@ -40,7 +40,10 @@ layout: compress
               <div class="info">
                 <h2>关于“画廊”</h2>
                 <p>画廊这个版块中的图片与视频是我建模与渲染过程中的练习作品，目的是记录学习成果。部分模型由其他创作者提供。</p>
-                <p style="font-size: 15px;">特别鸣谢：<a href="https://space.bilibili.com/435558003?spm_id_from=333.337" target = "_blank">李翔SCU</a>，<a href="https://space.bilibili.com/3494357237762255?spm_id_from=333.337" target="_blank">每天逛一逛的小林</a>，<a href="https://space.bilibili.com/318473879?spm_id_from=333.337.0.0" target="_blank">吴名小伙</a></p>
+                <p style="font-size: 15px;">特别鸣谢：<a href="https://space.bilibili.com/435558003?spm_id_from=333.337"
+                    target="_blank">李翔SCU</a>，<a href="https://space.bilibili.com/3494357237762255?spm_id_from=333.337"
+                    target="_blank">每天逛一逛的小林</a>，<a href="https://space.bilibili.com/318473879?spm_id_from=333.337.0.0"
+                    target="_blank">吴名小伙</a></p>
                 <button class="info-dismiss-btn">OK</button>
               </div>
             </div>
@@ -385,10 +388,10 @@ layout: compress
 <!-- Info View -->
 <script type="text/javascript">
   var infoView = document.querySelector('.gal-info');
-  document.querySelector('.gal-info-btn').addEventListener('click',function () {
+  document.querySelector('.gal-info-btn').addEventListener('click', function () {
     infoView.classList.add('active');
   });
-  document.querySelector('.info-dismiss-btn').addEventListener('click',function () {
+  document.querySelector('.info-dismiss-btn').addEventListener('click', function () {
     infoView.classList.remove('active');
   });
 </script>
@@ -468,13 +471,22 @@ layout: compress
 </script>
 
 <!-- Loader -->
-<script> 
-  $(window).on("load",function(){
-    $(".loader-wrapper").fadeOut("slow");
-  });
-  setTimeout(function() {
-    alert('检测到页面加载时间已经超过 10 秒，原因可能是您的网速过慢或系统正在维护，您可尝试刷新界面以解决。');
+
+
+<script>
+  $(document).ready(function () {
     $(".loader-wrapper").show();
-  }, 1000); 
-  </script>
+    setTimeout(function () {
+      $(".loader-wrapper").fadeIn("slow");
+      alert('检测到页面加载时间已经超过 10 秒，原因可能是您的网速过慢或系统正在维护，您可尝试刷新界面以解决。');
+      setInterval(function () {
+        $(".loader-wrapper").fadeIn("slow");
+      }, 1000);
+    }, 10000);
+    $(window).on("load", function () {
+      $(".loader-wrapper").fadeOut("slow");
+    });
+  });
+</script>
+
 </html>
