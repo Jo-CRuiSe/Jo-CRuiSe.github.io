@@ -117,7 +117,7 @@ $$ \begin{bmatrix}
 \begin{bmatrix}
 sin\theta cos\varphi & sin\theta sin\varphi & cos\theta\\
 cos\theta cos\varphi & cos\theta sin\varphi & -sin\theta\\
--sin\theta & cos\varphi & 0
+-sin\varphi & cos\varphi & 0
 \end{bmatrix}
 \begin{bmatrix}
 \widehat{e}_{x}\\
