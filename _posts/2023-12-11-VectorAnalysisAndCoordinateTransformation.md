@@ -14,7 +14,6 @@ published: true
 image:
   path: /assets/blog_res/title/VectorAnalysisAndCoordinateTransformation.jpg
   lqip: /assets/blog_res/title/VectorAnalysisAndCoordinateTransformation.jpg
-
 ---
 
 ## 坐标变换[^1]
@@ -43,9 +42,9 @@ image:
 
 面元矢量：$$ \begin{array}{l} 
   \left\{\begin{matrix} 
-  d\overrightarrow{S}_{\rho}= \rho d\varphi dz \widehat{e}_{\rho}\\
-  d\overrightarrow{S}_{\varphi}= d\rho dz \widehat{e}_{\varphi}\\
-  d\overrightarrow{S}_{z}= \rho d\rho d\varphi \widehat{e}_{z}
+  & d\overrightarrow{S}_{\rho}= \rho d\varphi dz \widehat{e}_{\rho}\\
+  & d\overrightarrow{S}_{\varphi}= d\rho dz \widehat{e}_{\varphi}\\
+  & d\overrightarrow{S}_{z}= \rho d\rho d\varphi \widehat{e}_{z}
 \end{matrix}\right.    
 \end{array} $$
 
@@ -59,9 +58,9 @@ image:
 
 面元矢量：$$ \begin{array}{l} 
   \left\{\begin{matrix} 
-  d\overrightarrow{S}_{\rho}= \rho^{2} sin\theta d\theta d\varphi \widehat{e}_{\rho}\\ 
-  d\overrightarrow{S}_{\theta}= \rho sin\theta d\rho d\varphi \widehat{e}_{\theta}\\ 
-  d\overrightarrow{S}_{\varphi}= \rho d\rho  d\varphi \widehat{e}_{\varphi}
+  & d\overrightarrow{S}_{\rho}= \rho^{2} sin\theta d\theta d\varphi \widehat{e}_{\rho}\\ 
+  & d\overrightarrow{S}_{\theta}= \rho sin\theta d\rho d\varphi \widehat{e}_{\theta}\\ 
+  & d\overrightarrow{S}_{\varphi}= \rho d\rho  d\varphi \widehat{e}_{\varphi}
 \end{matrix}\right.    
 \end{array} $$
 
