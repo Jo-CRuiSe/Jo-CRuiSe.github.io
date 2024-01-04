@@ -1,5 +1,5 @@
 ---
-title: 二阶方程常数变易法知识整理
+title: 二阶方程常数变易法
 date: 2024-01-03 16:45:00 +0800
 categories: [学习笔记]
 tags: [数理方法]
@@ -12,11 +12,9 @@ math: true
 mermaid: true
 published: true
 image:
-  path: /assets/blog_res/title/VectorAnalysisAndCoordinateTransformation.jpg
-  lqip: /assets/blog_res/title/VectorAnalysisAndCoordinateTransformation.jpg
+  path: /assets/blog_res/title/MethodOfVariationOfConstant.
+  lqip: /assets/blog_res/title/MethodOfVariationOfConstant.jpg
 ---
-
-## 二阶方程常数变易法
 
 已知方程：
 
