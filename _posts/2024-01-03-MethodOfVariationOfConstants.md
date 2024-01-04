@@ -105,5 +105,5 @@ y = -\frac{1}{\omega} cos(\omega x) \int_{0}^{x} sin(\omega \xi) f(\xi) d\xi + \
 
 利用初始条件：$$ C_3 = \alpha, C_4 = \frac{\beta}{\omega} $$ 代入 (3) 中，并用和差化积公式化简：
 
-$$ y(x) = \alpha cos(\omega x) + \frac{\beta}{\omega} sin(\omega x) + \frac{1}{\omega} \int_{0}^{x}sin[\omega (x - \xi) f(\xi)d\xi $$
+$$ y(x) = \alpha cos(\omega x) + \frac{\beta}{\omega} sin(\omega x) + \frac{1}{\omega} \int_{0}^{x}sin[\omega (x - \xi)] f(\xi)d\xi $$
 
