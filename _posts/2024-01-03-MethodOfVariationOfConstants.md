@@ -42,7 +42,7 @@ $$ y'(x) = [u'(x) cos(\omega x) + v'(x) sin(\omega x) + [-\omega u(x) sin(\omega
 令第一个方程为 0，即
 
 $$\begin{equation}
-u'(x) cos(\omega x) + v'(x) sin(\omega x) = 0 \label{1}
+u'(x) cos(\omega x) + v'(x) sin(\omega x) = 0 
 \end{equation} $$
 
 余下部分再求导：
@@ -52,7 +52,7 @@ $$ y''(x) = [-\omega u'(x) sin(\omega x) + \omega v'(x) cos(\omega x)] - [\omega
 代入原方程得到：
 
 $$ \begin{equation}
--\omega u'(x) sin(\omega x) + \omega v'(x) cos(\omega x) = f(x) \label{2}
+-\omega u'(x) sin(\omega x) + \omega v'(x) cos(\omega x) = f(x) 
 \end{equation}$$
 
 (1)、(2)联立得
@@ -102,7 +102,7 @@ $$ v'(x) = \frac{D_2}{D} = \frac{1}{\omega}f(x)cos(\omega x) $$
 代入通解中得到：
 
 $$ \begin{equation}
-y = -\frac{1}{\omega} cos(\omega x) \int_{0}^{x} sin(\omega \xi) f(\xi) d\xi + \frac{1}{\omega} \int_{0}^{x} cos(\omega \xi)f(\xi)d\xi + C_3 cos(\omega x) + C_4 sin(\omega x) \label{3}
+y = -\frac{1}{\omega} cos(\omega x) \int_{0}^{x} sin(\omega \xi) f(\xi) d\xi + \frac{1}{\omega} \int_{0}^{x} cos(\omega \xi)f(\xi)d\xi + C_3 cos(\omega x) + C_4 sin(\omega x) 
 \end{equation}$$
 
 利用初始条件：$$ C_3 = \alpha, C_4 = \frac{\beta}{\omega} $$ 代入 (3) 中，并用和差化积公式化简：
