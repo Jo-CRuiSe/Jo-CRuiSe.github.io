@@ -14,6 +14,7 @@ published: true
 image:
   path: /assets/blog_res/title/VectorAnalysisAndCoordinateTransformation.jpg
   lqip: /assets/blog_res/title/VectorAnalysisAndCoordinateTransformation.jpg
+
 ---
 
 ## 坐标变换[^1]
@@ -42,9 +43,9 @@ image:
 
 面元矢量：$$ \begin{array}{l} 
   \left\{\begin{matrix} 
-  & d\overrightarrow{S}_{\rho}= \rho d\varphi dz \widehat{e}_{\rho}\\
-  & d\overrightarrow{S}_{\varphi}= d\rho dz \widehat{e}_{\varphi}\\
-  & d\overrightarrow{S}_{z}= \rho d\rho d\varphi \widehat{e}_{z}
+  d\overrightarrow{S}_{\rho}= \rho d\varphi dz \widehat{e}_{\rho}\\
+  d\overrightarrow{S}_{\varphi}= d\rho dz \widehat{e}_{\varphi}\\
+  d\overrightarrow{S}_{z}= \rho d\rho d\varphi \widehat{e}_{z}
 \end{matrix}\right.    
 \end{array} $$
 
@@ -58,9 +59,9 @@ image:
 
 面元矢量：$$ \begin{array}{l} 
   \left\{\begin{matrix} 
-  & d\overrightarrow{S}_{\rho}= \rho^{2} sin\theta d\theta d\varphi \widehat{e}_{\rho}\\ 
-  & d\overrightarrow{S}_{\theta}= \rho sin\theta d\rho d\varphi \widehat{e}_{\theta}\\ 
-  & d\overrightarrow{S}_{\varphi}= \rho d\rho  d\varphi \widehat{e}_{\varphi}
+  d\overrightarrow{S}_{\rho}= \rho^{2} sin\theta d\theta d\varphi \widehat{e}_{\rho}\\ 
+  d\overrightarrow{S}_{\theta}= \rho sin\theta d\rho d\varphi \widehat{e}_{\theta}\\ 
+  d\overrightarrow{S}_{\varphi}= \rho d\rho  d\varphi \widehat{e}_{\varphi}
 \end{matrix}\right.    
 \end{array} $$
 
@@ -136,30 +137,14 @@ cos\theta cos\varphi & cos\theta sin\varphi & -sin\theta\\
 
 ### 散度
 
-1. 通量：设向量场$$ \begin{equation}
-\overrightarrow{F} = P(x, y, z) \overrightarrow{i} + Q(x, y, z) \overrightarrow{j} + R(x, y, z) \overrightarrow{k} , (x, y, z) \in \Omega 
-\end{equation} $$ ，其中$$ P，Q，R $$具有一阶连续偏导数，$$ \Sigma $$为场中的定侧曲面，则称曲面积分 $$ \Phi = \iint\limits_{\Sigma }^{} \overrightarrow{F} \cdot d\overrightarrow{S} $$ 为向量场$$ \overrightarrow{F} $$通过定侧曲面的$$ \Sigma $$通量
+1. 通量：设向量场$$ \overrightarrow{F} = P(x, y, z) \overrightarrow{i} + Q(x, y, z) \overrightarrow{j} + R(x, y, z) \overrightarrow{k} , (x, y, z) \in \Omega $$ ，其中$$ P，Q，R $$具有一阶连续偏导数，$$ \Sigma $$为场中的定侧曲面，则称曲面积分 $$ \Phi = \iint\limits_{\Sigma }^{} \overrightarrow{F} \cdot d\overrightarrow{S} $$ 为向量场$$ \overrightarrow{F} $$通过定侧曲面的$$ \Sigma $$通量
 2. 符号：记为 $$ div \overrightarrow{F} $$ <br>  $$ div \overrightarrow{F} =  \triangledown \cdot \overrightarrow{F} $$
-3. 直角坐标系下：<br> $$ \begin{equation}
-\triangledown \cdot \overrightarrow{A} = \frac{\partial A_{x}}{\partial x}  + \frac{\partial A_{y}}{\partial y} +\frac{\partial A_{z}}{\partial z} 
-\end{equation}$$ <br> 柱坐标系下：<br> $$ \begin{equation}
-\triangledown \cdot \overrightarrow{A} = \frac{1}{r} \frac{\partial }{\partial r} (rA_{r}) + \frac{1}{r} \frac{\partial }{\partial \varphi} A_{\varphi} + \frac{\partial }{\partial z}A_{z} 
-\end{equation}$$ <br> 球坐标系下：<br> $$ \begin{equation}
-\triangledown \cdot \overrightarrow{A} = \frac{1}{r^{2}} \frac{\partial }{\partial r}(r^{2}A_{r}) + \frac{1}{rsin\theta} \frac{\partial }{\partial \theta}(sinA_{\theta}) + \frac{1}{rsin\theta} \frac{\partial }{\partial \varphi}A_{\varphi} 
-\end{equation}$$ <br> 用拉梅系数表示：<br> $$ \begin{equation}
-\triangledown \cdot \overrightarrow{A} = \frac{1}{h_{1}h_{2}h_{3}} \left [ \frac{\partial }{\partial u_{1}} (h_{2}h_{3}A_{1}) + \frac{\partial }{\partial u_{2}} (h_{1}h_{3}A_{2}) + \frac{\partial }{\partial u_{3}} (h_{1}h_{2}A_{3}) \right ]  
-\end{equation}$$
-4. 散度定理/高斯定理：<br> $$ \begin{equation}
-\unicode{8751}_{S^{+}} \overrightarrow{F} \cdot d\overrightarrow{S} = \iiint\limits_{\Sigma}^{} div \overrightarrow{F} dV 
-\end{equation} $$ <br> 即矢量场在 $$ S $$ 的通量等于其散度在 $$ S $$ 包围的区域上的三重积分
+3. 直角坐标系下：<br> $$ \triangledown \cdot \overrightarrow{A} = \frac{\partial A_{x}}{\partial x}  + \frac{\partial A_{y}}{\partial y} +\frac{\partial A_{z}}{\partial z} $$ <br> 柱坐标系下：<br> $$ \triangledown \cdot \overrightarrow{A} = \frac{1}{r} \frac{\partial }{\partial r} (rA_{r}) + \frac{1}{r} \frac{\partial }{\partial \varphi} A_{\varphi} + \frac{\partial }{\partial z}A_{z} $$ <br> 球坐标系下：<br> $$ \triangledown \cdot \overrightarrow{A} = \frac{1}{r^{2}} \frac{\partial }{\partial r}(r^{2}A_{r}) + \frac{1}{rsin\theta} \frac{\partial }{\partial \theta}(sinA_{\theta}) + \frac{1}{rsin\theta} \frac{\partial }{\partial \varphi}A_{\varphi} $$ <br> 用拉梅系数表示：<br> $$ \triangledown \cdot \overrightarrow{A} = \frac{1}{h_{1}h_{2}h_{3}} \left [ \frac{\partial }{\partial u_{1}} (h_{2}h_{3}A_{1}) + \frac{\partial }{\partial u_{2}} (h_{1}h_{3}A_{2}) + \frac{\partial }{\partial u_{3}} (h_{1}h_{2}A_{3}) \right ]  $$
+4. 散度定理/高斯定理：<br> $$ \unicode{8751}_{S^{+}} \overrightarrow{F} \cdot d\overrightarrow{S} = \iiint\limits_{\Sigma}^{} div \overrightarrow{F} dV $$ <br> 即矢量场在 $$ S $$ 的通量等于其散度在 $$ S $$ 包围的区域上的三重积分
 
 ### 旋度
 
-1. 环量：设有向量场$$ \begin{equation}
-\overrightarrow{F} = P(x, y, z)\overrightarrow{i} + Q(x, y, z)\overrightarrow{j} + R(x, y, z)\overrightarrow{k}, (x, y, z)\in \Omega 
-\end{equation} $$  ，其中 $$ P, Q, R $$ 具有一阶连续偏导数，$$ L $$ 为场中的定向曲线，称曲线积分$$\begin{equation} 
-\int\limits_{L} \overrightarrow{F} \cdot d\overrightarrow{r} = \int\limits_{L}Pdx + Qdy + Rdz
-\end{equation}$$ 为向量场$$ \overrightarrow{F} $$ 沿定向曲线L的环量
+1. 环量：设有向量场$$ \overrightarrow{F} = P(x, y, z)\overrightarrow{i} + Q(x, y, z)\overrightarrow{j} + R(x, y, z)\overrightarrow{k}, (x, y, z)\in \Omega $$  ，其中 $$ P, Q, R $$ 具有一阶连续偏导数，$$ L $$ 为场中的定向曲线，称曲线积分$$\int\limits_{L} \overrightarrow{F} \cdot d\overrightarrow{r} = \int\limits_{L}Pdx + Qdy + Rdz$$ 为向量场$$ \overrightarrow{F} $$ 沿定向曲线L的环量
 2. 符号：记为$$ rot \overrightarrow{F} $$ 或 $$ curl \overrightarrow{F} $$ <br> $$ rot \overrightarrow{F} = \triangledown \times \overrightarrow{F} $$
 3. 直角坐标系下：<br> $$ \triangledown \times \overrightarrow{F} = 
    \begin{vmatrix}  
