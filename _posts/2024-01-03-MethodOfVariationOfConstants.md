@@ -12,7 +12,7 @@ math: true
 mermaid: true
 published: true
 image:
-  path: /assets/blog_res/title/MethodOfVariationOfConstant.
+  path: /assets/blog_res/title/MethodOfVariationOfConstant.jpg
   lqip: /assets/blog_res/title/MethodOfVariationOfConstant.jpg
 ---
 
