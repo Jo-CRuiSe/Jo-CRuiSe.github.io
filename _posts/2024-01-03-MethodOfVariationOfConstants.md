@@ -16,6 +16,8 @@ image:
   lqip: /assets/blog_res/title/MethodOfVariationOfConstant.jpg
 ---
 
+## 公式推导
+
 已知方程：
 
 $$ \begin{align*}
@@ -107,3 +109,24 @@ y = -\frac{1}{\omega} cos(\omega x) \int_{0}^{x} sin(\omega \xi) f(\xi) d\xi + \
 
 $$ y(x) = \alpha cos(\omega x) + \frac{\beta}{\omega} sin(\omega x) + \frac{1}{\omega} \int_{0}^{x}sin[\omega (x - \xi)] f(\xi)d\xi $$
 
+## 补充知识——和差化积、积化和差公式
+
+### 和差化积
+
+$$ sin \alpha + sin \beta = 2 sin \frac{\alpha + \beta}{2} cos \frac{\alpha - \beta}{2}  $$
+
+$$ sin \alpha - sin \beta = 2 cos \frac{\alpha + \beta}{2} sin \frac{\alpha - \beta}{2} $$
+
+$$ cos \alpha + cos \beta = 2 cos \frac{\alpha + \beta}{2} cos \frac{\alpha - \beta}{2}  $$
+
+$$ cos \alpha - cos \beta = - 2 sin \frac{\alpha + \beta}{2} sin \frac{\alpha - \beta}{2}  $$
+
+### 积化和差
+
+$$ sin \alpha cos \beta = \frac{1}{2} [sin(\alpha + \beta) + sin(\alpha - \beta)] $$
+
+$$ cos \alpha sin \beta = \frac{1}{2} [cos(\alpha + \beta) - sin(\alpha - \beta)] $$
+
+$$ cos \alpha cos \beta = \frac{1}{2} [cos(\alpha + \beta) + cos(\alpha - \beta)] $$
+
+$$ sin \alpha sin \beta = -\frac{1}{2} [cos(\alpha + \beta) - cos(\alpha - \beta)] $$
