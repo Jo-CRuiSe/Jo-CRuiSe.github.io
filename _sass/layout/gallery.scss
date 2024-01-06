@@ -620,3 +620,37 @@
         right: 10px;
     }
 }
+
+@media only screen and (max-width: 320px) {
+    .titleButton {
+        font-size: 15vw;
+    }
+    .portfolio-layer h4 {
+        font-size: 2rem;
+    }
+    .popup-btn {
+        font-size: 12px;
+        padding-block: 0.1rem;
+        padding-inline: 0.5rem;
+    }
+    .portfolio-item .popup-card .info h2 {
+        font-size: 10vw;
+    }
+    .portfolio-item .popup-card .info p {
+        font-size: 6vw;
+    }
+    .info {
+        padding: 20px;
+        padding-top: 40px;
+    }
+    .info-card .info p {
+        font-size: 6vw;
+    }
+    .info-card .info h2 {
+        font-size: 10vw;
+    }
+    .info-dismiss-btn {
+        font-size: 12px;
+        width: 8rem;
+    }
+}
