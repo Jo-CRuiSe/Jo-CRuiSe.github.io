@@ -619,6 +619,9 @@
     .gal-info-btn {
         right: 10px;
     }
+    .portfolio-container .portfolio-heading {
+        padding-bottom: 30px;
+    }
 }
 
 @media only screen and (max-width: 320px) {
@@ -652,5 +655,8 @@
     .info-dismiss-btn {
         font-size: 12px;
         width: 8rem;
+    }
+    .portfolio-container .portfolio-heading {
+        padding-bottom: 10px;
     }
 }
