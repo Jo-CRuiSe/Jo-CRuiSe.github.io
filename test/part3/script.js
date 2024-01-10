@@ -31,9 +31,11 @@ window.addEventListener('scroll', (e) => {
         $theChip.classList.remove('transparent');
     }
 
-    if (scrolled >= 0.95) {
-        $theChip.style.opacity = (1 - scrolled) / 0.05;
+    if (scrolled >= 0.9 && scrolled <= 0.95) {
+        $theChip.style.opacity = (0.95 - scrolled) / 0.05;
+    } else if (scrolled >= 0.95){
+        $theChip.style.opacity =0;
     } else {
-        $theChip.style.opacity = 1;
+        $theChip.style.opacity =1;
     }
 })

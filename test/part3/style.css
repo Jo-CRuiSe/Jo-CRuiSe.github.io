@@ -73,3 +73,9 @@ h1 {
     transform: translate(0, -50%);
     margin: 0;
 }
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+}
