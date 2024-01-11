@@ -56,7 +56,7 @@ $(function () {
       }
     } else {
       let offsetRatio = (current - toRightFrom) / (toRightTo - toRightFrom)
-      $(el).css('left', $(el).width() / 2 * -1 + $('#iphone-se').width() * offsetRatio)
+      $(el).css('left', $(el).width() / 2 * -1 + $(el).width() * offsetRatio)
     }
   }
   
