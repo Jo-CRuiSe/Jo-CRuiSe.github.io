@@ -198,6 +198,13 @@
 }
 
 // 列
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .portfolio-container .portfolio-box .portfolio-dream {
     display: flex;
     flex-direction: column;
