@@ -54,14 +54,14 @@ layout: compress
 
       <div class="portfolio-container">
         <div class="portfolio-heading">
-            <button class="titleButton" data-text="Awesome">
-                <span class="actual-text">&nbsp;GALLERY&nbsp;</span>
-                <span aria-hidden="true" class="hover-text">&nbsp;GALLERY&nbsp;</span>
-            </button>
+          <button class="titleButton" data-text="Awesome">
+            <span class="actual-text">&nbsp;GALLERY&nbsp;</span>
+            <span aria-hidden="true" class="hover-text">&nbsp;GALLERY&nbsp;</span>
+          </button>
         </div>
         <div class="portfolio-box">
         </div>
-       </div>
+      </div>
       <div class="row">
         <!-- tail -->
         <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
@@ -100,107 +100,288 @@ layout: compress
 
   {% include_cached search-loader.html %}
 
-  <script defer src="/assets/js/dist/items.js"></script>
-  <script defer src="/assets/js/dist/app.js"></script>
+
+  <script>
+    const portfolioBox = document.querySelector('.portfolio-box');
+
+    function generateMasonryGrid(columns, portfolioItems) {
+      portfolioBox.innerHTML = '';
+
+      /* Store all column arrays which contain the relevant posts */
+      let columnWrappers = [];
+
+      /* Create column item array and add this to columnWrappers object */
+      for (let i = 0; i < columns; i++) {
+        columnWrappers[`column${i}`] = [];
+      };
+
+
+      for (let i = 0; i < portfolioItems.length; i++) {
+        const column = i % columns;
+        columnWrappers[`column${column}`].push(portfolioItems[i]);
+      };
+
+      for (let i = 0; i < columns; i++) {
+        let columnPosts = columnWrappers[`column${i}`];
+        let column = document.createElement('div');
+        column.classList.add('column');
+
+        columnPosts.forEach(portfolioItems => {
+          let portfolioItem = document.createElement('div');
+          portfolioItem.classList.add('portfolio-item');
+          let image = document.createElement('img');
+          image.src = portfolioItems.image;
+          image.loading = "lazy";
+          image.alt = portfolioItems.layerTitle;
+          let portfolioLayer = document.createElement('div');
+          portfolioLayer.classList.add('portfolio-layer');
+          let layerTitle = document.createElement('h4');
+          layerTitle.innerText = portfolioItems.layerTitle;
+          let popupBtn = document.createElement('button');
+          popupBtn.classList.add('popup-btn');
+          popupBtn.innerText = '查看更多';
+          let icon = document.createElement('i');
+          icon.classList.add('fa-solid', 'fa-arrow-right');
+          icon.innerHTML = "";
+          let popupView = document.createElement('div');
+          popupView.classList.add('popup-view');
+          let popupCard = document.createElement('div');
+          popupCard.classList.add('popup-card');
+          let popupAlign = document.createElement('div');
+          popupAlign.classList.add('popup-align');
+          let popupRed = document.createElement('a');
+          popupRed.classList.add('popup-red');
+          let popupYellow = document.createElement('a');
+          popupYellow.classList.add('popup-yellow');
+          let popupGreen = document.createElement('a');
+          popupGreen.classList.add('popup-green');
+          let popupInfo = document.createElement('div');
+          popupInfo.classList.add('info');
+          let infoTitle = document.createElement('h2');
+          infoTitle.innerText = portfolioItems.infoTitle;
+          let infoText = document.createElement('p');
+          infoText.innerText = portfolioItems.info;
+
+          popupBtn.appendChild(icon);
+          portfolioLayer.append(layerTitle, popupBtn);
+          portfolioItem.append(image, portfolioLayer, popupView);
+          popupView.append(popupCard);
+          popupCard.append(popupAlign, popupInfo);
+          popupAlign.append(popupRed, popupYellow, popupGreen);
+          popupInfo.append(infoTitle, infoText);
+          column.appendChild(portfolioItem);
+
+          if (portfolioItems.infoTitle == '') {
+            popupBtn.style.display = 'none';
+          };
+        });
+        portfolioBox.appendChild(column);
+      }
+
+    }
+
+    let previousScreenSize = window.innerWidth;
+
+    window.addEventListener('resize', () => {
+      imageIndex = 0;
+
+      if (window.innerWidth < 600 && previousScreenSize > 600) {
+        generateMasonryGrid(1, portfolioItems);
+      } else if (window.innerWidth >= 600 && window.innerWidth < 1000 && (previousScreenSize < 600 || previousScreenSize >= 1000)) {
+        generateMasonryGrid(2, portfolioItems);
+      } else if (window.innerWidth >= 1000 && previousScreenSize < 1000) {
+        generateMasonryGrid(3, portfolioItems);
+      }
+      previousScreenSize = window.innerWidth;
+    });
+
+    if (previousScreenSize < 600) {
+      generateMasonryGrid(1, portfolioItems);
+    } else if (previousScreenSize >= 600 && previousScreenSize < 1000) {
+      generateMasonryGrid(2, portfolioItems);
+    } else {
+      generateMasonryGrid(3, portfolioItems);
+    }
+  </script>
+
+  <script type="text/javascript">
+
+    const portfolioItems = [];
+
+    const images = [
+      'https://imglf6.lf127.net/img/551cd5c65588456b/UFZTUldOYTRpNnppRmV3ZTVSMDFuQkhKZTZkV0tpQ3liZGx2aWNnK2FURT0.jpeg?imageView&thumbnail=1000x0&type=jpg',
+      'https://imglf3.lf127.net/img/4f323ee95f1314c2/UFZTUldOYTRpNnpnZlVkTG9GZnFiVUlTaHJzUDRFb1p3Q0lEZGVZc1VLRT0.jpeg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg',
+      'https://imglf3.lf127.net/img/fca0dfad8dc13388/UFZTUldOYTRpNnlyVFIxVkdHREd5dzNUanEyRWlVRGdUaFoyaTUvMnk3bz0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg',
+      'https://imglf4.lf127.net/img/256828d4a62caa2d/UFZTUldOYTRpNnlENTlPZklGeFdGWllyeVlvcVdkY1F3ZG5DZWRqeW13MD0.gif',
+      'https://imglf3.lf127.net/img/d1390542d3530149/UFZTUldOYTRpNnlENTlPZklGeFdGZlNadjJjeXl0Y29uYkE1bk1xY04vUT0.gif',
+      'https://imglf3.lf127.net/img/dbf0f88f75de8082/UFZTUldOYTRpNnlENTlPZklGeFdGUjBHWmw3V0dHZG43VU11UzhvQUk0WT0.png?imageView&thumbnail=1680x0&quality=96&stripmeta=0',
+      'https://imglf5.lf127.net/img/b59100c3727980d4/UFZTUldOYTRpNnlENTlPZklGeFdGZmswbUE4RkNxRU93Zng2V0J1UnEvYz0.gif',
+      'https://imglf5.lf127.net/img/d3d037e1dff56dd5/UFZTUldOYTRpNnlENTlPZklGeFdGZkhoR3NxbllHYWUzV3N0bU5laEcvUT0.jpeg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg',
+      'https://imglf3.lf127.net/img/bb789a89de6c47f2/UFZTUldOYTRpNnlENTlPZklGeFdGUm5uNHZoYTFvR2s3V0xwallpcEFWWT0.gif',
+      'https://imglf3.lf127.net/img/83df34c9c785ec13/UFZTUldOYTRpNnlENTlPZklGeFdGVnNoWXdlalYyb3FiQlRiUHFDcURnRT0.jpeg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg',
+      'https://imglf6.lf127.net/img/f6ef3e8108a48e41/UFZTUldOYTRpNnhuVktXL1ZaczAwWG5HS2Q2REtzbUsvMUxwQVNkaUhEUT0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg',
+    ];
+
+    const layerTitle = [
+      'Small Kitchen',
+      'Headphone',
+      'Mooncake',
+      'Art School',
+      'Rocket Launching',
+      'Cake',
+      'Solor System',
+      'AMBPOEIAI',
+      'Plane Model',
+      'MONIN',
+      'Clock',
+
+    ]
+
+    const infoTitle = [
+      '',
+      '北欧风耳机场景',
+      '月饼建模+渲染',
+      '轻量化的C4D动画',
+      '浅试 AE 动画',
+      'Octane——初试锋芒',
+      '',
+      '',
+      '',
+      '',
+      'C4D 建模尝试',
+    ]
+
+    const info = [
+      '',
+      '针对商业化产品进行场景布置、材质构建、光照练习。用高光凸显主体，HDR 光对室内初照明，区域光构造暗部、突出局部。',
+      '这是我第一次独立地使用Octane渲染器尝试完成一张静态图片。由于没有实景参考，需要自己构想一个位置并摆放模型。制作过程中也要注意1：1进行建模以便把握布局。其他制作细节我放在博客里进行介绍。',
+      '使用全局光照会严重减慢渲染速度，这个动画总渲染时间却不到十分钟。得益于低多边形和零玻璃材质，整体画风表现为卡通动画的同时让动画更加灵动。掌握了动画烘焙技巧。',
+      '虽然之前我做后期偶尔会用到AE，但我对其界面布局和操作并不熟悉，大多数情况只是用于去黑色背景、分离alpha通道等。这次是我系统学习AE的一个开始，我也逐渐对其用户界面熟悉并能轻松完成一些基本效果。',
+      '当我入手Octane渲染器后，我首先尝试了它的输出质感。更容易比自带的渲染器输出高级质感。光影、虚实、滤镜所有都可以在OC摄像机中调整；丰富的材质简化了创作过程。',
+      '',
+      '',
+      '',
+      '',
+      '闹钟的案例让我开始对默认渲染器所支持的材质制作有了一定的了解，并熟悉了如何从零进行建模、上材质、打光、渲染静态图片，是我以后学习其他案例的基础',
+    ]
+    let imageIndex = 0;
+
+    for (let i = 0; i < images.length; i++) {
+      let item = {
+        id: i,
+        layerTitle: layerTitle[i],
+        image: images[imageIndex],
+        infoTitle: infoTitle[i],
+        info: info[i],
+      };
+      portfolioItems.push(item);
+      imageIndex++;
+      if (imageIndex > images.length - 1) {
+        imageIndex = 0;
+      };
+    };
+  </script>
+
+  <!-- Info View -->
+  <script type="text/javascript">
+    var infoView = document.querySelector('.gal-info');
+    document.querySelector('.gal-info-btn').addEventListener('click', function () {
+      infoView.classList.add('active');
+    });
+    document.querySelector('.info-dismiss-btn').addEventListener('click', function () {
+      infoView.classList.remove('active');
+    });
+  </script>
+
+  <!-- Popup View -->
+  <script type="text/javascript">
+    var popupViews = document.querySelectorAll('.popup-view');
+    var popupBtns = document.querySelectorAll('.popup-btn');
+    var closeBtns = document.querySelectorAll('.popup-red');
+    var genieBtns = document.querySelectorAll('.popup-yellow');
+    var scaleBtns = document.querySelectorAll('.popup-green');
+    var layerViews = document.querySelectorAll('.portfolio-layer');
+
+    var popup = function (popupClick) {
+      popupViews[popupClick].classList.add('active');
+      layerViews[popupClick].classList.add('deactive');
+    };
+
+    popupBtns.forEach((popupBtn, i) => {
+      popupBtn.addEventListener("click", () => {
+        popup(i);
+      });
+    });
+
+    closeBtns.forEach((closeBtn) => {
+      closeBtn.addEventListener("click", () => {
+        popupViews.forEach((popupView) => {
+          popupView.classList.remove('active', 'red', 'yellow', 'green');
+          popupView.classList.add('red');
+        });
+        layerViews.forEach((layerViews) => {
+          layerViews.classList.remove('deactive');
+        });
+      });
+    });
+    genieBtns.forEach((genieBtn) => {
+      genieBtn.addEventListener("click", () => {
+        popupViews.forEach((popupView) => {
+          popupView.classList.remove('active', 'red', 'yellow', 'green');
+          popupView.classList.add('yellow');
+        });
+        layerViews.forEach((layerViews) => {
+          layerViews.classList.remove('deactive');
+        });
+      });
+    });
+    scaleBtns.forEach((scaleBtn) => {
+      scaleBtn.addEventListener("click", () => {
+        popupViews.forEach((popupView) => {
+          popupView.classList.remove('active', 'red', 'yellow', 'green');
+          popupView.classList.add('green');
+        });
+        layerViews.forEach((layerViews) => {
+          layerViews.classList.remove('deactive');
+        });
+      });
+    });
+  </script>
+
+  <!-- 以下两个 js 异步进行，不能合并 -->
+  <!-- 监听 title 是否被点击 -->
+  <script>
+    document.querySelector('.titleButton').addEventListener('click', function () {
+      this.classList.toggle('clicked');
+    });
+  </script>
+
+  <!-- 更改 title 颜色 -->
+  <script>
+    var colors = ["rgba(241, 160, 79, 0.892)", "rgba(29, 152, 232, 0.87)", "rgba(29, 152, 232, 0.87)", "rgba(125, 12, 254, 1)", "rgba(125, 12, 254, 1)", "rgba(19, 236, 221, 0.87)", "rgba(19, 236, 221, 0.87)", "rgba(228, 49, 161, 0.9)", "rgba(228, 49, 161, 0.9)", "rgba(241, 160, 79, 0.892)"];
+    var i = 0;
+
+    document.querySelector('.titleButton').addEventListener('click', function () {
+      this.style.setProperty('--animation-color', colors[i % colors.length]);
+      i++;
+    });
+  </script>
+
+  <!-- Loader -->
+  <script>
+    $(window).on("load", function () {
+      $(".loader-wrapper").fadeOut("slow");
+    });
+    setTimeout(function () {
+      if ($(".loader-wrapper").is(":visible")) {
+        alert('检测到当前页面加载时间已超过 10 秒，原因可能是您的网速过慢或系统正在维护，您可继续等待加载或尝试刷新页面以解决。');
+      };
+    }, 10000); 
+  </script>
 
 </body>
 
 
-<!-- Info View -->
-<script type="text/javascript">
-  var infoView = document.querySelector('.gal-info');
-  document.querySelector('.gal-info-btn').addEventListener('click', function () {
-    infoView.classList.add('active');
-  });
-  document.querySelector('.info-dismiss-btn').addEventListener('click', function () {
-    infoView.classList.remove('active');
-  });
-</script>
 
-<!-- Popup View -->
-<script type="text/javascript">
-  var popupViews = document.querySelectorAll('.popup-view');
-  var popupBtns = document.querySelectorAll('.popup-btn');
-  var closeBtns = document.querySelectorAll('.popup-red');
-  var genieBtns = document.querySelectorAll('.popup-yellow');
-  var scaleBtns = document.querySelectorAll('.popup-green');
-  var layerViews = document.querySelectorAll('.portfolio-layer');
-
-  var popup = function (popupClick) {
-    popupViews[popupClick].classList.add('active');
-    layerViews[popupClick].classList.add('deactive');
-  };
-
-  popupBtns.forEach((popupBtn, i) => {
-    popupBtn.addEventListener("click", () => {
-      popup(i);
-    });
-  });
-
-  closeBtns.forEach((closeBtn) => {
-    closeBtn.addEventListener("click", () => {
-      popupViews.forEach((popupView) => {
-        popupView.classList.remove('active', 'red', 'yellow', 'green');
-        popupView.classList.add('red');
-      });
-      layerViews.forEach((layerViews) => {
-        layerViews.classList.remove('deactive');
-      });
-    });
-  });
-  genieBtns.forEach((genieBtn) => {
-    genieBtn.addEventListener("click", () => {
-      popupViews.forEach((popupView) => {
-        popupView.classList.remove('active', 'red', 'yellow', 'green');
-        popupView.classList.add('yellow');
-      });
-      layerViews.forEach((layerViews) => {
-        layerViews.classList.remove('deactive');
-      });
-    });
-  });
-  scaleBtns.forEach((scaleBtn) => {
-    scaleBtn.addEventListener("click", () => {
-      popupViews.forEach((popupView) => {
-        popupView.classList.remove('active', 'red', 'yellow', 'green');
-        popupView.classList.add('green');
-      });
-      layerViews.forEach((layerViews) => {
-        layerViews.classList.remove('deactive');
-      });
-    });
-  });
-</script>
-
-<!-- 以下两个 js 异步进行，不能合并 -->
-<!-- 监听 title 是否被点击 -->
-<script>
-  document.querySelector('.titleButton').addEventListener('click', function () {
-    this.classList.toggle('clicked');
-  });
-</script>
-
-<!-- 更改 title 颜色 -->
-<script>
-  var colors = ["rgba(241, 160, 79, 0.892)", "rgba(29, 152, 232, 0.87)", "rgba(29, 152, 232, 0.87)", "rgba(125, 12, 254, 1)", "rgba(125, 12, 254, 1)", "rgba(19, 236, 221, 0.87)", "rgba(19, 236, 221, 0.87)", "rgba(228, 49, 161, 0.9)", "rgba(228, 49, 161, 0.9)", "rgba(241, 160, 79, 0.892)"];
-  var i = 0;
-
-  document.querySelector('.titleButton').addEventListener('click', function () {
-    this.style.setProperty('--animation-color', colors[i % colors.length]);
-    i++;
-  });
-</script>
-
-<!-- Loader -->
-<script>
-  $(window).on("load", function () {
-    $(".loader-wrapper").fadeOut("slow");
-  });
-  setTimeout(function () {
-    if ($(".loader-wrapper").is(":visible")) {
-      alert('检测到当前页面加载时间已超过 10 秒，原因可能是您的网速过慢或系统正在维护，您可继续等待加载或尝试刷新页面以解决。');
-    };
-  }, 10000); 
-</script>
 
 </html>
