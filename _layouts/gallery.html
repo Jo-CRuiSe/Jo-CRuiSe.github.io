@@ -272,10 +272,13 @@ layout: compress
 
     if (previousScreenSize < 600) {
       generateMasonryGrid(1, portfolioItems);
+      popupViews = document.querySelectorAll('.popup-view');
     } else if (previousScreenSize >= 600 && previousScreenSize < 1000) {
       generateMasonryGrid(2, portfolioItems);
+      popupViews = document.querySelectorAll('.popup-view');
     } else {
       generateMasonryGrid(3, portfolioItems);
+      popupViews = document.querySelectorAll('.popup-view');
     }
   </script>
 
