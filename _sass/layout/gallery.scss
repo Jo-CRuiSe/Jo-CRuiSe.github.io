@@ -191,10 +191,11 @@
 
 // Gallery 容器，里面装有不同列
 .portfolio-container .portfolio-box {
+    position: relative;
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 10px;
+    padding: 100px 2vw;
 }
 
 // 列
