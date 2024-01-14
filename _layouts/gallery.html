@@ -253,48 +253,6 @@ layout: compress
         portfolioBox.appendChild(column);
       }
 
-    }
-
-    let previousScreenSize = window.innerWidth;
-
-    window.addEventListener('resize', () => {
-      imageIndex = 0;
-
-      if (window.innerWidth < 600 && previousScreenSize > 600) {
-        generateMasonryGrid(1, portfolioItems);
-      } else if (window.innerWidth >= 600 && window.innerWidth < 1000 && (previousScreenSize < 600 || previousScreenSize >= 1000)) {
-        generateMasonryGrid(2, portfolioItems);
-      } else if (window.innerWidth >= 1000 && previousScreenSize < 1000) {
-        generateMasonryGrid(3, portfolioItems);
-      }
-      previousScreenSize = window.innerWidth;
-    });
-
-    if (previousScreenSize < 600) {
-      generateMasonryGrid(1, portfolioItems);
-      popupViews = document.querySelectorAll('.popup-view');
-    } else if (previousScreenSize >= 600 && previousScreenSize < 1000) {
-      generateMasonryGrid(2, portfolioItems);
-      popupViews = document.querySelectorAll('.popup-view');
-    } else {
-      generateMasonryGrid(3, portfolioItems);
-      popupViews = document.querySelectorAll('.popup-view');
-    }
-  </script>
-
-  <!-- Info View -->
-  <script type="text/javascript">
-    var infoView = document.querySelector('.gal-info');
-    document.querySelector('.gal-info-btn').addEventListener('click', function () {
-      infoView.classList.add('active');
-    });
-    document.querySelector('.info-dismiss-btn').addEventListener('click', function () {
-      infoView.classList.remove('active');
-    });
-  </script>
-
-  <!-- Popup View -->
-  <script type="text/javascript">
     var popupViews = document.querySelectorAll('.popup-view');
     var popupBtns = document.querySelectorAll('.popup-btn');
     var closeBtns = document.querySelectorAll('.popup-red');
@@ -346,7 +304,45 @@ layout: compress
         });
       });
     });
+
+    }
+
+    let previousScreenSize = window.innerWidth;
+
+    window.addEventListener('resize', () => {
+      imageIndex = 0;
+
+      if (window.innerWidth < 600 && previousScreenSize > 600) {
+        generateMasonryGrid(1, portfolioItems);
+      } else if (window.innerWidth >= 600 && window.innerWidth < 1000 && (previousScreenSize < 600 || previousScreenSize >= 1000)) {
+        generateMasonryGrid(2, portfolioItems);
+      } else if (window.innerWidth >= 1000 && previousScreenSize < 1000) {
+        generateMasonryGrid(3, portfolioItems);
+      }
+      previousScreenSize = window.innerWidth;
+    });
+
+    if (previousScreenSize < 600) {
+      generateMasonryGrid(1, portfolioItems);
+    } else if (previousScreenSize >= 600 && previousScreenSize < 1000) {
+      generateMasonryGrid(2, portfolioItems);
+    } else {
+      generateMasonryGrid(3, portfolioItems);
+    }
   </script>
+
+  <!-- Info View -->
+  <script type="text/javascript">
+    var infoView = document.querySelector('.gal-info');
+    document.querySelector('.gal-info-btn').addEventListener('click', function () {
+      infoView.classList.add('active');
+    });
+    document.querySelector('.info-dismiss-btn').addEventListener('click', function () {
+      infoView.classList.remove('active');
+    });
+  </script>
+
+  
 
   <!-- 以下两个 js 异步进行，不能合并 -->
   <!-- 监听 title 是否被点击 -->
