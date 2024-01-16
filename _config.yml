@@ -119,7 +119,7 @@ valine_comment:
   placeholder: "🥳快来发表一条评论吧！（允许匿名评论）\n📨呢称填入QQ号可以自动补全邮箱和显示头像 \n📝请遵守网络道德"  #评论区的占位文本
   avatar: monsterid  #评论用户的头像
   enableQQ: true
-  serverURLs: 'https://rzv27a2i.lc-cn-e1-shared.com'  #LeanCloud应用的REST API 服务器地址
+  serverURLs: 'https://rzv27a2i.lc-cn-n1-shared.com'  #LeanCloud应用的REST API 服务器地址
 
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:
