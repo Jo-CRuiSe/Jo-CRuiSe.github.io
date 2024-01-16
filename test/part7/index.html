@@ -2,33 +2,36 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="style.css">
-    <meta name="referrer" content="no-referrer" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
-    <title>Masonry</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="style.css">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+  <title>Masonry</title>
 </head>
 
 <body>
 
-    <div class="portfolio-container">
-        <div class="portfolio-heading">
-            <button class="titleButton" data-text="Awesome">
-                <span class="actual-text">&nbsp;GALLERY&nbsp;</span>
-                <span aria-hidden="true" class="hover-text">&nbsp;GALLERY&nbsp;</span>
-            </button>
-        </div>
-        <div class="portfolio-box">
-        </div>
-
+  <div class="portfolio-container">
+    <div class="portfolio-heading">
+      <button class="titleButton" data-text="Awesome">
+        <span class="actual-text">&nbsp;GALLERY&nbsp;</span>
+        <span aria-hidden="true" class="hover-text">&nbsp;GALLERY&nbsp;</span>
+      </button>
+    </div>
+    <div class="portfolio-box">
     </div>
 
-    <script src="items.js"></script>
-    <script src="app.js"></script>
-    <!-- Info View -->
-<script type="text/javascript">
+  </div>
+  <div id="cusdis_thread" data-host="https://cusdis.com" data-app-id="90730bea-b507-45d8-a4a9-1731f66f9a09"
+    data-page-id="{{ PAGE_ID }}" data-page-url="{{ PAGE_URL }}" data-page-title="{{ PAGE_TITLE }}"></div>
+  <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+
+  <script src="items.js"></script>
+  <script src="app.js"></script>
+  <!-- Info View -->
+  <script type="text/javascript">
     var infoView = document.querySelector('.gal-info');
     document.querySelector('.gal-info-btn').addEventListener('click', function () {
       infoView.classList.add('active');
@@ -37,7 +40,7 @@
       infoView.classList.remove('active');
     });
   </script>
-  
+
   <!-- Popup View -->
   <script type="text/javascript">
     var popupViews = document.querySelectorAll('.popup-view');
@@ -46,18 +49,18 @@
     var genieBtns = document.querySelectorAll('.popup-yellow');
     var scaleBtns = document.querySelectorAll('.popup-green');
     var layerViews = document.querySelectorAll('.portfolio-layer');
-  
+
     var popup = function (popupClick) {
       popupViews[popupClick].classList.add('active');
       layerViews[popupClick].classList.add('deactive');
     };
-  
+
     popupBtns.forEach((popupBtn, i) => {
       popupBtn.addEventListener("click", () => {
         popup(i);
       });
     });
-  
+
     closeBtns.forEach((closeBtn) => {
       closeBtn.addEventListener("click", () => {
         popupViews.forEach((popupView) => {
@@ -92,7 +95,7 @@
       });
     });
   </script>
-  
+
   <!-- 以下两个 js 异步进行，不能合并 -->
   <!-- 监听 title 是否被点击 -->
   <script>
@@ -100,18 +103,18 @@
       this.classList.toggle('clicked');
     });
   </script>
-  
+
   <!-- 更改 title 颜色 -->
   <script>
     var colors = ["rgba(241, 160, 79, 0.892)", "rgba(29, 152, 232, 0.87)", "rgba(29, 152, 232, 0.87)", "rgba(125, 12, 254, 1)", "rgba(125, 12, 254, 1)", "rgba(19, 236, 221, 0.87)", "rgba(19, 236, 221, 0.87)", "rgba(228, 49, 161, 0.9)", "rgba(228, 49, 161, 0.9)", "rgba(241, 160, 79, 0.892)"];
     var i = 0;
-  
+
     document.querySelector('.titleButton').addEventListener('click', function () {
       this.style.setProperty('--animation-color', colors[i % colors.length]);
       i++;
     });
   </script>
-  
+
   <!-- Loader -->
   <script>
     $(window).on("load", function () {
@@ -127,5 +130,5 @@
 
 
 
-  
+
 </html>
