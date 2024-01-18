@@ -29,11 +29,11 @@ $$ \begin{align*}
 \right.
 \end{align*} $$
 
-可以得到相应的齐次方程：$$ y''(x) + \omega^{2}(x) = 0 $$
+可以得到相应的齐次方程：$ y''(x) + \omega^{2}(x) = 0 $
 
-通解：$$ y(x) = C_{1}cos(\omega x) + C_{2}sin(\omega x)$$
+通解：$ y(x) = C_{1}cos(\omega x) + C_{2}sin(\omega x) $
 
-由常数变易法，$$ y(x) = u(x)cos(\omega x) + v(x)sin(\omega x)$$
+由常数变易法，$ y(x) = u(x)cos(\omega x) + v(x)sin(\omega x) $
 
 构造二元线性方程组
 
@@ -105,7 +105,7 @@ $$ \begin{equation}
 y = -\frac{1}{\omega} cos(\omega x) \int_{0}^{x} sin(\omega \xi) f(\xi) d\xi + \frac{1}{\omega} \int_{0}^{x} cos(\omega \xi)f(\xi)d\xi + C_3 cos(\omega x) + C_4 sin(\omega x) \tag{3}
 \end{equation}$$
 
-利用初始条件：$$ C_3 = \alpha, C_4 = \frac{\beta}{\omega} $$ 代入 (3) 中，并用和差化积公式化简：
+利用初始条件：$ C_3 = \alpha, C_4 = \frac{\beta}{\omega} $ 代入 (3) 中，并用和差化积公式化简：
 
 $$ y(x) = \alpha cos(\omega x) + \frac{\beta}{\omega} sin(\omega x) + \frac{1}{\omega} \int_{0}^{x}sin[\omega (x - \xi)] f(\xi)d\xi $$
 
