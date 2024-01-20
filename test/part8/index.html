@@ -61,9 +61,6 @@
 <script src="//cdn1.lncld.net/static/js/3.0.5/av-min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
 <script>
-    // 第一个参数是appid，第二个参数是appkey，此处的只是示例
-    // AV.initialize("rzV27a2iZkM3qCAIMnz2u6pO-9Nh9j0Va", "6sPXQuSvQBiMk60c7sFhRPVz");
-
     let appId = 'rzV27a2iZkM3qCAIMnz2u6pO-9Nh9j0Va';
     let appKey = '6sPXQuSvQBiMk60c7sFhRPVz';
     AV.init({
@@ -77,14 +74,14 @@
         var password = document.getElementById('password').value;
 
         AV.User.logIn(username, password).then(function (user) {
-            // 登录成功，可以进行后续操作
+            /* 登录成功 */
             console.log('登录成功');
             alert('Successfully Login');
             document.getElementById('username').value = '';
             document.getElementById('password').value = '';
             window.location.href = 'https://jo-cruise.github.io/test/part9';
         }).catch(function (error) {
-            // 登录失败，处理错误信息
+            /* 登录失败，处理错误信息 */
             console.log('登录失败：', error);
         });
     });
