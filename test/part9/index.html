@@ -34,7 +34,7 @@ layout: compress
         {% assign unpublished_num = unpublished.size %}
 
         {% if unpublished_num > 0 %}
-          {% for i in unpublished_num %}
+          {% for i in (0..unpublished_num) limit: unpublished_num %}
             {% assign unpublishedPosts = unpublishedPosts | push: unpublished[i] %}
           {% endfor %}
         {% else %}
