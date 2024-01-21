@@ -27,14 +27,14 @@ layout: compress
       <div class="container d-flex flex-column px-xxl-5">
         {% include topbar.html lang=lang %}
 
+        {% assign unpublished = site.posts | where: 'published', 'false' %}
         {% assign unpublishedPosts = '' | split: '' %}
 
         <!-- Get unpublished posts -->
-        {% assign offset = paginator.page | minus: 1 | times: paginator.per_page %}
-        {% assign unpublished_num = unpublished.size | minus: offset %}
+        {% assign unpublished_num = unpublished.size %}
 
         {% if unpublished_num > 0 %}
-          {% for i in (offset..unpublished.size) limit: unpublished_num %}
+          {% for i in unpublished_num %}
             {% assign unpublishedPosts = unpublishedPosts | push: unpublished[i] %}
           {% endfor %}
         {% else %}
