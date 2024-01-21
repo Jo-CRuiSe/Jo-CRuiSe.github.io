@@ -10,7 +10,6 @@ commments: true
 typora-root-url: ../../Jo-CRuiSe.github.io/
 math: false
 mermaid: true
-published: true
 image:
   path: /assets/blog_res/title/CheckDiskLife.png
   lqip: /assets/blog_res/title/CheckDiskLife.png

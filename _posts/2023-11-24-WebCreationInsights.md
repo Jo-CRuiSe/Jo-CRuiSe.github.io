@@ -10,7 +10,7 @@ commments: true
 typora-root-url: ../../Jo-CRuiSe.github.io/
 math: false
 mermaid: true
-published: false
+public: false
 ---
 
 建这个个人博客站大概有 1 个月的时间了，到今天为止这个网站的大体已经成型，接下来谈谈我这一个月的建站感受，算是一个经历的记录，也是给正在准备建站的朋友们一些参考：
