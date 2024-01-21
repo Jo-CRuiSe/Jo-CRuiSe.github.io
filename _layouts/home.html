@@ -35,7 +35,7 @@ refactor: true
 {% assign default_end = default_beg | plus: default_num | minus: 1 %}
 
 {% if default_num > 0 %}
-  {% for i in (default_beg..default_end) %}
+  {% for i in (default_beg..default_end) limit: default_num %}
     {% assign posts = posts | push: default[i] %}
   {% endfor %}
 {% endif %}
