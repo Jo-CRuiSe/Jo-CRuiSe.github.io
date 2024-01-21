@@ -21,118 +21,76 @@ refactor: true
 <body style="display: none">
     <h1 style="text-align: center;font-size: 100px;">Hello!</h1>
 
-    {% assign pinned = site.posts | where: 'pin', 'true' %}
-    {% assign default = site.posts | where_exp: 'item', 'item.pin != true and item.hidden != true' %}
-
-    {% assign posts = '' | split: '' %}
-
-    <!-- Get pinned posts -->
-
-    {% assign offset = paginator.page | minus: 1 | times: paginator.per_page %}
-    {% assign pinned_num = pinned.size | minus: offset %}
-
-    {% if pinned_num > 0 %}
-    {% for i in (offset..pinned.size) limit: pinned_num %}
-        {% assign posts = posts | push: pinned[i] %}
-    {% endfor %}
-    {% else %}
-    {% assign pinned_num = 0 %}
-    {% endif %}
-
-    <!-- Get default posts -->
-
-    {% assign default_beg = offset | minus: pinned.size %}
-
-    {% if default_beg < 0 %}
-    {% assign default_beg = 0 %}
-    {% endif %}
-
-    {% assign default_num = paginator.posts | size | minus: pinned_num %}
-    {% assign default_end = default_beg | plus: default_num | minus: 1 %}
-
-    {% if default_num > 0 %}
-    {% for i in (default_beg..default_end) %}
-        {% assign posts = posts | push: default[i] %}
-    {% endfor %}
-    {% endif %}
-
-    <div id="post-list" class="flex-grow-1 px-xl-1">
-    {% for post in posts %}
-        <article class="card-wrapper card">
-        <a href="{{ post.url | relative_url }}" class="post-preview row g-0 flex-md-row-reverse">
-            {% assign card_body_col = '12' %}
-
-            {% if post.image %}
-            {% assign src = post.image.path | default: post.image %}
-            {% unless src contains '//' %}
-                {% assign src = post.img_path | append: '/' | append: src | replace: '//', '/' %}
-            {% endunless %}
-
-            {% assign alt = post.image.alt | xml_escape | default: 'Preview Image' %}
-
-            {% assign lqip = null %}
-
-            {% if post.image.lqip %}
-                {% capture lqip %}lqip="{{ post.image.lqip }}"{% endcapture %}
-            {% endif %}
-
-            <div class="col-md-5">
-                <img src="{{ src }}" alt="{{ alt }}" {{ lqip }}>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+     </div>
+  
+      {% include sidebar.html lang=lang %}
+  
+      <div id="main-wrapper" class="d-flex justify-content-center">
+        <div class="container d-flex flex-column px-xxl-5">
+          {% include topbar.html lang=lang %}
+  
+          <div class="row flex-grow-1">
+            <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
+              {% if layout.refactor or layout.layout == 'default' %}
+                {% include refactor-content.html content=content lang=lang %}
+              {% else %}
+                {{ content }}
+              {% endif %}
+            </main>
+  
+            <!-- panel -->
+            <aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 mb-5 text-muted">
+              <div class="access">
+                {% include_cached update-list.html lang=lang %}
+                {% include_cached trending-tags.html lang=lang %}
+              </div>
+  
+              {% for _include in layout.panel_includes %}
+                {% assign _include_path = _include | append: '.html' %}
+                {% include {{ _include_path }} lang=lang %}
+              {% endfor %}
+            </aside>
+          </div>
+  
+          <div class="row">
+            <!-- tail -->
+            <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
+              {% for _include in layout.tail_includes %}
+                {% assign _include_path = _include | append: '.html' %}
+                {% include {{ _include_path }} lang=lang %}
+              {% endfor %}
+  
+              {% include_cached footer.html lang=lang %}
             </div>
-
-            {% assign card_body_col = '7' %}
-            {% endif %}
-
-            <div class="col-md-{{ card_body_col }}">
-            <div class="card-body d-flex flex-column">
-                <h1 class="card-title my-2 mt-md-0">{{ post.title }}</h1>
-
-                <div class="card-text content mt-0 mb-3">
-                <p>
-                    {% include no-linenos.html content=post.content %}
-                    {{ content | markdownify | strip_html | truncate: 200 | escape }}
-                </p>
-                </div>
-
-                <div class="post-meta flex-grow-1 d-flex align-items-end">
-                <div class="me-auto">
-                    <!-- posted date -->
-                    <i class="far fa-calendar fa-fw me-1"></i>
-                    {% include datetime.html date=post.date lang=lang %}
-
-                    <!-- categories -->
-                    {% if post.categories.size > 0 %}
-                    <i class="far fa-folder-open fa-fw me-1"></i>
-                    <span class="categories">
-                        {% for category in post.categories %}
-                        {{ category }}
-                        {%- unless forloop.last -%},{%- endunless -%}
-                        {% endfor %}
-                    </span>
-                    {% endif %}
-                </div>
-
-                {% if post.pin %}
-                    <div class="pin ms-1">
-                    <i class="fas fa-thumbtack fa-fw"></i>
-                    <span>{{ site.data.locales[lang].post.pin_prompt }}</span>
-                    </div>
-                {% endif %}
-                </div>
-                <!-- .post-meta -->
-            </div>
-            <!-- .card-body -->
-            </div>
-        </a>
-        </article>
-    {% endfor %}
-    </div>
-    <!-- #post-list -->
-
-    {% if paginator.total_pages > 1 %}
-    {% include post-paginator.html %}
-    {% endif %}
-
+          </div>
+  
+          {% include_cached search-results.html lang=lang %}
+        </div>
+  
+        <aside aria-label="Scroll to Top">
+          <button id="back-to-top" type="button" class="btn btn-lg btn-box-shadow">
+            <i class="fas fa-angle-up"></i>
+          </button>
+        </aside>
+      </div>
+  
+      <div id="mask"></div>
+  
+      {% if site.pwa.enabled %}
+        {% include_cached notification.html lang=lang %}
+      {% endif %}
+  
+      <!-- JavaScripts -->
+  
+      {% include js-selector.html %}
+  
+      {% if page.mermaid %}
+        {% include mermaid.html %}
+      {% endif %}
+  
+      {% include_cached search-loader.html %}
 
     <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
     <script type="text/javascript">
