@@ -12,7 +12,7 @@ refactor: true
 
 <!-- Get pinned posts -->
 
-<!-- {% assign paginator.total_pages = pinned.size | plus: default.size | divide_by: paginator.per_page | plus: 1%} -->
+{% assign paginator.total_pages = pinned.size | plus: default.size | divide_by: paginator.per_page | plus: 1%}
 
 {% assign offset = paginator.page | minus: 1 | times: paginator.per_page %}
 {% assign pinned_num = pinned.size | minus: offset %}
@@ -42,7 +42,7 @@ refactor: true
   {% endfor %}
 {% endif %}
 
-<div>{{ paginator.total_pages }}</div>
+<!-- <div>{{ paginator.total_pages }}</div> -->
 
 
 <div id="post-list" class="flex-grow-1 px-xl-1">
