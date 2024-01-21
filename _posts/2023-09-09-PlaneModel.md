@@ -5,13 +5,12 @@ categories: [影视后期]
 tags: [Cinema 4D, 动画]
 pin: false
 author: jo
-
 toc: true
 commments: true
-published: false
 typora-root-url: ../../Jo-CRuiSe.github.io/
 math: false
 mermaid: true
+public: false
 image:
   path: /assets/blog_res/title/PlaneModel.jpg
   lqip: /assets/blog_res/title/PlaneModel.jpg

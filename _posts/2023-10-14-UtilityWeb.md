@@ -5,13 +5,12 @@ categories: [实用工具]
 tags: []
 pin: false
 author: jo
-
 toc: true
 commments: true
 typora-root-url: ../../Jo-CRuiSe.github.io/
 math: false
 mermaid: true
-published: true
+public: true
 image:
   path: /assets/blog_res/title/UtilityWeb.jpg
   lqip: /assets/blog_res/title/UtilityWeb.jpg

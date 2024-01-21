@@ -10,7 +10,7 @@ commments: true
 typora-root-url: ../../Jo-CRuiSe.github.io/
 math: true
 mermaid: true
-published: true
+public: true
 image:
   path: /assets/blog_res/title/VectorAnalysisAndCoordinateTransformation.jpg
   lqip: /assets/blog_res/title/VectorAnalysisAndCoordinateTransformation.jpg

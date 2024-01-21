@@ -5,13 +5,12 @@ categories: [开发]
 tags: [SwiftUI]
 pin: false
 author: jo
-
 toc: true
 commments: true
 typora-root-url: ../../Jo-CRuiSe.github.io/
 math: false
 mermaid: true
-published: false
+public: true
 ---
 
 ## 准备阶段
