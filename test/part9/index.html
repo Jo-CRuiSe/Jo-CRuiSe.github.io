@@ -68,7 +68,7 @@ layout: compress
                 {%assign card_body_col = '7' %}
               {% endif %}
             
-              < class="col-md-{{ card_body_col }}">
+              <div class="col-md-{{ card_body_col }}">
                 <div class="card-body d-flex flex-column">
                   <h1 class="card-title my-2 mt-md-0">{{ unpublishedPost.title }}</h1>
 
@@ -99,7 +99,8 @@ layout: compress
 
                   </div>
                 </div>
-              </a>
+              </div>
+            </a>
           </article>
           {% endfor %}
       </div>
