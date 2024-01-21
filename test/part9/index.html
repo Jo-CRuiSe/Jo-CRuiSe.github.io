@@ -27,7 +27,7 @@ layout: compress
       <div class="container d-flex flex-column px-xxl-5">
         {% include topbar.html lang=lang %}
 
-        {% assign unpublished = site.posts | where: 'published', 'false' %}
+        {% assign unpublished = site.posts | where: 'pin', 'false' %}
         {% assign unpublishedPosts = '' | split: '' %}
 
         <!-- Get unpublished posts -->
