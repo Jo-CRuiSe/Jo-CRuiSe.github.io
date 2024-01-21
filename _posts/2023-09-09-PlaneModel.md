@@ -11,6 +11,7 @@ typora-root-url: ../../Jo-CRuiSe.github.io/
 math: false
 mermaid: true
 public: false
+hidden: true
 image:
   path: /assets/blog_res/title/PlaneModel.jpg
   lqip: /assets/blog_res/title/PlaneModel.jpg
