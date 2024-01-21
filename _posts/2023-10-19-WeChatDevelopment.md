@@ -10,7 +10,7 @@ commments: true
 typora-root-url: ../../Jo-CRuiSe.github.io/
 math: false
 mermaid: true
-public: true
+public: false
 ---
 
 ## 准备阶段
