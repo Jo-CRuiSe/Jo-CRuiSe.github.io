@@ -13,7 +13,7 @@ refactor: true
 <!-- Get pinned posts -->
 
 {% assign paginator.total_pages = pinned.size | plus: default.size | divide_by: paginator.per_page | plus: 1%}
-<div>paginator.total_pages</div>
+<div>{{ paginator.total_pages }}</div>
 
 <div>{{ pinned.size }} {{ default.size}} </div>
 {% assign offset = paginator.page | minus: 1 | times: paginator.per_page %}
