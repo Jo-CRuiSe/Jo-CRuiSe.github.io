@@ -11,7 +11,7 @@ commments: true
 typora-root-url: ../../Jo-CRuiSe.github.io/
 math: false
 mermaid: true
-published: true
+public: false
 image: 
   path: /assets/blog_res/title/SwiftUILearning.png
   lqip: /assets/blog_res/title/SwiftUILearning.png
