@@ -1,8 +1,8 @@
 ---
 title: Plane Model 动画
 date: 2023-09-09 15:08:00 +0800
-categories: [影视后期]
-tags: [Cinema 4D, 动画]
+categories: []
+tags: []
 pin: false
 author: jo
 toc: true
