@@ -46,7 +46,7 @@ layout: compress
           <div id="post-list" class="flex-grow-1 px-xl-1">
             {% for unpublishedPost in unpublishedPosts %}
             <article class="card-wrapper card">
-              <a href="{{ unpublishedPost.url | relative_url}}" class="post-preview row flex-md-row-reverse">
+              <a href="{{ unpublishedPost.url | relative_url}}" class="post-preview row g-0 flex-md-row-reverse">
                 {% assign card_body_col = '12' %}
 
                 {% if unpublishedPost.image %}
