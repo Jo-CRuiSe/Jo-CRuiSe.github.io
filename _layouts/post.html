@@ -149,3 +149,30 @@ tail_includes:
   </div> <!-- .col-12 -->
 </div> <!-- .row -->
 {% endif %}
+
+{% if page.public == false}
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+<script type="text/javascript">
+  let appId = 'rzV27a2iZkM3qCAIMnz2u6pO-9Nh9j0Va';
+  let appKey = '6sPXQuSvQBiMk60c7sFhRPVz';
+  AV.init({
+      appId: appId,
+      appKey: appKey,
+      serverURL: 'https://rzv27a2i.lc-cn-n1-shared.com',
+  });
+
+  const currentUser = AV.User.current();
+  console.log(currentUser);
+  function checkLogin() {
+      if (currentUser) {
+          /* 跳到首页 */
+          document.body.style.display = 'block';
+      } else {
+          /* 显示注册或登录页面 */
+          window.location.href = '/test/part8';
+      }
+  }
+  /* 在页面加载时调用checkLogin函数检查登录状态 */
+  window.addEventListener('load', checkLogin);
+</script>
+{% endif %}
