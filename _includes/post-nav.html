@@ -4,7 +4,7 @@
   {% assign previous = site.data.locales[include.lang].post.button.previous %}
   {% assign next = site.data.locales[include.lang].post.button.next %}
 
-  {% assign public = site.posts | where_exp: 'item', 'item.public == true' %}
+  {% assign public = site.posts | where: 'public', 'true' %}
   {% assign unpublic = site.posts | where: 'public', 'false' %}
 
   {% assign previous_public = nil %}
@@ -15,7 +15,7 @@
       {% break %}
     {% endif %}
   {% endfor %}
-
+  <div>{{ previous_public }} {{ previous_public.url }} {{ page.url }}</div>
   {% if page.previous.url %}
     <a
       href="{{ site.baseurl }}{{ previous_public.url }}"
