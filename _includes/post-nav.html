@@ -13,7 +13,7 @@
     {% if public[i+1].url == page.url %}
       {% assign previous_public = public[i] %}
       {% break %}
-    {% endfor %}
+    {% endif %}
   {% endfor %}
   {% if page.previous.url %}
     <a
