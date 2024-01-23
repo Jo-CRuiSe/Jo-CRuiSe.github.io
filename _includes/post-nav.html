@@ -5,13 +5,14 @@
   {% assign next = site.data.locales[include.lang].post.button.next %}
 
 
-  {% if page.previous.url %}
+  {% assign previous_public = site.posts | where_exp: "item", "item.public == true" | where_exp: "item", "item.url == page.previous.url" | first %}
+  {% if previous_public %}
     <a
-      href="{{ site.baseurl }}{{ page.previous.url }}"
+      href="{{ site.baseurl }}{{ previous_public.url }}"
       class="btn btn-outline-primary"
       aria-label="{{ previous }}"
     >
-      <p>{{ page.previous.title }}</p>
+      <p>{{ previous_public.title }}</p>
     </a>
   {% else %}
     <div class="btn btn-outline-primary disabled" aria-label="{{ previous }}">
