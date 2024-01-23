@@ -6,7 +6,11 @@
 
   {% if page.previous.url %}
     <a
-      href="{{ site.baseurl }}{{ page.previous.url }}"
+      {% if page.public }
+        href="{{ site.baseurl }}{{ page.previous.url | where: 'public', 'true' }}"
+      {% else %}
+        href="{{ site.baseurl }}{{ page.previous.url | where: 'public', 'false'}}"
+      {% endif %}
       class="btn btn-outline-primary"
       aria-label="{{ previous }}"
     >
@@ -20,7 +24,11 @@
 
   {% if page.next.url %}
     <a
-      href="{{ site.baseurl }}{{page.next.url}}"
+      {% if page.public }
+        href="{{ site.baseurl }}{{ page.next.url | where: 'public', 'true' }}"
+      {% else %}
+        href="{{ site.baseurl }}{{ page.next.url | where: 'public', 'false'}}"
+      {% endif %}
       class="btn btn-outline-primary"
       aria-label="{{ next }}"
     >
