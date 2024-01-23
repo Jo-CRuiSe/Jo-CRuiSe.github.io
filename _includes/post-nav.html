@@ -15,7 +15,7 @@
       {% break %}
     {% endif %}
   {% endfor %}
-  <div>{{ previous_public }} {{ previous_public.url }} {{ page.url }}</div>
+  <div>{{ previous_public }} + {{ previous_public.url }} </div>
   {% if page.previous.url %}
     <a
       href="{{ site.baseurl }}{{ previous_public.url }}"
