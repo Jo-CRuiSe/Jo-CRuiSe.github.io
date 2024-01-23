@@ -9,9 +9,11 @@
 
   {% assign previous_public = nil %}
   {% assign previous_unpublic = nil %}
-  {% for i in (0..public.size) %}
-    {% if public[i+1].url == page.url %}
-      {% assign previous_public = public[i] %}
+
+  {% for i in (1..public.size - 1) %}
+    {% assign front = i | minus: 1%}
+    {% if public[i].url == page.url %}
+      {% assign previous_public = public[front] %}
       {% break %}
     {% endif %}
   {% endfor %}
