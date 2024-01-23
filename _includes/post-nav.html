@@ -11,11 +11,11 @@
     {% for i in (0..public.size) %}
       {% if public[i].title == page.title %}
         <a
-          href="{{ site.baseurl }}{{ public[i-1].url }}"
+          href="{{ site.baseurl }}{{ public[i+1].url }}"
           class="btn btn-outline-primary"
           aria-label="{{ previous }}"
         >
-          <p>{{ public[i-1].title }}</p>
+          <p>{{ public[i+1].title }}</p>
         </a>
       {% endif %}
     {% endfor %}
