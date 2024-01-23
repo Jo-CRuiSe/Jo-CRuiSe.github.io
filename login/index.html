@@ -1,0 +1,205 @@
+---
+layout: compress
+title: Unpublished Posts
+---
+
+<!doctype html>
+
+{% include origin-type.html %}
+
+{% include lang.html %}
+
+{% if site.theme_mode %}
+{% capture prefer_mode %}data-mode="{{ site.theme_mode }}"{% endcapture %}
+{% endif %}
+
+<!-- `site.alt_lang` can specify a language different from the UI -->
+<html lang="{{ site.alt_lang | default: site.lang }}" {{ prefer_mode }}>
+{% include head.html %}
+
+<body>
+  <div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+  </div>
+
+  {% include sidebar.html lang=lang %}
+
+  <div id="main-wrapper" class="d-flex justify-content-center">
+    <div class="container d-flex flex-column px-xxl-5">
+      {% include topbar.html lang=lang %}
+
+      <div class="row flex-grow-1">
+        <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
+          {% assign unpublished = site.posts | where: 'public', 'false' %}
+          {% assign unpublishedPosts = '' | split: '' %}
+
+          <!-- Get unpublished posts -->
+          {% assign unpublished_num = unpublished.size %}
+
+          {% if unpublished_num > 0 %}
+          {% for i in (0..unpublished_num) limit: unpublished_num %}
+          {% assign unpublishedPosts = unpublishedPosts | push: unpublished[i] %}
+          {% endfor %}
+          {% else %}
+          {% assign unpublished_num = 0 %}
+          {% endif %}
+
+          <div id="post-list" class="flex-grow-1 px-xl-1">
+            {% for unpublishedPost in unpublishedPosts %}
+            <article class="card-wrapper card">
+              <a href="{{ unpublishedPost.url | relative_url}}" class="post-preview row g-0 flex-md-row-reverse">
+                {% assign card_body_col = '12' %}
+
+                {% if unpublishedPost.image %}
+                {% assign src = unpublishedPost.image.path | default: unpublishedPost.image %}
+                {% unless src contains '//' %}
+                {% assign src = unpublishedPost.img_path | append: '/' | append: src | replace: '//', '/' %}
+                {% endunless %}
+
+                {% assign alt = unpublishedPost.image.alt | xml_escape | default: 'Preview Image' %}
+
+                {% assign lqip = null %}
+
+                {% if unpublishedPost.image.lqip %}
+                {% capture lqip %}lqip="{{ unpublishedPost.image.lqip }}"{% endcapture %}
+                {% endif %}
+
+                <div class="col-md-5">
+                  <div class="preview-img">
+                    <img src="{{ src }}" alt="{{ alt }}" {{ lqip }}>
+                  </div>
+                </div>
+
+                {% assign card_body_col = '7' %}
+                {% endif %}
+
+                <div class="col-md-{{ card_body_col }}">
+                  <div class="card-body d-flex flex-column">
+                    <h1 class="card-title my-2 mt-md-0">{{ unpublishedPost.title }}</h1>
+
+                    <div class="card-text content mt-0 mb-3">
+                      <p>
+                        {% include no-linenos.html content=unpublishedPost.content %}
+                        {{ content | markdownify | strip_html | truncate: 200 | escape }}
+                      </p>
+                    </div>
+
+                    <div class="post-meta flex-grow-1 d-flex align-items-end">
+                      <div class="me-auto">
+                        <!-- posted date -->
+                        <i class="far fa-calendar fa-fw me-1"></i>
+                        {% include datetime.html date=unpublishedPost.date lang=lang %}
+
+                        <!-- categories -->
+                        {% if unpublishedPost.categories.size > 0 %}
+                        <i class="far fa-folder-open fa-fw me-1"></i>
+                        <span class="categories">
+                          {% for category in unpublishedPost.categories %}
+                          {{ category }}
+                          {%- unless forloop.last -%},{%- endunless -%}
+                          {% endfor %}
+                        </span>
+                        {% endif %}
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </article>
+            {% endfor %}
+          </div>
+          {% if paginator.total_pages > 1 %}
+          {% include post-paginator.html %}
+          {% endif %}
+        </main>
+        <!-- panel -->
+        <aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 mb-5 text-muted">
+          <div class="access">
+            {% include_cached update-list.html lang=lang %}
+            {% include_cached trending-tags.html lang=lang %}
+          </div>
+
+          {% for _include in layout.panel_includes %}
+          {% assign _include_path = _include | append: '.html' %}
+          {% include {{ _include_path }} lang=lang %}
+          {% endfor %}
+        </aside>
+      </div>
+
+      <div class="row">
+        <!-- tail -->
+        <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
+          {% for _include in layout.tail_includes %}
+          {% assign _include_path = _include | append: '.html' %}
+          {% include {{ _include_path }} lang=lang %}
+          {% endfor %}
+
+          {% include_cached footer.html lang=lang %}
+        </div>
+      </div>
+
+      {% include_cached search-results.html lang=lang %}
+    </div>
+
+    <aside aria-label="Scroll to Top">
+      <button id="back-to-top" type="button" class="btn btn-lg btn-box-shadow">
+        <i class="fas fa-angle-up"></i>
+      </button>
+    </aside>
+  </div>
+
+
+
+  <div id="mask"></div>
+
+  {% if site.pwa.enabled %}
+  {% include_cached notification.html lang=lang %}
+  {% endif %}
+
+  <!-- JavaScripts -->
+
+  {% include js-selector.html %}
+
+  {% if page.mermaid %}
+  {% include mermaid.html %}
+  {% endif %}
+
+  {% include_cached search-loader.html %}
+</body>
+<script>
+  $(window).on("load", function () {
+    $(".loader-wrapper").fadeOut("slow");
+  });
+  setTimeout(function () {
+    if ($(".loader-wrapper").is(":visible")) {
+      alert('检测到当前页面加载时间已超过 10 秒，原因可能是您的网速过慢或系统正在维护，您可继续等待加载或尝试刷新页面以解决。');
+    };
+  }, 10000); 
+</script>
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+<script type="text/javascript">
+  let appId = 'rzV27a2iZkM3qCAIMnz2u6pO-9Nh9j0Va';
+  let appKey = '6sPXQuSvQBiMk60c7sFhRPVz';
+  AV.init({
+    appId: appId,
+    appKey: appKey,
+    serverURL: 'https://rzv27a2i.lc-cn-n1-shared.com',
+  });
+
+  const currentUser = AV.User.current();
+  console.log(currentUser);
+  function checkLogin() {
+    if (currentUser) {
+      /* 跳到首页 */
+      document.body.style.display = 'block';
+    } else {
+      /* 显示注册或登录页面 */
+      window.location.href = '/test/part8';
+    }
+  }
+  /* 在页面加载时调用checkLogin函数检查登录状态 */
+  window.addEventListener('load', checkLogin);
+</script>
+
+</html>
