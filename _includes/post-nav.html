@@ -4,21 +4,15 @@
   {% assign previous = site.data.locales[include.lang].post.button.previous %}
   {% assign next = site.data.locales[include.lang].post.button.next %}
 
-  {% assign public = site.posts | where: 'public', 'true' %}
-  {% assign unpublic = site.posts | where: 'public', 'false' %}
 
   {% if page.previous.url %}
-    {% for i in (0..public.size) %}
-      {% if public[i].title == page.title %}
-        <a
-          href="{{ site.baseurl }}{{ public[i+1].url }}"
-          class="btn btn-outline-primary"
-          aria-label="{{ previous }}"
-        >
-          <p>{{ public[i+1].title }}</p>
-        </a>
-      {% endif %}
-    {% endfor %}
+    <a
+      href="{{ site.baseurl }}{{ page.previous.url }}"
+      class="btn btn-outline-primary"
+      aria-label="{{ previous }}"
+    >
+      <p>{{ page.previous.title }}</p>
+    </a>
   {% else %}
     <div class="btn btn-outline-primary disabled" aria-label="{{ previous }}">
       <p>-</p>
