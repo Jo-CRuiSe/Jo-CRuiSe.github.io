@@ -48,7 +48,11 @@ image:
 
 [TinyPNG](https://tinypng.com): 压缩 webp/png/jpeg
 
-[SVG 在线编辑器)](https://c.runoob.com/more/svgeditor/): 在线编辑 SVG 文件并导出
+[SVG 在线编辑器](https://c.runoob.com/more/svgeditor/): 在线编辑 SVG 文件并导出
+
+### 文件处理
+
+[白描](https://web.baimiaoapp.com/): 较高精度的图片文字提取、数学公式识别、电子表格识别、扫描PDF转文字网站
 
 ### 图书
 [Zlibrary](https://zlibrary-east.se): 丰富的电子书网站
