@@ -291,8 +291,10 @@ title: Unpublished Posts
     if (currentUser.get('avatar')) {
       document.getElementById('avatar').getElementsByTagName('img')[0].src = currentUser.get('avatar');
     }
-    if (currentUser.get('username')) {
-      document.querySelector('.site-title a').innerText = "Hi " + currentUser.get('username') + " !";
+    if (currentUser.get('nickname')) {
+      document.querySelector('.site-title a').innerText = "Hi " + currentUser.get('nickname') + " !";
+    } else if (currentUser.get('username')) {
+      document.querySelector('.site-title a').innerText = "Hi " + currentUser.get('username') + "!";
     }
   }
 
