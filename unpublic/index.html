@@ -25,23 +25,29 @@ title: Unpublished Posts
   <!-- The Side Bar -->
 
   <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
-    <a href="javascript:void(0)" id="changeInfo" onclick="document.getElementById('InfoForm').style.display = 'block'" style="position: absolute; top: 140px; left: 140px;">
+    <a href="javascript:void(0)" id="changeInfo" onclick="document.getElementById('InfoForm').style.display = 'block'" style="position: absolute; top: 140px; left: 150px;">
       <i class="fa-fw fas fa-pen-to-square"></i>
     </a>
-    <div id = "from" style="display: none;">
-      <form action="" method="get" class="form-example">
-        <div class="form-example">
-          <label for="name">Enter your name: </label>
-          <input type="text" name="name" id="name" required />
-        </div>
-        <div class="form-example">
-          <label for="email">Enter your email: </label>
-          <input type="email" name="email" id="email" required />
-        </div>
-        <div class="form-example">
-          <input type="submit" value="Subscribe!" />
-        </div>
-      </form>
+    <div id = "InfoForm" style="display: none; position: absolute; top: 30vh; left: 40vw;">
+      <div class = "info">
+          <form action="" method="get" class="form-example">
+            <div class="form-avatar">
+              <label for="avatar">请提供新头像的URL:</label>
+              <input type="text" name="name" id="name"/>
+            </div>
+            <div class="form-nickname">
+              <label for="nickname">请输入您的新昵称: </label>
+              <input type="email" name="email" id="email"/>
+            </div>
+            <div class="form-password">
+              <label for="password">请输入您的新密码: </label>
+              <input type="password" name="password" id="password"/>
+            </div>
+            <div class="form-example">
+              <input type="submit" value="Subscribe!" />
+            </div>
+          </form>
+      </div>
     </div>
     <header class="profile-wrapper">
       <a href="/unpublic" id="avatar" class="rounded-circle">
