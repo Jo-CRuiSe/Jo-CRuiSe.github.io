@@ -4,7 +4,7 @@
   {% assign previous = site.data.locales[include.lang].post.button.previous %}
   {% assign next = site.data.locales[include.lang].post.button.next %}
 
-  {% assign public = site.posts | where: 'public', 'true' %}
+  {% assign public = site.posts | where: 'hidden', 'false' %}
   {% assign unpublic = site.posts | where: 'public', 'false' %}
   {% assign publicTmp = '' | split: '' %}
 
