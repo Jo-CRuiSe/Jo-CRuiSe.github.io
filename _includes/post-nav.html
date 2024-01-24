@@ -6,21 +6,24 @@
 
   {% assign public = site.posts | where: 'public', 'true' %}
   {% assign unpublic = site.posts | where: 'public', 'false' %}
+  {% assign publicTmp = '' | split: '' %}
 
-  {% assign previous_public = nil %}
+  {% assign previous_public = '' | split: '' %}
   {% assign previous_unpublic = nil %}
 
-  {% for i in (1..public.size - 1) %}
-    {% assign front = i | minus: 1%}
+  {% for i in (0..public.size - 1) %}
     {% if public[i].url == page.url %}
-      {% assign previous_public = public[front].url %}
       {% break %}
+    {% else %}
+      {% assign publicTmp = publicTmp | push: public[i] %}
     {% endif %}
   {% endfor %}
   
-  {% if previous_public %}
+  {% assign previous_public = previous_public | push: publicTmp.pop %}
+
+  {% if previous_public.url %}
     <a
-      href="{{ site.baseurl }}{{ previous_public }}"
+      href="{{ site.baseurl }}{{ previous_public.url }}"
       class="btn btn-outline-primary"
       aria-label="{{ previous }}"
     >
