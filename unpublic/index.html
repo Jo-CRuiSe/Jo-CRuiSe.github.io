@@ -110,7 +110,7 @@ title: Unpublished Posts
             {% endfor %}
           </div>
 
-          {% if paginator.per_page > paginator.posts %}
+          {% if paginator.total_pages > paginator.posts %}
             {% include post-paginator.html %}
           {% endif %}
 
