@@ -40,10 +40,10 @@ title: Unpublished Posts
     <nav class="flex-column flex-grow-1 w-100 ps-0">
       <ul class="nav">
         <!-- home -->
-        <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
-          <a href="{{ '/' | relative_url }}" class="nav-link">
-            <i class="fa-fw fas fa-home"></i>
-            <span>{{ site.data.locales[include.lang].tabs.home | upcase }}</span>
+        <li class="nav-item active">
+          <a href="/unpublic" class="nav-link">
+            <i class="fas eye-slash"></i>
+            <span>Unpublished</span>
           </a>
         </li>
         <!-- the real tabs -->
@@ -211,9 +211,7 @@ title: Unpublished Posts
         </main>
         <!-- panel -->
         <aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 mb-5 text-muted">
-          <div class="guestAvatar">
-            <img src="https://gitee.com/jo-cruise/guests-avatar/raw/master/GuestAvatar.jpg" alt="Guest's Avatar">
-          </div>
+
         </aside>
       </div>
 
