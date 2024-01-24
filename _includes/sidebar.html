@@ -210,36 +210,3 @@
     };
   }, 10000); 
 </script>
-<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
-<script type="text/javascript">
-  let appId = 'rzV27a2iZkM3qCAIMnz2u6pO-9Nh9j0Va';
-  let appKey = '6sPXQuSvQBiMk60c7sFhRPVz';
-  AV.init({
-    appId: appId,
-    appKey: appKey,
-    serverURL: 'https://rzv27a2i.lc-cn-n1-shared.com',
-  });
-
-  const currentUser = AV.User.current();
-  if (currentUser != null) {
-    if (currentUser.get('avatar')) {
-      document.getElementById('avatar').getElementsByTagName('img')[0].src = currentUser.get('avatar');
-    }
-    if (currentUser.get('nickname')) {
-      document.querySelector('.site-title a').innerText = "Hi " + currentUser.get('nickname') + " !";
-    } else if (currentUser.get('username')) {
-      document.querySelector('.site-title a').innerText = "Hi " + currentUser.get('username') + "!";
-    }
-  }
-
-  function checkLogin() {
-    if (currentUser != null) {
-      document.body.style.display = 'block';
-    } else {
-      /* 显示注册或登录页面 */
-      window.location.href = '/login';
-    }
-  };
-  /* 在页面加载时调用checkLogin函数检查登录状态 */
-  window.addEventListener('load', checkLogin);
-</script>
