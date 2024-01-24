@@ -40,22 +40,24 @@ title: Unpublished Posts
     <nav class="flex-column flex-grow-1 w-100 ps-0">
       <ul class="nav">
         <!-- home -->
-        <li class="nav-item active">
-          <a href="/unpublic" class="nav-link">
-            <i class="fas eye-slash"></i>
+        <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
+          <a href="{{ '/' | relative_url }}" class="nav-link">
+            <i class="fa-fw fas fa-home"></i>
             <span>{{ site.data.locales[include.lang].tabs.home | upcase }}</span>
           </a>
         </li>
         <!-- the real tabs -->
         {% for tab in site.tabs %}
-          <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
-            <a href="{{ tab.url | relative_url }}" class="nav-link">
-              <i class="fa-fw {{ tab.icon }}"></i>
-              <span>Unpublished</span>
-            </a>
-          </li>
-          <!-- .nav-item -->
-        {% endfor %}
+        <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
+          <a href="{{ tab.url | relative_url }}" class="nav-link">
+            <i class="fa-fw {{ tab.icon }}"></i>
+            {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
+
+            <span>{{ site.data.locales[include.lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
+          </a>
+        </li>
+        <!-- .nav-item -->
+      {% endfor %}
       </ul>
     </nav>
 
@@ -276,7 +278,10 @@ title: Unpublished Posts
   });
 
   const currentUser = AV.User.current();
-  console.log(currentUser);
+  if (currentUser.get('avatar')) {
+    document.querySelector('.rounded-circle img').src = currentUser.get('avatar');
+  };
+
   function checkLogin() {
     if (currentUser) {
       /* 跳到首页 */
@@ -284,10 +289,9 @@ title: Unpublished Posts
     } else {
       /* 显示注册或登录页面 */
       window.location.href = '/login';
-    }
-  }
+    };
+  };
   /* 在页面加载时调用checkLogin函数检查登录状态 */
   window.addEventListener('load', checkLogin);
 </script>
-
 </html>
