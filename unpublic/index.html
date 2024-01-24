@@ -339,8 +339,8 @@ title: Unpublished Posts
     var newNickname = document.getElementById('newNickname').value;
     var newPassword = document.getElementById('newPassword').value;
     currentUser.save().then((user) => {
-      currentUser.setNickname(newNickname);
-      currentUser.setAvatar(newAvatar);
+      currentUser.set("nickname", newNickname);
+      currentUser.set("avatar", newAvatar);
     }).catch((error) => {
       console.log(error.message);
     });
