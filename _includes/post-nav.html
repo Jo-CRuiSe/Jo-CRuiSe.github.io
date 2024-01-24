@@ -13,13 +13,13 @@
 
   {% for i in (0..public.size - 1) %}
     {% if public[i].url == page.url %}
+      {% assign previous_public = previous_public | push: public[i] %}
       {% break %}
     {% else %}
       {% assign publicTmp = publicTmp | push: public[i] %}
     {% endif %}
   {% endfor %}
   
-  {% assign previous_public = previous_public | push: publicTmp.pop %}
 
   {% if previous_public.url %}
     <a
