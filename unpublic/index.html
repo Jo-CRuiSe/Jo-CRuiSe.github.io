@@ -280,7 +280,7 @@ title: Unpublished Posts
 
   const currentUser = AV.User.current();
   if (currentUser.get('avatar')) {
-    document.getElementById('avatar').getElementsByTagName('img')[0].src = "https://gitee.com/jo-cruise/jos-avatar/raw/master/d35d2183941dcb96c05708a4920eb64b.png";
+    document.getElementById('avatar').getElementsByTagName('img')[0].src = currentUser.get('avatar');
   }
   if (currentUser.get('username')) {
     document.querySelector('.site-title a').innerText = "Hi " + currentUser.get('username') + " !";
