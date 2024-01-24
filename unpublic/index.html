@@ -25,10 +25,10 @@ title: Unpublished Posts
   <!-- The Side Bar -->
   <div id = "InfoForm" style="display: none; position: absolute; top: 30vh; left: 40vw; z-index: 9999;">
     <div class = "info">
-        <form action="" method="get" class="form-example">
+        <form onsubmit="updateUserInfo()" class="form-example">
           <div class="form-avatar">
             <label for="avatar">请提供新头像的URL:</label>
-            <input type="url" name="avatar" id="NewAvatar"/>
+            <input type="url" name="avatar" id="newAvatar"/>
           </div>
           <div class="form-nickname">
             <label for="nickname">请输入您的新昵称: </label>
@@ -38,7 +38,7 @@ title: Unpublished Posts
             <label for="password">请输入您的新密码: </label>
             <input type="password" name="password" id="newPassword"/>
           </div>
-          <div class="form-example">
+          <div class="form-submit">
             <input type="submit" value="Submit" />
           </div>
         </form>
@@ -332,5 +332,19 @@ title: Unpublished Posts
   };
   /* 在页面加载时调用checkLogin函数检查登录状态 */
   window.addEventListener('load', checkLogin);
+</script>
+<script>
+  function updateUserInfo() {
+    var newAvatar = document.getElementById('newAvatar').value;
+    var newNickname = document.getElementById('newNickname').value;
+    var newPassword = document.getElementById('newPassword').value;
+    currentUser.save().then((user) => {
+      currentUser.setNickname(newNickname);
+      currentUser.setAvatar(newAvatar);
+    }).catch((error) => {
+      console.log(error.message);
+    });
+
+  }
 </script>
 </html>
