@@ -8,7 +8,7 @@
     <meta name="referrer" content="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
-    <title>LeanCloud Authentication</title>
+    <title> Login </title>
 </head>
 
 <body>
@@ -18,11 +18,7 @@
         <input type="password" id="password" placeholder="Password">
         <input type="submit" value="Login" id="loginBtn">
         <div class="footer">
-            <div class="remember">
-                <input type="checkbox" id="rememberMe">
-                <label for="rememberMe">记住我</label>
-            </div>
-            <button id="signUp">去注册</button>
+            <button id="signUp">Go to Login</button>
         </div>
     </div>
 
@@ -30,13 +26,11 @@
 
     document.getElementById('signUp').addEventListener('click', function () {
         var title = document.querySelector('.title');
-        var loginBtn = document.querySelector('loginBtn');
-        var rememberMeLabel = document.querySelector('.rememberMe');
+        var loginBtn = document.getElementById('loginBtn');
         var signUpBtn = document.getElementById('signUp');
         if (title.innerText == 'Login') {
             title.innerText = 'Register';
             loginBtn.value = 'Register';
-            rememberMeLabel.style.opacity = '0';
             signUpBtn.innerText = 'Go to login';
             document.getElementById('username').value = '';
             document.getElementById('password').value = '';
@@ -46,7 +40,6 @@
         } else {
             title.innerText = 'Login';
             loginBtn.value = 'Login';
-            rememberMeLabel.style.opacity = '1';
             signUpBtn.innerText = 'Go to register';
             document.getElementById('username').placeholder = 'Username';
             document.getElementById('password').placeholder = 'Password';
@@ -76,13 +69,13 @@
         AV.User.logIn(username, password).then(function (user) {
             /* 登录成功 */
             console.log('登录成功');
-            alert('Successfully Login');
             document.getElementById('username').value = '';
             document.getElementById('password').value = '';
-            window.location.href = '/test/part9';
+            window.location.href = '/unpublic';
         }).catch(function (error) {
             /* 登录失败，处理错误信息 */
             console.log('登录失败：', error);
+            alert('登录失败！');
         });
     });
 

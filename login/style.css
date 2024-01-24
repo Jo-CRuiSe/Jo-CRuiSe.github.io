@@ -3,7 +3,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: var(--main-bg);
+    background-color: rgb(27, 27, 30);
 }
 
 .shell {
@@ -15,8 +15,9 @@ body {
 }
 
 .title {
-    color: var(--heading-color);
+    color: #ffffff ;
     font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
     margin-bottom: 30px;
 }
 
@@ -38,22 +39,23 @@ input[type="password"] {
 input[type="submit"] {
     width: 30%;
     height: 30px;
+    padding: 0;
     margin: 15px 0;
+    font-family: Arial, Helvetica, sans-serif;
     color: #fff;
     background-color: #007bff;
     cursor: pointer;
     font-size: 20px;
-    letter-spacing: 3px;
     border: none;
     text-align: center;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     margin-top: 20px;
@@ -63,6 +65,8 @@ input[type="submit"] {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
 }
 
 input[type="checkbox"] {
@@ -71,10 +75,30 @@ input[type="checkbox"] {
     height: 25px;
 }
 
+
 #signUp {
+    background: none;
     border: none;
-    background-color: #007bff;
-    font-size: 18px;
+    text-decoration: underline;
+    font-size: 15px;
     border-radius: 5px;
-    color: #fff;
+    color: rgba(203, 203, 211, 0.447);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* 浅色模式 */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: white;
+    }
+    .title {
+        color: #2a2a2a;
+    }
+    .remember {
+        color: #2a2a2a;
+    }
+    #signUp {
+        color: rgba(51, 51, 53, 0.447);
+    }
 }
