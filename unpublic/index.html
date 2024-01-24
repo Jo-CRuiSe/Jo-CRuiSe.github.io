@@ -26,17 +26,12 @@ title: Unpublished Posts
 
   <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
     <header class="profile-wrapper">
-      <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
-        {%- if site.avatar != empty and site.avatar -%}
-          {%- capture avatar_url -%}
-            {% include img-url.html src=site.avatar %}
-          {%- endcapture -%}
-          <img src="{{- avatar_url -}}" width="112" height="112" alt="avatar" onerror="this.style.display='none'">
-        {%- endif -%}
+      <a href="/unpublic" id="avatar" class="rounded-circle">
+          <img src="https://gitee.com/jo-cruise/guests-avatar/raw/master/GuestAvatar.jpg" width="112" height="112" alt="avatar" onerror="this.style.display='none'">
       </a>
 
       <div class="site-title">
-        <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        <a href="/unpublic">Hi Guest!</a>
       </div>
       <p class="site-subtitle fst-italic mb-0">{{ site.tagline }}</p>
     </header>
@@ -45,9 +40,9 @@ title: Unpublished Posts
     <nav class="flex-column flex-grow-1 w-100 ps-0">
       <ul class="nav">
         <!-- home -->
-        <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
-          <a href="{{ '/' | relative_url }}" class="nav-link">
-            <i class="fa-fw fas fa-home"></i>
+        <li class="nav-item active">
+          <a href="/unpublic" class="nav-link">
+            <i class="fas eye-slash"></i>
             <span>{{ site.data.locales[include.lang].tabs.home | upcase }}</span>
           </a>
         </li>
@@ -56,9 +51,7 @@ title: Unpublished Posts
           <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
             <a href="{{ tab.url | relative_url }}" class="nav-link">
               <i class="fa-fw {{ tab.icon }}"></i>
-              {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
-
-              <span>{{ site.data.locales[include.lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
+              <span>Unpublished</span>
             </a>
           </li>
           <!-- .nav-item -->
