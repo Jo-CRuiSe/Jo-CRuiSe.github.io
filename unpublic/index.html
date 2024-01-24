@@ -28,26 +28,27 @@ title: Unpublished Posts
     <a href="javascript:void(0)" id="changeInfo" onclick="document.getElementById('InfoForm').style.display = 'block'" style="position: absolute; top: 140px; left: 150px;">
       <i class="fa-fw fas fa-pen-to-square"></i>
     </a>
-    <div id = "InfoForm" style="display: none; position: absolute; top: 30vh; left: 40vw;">
-      <div class = "info">
+    <div id = "InfoForm" style="display: none; position: absolute; top: 30vh; left: 40vw; ">
+      <div class = "info" style="z-index: 9999;">
           <form action="" method="get" class="form-example">
             <div class="form-avatar">
               <label for="avatar">请提供新头像的URL:</label>
-              <input type="text" name="name" id="name"/>
+              <input type="url" name="avatar" id="NewAvatar"/>
             </div>
             <div class="form-nickname">
               <label for="nickname">请输入您的新昵称: </label>
-              <input type="email" name="email" id="email"/>
+              <input type="text" name="nickname" id="newNickname"/>
             </div>
             <div class="form-password">
               <label for="password">请输入您的新密码: </label>
-              <input type="password" name="password" id="password"/>
+              <input type="password" name="password" id="newPassword"/>
             </div>
             <div class="form-example">
-              <input type="submit" value="Subscribe!" />
+              <input type="submit" value="Submit" />
             </div>
           </form>
       </div>
+      <div class="gal-info active"></div>
     </div>
     <header class="profile-wrapper">
       <a href="/unpublic" id="avatar" class="rounded-circle">
