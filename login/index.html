@@ -16,70 +16,106 @@
         <h2 class="title">Login</h2>
         <input type="text" id="username" placeholder="Username">
         <input type="password" id="password" placeholder="Password">
+        <input type="email" id="email" placeholder="Email(MUST)">
         <input type="submit" value="Login" id="loginBtn">
         <div class="footer">
             <button id="signUp">Go to Login</button>
         </div>
     </div>
 
-<script>
+    <script>
 
-    document.getElementById('signUp').addEventListener('click', function () {
-        var title = document.querySelector('.title');
-        var loginBtn = document.getElementById('loginBtn');
-        var signUpBtn = document.getElementById('signUp');
-        if (title.innerText == 'Login') {
-            title.innerText = 'Register';
-            loginBtn.value = 'Register';
-            signUpBtn.innerText = 'Go to login';
-            document.getElementById('username').value = '';
-            document.getElementById('password').value = '';
-            document.getElementById('username').placeholder = 'New User Name';
-            document.getElementById('password').placeholder = 'New Password';
-            document.getElementById('password').type = 'password';
-        } else {
-            title.innerText = 'Login';
-            loginBtn.value = 'Login';
-            signUpBtn.innerText = 'Go to register';
-            document.getElementById('username').placeholder = 'Username';
-            document.getElementById('password').placeholder = 'Password';
-            document.getElementById('password').type = 'password';
+        document.getElementById('signUp').addEventListener('click', function () {
+            var title = document.querySelector('.title');
+            var loginBtn = document.getElementById('loginBtn');
+            var signUpBtn = document.getElementById('signUp');
+            if (title.innerText == 'Login') {
+                title.innerText = 'Register';
+                loginBtn.value = 'Register';
+                signUpBtn.innerText = 'Go to login';
+                document.getElementById('username').value = '';
+                document.getElementById('password').value = '';
+                document.getElementById('username').placeholder = 'New User Name';
+                document.getElementById('password').placeholder = 'New Password';
+                document.getElementById('password').type = 'password';
+                document.getElementById('email').style.display = 'block';
+            } else {
+                title.innerText = 'Login';
+                loginBtn.value = 'Login';
+                signUpBtn.innerText = 'Go to register';
+                document.getElementById('username').placeholder = 'Username';
+                document.getElementById('password').placeholder = 'Password';
+                document.getElementById('password').type = 'password';
+                document.getElementById('email').style.display = 'none';
+            }
+
+        })
+    </script>
+
+
+    <!-- 同时兼容http与https -->
+    <script src="//cdn1.lncld.net/static/js/3.0.5/av-min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+    <script>
+        let appId = 'rzV27a2iZkM3qCAIMnz2u6pO-9Nh9j0Va';
+        let appKey = '6sPXQuSvQBiMk60c7sFhRPVz';
+        AV.init({
+            appId: appId,
+            appKey: appKey,
+            serverURL: 'https://rzv27a2i.lc-cn-n1-shared.com',
+        });
+        function validateEmail(email) {
+            var re = /\S+@\S+\.\S+/;
+            return re.test(email);
         }
 
-    })
-</script>
+        document.getElementById('loginBtn').addEventListener("click", function () {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            if (document.querySelector('.title').innerText == 'Login') {
+                AV.User.logIn(username, password).then(function (user) {
+                    if(user.get("emailVerified")){
+                        /* 登录成功 */
+                        console.log('登录成功');
+                        console.log(AV.User.emailVerified);
+                        document.getElementById('username').value = '';
+                        document.getElementById('password').value = '';
+                        window.location.href = '/unpublic';
+                    } else {
+                        alert('当前用户邮箱未通过验证，暂时无法登录');
+                    }
+                }).catch(function (error) {
+                    /* 登录失败，处理错误信息 */
+                    console.log('登录失败：', error);
+                    alert('登录失败！');
+                });
+            } else {
+                var email = document.getElementById('email').value;
+                if (!validateEmail(email)) {
+                    alert('请输入有效的电子邮件地址！');
+                    return;
+                } else {
+                    const user = new AV.User();
+                    AV.User.requestEmailVerify(email);
+                    user.setUsername(username);
+                    user.setPassword(password);
+                    user.setEmail(email);
 
-
-<!-- 同时兼容http与https -->
-<script src="//cdn1.lncld.net/static/js/3.0.5/av-min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
-<script>
-    let appId = 'rzV27a2iZkM3qCAIMnz2u6pO-9Nh9j0Va';
-    let appKey = '6sPXQuSvQBiMk60c7sFhRPVz';
-    AV.init({
-        appId: appId,
-        appKey: appKey,
-        serverURL: 'https://rzv27a2i.lc-cn-n1-shared.com',
-    });
-
-    document.getElementById('loginBtn').addEventListener("click", function () {
-        var username = document.getElementById('username').value;
-        var password = document.getElementById('password').value;
-
-        AV.User.logIn(username, password).then(function (user) {
-            /* 登录成功 */
-            console.log('登录成功');
-            document.getElementById('username').value = '';
-            document.getElementById('password').value = '';
-            window.location.href = '/unpublic';
-        }).catch(function (error) {
-            /* 登录失败，处理错误信息 */
-            console.log('登录失败：', error);
-            alert('登录失败！');
+                    user.signUp().then(function (user) {
+                        /* 注册成功 */
+                        alert('注册成功，等待验证邮箱。邮件已发送！');
+                        console.log('注册成功，等待验证邮箱');
+                        window.location.reload();
+                    }).catch(function (error) {
+                        /* 注册失败，处理错误信息 */
+                        console.log('注册失败：', error);
+                        alert('注册失败！');
+                    });
+                }
+            };
         });
-    });
 
-</script>
+    </script>
 
 </body>
 
