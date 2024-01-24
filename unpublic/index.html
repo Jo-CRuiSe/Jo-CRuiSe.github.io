@@ -278,10 +278,10 @@ title: Unpublished Posts
   const currentUser = AV.User.current();
   if (currentUser.get('avatar')) {
     document.querySelector('.rounded-circle img').src = currentUser.get('avatar');
-  };
+  }
   if (currentUser.get('username')) {
     document.querySelector('site-title a').innerText = currentUser.get('username');
-  };
+  }
 
   function checkLogin() {
     if (currentUser) {
