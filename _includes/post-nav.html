@@ -4,26 +4,25 @@
   {% assign previous = site.data.locales[include.lang].post.button.previous %}
   {% assign next = site.data.locales[include.lang].post.button.next %}
 
-  {% assign public = site.posts | where: 'hidden', 'false' %}
+  {% assign public = site.posts | where: 'public', 'true' %}
   {% assign unpublic = site.posts | where: 'public', 'false' %}
   {% assign publicTmp = '' | split: '' %}
 
-  {% assign previous_public = '' | split: '' %}
+  {% assign previous_public_url = '' %}
   {% assign previous_unpublic = nil %}
 
   {% for i in (0..public.size - 1) %}
-    {% if public[i].url == page.url %}
-      {% assign previous_public = previous_public | push: public[i] %}
+    {% if page.previous.public %}
+      {% assign previous_public_url = page.previous.url %}
       {% break %}
     {% else %}
-      {% assign publicTmp = publicTmp | push: public[i] %}
+      {% continue %}
     {% endif %}
-  {% endfor %}
   
 
-  {% if page.url %}
+  {% if previous_public_url %}
     <a
-      href="{{ site.baseurl }}{{ page.previous.url }}"
+      href="{{ site.baseurl }}{{ previous_public_url }}"
       class="btn btn-outline-primary"
       aria-label="{{ previous }}"
     >
