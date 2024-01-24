@@ -12,7 +12,7 @@
   {% assign previous_public = page.previous %}
   {% assign previous_unpublic = nil %}
 
-  {% for i in (0..site.posts.size - 1) %}
+  {% for i in (0..3) %}
     {% if previous_public.public %}
       {% break %}
     {% else %}
