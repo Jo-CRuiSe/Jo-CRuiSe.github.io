@@ -8,11 +8,11 @@
   {% assign unpublic = site.posts | where: 'public', 'false' %}
   {% assign publicTmp = '' | split: '' %}
 
-  {% assign previous_public_url = '' %}
+  {% assign posts_num = site.posts | size %}
   {% assign previous_public = page.previous %}
   {% assign previous_unpublic = nil %}
 
-  {% for i in (0..3) %}
+  {% for i in (0..posts_num) %}
     {% if previous_public.public %}
       {% break %}
     {% else %}
