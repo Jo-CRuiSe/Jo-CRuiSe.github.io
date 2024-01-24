@@ -109,9 +109,11 @@ title: Unpublished Posts
             </article>
             {% endfor %}
           </div>
-          {% if paginator.total_pages > 1 %}
-          {% include post-paginator.html %}
+
+          {% if paginator.per_page > paginator.posts %}
+            {% include post-paginator.html %}
           {% endif %}
+
         </main>
         <!-- panel -->
         <aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 mb-5 text-muted">
@@ -195,7 +197,7 @@ title: Unpublished Posts
       document.body.style.display = 'block';
     } else {
       /* 显示注册或登录页面 */
-      window.location.href = '/test/part8';
+      window.location.href = '/login';
     }
   }
   /* 在页面加载时调用checkLogin函数检查登录状态 */
