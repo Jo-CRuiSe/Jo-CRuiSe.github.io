@@ -9,21 +9,21 @@
   {% assign publicTmp = '' | split: '' %}
 
   {% assign previous_public_url = '' %}
+  {% assign previous_public = page.previous %}
   {% assign previous_unpublic = nil %}
 
   {% for i in (0..public.size - 1) %}
-    {% if page.previous.public %}
-      {% assign previous_public_url = page.previous.url %}
+    {% if previous_public %}
       {% break %}
     {% else %}
-      {% continue %}
+      {% assign previous_public = previous_public.previous %}
     {% endif %}
   {% endfor %}
   
 
-  {% if previous_public_url %}
+  {% if previous_public.url %}
     <a
-      href="{{ site.baseurl }}{{ previous_public_url }}"
+      href="{{ site.baseurl }}{{ previous_public.url }}"
       class="btn btn-outline-primary"
       aria-label="{{ previous }}"
     >
