@@ -3,12 +3,12 @@
 {% if page.public == false %}
   <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
     <header class="profile-wrapper">
-      <a href="/unpublic" id="avatar" class="rounded-circle">
+      <a href="/shelter" id="avatar" class="rounded-circle">
           <img src="https://gitee.com/jo-cruise/guests-avatar/raw/master/GuestAvatar.jpg" width="112" height="112" alt="avatar" onerror="this.style.display='none'">
       </a>
 
       <div class="site-title">
-        <a href="/unpublic">Hi Guest!</a>
+        <a href="/shelter">Hi Guest!</a>
       </div>
       <p class="site-subtitle fst-italic mb-0">{{ site.tagline }}</p>
     </header>
@@ -18,7 +18,7 @@
       <ul class="nav">
         <!-- home -->
         <li class="nav-item active">
-          <a href="/unpublic" class="nav-link">
+          <a href="/shelter" class="nav-link">
             <i class="fa-fw fas fa-eye-slash"></i>
             <span>Unpublished</span>
           </a>
@@ -197,7 +197,7 @@
 {% endif %}
 <script>
     document.querySelector('.site-subtitle').addEventListener('dblclick', function() {
-      window.location.href = '/unpublic';
+      window.location.href = '/shelter';
     });
 </script>
 <script>
