@@ -20,6 +20,7 @@
         <input type="submit" value="Login" id="loginBtn">
         <div class="footer">
             <button id="signUp">Go to Register</button>
+            <button id="forgotPassword">Forgot Password?</button>
         </div>
     </div>
 
@@ -123,6 +124,12 @@
 
     </script>
 
+    <script>
+        var forgotBtn = document.getElementById('forgotPassword');
+        forgotBtn.addEventListener('click', function () {
+            window.location.href = '/fogot';
+        });
+    </script>
 </body>
 
 </html>
