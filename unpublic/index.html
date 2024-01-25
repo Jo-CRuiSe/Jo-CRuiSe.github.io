@@ -403,11 +403,13 @@ title: Unpublished Posts
 
     if(newNickname.length > 20) {
       alert('昵称不能超过 20 个字符！');
-      return;
+      event.preventDefault();
+      return false;
     }
     if(!isValidUrl(newAvatar)) {
       alert('请输入正确的URL！');
-      return;
+      event.preventDefault();
+      return false;
     }
     if (newNickname != ''){
       currentUser.set("nickname", newNickname);
