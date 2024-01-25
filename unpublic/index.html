@@ -39,6 +39,10 @@ title: Unpublished Posts
     border-radius: 5px;
     border: transparent;
   }
+  .validatemsg {
+    font-size: 10px;
+    color: gray;
+  }
   .form-buttons {
     display: flex;
     justify-content: space-between;
@@ -71,14 +75,16 @@ title: Unpublished Posts
   <!-- The Side Bar -->
   <div id = "InfoForm">
     <div class = "info">
-        <form target="_self" onsubmit="updateUserInfo()" class="form-changeInfo">
+        <form target="_self" class="form-changeInfo">
           <div class="form-avatar">
             <label for="avatar">请提供新头像的URL:</label>
             <input type="url" name="avatar" id="newAvatar"/>
+            <span class="validatemsg" id="isAvatarValid">TEST</span>
           </div>
           <div class="form-nickname">
             <label for="nickname">请输入您的新昵称: </label>
             <input type="text" name="nickname" maxlength="14" id="newNickname"/>
+            <span class="validatemsg" id="isNicknameValid">Nickname</span>
           </div>
           <!-- <div class="form-password">
             <label for="password">请输入您的新密码: </label>
@@ -86,7 +92,7 @@ title: Unpublished Posts
           </div> -->
           <div class="form-buttons">
             <div class="form-submit">
-              <input type="button" class="submitChange" value="Submit" />
+              <input type="button" class="submitChange" value="Submit" onclick="updateUserInfo()"/>
             </div>
             <div class="form-cancel">
               <input type="button" class="cancelChange" value="Cancel"/>
@@ -397,16 +403,24 @@ title: Unpublished Posts
   }
 </script>
 <script>
-  function updateUserInfo() {
-    event.preventDefault();
     var newAvatar = document.getElementById('newAvatar').value.trim();
     var newNickname = document.getElementById('newNickname').value.trim(); 
 
-    if(!isValidUrl(newAvatar)) {
-      alert('请输入正确的URL！');
-      event.preventDefault();
-      return false;
+    var formValidate = {
+      checkNickname: function() {
+        var pattern = /^.{0,14}$/;
+        if (!pattern.test(newNickname)) {
+          return false;
+        } else {
+          return true;
+        }
+      }
     }
+</script>
+<script>
+  function updateUserInfo() {
+
+
     if (newNickname != ''){
       currentUser.set("nickname", newNickname);
     }
