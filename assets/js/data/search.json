@@ -6,7 +6,7 @@ swcache: true
 [
   {% assign public = site.posts | where: 'public', 'true' %}
 
-  {% if page.url == '/shelter' or page.public == 'false' %}
+  {% if page.dir == '/shelter/' or page.public == false %}
     {% for post in site.posts %}
     {
       "title": {{ post.title | jsonify }},
