@@ -409,7 +409,7 @@ title: Unpublished Posts
       checkNickname: function() {
         var pattern = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
         if (pattern.test(newNickname)) {
-          nicknameInfo.innerHTML = '禁止使用特殊字符<i class="fa-fw fas fa-xmrk"></i>';
+          nicknameInfo.innerHTML = '禁止使用特殊字符<i class="fa-fw fas fa-xmark"></i>';
           nicknameInfo.style.color = 'red';
           return false;
         } else if (newNickname != ''){
@@ -427,7 +427,7 @@ title: Unpublished Posts
           avatarInfo.style.color = 'green';
           return true;
         } else {
-          avatarInfo.innerHTML = '<i class="fa-fw fas fa-xmrk"></i>';
+          avatarInfo.innerHTML = '<i class="fa-fw fas fa-xmark"></i>';
           avatarInfo.style.color ='red';
           return false;
         }
