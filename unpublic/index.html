@@ -19,6 +19,16 @@ title: Unpublished Posts
 <link rel="stylesheet" href="style.css">
 
 <style>
+  #InfoForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  }
   input[type="text"], 
   input[type="url"]
   {
@@ -40,7 +50,7 @@ title: Unpublished Posts
     <span class="loader"><span class="loader-inner"></span></span>
   </div>
   <!-- The Side Bar -->
-  <div id = "InfoForm" style="display: none; position: absolute; top: 30vh; left: 40vw; z-index: 9999;">
+  <div id = "InfoForm">
     <div class = "info">
         <form onsubmit="updateUserInfo()" class="form-example">
           <div class="form-avatar">
