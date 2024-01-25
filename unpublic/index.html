@@ -86,7 +86,7 @@ title: Unpublished Posts
           </div>
           <div class="form-nickname">
             <label for="nickname">请输入您的新昵称: </label>
-            <input type="text" name="nickname" maxlength="14" id="newNickname"/>
+            <input type="text" name="nickname" maxlength="14" id="newNickname" onblur="formValidate.checkNickname()"/>
             <span class="validatemsg" id="isNicknameValid"></span>
           </div>
           <!-- <div class="form-password">
@@ -423,6 +423,7 @@ title: Unpublished Posts
           nicknameInfo.style.color = 'green';
           return true;
         } else {
+          nicknameInfo.innerHTML = ''
           return true;
         }
       }
