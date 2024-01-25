@@ -396,29 +396,25 @@ title: Unpublished Posts
 
 
 <script>
-    var newAvatar = document.getElementById('newAvatar').value.trim();
-    var newNickname = document.getElementById('newNickname').value.trim(); 
-    var avatarInfo = document.getElementById('isAvatarValid');
-    var nicknameInfo = document.getElementById('isNicknameValid');
 
     var formValidate = {
       checkNickname: function() {
-        if (newNickname != ''){
-          nicknameInfo.innerHTML = '<i class="fa-fw fas fa-check"></i>';
-          nicknameInfo.style.color = 'green';
+        if (document.getElementById('newNickname').value.trim() != ''){
+          document.getElementById('isNicknameValid').innerHTML = '<i class="fa-fw fas fa-check"></i>';
+          document.getElementById('isNicknameValid').style.color = 'green';
           return true;
         } else {
-          nicknameInfo.innerHTML = '';
+          document.getElementById('isNicknameValid').innerHTML = '';
           return true;
         }
       },
       checkAvatar: function() {
-        if (newAvatar != '') {
-          avatarInfo.innerHTML = '<i class="fa-fw fas fa-check"></i>';
-          avatarInfo.style.color = 'green';
+        if (document.getElementById('newAvatar').value.trim()) {
+          document.getElementById('isAvatarValid').innerHTML = '<i class="fa-fw fas fa-check"></i>';
+          document.getElementById('isAvatarValid').style.color = 'green';
           return true;
         } else {
-          avatarInfo.innerHTML = '';
+          document.getElementById('isAvatarValid').innerHTML = '';
           return true;
         }
       }
@@ -427,6 +423,8 @@ title: Unpublished Posts
 <script>
   function updateUserInfo() {
 
+    var newAvatar = document.getElementById('newAvatar').value.trim();
+    var newNickname = document.getElementById('newNickname').value.trim(); 
 
     if (newNickname != ''){
       currentUser.set("nickname", newNickname);
