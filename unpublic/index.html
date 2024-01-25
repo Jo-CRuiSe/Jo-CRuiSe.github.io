@@ -41,6 +41,9 @@ title: Unpublished Posts
           <div class="form-submit">
             <input type="submit" value="Submit" />
           </div>
+          <div class="form-reset">
+            <input type="reset" value="Reset" />
+          </div>
         </form>
     </div>
   </div>
@@ -349,6 +352,7 @@ title: Unpublished Posts
       console.log(newAvatar);
       console.log(newNickname);
       console.log('保存成功！');
+      alert("Save Successfully!");
     }).catch((error) => {
       console.log(error.message);
     });
