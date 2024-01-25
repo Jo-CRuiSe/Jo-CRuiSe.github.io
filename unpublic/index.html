@@ -81,12 +81,12 @@ title: Unpublished Posts
         <form target="_self" class="form-changeInfo">
           <div class="form-avatar">
             <label for="avatar">请提供新头像的URL:</label>
-            <input type="url" name="avatar" id="newAvatar" onblur="formValidate.checkAvatar()"/>
+            <input type="url" name="avatar" placeholder="Optional" id="newAvatar" onblur="formValidate.checkAvatar()"/>
             <span class="validatemsg" id="isAvatarValid"></span>
           </div>
           <div class="form-nickname">
             <label for="nickname">请输入您的新昵称: </label>
-            <input type="text" name="nickname" maxlength="15" id="newNickname" onblur="formValidate.checkNickname()"/>
+            <input type="text" name="nickname" maxlength="15" placeholder="Optional" id="newNickname" onblur="formValidate.checkNickname()"/>
             <span class="validatemsg" id="isNicknameValid"></span>
           </div>
           <!-- <div class="form-password">
