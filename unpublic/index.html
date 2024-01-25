@@ -86,7 +86,7 @@ title: Unpublished Posts
           </div> -->
           <div class="form-buttons">
             <div class="form-submit">
-              <input type="submit" value="Submit" />
+              <input type="button" clacss="submitChange" value="Submit" />
             </div>
             <div class="form-cancel">
               <input type="button" class="cancelChange" value="Cancel"/>
@@ -395,7 +395,8 @@ title: Unpublished Posts
     '(\\#[-a-z\\d_]*)?$','i'); 
   return pattern.test(url);
   }
-
+</script>
+<script>
   function updateUserInfo() {
     event.preventDefault();
     var newAvatar = document.getElementById('newAvatar').value;
@@ -409,7 +410,7 @@ title: Unpublished Posts
     if (newNickname != ''){
       currentUser.set("nickname", newNickname);
     }
-    if(newAvatar != '') {
+    if (newAvatar != '') {
       currentUser.set("avatar", newAvatar);
     }
     currentUser.save().then((user) => {
