@@ -88,7 +88,7 @@ title: Unpublished Posts
             <div class="form-submit">
               <input type="submit" value="Submit" />
             </div>
-            <div class="form-cencel">
+            <div class="form-cancel">
               <button class="cancelChange">Cancel</button>
             </div>
           </div>
@@ -430,6 +430,7 @@ title: Unpublished Posts
 </script>
 <script>
   document.querySelector('.cancelChange').addEventListener('click', () => {
+    even.preventDefault();
     document.getElementById('InfoForm').style.display = 'none';
     document.querySelector('.gal-info').classList.remove('active');
   });
