@@ -394,11 +394,7 @@ title: Unpublished Posts
   </script>
 </body>
 
-<script>
-  function isValidUrl(url) {
-    return /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\*\+,;=.]+$/.test(url);
-  }
-</script>
+
 <script>
     var newAvatar = document.getElementById('newAvatar').value.trim();
     var newNickname = document.getElementById('newNickname').value.trim(); 
@@ -417,14 +413,13 @@ title: Unpublished Posts
         }
       },
       checkAvatar: function() {
-        if (isValidUrl(newAvatar)) {
+        if (newAvatar != '') {
           avatarInfo.innerHTML = '<i class="fa-fw fas fa-check"></i>';
           avatarInfo.style.color = 'green';
           return true;
         } else {
-          avatarInfo.innerHTML = '<i class="fa-fw fas fa-xmark"></i>';
-          avatarInfo.style.color ='red';
-          return false;
+          avatarInfo.innerHTML = '';
+          return true;
         }
       }
     };
