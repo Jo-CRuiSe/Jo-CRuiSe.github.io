@@ -34,10 +34,10 @@ title: Unpublished Posts
             <label for="nickname">请输入您的新昵称: </label>
             <input type="text" name="nickname" id="newNickname"/>
           </div>
-          <div class="form-password">
+          <!-- <div class="form-password">
             <label for="password">请输入您的新密码: </label>
             <input type="password" name="password" id="newPassword"/>
-          </div>
+          </div> -->
           <div class="form-submit">
             <input type="submit" value="Submit" />
           </div>
@@ -335,13 +335,20 @@ title: Unpublished Posts
 </script>
 <script>
   function updateUserInfo() {
+    event.preventDefault();
     var newAvatar = document.getElementById('newAvatar').value;
     var newNickname = document.getElementById('newNickname').value;
-    var newPassword = document.getElementById('newPassword').value;
-    currentUser.set("nickname", newNickname);
-    currentUser.set("avatar", newAvatar);
-    currentUser.save().then((user) => {
 
+    if (newNickname != ''){
+      currentUser.set("nickname", newNickname);
+    }
+    if (newAvatar != ''){
+      currentUser.set("avatar", newAvatar);
+    }
+    currentUser.save().then((user) => {
+      console.log(newAvatar);
+      console.log(newNickname);
+      console.log('保存成功！');
     }).catch((error) => {
       console.log(error.message);
     });
