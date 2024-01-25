@@ -399,8 +399,8 @@ title: Unpublished Posts
 <script>
   function updateUserInfo() {
     event.preventDefault();
-    var newAvatar = document.getElementById('newAvatar').value;
-    var newNickname = document.getElementById('newNickname').value;
+    var newAvatar = document.getElementById('newAvatar').value.trim();
+    var newNickname = document.getElementById('newNickname').value.trim(); 
 
     if(!isValidUrl(newAvatar)) {
       alert('请输入正确的URL！');
