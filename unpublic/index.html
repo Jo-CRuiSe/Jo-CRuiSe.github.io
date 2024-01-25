@@ -349,10 +349,11 @@ title: Unpublished Posts
       currentUser.set("avatar", newAvatar);
     }
     currentUser.save().then((user) => {
-      console.log(newAvatar);
-      console.log(newNickname);
       console.log('保存成功！');
-      alert("Save Successfully!");
+      if (newAvatar != '' || newNickname != '') {
+        alert("Save Successfully!");
+        window.location.reload();
+      }
     }).catch((error) => {
       console.log(error.message);
     });
