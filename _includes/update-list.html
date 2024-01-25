@@ -4,7 +4,7 @@
 
 {% assign all_list = '' | split: '' %}
 
-{% if page.dir == 'shelter' or page.public == 'true' %}
+{% if page.dir == '/shelter/' or page.public == false %}
   {% assign posts = site.posts | where: 'public', 'false' %}
 
   {% for post in posts %}
