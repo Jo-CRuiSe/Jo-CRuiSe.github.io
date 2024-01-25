@@ -407,12 +407,7 @@ title: Unpublished Posts
 
     var formValidate = {
       checkNickname: function() {
-        var pattern = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
-        if (pattern.test(newNickname)) {
-          nicknameInfo.innerHTML = '禁止使用特殊字符<i class="fa-fw fas fa-xmark"></i>';
-          nicknameInfo.style.color = 'red';
-          return false;
-        } else if (newNickname != ''){
+        if (newNickname != ''){
           nicknameInfo.innerHTML = '<i class="fa-fw fas fa-check"></i>';
           nicknameInfo.style.color = 'green';
           return true;
