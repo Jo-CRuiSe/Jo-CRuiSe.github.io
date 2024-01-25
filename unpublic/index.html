@@ -82,12 +82,12 @@ title: Unpublished Posts
           <div class="form-avatar">
             <label for="avatar">请提供新头像的URL:</label>
             <input type="url" name="avatar" id="newAvatar"/>
-            <span class="validatemsg" id="isAvatarValid">TEST</span>
+            <span class="validatemsg" id="isAvatarValid"></span>
           </div>
           <div class="form-nickname">
             <label for="nickname">请输入您的新昵称: </label>
             <input type="text" name="nickname" maxlength="14" id="newNickname"/>
-            <span class="validatemsg" id="isNicknameValid">Nickname</span>
+            <span class="validatemsg" id="isNicknameValid"></span>
           </div>
           <!-- <div class="form-password">
             <label for="password">请输入您的新密码: </label>
@@ -408,12 +408,20 @@ title: Unpublished Posts
 <script>
     var newAvatar = document.getElementById('newAvatar').value.trim();
     var newNickname = document.getElementById('newNickname').value.trim(); 
+    var avatarInfo = document.getElementById('isAvatarValid');
+    var nicknameInfo = document.getElementById('isNicknameValid');
 
     var formValidate = {
       checkNickname: function() {
-        var pattern = /^.{0,14}$/;
+        var pattern = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
         if (!pattern.test(newNickname)) {
+          nicknameInfo.innerHTML = '禁止使用特殊字符<i class="fa-fw fas fa-xmrk"></i>';
+          nicknameInfo.style.color = 'red';
           return false;
+        } else if (newNickname != ''){
+          nicknameInfo.innerHTML = '<i class="fa-fw fas fa-check"></i>';
+          nicknameInfo.style.color = 'green';
+          return true;
         } else {
           return true;
         }
