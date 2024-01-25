@@ -44,7 +44,7 @@ title: Unpublished Posts
     color: gray;
   }
   .form-nickname {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
   .form-buttons {
     display: flex;
@@ -396,7 +396,6 @@ title: Unpublished Posts
 
 
 <script>
-
     var formValidate = {
       checkNickname: function() {
         if (document.getElementById('newNickname').value.trim() != ''){
@@ -409,15 +408,18 @@ title: Unpublished Posts
         }
       },
       checkAvatar: function() {
-        if (document.getElementById('newAvatar').value.trim()) {
+        if (document.getElementById('newAvatar').value.trim().startsWith('https://') || document.getElementById('newAvatar').value.trim().startsWith('http://')) {
           document.getElementById('isAvatarValid').innerHTML = '<i class="fa-fw fas fa-check"></i>';
           document.getElementById('isAvatarValid').style.color = 'green';
           return true;
+        } else if (document.getElementById('newAvatar').value.trim() !='') {
+          document.getElementById('isAvatarValid').innerHTML = '<i class="fa-fw fas fa-xmark"></i>Invalid URL';
+          document.getElementById('isAvatarValid').style.color = 'red';
         } else {
           document.getElementById('isAvatarValid').innerHTML = '';
           return true;
         }
-      }
+      },
     };
 </script>
 <script>
