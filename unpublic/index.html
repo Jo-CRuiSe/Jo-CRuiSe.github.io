@@ -29,7 +29,8 @@ title: Unpublished Posts
   transform: translate(-50%, -50%);
   z-index: 9999;
   }
-  input[type="text"], 
+  
+  .form-changeInfo input[type="text"], 
   input[type="url"]
   {
     margin: 10px 0;
@@ -40,9 +41,25 @@ title: Unpublished Posts
   }
   .form-submit {
     display: inline-block;
+    margin: 0 10px;
+  }
+  .form-submit input[type="submit"]
+  {
+    background: rgba(0, 123, 255, 0.8);
+    color: #fff;
+    border-radius: 5px;
+    border: transparent;
   }
   .form-reset {
     display: inline-block;
+    margin: 0, 10px;
+  }
+  .cancelChange
+  {
+    background: rgba(112, 112, 112, 0.679);
+    color: #fff;
+    border-radius: 5px;
+    border: transparent;
   }
 </style>
 <body>
@@ -52,7 +69,7 @@ title: Unpublished Posts
   <!-- The Side Bar -->
   <div id = "InfoForm">
     <div class = "info">
-        <form onsubmit="updateUserInfo()" class="form-example">
+        <form onsubmit="updateUserInfo()" class="form-changeInfo">
           <div class="form-avatar">
             <label for="avatar">请提供新头像的URL:</label>
             <input type="url" name="avatar" id="newAvatar"/>
@@ -65,11 +82,13 @@ title: Unpublished Posts
             <label for="password">请输入您的新密码: </label>
             <input type="password" name="password" id="newPassword"/>
           </div> -->
-          <div class="form-submit">
-            <input type="submit" value="Submit" />
-          </div>
-          <div class="form-reset">
-            <input type="reset" value="Reset" />
+          <div class="form-buttons">
+            <div class="form-submit">
+              <input type="submit" value="Submit" />
+            </div>
+            <div class="form-reset">
+              <button class="cancelChange">Cancel</button>
+            </div>
           </div>
         </form>
     </div>
