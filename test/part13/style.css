@@ -41,7 +41,7 @@ body {
 }
 
 .dock li.loading {
-    animation: 1s loading ease-in infinite;
+  animation: 0.8s loading ease-in infinite;
 }
 
 @keyframes loading {
