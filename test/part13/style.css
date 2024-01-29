@@ -21,7 +21,7 @@ body {
 }
 
 .dock {
-    /* --scale: 1; */
+    --scale: 1;
 
     list-style: none;
     margin: 0;
@@ -31,18 +31,19 @@ body {
 }
 
 .dock li {
-    font-size: 6rem;
+    font-size: calc(6rem * var(--scale));
     padding: 0 .5rem;
     cursor: default;
-/* 
+
     position: relative;
     top:calc((6rem * var(--scale) - 6rem) / 2 * -1);
-    transition: 15ms all ease-out; */
+    transition: 15ms all ease-out;
 }
 
-/* .dock.li.loading {
-    animation: 1s loading ease-in in infinite;
+.dock li.loading {
+    animation: 1s loading ease-in infinite;
 }
+
 @keyframes loading {
     0%, 100% {
         transform: translateY(0px);
@@ -50,4 +51,4 @@ body {
     60% {
         transform: translateY(-40px);
     }
-} */
+}

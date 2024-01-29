@@ -1,7 +1,7 @@
-document.querySelectorAll('.dock li').forEach(li  => {
+document.querySelectorAll('.dock li').forEach(li => {
     li.addEventListener('click', e => {
         e.currentTarget.classList.add('loading');
-    })
+      })
 
     li.addEventListener('mousemove', e => {
         let item = e.target;
@@ -27,12 +27,12 @@ document.querySelectorAll('.dock li').forEach(li  => {
     })
 });
 
-document.querySelector('.dock').addEventListener('mousemove', e => {
+document.querySelector('.dock').addEventListener('mouseleave', e => {
     resetScale();
 });
 
 function resetScale() {
-    document.querySelectorAll('.dock li').forEach(li  => {
+    document.querySelectorAll('.dock li').forEach(li => {
         li.style.setProperty('--scale', 1);
     });
 }
