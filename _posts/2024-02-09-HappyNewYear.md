@@ -11,6 +11,9 @@ typora-root-url: ../../Jo-CRuiSe.github.io/
 math: false
 mermaid: true
 public: true
+image:
+  path: /assets/blog_res/2024-02-09-HappyNewYear.assets/Scene1.jpg
+  lqip: /assets/blog_res/2024-02-09-HappyNewYear.assets/Scene1.jpg
 ---
 
 ## 概述
@@ -41,8 +44,6 @@ public: true
 2.2 ～ 2.6 有比赛，停止更新；
 
 2.7 ～ 2.9 博客撰写、最后的检查工作、预发布。
-
-
 
 ## 技术部分
 
