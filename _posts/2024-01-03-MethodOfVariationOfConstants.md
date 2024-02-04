@@ -21,7 +21,7 @@ image:
 已知方程：
 
 $$ \begin{align*}
-\left\{
+\left \{
 \begin{aligned}
    & y''(x) + \omega^{2}(y) = f(x)\\
    & y(0) = \alpha, y'(0) = \beta
