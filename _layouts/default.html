@@ -15,6 +15,7 @@ layout: compress
 <!-- `site.alt_lang` can specify a language different from the UI -->
 <html lang="{{ site.alt_lang | default: site.lang }}" {{ prefer_mode }}>
   {% include head.html %}
+  {% include mathjax_support.html %}
   <body>
     <div class="loader-wrapper">
       <span class="loader"><span class="loader-inner"></span></span>
