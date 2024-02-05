@@ -20,14 +20,10 @@ image:
 
 已知方程：
 
-$$ \begin{align*}
-\left \{
-\begin{aligned}
-   & y''(x) + \omega^{2}(x) = f(x)\\
-   & y(0) = \alpha, \quad y'(0) = \beta
-\end{aligned}
-\right.
-\end{align*} $$
+$$\begin{cases}
+   y''(x) + \omega^{2}(x) = f(x)\\
+   y(0) = \alpha, \quad y'(0) = \beta
+\end{cases}$$
 
 可以得到相应的齐次方程：$ y''(x) + \omega^{2}(x) = 0 $
 
