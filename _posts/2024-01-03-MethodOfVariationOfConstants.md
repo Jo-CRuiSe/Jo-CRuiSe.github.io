@@ -23,8 +23,8 @@ image:
 $$ \begin{align*}
 \left \{
 \begin{aligned}
-   & y''(x) + \omega^{2}(y) = f(x)\\
-   & y(0) = \alpha, y'(0) = \beta
+   & y''(x) + \omega^{2}(x) = f(x)\\
+   & y(0) = \alpha, \quad y'(0) = \beta
 \end{aligned}
 \right.
 \end{align*} $$
