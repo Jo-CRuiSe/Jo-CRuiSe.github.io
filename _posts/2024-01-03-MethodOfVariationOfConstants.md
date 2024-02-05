@@ -21,8 +21,8 @@ image:
 已知方程：
 
 $$\begin{cases}
-   y''(x) + \omega^{2}(x) = f(x)\\
-   y(0) = \alpha, \quad y'(0) = \beta
+   y^{\prime \prime}(x) + \omega^{2}(x) = f(x)\\
+   y(0) = \alpha, \quad y^{\prime}(0) = \beta
 \end{cases}$$
 
 可以得到相应的齐次方程：$ y^{\prime \prime}(x) + \omega^{2}(x) = 0 $
@@ -33,22 +33,22 @@ $$\begin{cases}
 
 构造二元线性方程组
 
-$$ y'(x) = [u'(x) cos(\omega x) + v'(x) sin(\omega x) + [-\omega u(x) sin(\omega x) + \omega v(x)cos(\omega x)] $$
+$$ y^{\prime}(x) = [u^{\prime}(x) cos(\omega x) + v^{\prime}(x) sin(\omega x) + [-\omega u(x) sin(\omega x) + \omega v(x)cos(\omega x)] $$
 
 令第一个方程为 0，即
 
 $$\begin{equation}
-u'(x) cos(\omega x) + v'(x) sin(\omega x) = 0 \tag{1}
+u^{\prime}(x) cos(\omega x) + v^{\prime}(x) sin(\omega x) = 0 \tag{1}
 \end{equation} $$
 
 余下部分再求导：
 
-$$ y''(x) = [-\omega u'(x) sin(\omega x) + \omega v'(x) cos(\omega x)] - [\omega^{2} u(x) cos(\omega x) + \omega^{2} v(x) sin(\omega x)] $$
+$$ y^{\prime \prime}(x) = [-\omega u^{\prime}(x) sin(\omega x) + \omega v^{\prime}(x) cos(\omega x)] - [\omega^{2} u(x) cos(\omega x) + \omega^{2} v(x) sin(\omega x)] $$
 
 代入原方程得到：
 
 $$ \begin{equation}
--\omega u'(x) sin(\omega x) + \omega v'(x) cos(\omega x) = f(x) \tag{2}
+-\omega u^{\prime}(x) sin(\omega x) + \omega v^{\prime}(x) cos(\omega x) = f(x) \tag{2}
 \end{equation}$$
 
 (1)、(2)联立得
@@ -58,8 +58,8 @@ $$ \begin{bmatrix}
   -\omega sin(\omega x) & \omega cos(\omega x)
 \end{bmatrix} 
 \begin{bmatrix}  
-  u'(x) \\
-  v'(x)
+  u^{\prime}(x) \\
+  v^{\prime}(x)
 \end{bmatrix} 
 =\begin{bmatrix} 
   0 \\
