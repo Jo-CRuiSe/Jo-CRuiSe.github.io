@@ -25,7 +25,7 @@ $$\begin{cases}
    y(0) = \alpha, \quad y'(0) = \beta
 \end{cases}$$
 
-可以得到相应的齐次方程：$ y''(x) + \omega^{2}(x) = 0 $
+可以得到相应的齐次方程：$ y^{''}(x) + \omega^{2}(x) = 0 $
 
 通解：$ y(x) = C_{1}cos(\omega x) + C_{2}sin(\omega x) $
 
