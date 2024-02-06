@@ -1,7 +1,7 @@
 ---
 title: How to Use UPE
 date: 2024-02-06 09:41:00 +0800
-categories: [tutorial]
+categories: [Tutorial]
 tags: []
 pin: false
 author: jo
