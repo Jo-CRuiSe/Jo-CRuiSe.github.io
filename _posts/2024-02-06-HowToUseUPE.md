@@ -55,7 +55,7 @@ Leancloud:
   appId: 'example' # fill with your Leancloud appId
   appKey: 'example' # fill with your Leancloud appKey
   serverURL: 'example' # fill with your Leancloud serverURL
-  allowRegister: true
+  allowRegister: true # allow registration for your website
 ```
 
 ### 安全
