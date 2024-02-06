@@ -26,7 +26,7 @@ public: true
 登录注册网址：https://console.leancloud.cn/register，在左上角选择**华北节点**
 
 >华东地区节点在2024.1.30关闭，国际版对国内评论系统有限制
-{:. prompt-info}
+{: .prompt-info}
 
 ![LeancloudRegisterDark](/assets/blog_res/2024-02-06-HowToUseUPE.assets/LeancloudRegisterDark.png){: .dark }
 
@@ -105,7 +105,7 @@ Leancloud:
 再到Leancloud下的"Data Storage"-"Data"-"_User"，您就可以看到已注册的用户信息了。
 
 >由于Leancloud的安全限制，您无法查看任何人的密码
-{:. prompt-info}
+{: .prompt-info}
 
 ## 登录后的使用
 
@@ -114,7 +114,7 @@ Leancloud:
 如果以上步骤您都顺利通过，那么您现在可以像使用原本的Chirpy主题的博客一样来对当前项目进行更改。
 
 >在提交时请注意仓库名称是否选取正确
-{:. prompt-warning}
+{: .prompt-warning}
 
 ### 进阶使用
 
