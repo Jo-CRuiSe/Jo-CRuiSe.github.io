@@ -28,25 +28,25 @@ Follow the instructions in [README](https://github.com/Jo-CRuiSe/unpublished-pos
 >华东地区节点在2024.1.30关闭，国际版对国内评论系统有限制
 {:. prompt-info}
 
-![LeancloudRegisterDark](/assets/blog_res/2024-02-06-HowToUseUPE.assets/LeancloudRegisterDark.png)
+![LeancloudRegisterDark](/assets/blog_res/2024-02-06-HowToUseUPE.assets/LeancloudRegisterDark.png){: .dark }
 
-![LeancloudRegisterLight](/assets/blog_res/2024-02-06-HowToUseUPE.assets/LeancloudRegisterLight.png)
+![LeancloudRegisterLight](/assets/blog_res/2024-02-06-HowToUseUPE.assets/LeancloudRegisterLight.png){: .light }
 
 ### 创建应用
 
 注册完成后左上角选择<kbd>Create app</kbd>，App name随意取，在"App price plan"中选择<kbd>Developer</kbd>，完成后点击<kbd>Create</kbd>
 
-![CreateAppDark](/assets/blog_res/2024-02-06-HowToUseUPE.assets/CreateAppDark.png)
+![CreateAppDark](/assets/blog_res/2024-02-06-HowToUseUPE.assets/CreateAppDark.png){: .dark }
 
-![CreateAppLight](/assets/blog_res/2024-02-06-HowToUseUPE.assets/CreateAppLight.png)
+![CreateAppLight](/assets/blog_res/2024-02-06-HowToUseUPE.assets/CreateAppLight.png){: .light }
 
 ### 应用设置
 
 进入app的设置，在侧边栏选择"Settings"-"App keys"（可能需要向下滚动）
 
-![AppKeysLight.png](/assets/blog_res/2024-02-06-HowToUseUPE.assets/AppKeysLight.png)
+![AppKeysLight.png](/assets/blog_res/2024-02-06-HowToUseUPE.assets/AppKeysLight.png){: .light }
 
-![AppKeysDark](/assets/blog_res/2024-02-06-HowToUseUPE.assets/AppKeysDark.png)
+![AppKeysDark](/assets/blog_res/2024-02-06-HowToUseUPE.assets/AppKeysDark.png){: .dark }
 
 这里的AppID、AppKey和Server URLs对应_config.yml文件中的相应内容
 
@@ -62,9 +62,9 @@ Leancloud:
 
 由于App ID、App Key、ServerURL是在配置文件中以明文形式储存的，使用为了安全，请在"Settings"-"Security"（可能需要向下滚动）中的"Web secure domains"下的文本框中添加您的域名，例如`https://username.github.io`。同时为了方便在本地调试，可以添加`127.0.0.1:4000`
 
-![SecurityLight](/assets/blog_res/2024-02-06-HowToUseUPE.assets/SecurityLight.png)
+![SecurityLight](/assets/blog_res/2024-02-06-HowToUseUPE.assets/SecurityLight.png){: .light }
 
-![SecurityDark](/assets/blog_res/2024-02-06-HowToUseUPE.assets/SecurityDark.png)
+![SecurityDark](/assets/blog_res/2024-02-06-HowToUseUPE.assets/SecurityDark.png){: .dark }
 
 >127.0.0.是本机ip，4000是本地调试端口号，如果您未修改过相关配置，Jekyll默认使用4000端口
 {: .prompt-info }
@@ -76,15 +76,15 @@ Leancloud:
 
 用户信息存储在"Data Storage"-"Data"（可能需要向下滚动）下的"_User"内。
 
-![UsersLight](/assets/blog_res/2024-02-06-HowToUseUPE.assets/UsersLight.png)
+![UsersLight](/assets/blog_res/2024-02-06-HowToUseUPE.assets/UsersLight.png){: .light }
 
-![UsersDark](/assets/blog_res/2024-02-06-HowToUseUPE.assets/UsersDark.png)
+![UsersDark](/assets/blog_res/2024-02-06-HowToUseUPE.assets/UsersDark.png){: .dark }
 
 为了使登录的用户能够更改头像和昵称，请在上方的"Permission"-"Default ACL"-<kbd>Edit</kbd>将读写权限改为"All users"
 
-![ChangeACLDark](/assets/blog_res/2024-02-06-HowToUseUPE.assets/ChangeACLDark.png)
+![ChangeACLDark](/assets/blog_res/2024-02-06-HowToUseUPE.assets/ChangeACLDark.png){: .dark }
 
-![ChangeACLLight](/assets/blog_res/2024-02-06-HowToUseUPE.assets/ChangeACLLightt.png)
+![ChangeACLLight](/assets/blog_res/2024-02-06-HowToUseUPE.assets/ChangeACLLightt.png){: .light }
 
 ### 邮箱注册权限
 
@@ -94,9 +94,9 @@ Leancloud:
 
 - [x] Do not allow users with unverified email addresses to log in
 
-![EmailConfigDark.png](/assets/blog_res/2024-02-06-HowToUseUPE.assets/EmailConfigDark.png)
+![EmailConfigDark.png](/assets/blog_res/2024-02-06-HowToUseUPE.assets/EmailConfigDark.png){: .dark }
 
-![EmailConfigLight](/assets/blog_res/2024-02-06-HowToUseUPE.assets/EmailConfigLight.png)
+![EmailConfigLight](/assets/blog_res/2024-02-06-HowToUseUPE.assets/EmailConfigLight.png){: .light }
 
 ## 登录测试
 
