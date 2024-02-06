@@ -11,6 +11,9 @@ typora-root-url: ../../Jo-CRuiSe.github.io/
 math: false
 mermaid: true
 public: true
+image:
+  path: /assets/blog_res/title/HowToUseUPE.png
+  lqip: /assets/blog_res/title/HowToUseUPE.png
 ---
 
 ## 先决条件
