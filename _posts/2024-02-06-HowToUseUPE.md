@@ -13,11 +13,11 @@ mermaid: true
 public: true
 ---
 
-## Prerequisites
+## 先决条件
 
-Follow the instructions in [README](https://github.com/Jo-CRuiSe/unpublished-posts-enhancement/blob/main/README.md) to complete the installation of the basic environment. 
+请先根据 [README](https://github.com/Jo-CRuiSe/unpublished-posts-enhancement/blob/main/README.md) 来完成基本配置。
 
-## Configuration
+## 配置方法
 
 ### 注册 Leancloud
 
@@ -100,25 +100,25 @@ Leancloud:
 
 ## 登录测试
 
-现在登录你自定义的网址：`https://username.github.io/unpublished-posts-enhancement`，如果运行正确你会被redirect到`https://username.github.io/unpublished-posts-enhancement/login`。现在尝试注册一个账号，需要填写用户名、密码、邮箱。进行邮箱验证后就可以正常登录了。
+现在登录您自定义的网址：`https://username.github.io/unpublished-posts-enhancement`，如果运行正确您会被redirect到`https://username.github.io/unpublished-posts-enhancement/login`。现在尝试注册一个账号，需要填写用户名、密码、邮箱。进行邮箱验证后就可以正常登录了。
 
-再到Leancloud下的"Data Storage"-"Data"-"_User"，你就可以看到已注册的用户信息了。
+再到Leancloud下的"Data Storage"-"Data"-"_User"，您就可以看到已注册的用户信息了。
 
->由于Leancloud的安全限制，你无法查看任何人的密码
+>由于Leancloud的安全限制，您无法查看任何人的密码
 {:. prompt-info}
 
 ## 登录后的使用
 
 ### 基础使用
 
-如果以上步骤你都顺利通过，那么你现在可以像使用原本的Chirpy主题的博客一样来对当前项目进行更改。
+如果以上步骤您都顺利通过，那么您现在可以像使用原本的Chirpy主题的博客一样来对当前项目进行更改。
 
 >在提交时请注意仓库名称是否选取正确
 {:. prompt-warning}
 
 ### 进阶使用
 
-<span style="color: red">请确保你有html相关知识，并且你有足够的信心来更新这个项目中的代码。</span>
+<span style="color: red">请确保您有html相关知识，并且您有足够的信心来更新这个项目中的代码。</span>
 
 #### _includes
 
@@ -163,4 +163,4 @@ Leancloud:
 
 ## 最后
 
-该文章详细地指导您如何使用[unpublished-posts-enhancement](https://github.com/Jo-CRuiSe/unpublished-posts-enhancement)，如果您遇到任何困难可以到评论区进行留言或使用邮件等通讯方式与我取得联系。如果你觉得我的项目还不错的话不要忘记给我一个star😉
+该文章详细地指导您如何使用[unpublished-posts-enhancement](https://github.com/Jo-CRuiSe/unpublished-posts-enhancement)，如果您遇到任何困难可以到评论区进行留言或使用邮件等通讯方式与我取得联系。如果您觉得我的项目还不错的话不要忘记给我一个star😉
