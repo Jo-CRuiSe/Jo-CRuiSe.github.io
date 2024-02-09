@@ -2,8 +2,9 @@
 
 cdns:
   # Google Fonts
-  - url: https://fonts.googleapis.com
-  - url: https://fonts.gstatic.com
+  # - url: https://fonts.googleapis.com
+  # - url: https://fonts.gstatic.com
+  - url: https://fonts.css.network/
     args: crossorigin
   - url: https://fonts.googleapis.com
   # jsDelivr CDN
