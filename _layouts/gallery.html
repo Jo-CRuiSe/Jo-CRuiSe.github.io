@@ -17,9 +17,7 @@ layout: compress
 {% include head.html %}
 
 <body>
-  <!-- <div class="loader-wrapper">
-    <span class="loader"><span class="loader-inner"></span></span>
-  </div> -->
+
   {% include sidebar.html lang=lang %}
 
   <div id="main-wrapper" class="d-flex justify-content-center">
@@ -362,21 +360,5 @@ layout: compress
     });
   </script>
 </body>
-
-  <!-- Loader -->
-  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    $(window).on("load", function () {
-      $(".loader-wrapper").fadeOut("slow");
-    });
-    setTimeout(function () {
-      if ($(".loader-wrapper").is(":visible")) {
-        alert('检测到当前页面加载时间已超过 15 秒，原因可能是您的网速过慢或系统正在维护，您可继续等待加载或尝试刷新页面以解决。');
-      };
-    }, 15000); 
-  </script> -->
-
-
-
 
 </html>
