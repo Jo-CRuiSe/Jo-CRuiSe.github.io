@@ -4,125 +4,31 @@
   {% assign previous = site.data.locales[include.lang].post.button.previous %}
   {% assign next = site.data.locales[include.lang].post.button.next %}
 
-
-  {% assign publicTmp = '' | split: '' %}
-
-  {% assign posts_num = site.posts | size %}
-  {% assign previous_public = page.previous %}
-  {% assign next_public = page.next %}
-  {% assign previous_unpublic = page.previous %}
-  {% assign next_unpublic = page.next %}
-
-  <!-- Get public previous posts -->
-  {% for i in (0..posts_num) %}
-    {% if previous_public.public %}
-      {% break %}
-    {% else %}
-      {% assign tmp = previous_public.previous %}
-      {% assign previous_public = tmp %}
-        {% if previous_public.url == nil %}
-          {% break %}
-        {% endif %}
-    {% endif %}
-  {% endfor %}
-
-  <!-- Get public next posts -->
-  {% for i in (0..posts_num) %}
-    {% if next_public.public %}
-      {% break %}
-    {% else %}
-      {% assign tmp = next_public.next %}
-      {% assign next_public = tmp %}
-        {% if next_public.url == nil %}
-          {% break %}
-        {% endif %}
-    {% endif %}
-  {% endfor %}
-
-  <!-- Get unpublic previous posts -->
-  {% for i in (0..posts_num) %}
-    {% if previous_unpublic.public == false %}
-      {% break %}
-    {% else %}
-      {% assign tmp = previous_unpublic.previous %}
-      {% assign previous_unpublic = tmp %}
-        {% if previous_unpublic.url == nil %}
-          {% break %}
-        {% endif %}
-    {% endif %}
-  {% endfor %}
-
-  <!-- Get unpublic next posts -->
-  {% for i in (0..posts_num) %}
-    {% if next_unpublic.public == false%}
-      {% break %}
-    {% else %}
-      {% assign tmp = next_unpublic.next %}
-      {% assign next_unpublic = tmp %}
-        {% if next_unpublic.url == nil %}
-          {% break %}
-        {% endif %}
-    {% endif %}
-  {% endfor %}
-  
-  {% if page.public %}
-    {% if previous_public.url %}
-      <a
-        href="{{ site.baseurl }}{{ previous_public.url }}"
-        class="btn btn-outline-primary"
-        aria-label="{{ previous }}"
-      >
-        <p>{{ previous_public.title }}</p>
-      </a>
-    {% else %}
-      <div class="btn btn-outline-primary disabled" aria-label="{{ previous }}">
-        <p>-</p>
-      </div>
-    {% endif %}
-
-    {% if next_public.url %}
-      <a
-        href="{{ site.baseurl }}{{ next_public.url }}"
-        class="btn btn-outline-primary"
-        aria-label="{{ next }}"
-      >
-        <p>{{ next_public.title }}</p>
-      </a>
-    {% else %}
-      <div class="btn btn-outline-primary disabled" aria-label="{{ next }}">
-        <p>-</p>
-      </div>
-    {% endif %}
+  {% if page.previous.url %}
+    <a
+      href="{{ site.baseurl }}{{ page.previous.url }}"
+      class="btn btn-outline-primary"
+      aria-label="{{ previous }}"
+    >
+      <p>{{ page.previous.title }}</p>
+    </a>
   {% else %}
-    {% if previous_unpublic.url %}
-      <a
-        href="{{ site.baseurl }}{{ previous_unpublic.url }}"
-        class="btn btn-outline-primary"
-        aria-label="{{ previous }}"
-      >
-        <p>{{ previous_unpublic.title }}</p>
-      </a>
-    {% else %}
-      <div class="btn btn-outline-primary disabled" aria-label="{{ previous }}">
-        <p>-</p>
-      </div>
-    {% endif %}
-
-    {% if next_unpublic.url %}
-      <a
-        href="{{ site.baseurl }}{{ next_unpublic.url }}"
-        class="btn btn-outline-primary"
-        aria-label="{{ next }}"
-      >
-        <p>{{ next_unpublic.title }}</p>
-      </a>
-    {% else %}
-      <div class="btn btn-outline-primary disabled" aria-label="{{ next }}">
-        <p>-</p>
-      </div>
-    {% endif %}
-      
+    <div class="btn btn-outline-primary disabled" aria-label="{{ previous }}">
+      <p>-</p>
+    </div>
   {% endif %}
 
-
+  {% if page.next.url %}
+    <a
+      href="{{ site.baseurl }}{{page.next.url}}"
+      class="btn btn-outline-primary"
+      aria-label="{{ next }}"
+    >
+      <p>{{ page.next.title }}</p>
+    </a>
+  {% else %}
+    <div class="btn btn-outline-primary disabled" aria-label="{{ next }}">
+      <p>-</p>
+    </div>
+  {% endif %}
 </nav>
