@@ -138,7 +138,7 @@ Leancloud:
  - `login-check.html` 是有关检查用户是否登录的代码
  - `sidebar.html` 在原作者Chirpy的代码基础上将侧边栏进行了修改
 
-#### _guestAvatar
+#### guest-Avatar
 
 ```
 .
