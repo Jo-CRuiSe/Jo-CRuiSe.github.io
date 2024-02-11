@@ -60,9 +60,7 @@ Leancloud:
   allowRegister: true # allow registration for your website
 ```
 
-> AppID：全局唯一的应用标识符，不可变更。
-AppKey：公开的访问密钥，适用于在公开的客户端中使用。使用 AppKey 进行的访问受到 ACL 等权限限制。
-MasterKey：私密的访问密钥，适用于在服务器等受信任环境中使用。使用 MasterKey 进行的访问拥有最高权限，不受 ACL 等权限限制。
+> AppID：全局唯一的应用标识符，不可变更。<br> AppKey：公开的访问密钥，适用于在公开的客户端中使用。使用 AppKey 进行的访问受到 ACL 等权限限制。<br> MasterKey：私密的访问密钥，适用于在服务器等受信任环境中使用。使用 MasterKey 进行的访问拥有最高权限，不受 ACL 等权限限制。
 {: .prompt-info}
 
 ### 安全
