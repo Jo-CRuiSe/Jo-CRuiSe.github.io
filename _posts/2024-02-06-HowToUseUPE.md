@@ -60,6 +60,11 @@ Leancloud:
   allowRegister: true # allow registration for your website
 ```
 
+> AppID：全局唯一的应用标识符，不可变更。
+AppKey：公开的访问密钥，适用于在公开的客户端中使用。使用 AppKey 进行的访问受到 ACL 等权限限制。
+MasterKey：私密的访问密钥，适用于在服务器等受信任环境中使用。使用 MasterKey 进行的访问拥有最高权限，不受 ACL 等权限限制。
+{: .prompt-info}
+
 ### 安全
 
 由于App ID、App Key、ServerURL是在配置文件中以明文形式储存的，使用为了安全，请在"Settings"-"Security"（可能需要向下滚动）中的"Web secure domains"下的文本框中添加您的域名，例如`https://username.github.io`。同时为了方便在本地调试，可以添加`127.0.0.1:4000`
