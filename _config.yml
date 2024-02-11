@@ -132,6 +132,11 @@ assets:
 
 paginate: 5
 
+Leancloud:
+  appId: 'rzV27a2iZkM3qCAIMnz2u6pO-9Nh9j0Va' # fill with your Leancloud appId
+  appKey: '6sPXQuSvQBiMk60c7sFhRPVz' # fill with your Leancloud appKey
+  serverURL: 'https://rzv27a2i.lc-cn-n1-shared.com' # fill with your Leancloud serverURL
+
 # ------------ The following options are not recommended to be modified ------------------
 
 kramdown:
