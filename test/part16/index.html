@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CSS List Hover Effect</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+        </div>
+    </div>
+    <script>
+        async function fetchURLTitle(index) {
+            const response = await fetch(`https://jo-cruise.github.io/test/part${index}/index.html`);
+            const html = await response.text();
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const titleElement = doc.querySelector('title');
+            if (titleElement) {
+                console.log(titleElement.textContent);
+                return titleElement.textContent;
+            } else {
+                return 'NO Title Found';
+            }
+        }
+    </script>
+    <script>
+        function judgeExistance() {
+            var page_index = 1;
+            let listBox = document.querySelector('.box');
+            return new Promise(function (resolve, reject) {
+                (async function () {
+                    while (page_index > 0) {
+                        try {
+                            const response = await fetch(`https://jo-cruise.github.io/test/part${page_index}/index.html`);
+                            if (response.ok) {
+                                console.log(`Link ${page_index} is valid and accessible.`);
+                                let listCard = document.createElement('div');
+                                listCard.classList.add('list');
+                                let content = document.createElement('div');
+                                content.classList.add('content');
+                                let URLTitle = document.createElement('h4');
+                                URLTitle.classList.add('URLTitle');
+                                URLTitle.textContent = await fetchURLTitle(page_index);
+                                let listURL = document.createElement('a');
+                                listURL.classList.add('list-url');
+                                listURL.textContent = `https://jo-cruise.github.io/test/part${page_index}`;
+                                listURL.href = `https://jo-cruise.github.io/test/part${page_index}`;
+
+                                listBox.appendChild(listCard);
+                                listCard.appendChild(content);
+                                content.append(URLTitle, listURL);
+                                page_index++;
+                            } else {
+                                console.log('Link is broken or returns a 404 error.');
+                                resolve(page_index);
+                                page_index = 0;
+                            }
+                        } catch (error) {
+                            console.log('Error occurred while checking the link:', error);
+                            reject(-1);
+                            page_index = 0;
+                        }
+                    }
+                })();
+            });
+        }
+    </script>
+    <script>
+        judgeExistance();
+    </script>
+    <!-- <script>
+        judgeExistance().then(function (page_indices) {
+            console.log(page_indices);
+            let listBox = document.querySelector('.box');
+            for (let i = 0; i < page_indices - 1; i++) {
+                let listCard = document.createElement('div');
+                listCard.classList.add('list');
+                let content = document.createElement('div');
+                content.classList.add('content');
+                let URLTitle = document.createElement('h4');
+                URLTitle.classList.add('URLTitle');
+                URLTitle.textContent = `Page ${i + 1}`;
+                let listURL = document.createElement('p');
+                listURL.classList.add('list-url');
+                listURL.textContent = `https://jo-cruise.github.io/test/part${i + 1}`;
+
+                listBox.appendChild(listCard);
+                listCard.appendChild(content);
+                content.append(URLTitle, listURL);
+            }
+        });
+    </script> -->
+</body>
+
+</html>
