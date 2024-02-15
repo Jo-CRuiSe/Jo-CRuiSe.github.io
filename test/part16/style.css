@@ -1,0 +1,188 @@
+@font-face {
+    font-family: 'STXingkai';
+    src: url('chinese.stxingka.ttf') format('truetype');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "STXingkai", Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+}
+
+body {
+    overflow: hidden;
+}
+
+.cake-logo {
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.cake-nav-list {
+    display: flex;
+}
+
+.cake-nav-list a {
+    box-sizing: border-box;
+    border-radius: 999px;
+    color: #fff;
+    margin-left: 60px;
+    padding: 5px 10px;
+    font-size: 20px;
+    font-weight: 400;
+    transition: all 0.5s ease;
+}
+
+.cake-nav-list a:hover {
+    background: #a5b0f4;
+}
+
+.cake-menu {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.cake-container {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(20deg, #fcecee 20%, #c1c8f8);
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1frac);
+    align-items: center;
+    gap: 2rem;
+}
+
+section {
+    padding: 0 20%;
+}
+
+.cake-text h1 {
+    font-family: "Kalam", cursive;
+    font-size: 150px;
+    line-height: 1;
+    color: #fff;
+    margin: 0 0 20px;
+}
+
+.cake-text h2 {
+    font-family: "Kalam", cursive;
+    font-size: 50px;
+    line-height: 1;
+    color: #fff;
+    margin: 0 0 10px;
+}
+
+.cake-text p {
+    font-size: 26px;
+    line-height: 1;
+    color: #fff;
+}
+
+.cake-3d-object {
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(-50%);
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 855px) {
+    section {
+        padding: 0 10%;
+    }
+}
+
+@media (max-width: 750px) {
+    .cake-nav-list a {
+        margin-left: 30px;
+        padding: 5px 10px;
+        font-size: 15px;
+        font-weight: 300;
+        transition: all 0.5s ease;
+    }
+    .cake-nav-list a:hover {
+        background: #a5b0f4;
+    }
+    .cake-text h1 {
+        font-size: 100px;
+    }
+    .cake-text p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 420px){
+    .cake-container {
+        align-items: initial;
+    }
+    .cake-text {
+        margin-top: 200px;
+    }
+    .cake-menu {
+        display: block;
+    }
+    .cake-nav-list {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 40vh;
+        background: #4d9559;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        transition: all .55s ease;
+    }
+    .cake-nav-list a{
+        margin-left: 0;
+        display: block;
+        margin: 7px 0;
+    }
+    .cake-nav-list.open {
+        right: 0;
+    }
+    .cake-3d-object {
+        top: 0;
+        left: 0;
+        transform: scale(1);
+    }
+    .cake-text h1 {
+        font-size: 80px;
+    }
+    .cake-text p {
+        margin-top: 220px;
+    }
+}
+
