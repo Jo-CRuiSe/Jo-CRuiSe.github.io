@@ -7,9 +7,13 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "STXingkai", Arial, Helvetica, sans-serif;
+    font-family: "Ma Shan Zheng", Arial, Helvetica, sans-serif;
     list-style: none;
     text-decoration: none;
+}
+
+.cake-logo {
+    font-family: "Kalam", cursive;
 }
 
 header {
