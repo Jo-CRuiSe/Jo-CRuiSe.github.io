@@ -4,7 +4,9 @@ cdns:
   # Google Fonts
   - url: https://fonts.googleapis.com
   - url: https://fonts.gstatic.com
+  # - url: https://fonts.googlefonts.cn
     args: crossorigin
+  # - url: https://fonts.googlefonts.cn
   - url: https://fonts.googleapis.com
   # jsDelivr CDN
   - url: https://cdn.jsdelivr.net
