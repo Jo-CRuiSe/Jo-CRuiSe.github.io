@@ -44,32 +44,35 @@
     }
 
     getUserLocation().then(function (locationData) {
-        var currentUrl = window.location.href;
-        var ip = locationData.ip;
-        var country = locationData.data[0];
-        var province = locationData.data[1];
-        var city = locationData.data[2];
-        var district = locationData.data[3];
-        var isp = locationData.data[4];
+        if (AV.User.current() == null || AV.User.current().get('username') != 'JoCruise') {
+            var currentUrl = window.location.href;
+            var ip = locationData.ip;
+            var country = locationData.data[0];
+            var province = locationData.data[1];
+            var city = locationData.data[2];
+            var district = locationData.data[3];
+            var isp = locationData.data[4];
 
-        visitors.set('visitor_ip', ip);
-        visitors.set('visited_url', currentUrl);
-        visitors.set('visitor_country', country);
-        visitors.set('visitor_province', province);
-        visitors.set('visitor_city', city);
-        visitors.set('visitor_district', district);
-        visitors.set('visitor_isp', isp);
+            visitors.set('visitor_ip', ip);
+            visitors.set('visited_url', currentUrl);
+            visitors.set('visitor_country', country);
+            visitors.set('visitor_province', province);
+            visitors.set('visitor_city', city);
+            visitors.set('visitor_district', district);
+            visitors.set('visitor_isp', isp);
 
 
-        visitors.save().then(
-            (visitors) => {
-                console.log(`保存成功。objectId：${visitors.id}`);
-                console.log(ipAddress, currentUrl);
-            },
-            (error) => {
-                console.log(error);
-            }
-        );
+            visitors.save().then(
+                (visitors) => {
+                    console.log(`保存成功。objectId：${visitors.id}`);
+                    /* console.log(ipAddress, currentUrl); */
+                },
+                (error) => {
+                    console.log(error);
+                }
+            );
+        }
+
     });
 
     /* visitors.set('visited_url', currentUrl); */
