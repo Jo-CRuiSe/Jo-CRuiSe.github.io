@@ -12,8 +12,13 @@
     text-decoration: none;
 }
 
-.cake-logo {
+
+
+.cake-logo,
+.cn-en-char
+{
     font-family: "Kalam", cursive;
+    z-index: 9999;
 }
 
 header {
@@ -31,6 +36,8 @@ header {
 
 body {
     overflow: hidden;
+    width: 100vw;
+    height: 100vh;
 }
 
 .cake-logo {
