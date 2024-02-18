@@ -3,12 +3,21 @@
     margin: 0;
 }
 
+:root {
+    --bg-color: #fff;
+    --input-bg-color: #d8d8d8;
+}
+
+body {
+    background: var(--bg-color);
+}
 .reverse-container {
     /* width: 350px; */
     padding: 10% 30%;
     display: flex;
     align-items: center;
     flex-direction: column;
+    /* background: var(--bg-color); */
 }
 
 #originalText,
@@ -19,8 +28,8 @@ input[type="password"] {
     margin: 10px 0;
     box-sizing: border-box;
     color: black;
-    border: 1px solid #000;
-    background-color: #fff;
+    border: 1px solid transparent;
+    background-color: var(--input-bg-color);
     border-radius: 10px;
     padding: 5px;
     font-size: 1rem;
@@ -43,4 +52,12 @@ input[type="password"] {
     border-radius: 18px;
     color: #fff;
     cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+    /* 深色模式 */
+    :root {
+        --bg-color: rgb(29, 29, 32);
+        --input-bg-color: #363535;
+    }
 }
