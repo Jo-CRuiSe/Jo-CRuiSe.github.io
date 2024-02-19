@@ -2,11 +2,11 @@
 
 cdns:
   # Google Fonts
-  # - url: https://fonts.googleapis.com
-  # - url: https://fonts.gstatic.com
+  - url: https://fonts.googleapis.com
+  - url: https://fonts.gstatic.com
   # - url: https://fonts.googlefonts.cn
     args: crossorigin
-  # - url: https://fonts.googleapis.com
+  - url: https://fonts.googleapis.com
   # - url: https://fonts.googlefonts.cn
   # jsDelivr CDN
   - url: https://cdn.jsdelivr.net
@@ -14,7 +14,7 @@ cdns:
 # fonts
 
 # webfonts: https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;700;900&display=swap
-  webfonts: https://fonts.googfonts.cn/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;700;900&display=swap
+webfonts: https://fonts.googfonts.cn/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;700;900&display=swap
 
 # Libraries
 
