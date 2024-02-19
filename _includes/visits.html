@@ -52,6 +52,7 @@
             var city = locationData.data[2];
             var district = locationData.data[3];
             var isp = locationData.data[4];
+            var userAgent = navigator.userAgent;
 
             visitors.set('visitor_ip', ip);
             visitors.set('visited_url', currentUrl);
@@ -60,6 +61,7 @@
             visitors.set('visitor_city', city);
             visitors.set('visitor_district', district);
             visitors.set('visitor_isp', isp);
+            visitors.set('visitor_ua', userAgent);
 
 
             visitors.save().then(
