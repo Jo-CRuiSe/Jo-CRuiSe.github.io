@@ -35,7 +35,7 @@
      });
      */
 
-    function getUserLocation() {
+    function getPageInfo() {
         return new Promise(function (resolve, reject) {
             $.getJSON("https://2024.ipchaxun.com/", function (data) {
                 resolve(data);
@@ -43,7 +43,7 @@
         });
     }
 
-    getUserLocation().then(function (locationData) {
+    getPageInfo().then(function (locationData) {
         if (AV.User.current() == null || AV.User.current().get('username') != 'JoCruise') {
             var currentUrl = window.location.href;
             var ip = locationData.ip;
@@ -53,6 +53,7 @@
             var district = locationData.data[3];
             var isp = locationData.data[4];
             var userAgent = navigator.userAgent;
+            var loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
 
             visitors.set('visitor_ip', ip);
             visitors.set('visited_url', currentUrl);
@@ -62,6 +63,8 @@
             visitors.set('visitor_district', district);
             visitors.set('visitor_isp', isp);
             visitors.set('visitor_ua', userAgent);
+            visitors.set('page_load_time', loadTime);
+            console.log('Page load time is ' + loadTime);
 
 
             visitors.save().then(
