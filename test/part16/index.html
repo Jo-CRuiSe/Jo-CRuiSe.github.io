@@ -18,6 +18,10 @@
 
 
             <div class="controlBtn">
+                <div class="tooltip">
+                    <button type="button" id="copyToClipboard" onclick="copyToClipboard()" onmouseout="outFunc()"><span class="tooltiptext" id="myTooltip">Copy to clipboard</span>Copy Result</button>
+                </div>
+                
                 <button type="button" id="typeChangeBtn">QWE to ABC</button>
                 <!-- <button type="button" id="typeChangeBtn">123 to abc</button>                 -->
                 <button type="button" id="submitBtn">Confirm</button>                
@@ -28,5 +32,21 @@
 
         <!-- scripts -->
         <script src="script.js"></script>
+        <script>
+            function copyToClipboard() {
+              var copyText = document.getElementById("result");
+              copyText.select();
+              copyText.setSelectionRange(0, 99999);
+              navigator.clipboard.writeText(copyText.value);
+              
+              var tooltip = document.getElementById("myTooltip");
+              tooltip.innerHTML = "Copied: " + copyText.value;
+            }
+            
+            function outFunc() {
+              var tooltip = document.getElementById("myTooltip");
+              tooltip.innerHTML = "Copy to clipboard";
+            }
+            </script>
     </body>
 </html>

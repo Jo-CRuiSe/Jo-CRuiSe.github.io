@@ -197,12 +197,14 @@ document.getElementById('submitBtn').addEventListener("click", function () {
 
     // outputText.value = result;
 
+    if(outputText.value) {
+        document.getElementById('copyToClipboard').style.display = 'block';
+    } else {
+        document.getElementById('copyToClipboard').style.display = 'none';
+    }
+
     result = '';
     
     // console.log(outputText.value);
 });
 
-
-var n1 = encryptNum(123);
-console.log(n1);
-console.log(decryptNum(n1));
