@@ -176,10 +176,10 @@ Leancloud:
 ```
 
 >如果您的主题为"jekyll-theme-chirpy"，请更改为"jekyll-theme-chirpy-customized-upe"，并写入版本号
-{: .prmpt-info}
+{: .prompt-info}
 
 >请勿使用 3.0.0 以前的版本，因为版本可能不存在或存在bug，具体版本号见仓库[jekyll-theme-chirpy-customized-upe](https://github.com/Jo-CRuiSe/jekyll-theme-chirpy-customized-upe)的release部分
-{: .prmpt-danger}
+{: .prompt-danger}
 
 ## 最后
 
