@@ -166,6 +166,21 @@ Leancloud:
 ```
  - 修改有关login和forgot相关代码请到第二个目录结构下
 
+## 升级版本
+
+在 unpublished-posts-enhancement 3.0.0 版本后您可以在Gemfile中进行升级。
+
+```diff
+- gem "jekyll-theme-chirpy-customized-upe", "~> 1.0.0"
++ gem "jekyll-theme-chirpy-customized-upe", "~> 3.0.0"
+```
+
+>如果您的主题为"jekyll-theme-chirpy"，请更改为"jekyll-theme-chirpy-customized-upe"，并写入版本号
+{: .prmpt-info}
+
+>请勿使用 3.0.0 以前的版本，因为版本可能不存在或存在bug，具体版本号见仓库[jekyll-theme-chirpy-customized-upe](https://github.com/Jo-CRuiSe/jekyll-theme-chirpy-customized-upe)的release部分
+{: .prmpt-danger}
+
 ## 最后
 
 该文章详细地指导您如何使用[unpublished-posts-enhancement](https://github.com/Jo-CRuiSe/unpublished-posts-enhancement)，如果您遇到任何困难可以到评论区进行留言或使用邮件等通讯方式与我取得联系。如果您觉得我的项目还不错的话不要忘记给我一个star😉
