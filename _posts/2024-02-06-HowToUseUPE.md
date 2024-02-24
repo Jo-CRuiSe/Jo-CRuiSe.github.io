@@ -175,6 +175,12 @@ Leancloud:
 + gem "jekyll-theme-chirpy-customized-upe", "~> 3.0.0"
 ```
 
+然后在根目录运行
+
+```console
+bundle update jekyll-theme-chirpy-customizd-upe
+```
+
 >如果您的主题为"jekyll-theme-chirpy"，请更改为"jekyll-theme-chirpy-customized-upe"，并写入版本号
 {: .prompt-info}
 
