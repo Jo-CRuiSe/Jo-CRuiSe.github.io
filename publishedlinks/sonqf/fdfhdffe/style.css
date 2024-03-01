@@ -3,6 +3,20 @@
     src: url('chinese.stxingka.ttf') format('truetype');
 }
 
+html {
+    touch-action: manipulation;
+}
+
+body {
+    /* 禁止用户缩放页面 */
+    touch-action: none;
+    /* 禁止用户双击放大页面 */
+    -webkit-touch-callout: none;
+    user-select: none;
+    /* 禁止用户通过按Ctrl键和滚动鼠标来缩放页面 */
+    pointer-events: none;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -15,8 +29,7 @@
 
 
 .cake-logo,
-.cn-en-char
-{
+.cn-en-char {
     font-family: "Kalam", cursive;
     z-index: 9999;
 }
@@ -135,15 +148,19 @@ iframe {
     section {
         padding: 0 10%;
     }
+
     .cake-container {
         align-items: initial;
     }
+
     .cake-text {
         margin-top: 200px;
     }
+
     .cake-text h1 {
         font-size: 80px;
     }
+
     .cake-3d-object {
         top: 10%;
         left: 50%;
@@ -158,12 +175,15 @@ iframe {
         font-weight: 300;
         transition: all 0.5s ease;
     }
+
     .cake-nav-list a:hover {
         background: #a5b0f4;
     }
+
     .cake-text h1 {
         font-size: 100px;
     }
+
     .cake-text p {
         font-size: 20px;
     }
@@ -173,13 +193,16 @@ iframe {
     .cake-container {
         align-items: initial;
     }
+
     .cake-text {
         margin-top: 150px;
     }
+
     .cake-menu {
         display: block;
-        
+
     }
+
     .cake-nav-list {
         position: absolute;
         top: -100%;
@@ -199,40 +222,45 @@ iframe {
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
     }
-    .cake-nav-list a{
+
+    .cake-nav-list a {
         margin-left: 0;
         display: block;
         margin: 10px 0;
         font-size: 25px;
     }
+
     .cake-nav-list.open {
         transform: translateY(0);
         top: 0;
     }
+
     .cake-text h1 {
         font-size: 80px;
     }
 }
 
 
-@media (max-width: 420px){
+@media (max-width: 420px) {
     .cake-container {
         align-items: initial;
     }
+
     .cake-text {
         margin-top: 150px;
     }
+
     .cake-3d-object {
         top: 15%;
         left: 0;
         transform: scale(0.85);
     }
+
     .cake-text h1 {
         font-size: 60px;
     }
+
     .cake-text p {
         margin: 0 auto;
     }
 }
-
-
