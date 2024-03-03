@@ -131,7 +131,7 @@ cos\theta cos\varphi & cos\theta sin\varphi & -sin\theta\\
 1. 方向导数：$$ \frac{\partial u}{\partial \overrightarrow{l} } = u_{x} cos\alpha + u_{y} cos\beta + u_{z} cos\gamma $$，其中 $$ cos\alpha, cos\beta, cos\gamma $$ 为 $$ \overrightarrow{l} $$的方向余弦
 2. 符号：记为 $$ gradf $$ 或 $$ \triangledown f $$ ，其中 $$ \triangledown  = \frac{1}{h_{1}}\frac{\partial}{\partial u_{1}} \widehat{e}_1 + \frac{1}{h_{2}}\frac{\partial}{\partial u_{2}} \widehat{e}_2 + \frac{1}{h_{3}}\frac{\partial}{\partial u_{3}} \widehat{e}_3    $$ 
 3. 梯度与方向导数的联系：$$ \frac{\partial u}{\partial \overrightarrow{l}} = \triangledown u \cdot \overrightarrow{l}=\lvert {\triangledown u}\rvert \lvert\overrightarrow{l} ^{0} \rvert  cos\varphi $$ <br> 当 $$ \varphi = 0 $$ 时，$$ \frac{\partial u}{\partial \overrightarrow{l}} $$ 取最大值；当 $$ \varphi = \pi $$ 时，$$ \frac{\partial u}{\partial \overrightarrow{l}} $$ 取最小值
-4. \$$ \triangledown f = \frac{1}{h_{1}}\frac{\partial f}{\partial u_{1}} \widehat{e}_1 + \frac{1}{h_{2}}\frac{\partial f}{\partial u_{2}} \widehat{e}_2 + \frac{1}{h_{3}}\frac{\partial f}{\partial u_{3}} \widehat{e}_3 + \frac{1}{h_{3}}\frac{\partial f}{\partial u_{3}} \widehat{e}_3 + \frac{1}{h_{3}}\frac{\partial f}{\partial u_{3}} \widehat{e}_3 + \frac{1}{h_{3}}\frac{\partial f}{\partial u_{3}} \widehat{e}_3 $$
+4. 用拉梅系数表示：<br> $$ \triangledown f = \frac{1}{h_{1}}\frac{\partial f}{\partial u_{1}} \widehat{e}_1 + \frac{1}{h_{2}}\frac{\partial f}{\partial u_{2}} \widehat{e}_2 + \frac{1}{h_{3}}\frac{\partial f}{\partial u_{3}} \widehat{e}_3 $$
 5. 梯度的旋度恒为0 <br> $$ \triangledown \times \left( \triangledown u \right) \equiv 0 $$
 
 参考
