@@ -137,7 +137,7 @@ mathjax:
     enabled: true # the option for math on home page
   packages:
     ams: true # the option for ams package
-    amscd: false # the option for amscd package
+    amscd: true # the option for amscd package
     bbox: false # the option for bbox package
     boldsymbol: false # the option for boldsymbol package
     braket: true # the option for braket package
