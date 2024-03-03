@@ -52,6 +52,7 @@
         p {
           @extend %text-clip;
 
+          min-height: 20px;
           line-height: 1.5;
           margin: 0;
         }
