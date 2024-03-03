@@ -143,7 +143,7 @@ mathjax:
     braket: false # the option for braket package
     bussproofs: false # the option for bussproofs package
     cancel: false # the option for cancel package
-    cases: false # the option for cases package
+    cases: true # the option for cases package
     centernot: false # the option for centernot package
     color: false # the option for color package
     colorv2: false # the option for colorv2 package
