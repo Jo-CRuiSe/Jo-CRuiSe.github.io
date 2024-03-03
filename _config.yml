@@ -132,6 +132,38 @@ assets:
 
 paginate: 5
 
+mathjax:
+  display_on_home:
+    enabled: true # the option for math on home page
+  packages:
+    ams: false # the option for ams package
+    amscd: false # the option for amscd package
+    bbox: false # the option for bbox package
+    boldsymbol: false # the option for boldsymbol package
+    braket: false # the option for braket package
+    bussproofs: false # the option for bussproofs package
+    cancel: false # the option for cancel package
+    cases: false # the option for cases package
+    centernot: false # the option for centernot package
+    color: false # the option for color package
+    colorv2: false # the option for colorv2 package
+    colortbl: false # the option for colortbl package
+    configmacros: true # the option for configmacros package
+    empheq: false # the option for empheq package
+    extpfeil: false # the option for extpfeil package
+    gensymb: false # the option for gensymb package
+    mathtools: false # the option for mathtools package
+    mhchem: false # the option for mathtools package
+    newcommand: true # the option for newcommand package
+    textcomp: false # the option for textcomp package
+    physics: false # the option for physics package
+    unicode: true # the option for unicode package
+    upgreek: false # the option for upgreek package
+    verb: false # the option for verb package
+  other_packages: [] # the option for other packages, use comma to separate. i.e. [mhchem, textcomp]
+  macros: 
+    oiint: "{\\\\bigcirc}\\\\kern-11.5pt{\\\\int}\\\\kern-6.5pt{\\\\int}"
+
 Leancloud:
   appId: 'rzV27a2iZkM3qCAIMnz2u6pO-9Nh9j0Va' # fill with your Leancloud appId
   appKey: '6sPXQuSvQBiMk60c7sFhRPVz' # fill with your Leancloud appKey

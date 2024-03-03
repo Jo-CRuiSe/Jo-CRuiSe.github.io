@@ -70,9 +70,30 @@
 
 {% if page.math %}
   <!-- MathJax -->
+
   <script>
     /* see: <https://docs.mathjax.org/en/latest/options/input/tex.html#tex-options> */
     MathJax = {
+      loader: {
+        showProcessingMessages: false,
+        versionWarnings: false,
+        messageStyle: 'none',
+        load: [
+        'input/tex-base',
+        'output/chtml',
+        '[tex]/action',
+        {% for package in site.mathjax.packages %}
+          {% if package[1] == true %}
+          '[tex]/{{ package[0] }}',
+          {% endif %}
+        {% endfor %}
+        {% unless site.mathjax.other_packages == empty %}
+          {% for package in site.mathjax.other_packages %}
+          '[tex]/{{ package }}',
+          {% endfor %}
+        {% endunless %}
+      ]},
+      
       tex: {
         /* start/end delimiter pairs for in-line math */
         inlineMath: [
@@ -83,7 +104,26 @@
         displayMath: [
           ['$$', '$$'],
           ['\\[', '\\]']
-        ]
+        ], 
+        macros: {
+          {% for macro in site.mathjax.macros %}
+            {{macro[0]}}: "{{macro[1]}}",
+          {% endfor %}
+        },
+        packages: [
+          'base', 
+          'action',
+          {% for package in site.mathjax.packages %}
+            {% if package[1] == true %}
+              '{{ package[0] }}',
+            {% endif %}
+          {% endfor %}
+          {% unless site.mathjax.other_packages == empty %}
+            {% for package in site.mathjax.other_packages %}
+              '{{ package }}',
+            {% endfor %}
+          {% endunless %}
+        ],
       }
     };
   </script>
@@ -94,7 +134,7 @@
 {% if jekyll.environment == 'production' %}
   <!-- PWA -->
   {% if site.pwa.enabled %}
-    <script defer src="{{ '/app.js' | relative_url }}"></script>
+    <!-- <script defer src="{{ '/app.js' | relative_url }}"></script> -->
   {% else %}
     <script defer src="{{ '/unregister.js' | relative_url }}"></script>
   {% endif %}
