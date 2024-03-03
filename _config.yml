@@ -162,7 +162,7 @@ mathjax:
     verb: false # the option for verb package
   other_packages: [] # the option for other packages, use comma to separate. i.e. [mhchem, textcomp]
   macros: 
-    oiint: "{\\\\bigcirc}\\\\kern-11.5pt{\\\\int}\\\\kern-6.5pt{\\\\int}"
+    ooint: "{\\\\bigcirc}\\\\kern-11.5pt{\\\\int}\\\\kern-6.5pt{\\\\int}"
 
 Leancloud:
   appId: 'rzV27a2iZkM3qCAIMnz2u6pO-9Nh9j0Va' # fill with your Leancloud appId
