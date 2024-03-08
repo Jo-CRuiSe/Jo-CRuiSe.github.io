@@ -160,3 +160,11 @@
     {% endif %}
   {% endfor %}
 {% endif %}
+
+{% include visits.html %}
+
+{% if site.mathjax.display_on_home.enabled %}
+  {% unless page.layout == 'post' or page.layout == 'archives' %}
+    {% include mathjax_support.html %}
+  {% endunless %}
+{% endif %}
