@@ -161,12 +161,11 @@
   {% endfor %}
 {% endif %}
 
+{% include mathjax_support.html %}
+
+
 // {% if site.mathjax.display_on_home.enabled %}
 //   {% unless page.layout == 'post' or page.layout == 'archives' %}
 //     {% include mathjax_support.html %}
 //   {% endunless %}
 // {% endif %}
-
-{% if site.mathjax.display_on_home.enabled %}
-  {% include mathjax_support.html %}
-{% endif %}
