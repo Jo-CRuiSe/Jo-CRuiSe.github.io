@@ -68,7 +68,7 @@
 {% capture script %}/assets/js/dist/{{ js }}.min.js{% endcapture %}
 <script defer src="{{ script | relative_url }}"></script>
 
-{% if page.math or page.layout == 'home' %}
+{% if page.math %}
   <!-- MathJax -->
 
   <script>
