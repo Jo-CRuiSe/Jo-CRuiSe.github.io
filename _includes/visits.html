@@ -1,5 +1,5 @@
-<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+<script src="//code.jquery.com/jquery-3.2.0.min.js"></script>
 <script>
 
     AV.init({
@@ -39,7 +39,9 @@
         return new Promise(function (resolve, reject) {
             $.getJSON("https://2024.ipchaxun.com/", function (data) {
                 resolve(data);
-            });
+            }).fail(function (xhr, status, error) {
+                reject(error);
+             });
         });
     }
 
@@ -78,7 +80,7 @@
             );
         }
 
-    });
+    }).catch(function(error) {});
 
     /* visitors.set('visited_url', currentUrl); */
     /* visitors.set('visitor_ip', ip); */
