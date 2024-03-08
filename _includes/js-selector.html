@@ -68,7 +68,7 @@
 {% capture script %}/assets/js/dist/{{ js }}.min.js{% endcapture %}
 <script defer src="{{ script | relative_url }}"></script>
 
-{% if page.math %}
+{% if page.math or page.layout == 'home' %}
   <!-- MathJax -->
 
   <script>
@@ -161,7 +161,7 @@
   {% endfor %}
 {% endif %}
 
-{% include mathjax_support.html %}
+// {% include mathjax_support.html %}
 
 
 // {% if site.mathjax.display_on_home.enabled %}
