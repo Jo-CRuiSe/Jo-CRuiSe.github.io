@@ -76,15 +76,15 @@ layout: compress
 
     <!-- JavaScripts -->
 
-    {% include login-check.html %}
+    {% include js-selector.html lang=lang %}
+
+    {% include visits.html %}
 
     {% if site.mathjax.display_on_home.enabled %}
       {% unless page.layout == 'post' or page.layout == 'archives' %}
         {% include mathjax_support.html %}
       {% endunless %}
     {% endif %}
-
-    {% include js-selector.html lang=lang %}
 
     {% if page.mermaid %}
       {% include mermaid.html %}
