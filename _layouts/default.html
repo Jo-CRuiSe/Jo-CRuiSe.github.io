@@ -81,7 +81,11 @@ layout: compress
 
     {% include visits.html %}
 
-    {% include mathjax_support.html %}
+    {% if site.mathjax.display_on_home.enabled %}
+      {% unless page.layout == 'post' or page.layout == 'archives' %}
+        {% include mathjax_support.html %}
+      {% endunless %}
+    {% endif %}
     
     {% if page.mermaid %}
       {% include mermaid.html %}
