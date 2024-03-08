@@ -46,3 +46,61 @@
     Total site visits: <span id="busuanzi_value_site_pv"></span>
 </span>
 
+<script>
+  /* see: <https://docs.mathjax.org/en/latest/options/input/tex.html#tex-options> */
+  MathJax = {
+    loader: {
+      showProcessingMessages: false,
+      versionWarnings: false,
+      messageStyle: 'none',
+      load: [
+      'input/tex-base',
+      'output/chtml',
+      '[tex]/action',
+      {% for package in site.mathjax.packages %}
+        {% if package[1] == true %}
+        '[tex]/{{ package[0] }}',
+        {% endif %}
+      {% endfor %}
+      {% unless site.mathjax.other_packages == empty %}
+        {% for package in site.mathjax.other_packages %}
+        '[tex]/{{ package }}',
+        {% endfor %}
+      {% endunless %}
+    ]},
+    
+    tex: {
+      /* start/end delimiter pairs for in-line math */
+      inlineMath: [
+        ['$', '$'],
+        ['\\(', '\\)']
+      ],
+      /* start/end delimiter pairs for display math */
+      displayMath: [
+        ['$$', '$$'],
+        ['\\[', '\\]']
+      ], 
+      macros: {
+          {% for macro in site.mathjax.macros %}
+            {{macro[0]}}: "{{macro[1]}}",
+          {% endfor %}
+        },
+      packages: [
+        'base', 
+        'action',
+        {% for package in site.mathjax.packages %}
+          {% if package[1] == true %}
+            '{{ package[0] }}',
+          {% endif %}
+        {% endfor %}
+        {% unless site.mathjax.other_packages == empty %}
+          {% for package in site.mathjax.other_packages %}
+            '{{ package }}',
+          {% endfor %}
+        {% endunless %}
+      ],
+    }
+  };
+</script>
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="{{ site.data.origin[type].mathjax.js | relative_url }}"></script>
