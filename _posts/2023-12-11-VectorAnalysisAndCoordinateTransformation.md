@@ -173,6 +173,10 @@ $$ \frac{\partial u}{\partial \vec{l}} = \nabla u \cdot \vec{l}=\lvert {\nabla u
 
 当 $$ \varphi = 0 $$ 时，$$ \frac{\partial u}{\partial \vec{l}} $$ 取最大值；当 $$ \varphi = \pi $$ 时，$$ \frac{\partial u}{\partial \vec{l}} $$ 取最小值
 
+#### 梯度积分公式（证明需要用到散度定理）
+
+$$ \int_{V} \nabla \phi dV = \oint_{S} \phi dS $$
+
 ### 散度
 
 #### 通量
@@ -189,7 +193,7 @@ $$\vec{F} = P(x, y, z) \vec{i} + Q(x, y, z) \vec{j} + R(x, y, z) \vec{k} , (x, y
 
 #### 散度定理/高斯定理：
 
-$${\ooint}_{S^{+}} \vec{F} \cdot d\vec{S} = \iiint\limits_{\Sigma}^{} div \vec{F} dV $$ 
+$${\oiint}_{S^{+}} \vec{F} \cdot d\vec{S} = \iiint\limits_{\Sigma}^{} div \vec{F} dV $$ 
 
 即矢量场在 $$ S $$ 的通量等于其散度在 $$ S $$ 包围的区域上的三重积分
 
@@ -197,17 +201,19 @@ $${\ooint}_{S^{+}} \vec{F} \cdot d\vec{S} = \iiint\limits_{\Sigma}^{} div \vec{F
 
 #### 环量
 
-设有向量场
+矢量$$\vec{A}$$沿一闭曲线$$\vec{l}$$的线积分定义为矢量$$\vec{A}$$沿该闭合曲线的环量
 
-$$ \vec{F} = P(x, y, z)\vec{i} + Q(x, y, z)\vec{j} + R(x, y, z)\vec{k}, (x, y, z)\in \Omega $$ 
-
-其中 $$ P, Q, R $$ 具有一阶连续偏导数，$$ L $$ 为场中的定向曲线，称曲线积分$$\int\limits_{L} \vec{F} \cdot d\vec{r} = \int\limits_{L}Pdx + Qdy + Rdz$$ 为向量场$$ \vec{F} $$ 沿定向曲线L的环量
+$$\Gamma  = \oint_{l} \vec{A} \cdot d \vec{l}$$
 
 #### 符号
 
 记为$$ rot \vec{F} $$ 或 $$ curl \vec{F} $$
 
-$$ rot \vec{F} = \nabla \times \vec{F} $$
+$$ rot \vec{F} = \nabla \times \vec{F} = \vec{a}_{n} \lim_{\Delta S \to 0} \left ( \frac{\oint_{S} \vec{F} \cdot d \vec{l}}{\Delta S}\right)$$
+
+#### 旋度定理
+
+$$\int_{V}(\nabla \times \vec{A}) dV = - \oint_{S} \vec{A} \times d \vec{S} = \oint_{S} d \vec{S} \times \vec{A}$$
 
 #### 斯托克斯定理 
 
@@ -218,6 +224,10 @@ P & Q & R
 \end{vmatrix}dS $$
 
 其中$$ (cos\alpha, cos\beta, cos\gamma) $$ 为 $$ \Sigma $$ 上任意指定侧的单位法向量
+
+或
+
+$$\int_{S} (\nabla \times \vec{A}) \cdot d \vec{S} = \oint_{l} \vec{A} \cdot d \vec{l}$$
 
 公式揭示了沿曲面 $$ \Sigma $$ 的曲面积分与其边界曲线 $$ C $$ 的曲线积分间的关系
 
