@@ -85,7 +85,7 @@
     });
 
     function fetchRelatedInfo(locationData){
-        if (AV.User.current() == null || AV.User.current().get('username') != 'Jo') {
+        if (AV.User.current() == null || AV.User.current().get('username') != 'JoCruise') {
             var currentUrl = window.location.href;
             var ip = locationData.ip;
             var country = locationData.data[0];
