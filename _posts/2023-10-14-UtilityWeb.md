@@ -25,6 +25,8 @@ image:
 
 [AppIconGenerator](https://www.appicon.co/): 一站式生成适用于 iOS & Android 各尺寸的应用图标
 
+[MAKEAPPICON](https://makeappicon.com/result/)：同上
+
 [HTML在线预览](https://uutool.cn/html/): 填入需要预览的HTML即可预览结果
 
 [CSS to SCSS](https://www.cssportal.com/css-to-scss/): CSS 转 SCSS
