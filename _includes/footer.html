@@ -17,6 +17,12 @@
       <em class="fst-normal">{{ site.social.name }}</em>.
     {% endif %}
 
+    {% if site.social.links %}
+      <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>.
+    {% else %}
+      <em class="fst-normal">{{ site.social.name }}</em>.
+    {% endif %}
+
     {% if site.data.locales[include.lang].copyright.brief %}
       <span
         data-bs-toggle="tooltip"
