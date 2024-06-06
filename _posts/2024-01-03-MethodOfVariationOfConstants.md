@@ -120,7 +120,7 @@ $$ cos \alpha - cos \beta = - 2 sin \frac{\alpha + \beta}{2} sin \frac{\alpha - 
 
 $$ sin \alpha cos \beta = \frac{1}{2} [sin(\alpha + \beta) + sin(\alpha - \beta)] $$
 
-$$ cos \alpha sin \beta = \frac{1}{2} [cos(\alpha + \beta) - sin(\alpha - \beta)] $$
+$$ cos \alpha sin \beta = \frac{1}{2} [sin(\alpha + \beta) - sin(\alpha - \beta)] $$
 
 $$ cos \alpha cos \beta = \frac{1}{2} [cos(\alpha + \beta) + cos(\alpha - \beta)] $$
 
