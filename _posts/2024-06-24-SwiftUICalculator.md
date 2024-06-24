@@ -9,7 +9,7 @@ author: jo
 toc: true
 commments: true
 typora-root-url: ../../Jo-CRuiSe.github.io/
-math: false
+math: true
 mermaid: false
 
 ---
