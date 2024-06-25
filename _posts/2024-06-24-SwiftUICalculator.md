@@ -1,6 +1,6 @@
 ---
 title: 使用 SwfitUI 来做仿做一个原生计算器(技术篇)
-date: 2024\-06\-24 14:40:00 \+0800
+date: 2024-06-24 14:40:00 +0800
 categories: [SwiftUI]
 tags: []
 pin: false
@@ -18,7 +18,7 @@ mermaid: false
 
 这里我们将会使用MVVM架构来编写这个项目，本文将主要探讨计算器计算功能实现的步骤。
 
->代码已开源：https://github.com/Jo\-CRuiSe/SwiftUICalculator
+>代码已开源：https://github.com/Jo-CRuiSe/SwiftUICalculator
 { :.prompt-info}
 
 ## Views
