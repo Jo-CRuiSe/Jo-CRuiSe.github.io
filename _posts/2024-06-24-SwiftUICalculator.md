@@ -18,8 +18,8 @@ mermaid: false
 
 这里我们将会使用MVVM架构来编写这个项目，本文将主要探讨计算器计算功能实现的步骤。
 
->代码已开源：https://github.com/Jo-CRuiSe/SwiftUICalculator
-{ :.prompt-info}
+> 代码已开源：https://github.com/Jo-CRuiSe/SwiftUICalculator
+{:.prompt-info}
 
 ## Views
 
