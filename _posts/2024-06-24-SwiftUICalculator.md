@@ -8,7 +8,7 @@ unpublished: true
 author: jo
 toc: true
 commments: true
-typora\-root\-url: ../../Jo\-CRuiSe.github.io/
+typora-root-url: ../../Jo-CRuiSe.github.io/
 math: true
 mermaid: false
 
@@ -111,14 +111,14 @@ if lastPressedButton == .operation && action != .equals && action != .plusMinus{
 
 ```swift
 if lastPressedButton == .operation {
-    operandStack.append("\-0")
-    display = "\-0"
+    operandStack.append("-0")
+    display = "-0"
 } else {
     var last = operandStack.popLast() ?? "0"
-    if last.first == "\-" {
+    if last.first == "-" {
         last.removeFirst()
     } else {
-        last = "\-" \+ last
+        last = "-" + last
     }
     operandStack.append(last)
     display = last
@@ -128,7 +128,7 @@ lastPressedButton = .plusMinus
 
 #### 百分号处理逻辑
 
-- 数字栈中最后一个元素 ÷​ 100
+- 数字栈中最后一个元素 ÷ 100
 
 ```swift
 canDeleteLastDigit = false
@@ -239,11 +239,13 @@ private func clearAll() {
 - 显示最大长度为9个字符，长于9个使用科学计数法，2.81531e10，3.362826e9，除去小数点和负号，最长显示9个字符
 - 对超过显示范围的数字使用科学计数法（代码中限制了精度为10^{\-15}）
 
->2.457343726 \-> 2.45734373
+>2.457343726 -> 2.45734373
 >
 >2.81531e10
 >
->3.72529e\-9
+>3.72529e
+>
+>-9
 
 ### 测试集
 
