@@ -1,5 +1,5 @@
 ---
-title: 使用 SwfitUI 来做仿做一个原生计算器(技术篇)
+title: 使用 SwiftUI 来做仿做一个原生计算器(技术篇)
 date: 2024-06-24 14:40:00 +0800
 categories: [SwiftUI]
 tags: []
