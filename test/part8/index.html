@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="referrer" content="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+    <title>LeanCloud Authentication</title>
+</head>
+
+<body>
+    <div class="shell">
+        <h2 class="title">Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <input type="submit" value="Login" id="loginBtn">
+        <div class="footer">
+            <div class="remember">
+                <input type="checkbox" id="rememberMe">
+                <label for="rememberMe">记住我</label>
+            </div>
+            <button id="signUp">去注册</button>
+        </div>
+    </div>
+
+<script>
+
+    document.getElementById('signUp').addEventListener('click', function () {
+        var title = document.querySelector('.title');
+        var loginBtn = document.querySelector('loginBtn');
+        var rememberMeLabel = document.querySelector('.rememberMe');
+        var signUpBtn = document.getElementById('signUp');
+        if (title.innerText == 'Login') {
+            title.innerText = 'Register';
+            loginBtn.value = 'Register';
+            rememberMeLabel.style.opacity = '0';
+            signUpBtn.innerText = 'Go to login';
+            document.getElementById('username').value = '';
+            document.getElementById('password').value = '';
+            document.getElementById('username').placeholder = 'New User Name';
+            document.getElementById('password').placeholder = 'New Password';
+            document.getElementById('password').type = 'password';
+        } else {
+            title.innerText = 'Login';
+            loginBtn.value = 'Login';
+            rememberMeLabel.style.opacity = '1';
+            signUpBtn.innerText = 'Go to register';
+            document.getElementById('username').placeholder = 'Username';
+            document.getElementById('password').placeholder = 'Password';
+            document.getElementById('password').type = 'password';
+        }
+
+    })
+</script>
+
+
+<!-- 同时兼容http与https -->
+<script src="//cdn1.lncld.net/static/js/3.0.5/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+<script>
+    let appId = 'rzV27a2iZkM3qCAIMnz2u6pO-9Nh9j0Va';
+    let appKey = '6sPXQuSvQBiMk60c7sFhRPVz';
+    AV.init({
+        appId: appId,
+        appKey: appKey,
+        serverURL: 'https://rzv27a2i.lc-cn-n1-shared.com',
+    });
+
+    document.getElementById('loginBtn').addEventListener("click", function () {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        AV.User.logIn(username, password).then(function (user) {
+            /* 登录成功 */
+            console.log('登录成功');
+            alert('Successfully Login');
+            document.getElementById('username').value = '';
+            document.getElementById('password').value = '';
+            window.location.href = '/test/part9';
+        }).catch(function (error) {
+            /* 登录失败，处理错误信息 */
+            console.log('登录失败：', error);
+        });
+    });
+
+</script>
+
+</body>
+
+</html>
