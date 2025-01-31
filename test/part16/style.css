@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --bg-color: #fff;
+    --input-bg-color: #d8d8d8;
+}
+
+body {
+    background: var(--bg-color);
+}
+
+.reverse-container {
+    /* width: 350px; */
+    padding: 10% 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* background: var(--bg-color); */
+}
+
+#originalText,
+input[type="text"] {
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    color: black;
+    border: 1px solid transparent;
+    background-color: var(--input-bg-color);
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.5s ease;
+}
+
+.controlBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#copyToClipboard,
+#typeChangeBtn,
+#submitBtn {
+    box-sizing: border-box;
+    width: 200px;
+    margin: 10px 30px;
+    padding: 5px 30px;
+    border: none;
+    background-color: #007bff;
+    font-size: 18px;
+    border-radius: 18px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+#copyToClipboard {
+    display: none;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 999;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* margin-left: -100px; */
+    opacity: 0;
+    transition: opacity 0.3s;
+    box-shadow: #363535;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    /* 深色模式 */
+    :root {
+        --bg-color: rgb(29, 29, 32);
+        --input-bg-color: #363535;
+    }
+
+    #originalText,
+    input[type="text"] {
+        color: #fff;
+    }
+}
+
+@media (max-width: 768px) {
+    .reverse-container {
+        padding: 10% 10%;
+    }
+
+}
