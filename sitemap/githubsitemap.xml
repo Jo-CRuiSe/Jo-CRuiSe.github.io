@@ -1,142 +1,184 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+>
 
-
 <url>
-  <loc>https://jo-cruise.github.io/</loc>
-  <lastmod>2023-12-06T04:20:30+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://jo-cruise.github.io/gallery/</loc>
-  <lastmod>2023-12-06T04:20:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://jo-cruise.github.io/categories/</loc>
-  <lastmod>2023-12-06T04:20:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://jo-cruise.github.io/tags/</loc>
-  <lastmod>2023-12-06T04:20:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://jo-cruise.github.io/archives/</loc>
-  <lastmod>2023-12-06T04:20:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://jo-cruise.github.io/about/</loc>
-  <lastmod>2023-12-06T04:20:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://jo-cruise.github.io/posts/Welcome/</loc>
-  <lastmod>2023-12-06T04:20:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://jo-cruise.github.io/posts/CheckDiskLife/</loc>
-  <lastmod>2023-12-06T04:20:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://jo-cruise.github.io/posts/SwiftUILearning/</loc>
-  <lastmod>2023-12-06T04:20:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://jo-cruise.github.io/posts/UtilityWeb/</loc>
-  <lastmod>2023-12-06T04:20:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://jo-cruise.github.io/posts/Mooncake/</loc>
-  <lastmod>2023-12-06T04:20:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://jo-cruise.github.io/page2/</loc>
-  <lastmod>2023-12-06T04:20:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://jo-cruise.github.io/posts/AuthorizeUnknownDeveloper/</loc>
-  <lastmod>2023-12-06T04:20:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://jo-cruise.github.io/tags/cinema-4d/</loc>
-  <lastmod>2023-12-06T04:20:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://jo-cruise.github.io/tags/macos/</loc>
-  <lastmod>2023-12-06T04:20:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://jo-cruise.github.io/tags/%E9%9D%99%E6%80%81%E6%B8%B2%E6%9F%93%E5%9B%BE/</loc>
-  <lastmod>2023-12-06T04:20:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://jo-cruise.github.io/tags/shortcuts/</loc>
-  <lastmod>2023-12-06T04:20:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://jo-cruise.github.io/tags/swiftui/</loc>
-  <lastmod>2023-12-06T04:20:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://jo-cruise.github.io/tags/%E5%8A%A8%E7%94%BB/</loc>
-  <lastmod>2023-12-06T04:20:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://jo-cruise.github.io/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/</loc>
-  <lastmod>2023-12-06T04:20:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://jo-cruise.github.io/categories/%E5%BC%80%E5%8F%91/</loc>
-  <lastmod>2023-12-06T04:20:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://jo-cruise.github.io/categories/%E5%BD%B1%E8%A7%86%E5%90%8E%E6%9C%9F/</loc>
-  <lastmod>2023-12-06T04:20:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://jo-cruise.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%BA%94%E7%94%A8/</loc>
-  <lastmod>2023-12-06T04:20:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://jo-cruise.github.io/posts/MoneyTrackerShortcuts/</loc>
-  <lastmod>2023-12-06T04:20:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://jo-cruise.github.io/posts/Cake/</loc>
-  <lastmod>2023-12-06T04:20:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://jo-cruise.github.io/posts/HappyNewYear/</loc>
-  <lastmod>2023-12-06T04:20:30+00:00</lastmod>
-  <priority>0.64</priority>
+ <loc>http://jo-cruise.github.io/</loc>
+ <priority>0.3</priority>
+ <lastmod>2025-02-10</lastmod>
+ <changefreq>weekly</changefreq>
 </url>
 
+<url>
+ <loc>http://jo-cruise.github.io/gallery</loc>
+ <priority>0.3</priority>
+ <lastmod>2025-02-10</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>http://jo-cruise.github.io/categories</loc>
+ <priority>0.3</priority>
+ <lastmod>2025-02-10</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>http://jo-cruise.github.io/tags</loc>
+ <priority>0.3</priority>
+ <lastmod>2025-02-10</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>http://jo-cruise.github.io/archives</loc>
+ <priority>0.3</priority>
+ <lastmod>2025-02-10</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>http://jo-cruise.github.io/about</loc>
+ <priority>0.3</priority>
+ <lastmod>2025-02-10</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>http://jo-cruise.github.io/posts/Welcome</loc>
+ <priority>0.3</priority>
+ <lastmod>2025-02-10</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>http://jo-cruise.github.io/posts/Xcode_no_dev_account</loc>
+ <priority>0.3</priority>
+ <lastmod>2025-02-10</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>http://jo-cruise.github.io/posts/SwiftUICalculatorIntroduction</loc>
+ <priority>0.3</priority>
+ <lastmod>2025-02-10</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>http://jo-cruise.github.io/posts/SwiftUICalculator</loc>
+ <priority>0.3</priority>
+ <lastmod>2025-02-10</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>http://jo-cruise.github.io/posts/HappyNewYear2024</loc>
+ <priority>0.3</priority>
+ <lastmod>2025-02-10</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>http://jo-cruise.github.io/page2</loc>
+ <priority>0.3</priority>
+ <lastmod>2025-02-10</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>http://jo-cruise.github.io/page3</loc>
+ <priority>0.3</priority>
+ <lastmod>2025-02-10</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>http://jo-cruise.github.io/page4</loc>
+ <priority>0.3</priority>
+ <lastmod>2025-02-10</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>http://jo-cruise.github.io/posts/MethodOfVariationOfConstants</loc>
+ <priority>0.3</priority>
+ <lastmod>2025-02-10</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>http://jo-cruise.github.io/tags/cinema-4d</loc>
+ <priority>0.3</priority>
+ <lastmod>2025-02-10</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>http://jo-cruise.github.io/tags/macos</loc>
+ <priority>0.3</priority>
+ <lastmod>2025-02-10</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>http://jo-cruise.github.io/tags/%E5%8A%A8%E7%94%BB</loc>
+ <priority>0.3</priority>
+ <lastmod>2025-02-10</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>http://jo-cruise.github.io/tags/%E6%95%B0%E7%90%86%E6%96%B9%E6%B3%95</loc>
+ <priority>0.3</priority>
+ <lastmod>2025-02-10</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>http://jo-cruise.github.io/tags/%E9%9D%99%E6%80%81%E6%B8%B2%E6%9F%93%E5%9B%BE</loc>
+ <priority>0.3</priority>
+ <lastmod>2025-02-10</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>http://jo-cruise.github.io/tags/after-effects</loc>
+ <priority>0.3</priority>
+ <lastmod>2025-02-10</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>http://jo-cruise.github.io/tags/shortcuts</loc>
+ <priority>0.3</priority>
+ <lastmod>2025-02-10</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>http://jo-cruise.github.io/tags/swiftui</loc>
+ <priority>0.3</priority>
+ <lastmod>2025-02-10</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>http://jo-cruise.github.io/tags/xcode</loc>
+ <priority>0.3</priority>
+ <lastmod>2025-02-10</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>http://jo-cruise.github.io</loc>
+ <priority>0.3</priority>
+ <lastmod>2025-02-10</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
 
 </urlset>
