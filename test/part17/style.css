@@ -1,0 +1,14 @@
+iframe {
+    border: none;
+    height: 100vh;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #181a1b;
+    }
+    iframe{
+        filter: invert(1) brightness(0.9) contrast(1.1);
+    }
+
+}

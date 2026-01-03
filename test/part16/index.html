@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reverse String for QWE</title>
+
+        <!-- css -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="reverse-container">
+            <input type="text" id="originalText" placeholder="Original Text" value="" onkeydown="if(event.keyCode===13) document.getElementById('submitBtn').click()">
+
+            <input type="text" id="result" placeholder="Result" readonly value="">
+
+
+            <div class="controlBtn">
+                <div class="tooltip">
+                    <button type="button" id="copyToClipboard" onclick="copyToClipboard()" onmouseout="outFunc()"><span class="tooltiptext" id="myTooltip">Copy to clipboard</span>Copy Result</button>
+                </div>
+                
+                <button type="button" id="typeChangeBtn">QWE to ABC</button>
+                <!-- <button type="button" id="typeChangeBtn">123 to abc</button>                 -->
+                <button type="button" id="submitBtn">Confirm</button>                
+            </div>
+        </div>
+
+
+
+        <!-- scripts -->
+        <script src="script.js"></script>
+        <script>
+            function copyToClipboard() {
+              var copyText = document.getElementById("result");
+              copyText.select();
+              copyText.setSelectionRange(0, 99999);
+              navigator.clipboard.writeText(copyText.value);
+              
+              var tooltip = document.getElementById("myTooltip");
+              tooltip.innerHTML = "Copied: " + copyText.value;
+            }
+            
+            function outFunc() {
+              var tooltip = document.getElementById("myTooltip");
+              tooltip.innerHTML = "Copy to clipboard";
+            }
+            </script>
+    </body>
+</html>
