@@ -13,7 +13,7 @@
 
 
     $.ajax({
-        url: "https://2024.ipchaxun.com",
+        url: "https://api.vore.top/api/IPdata?ip",
         type: 'GET',
         dataType: 'json',
         success: function (locationData) {
@@ -27,12 +27,12 @@
     function fetchRelatedInfo(locationData){
         if (AV.User.current() == null || AV.User.current().get('username') != 'JoCruise') {
             var currentUrl = window.location.href;
-            var ip = locationData.ip;
-            var country = locationData.data[0];
-            var province = locationData.data[1];
-            var city = locationData.data[2];
-            var district = locationData.data[3];
-            var isp = locationData.data[4];
+            var ip = locationData.ipinfo.text;
+            var country = locationData.ipinfo.cnip ? '中国' : '';
+            var province = locationData.adcode.p;
+            var city = locationData.adcode.c;
+            var district = locationData.ipdata.info2;
+            var isp = locationData.ipdata.isp;
             var userAgent = navigator.userAgent;
             var loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
 
