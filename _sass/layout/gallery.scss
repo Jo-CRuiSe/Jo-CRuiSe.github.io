@@ -40,12 +40,13 @@
     align-items: center;
     opacity: 0;
     visibility: hidden;
-    transition: 0.5s;
+    transition: opacity 0.25s ease, visibility 0s linear 0.25s;
 }
 
 .gal-info.active {
     visibility: visible;
     opacity: 1;
+    transition-delay: 0s;
 }
 
 .gal-info.active .info-card{
@@ -55,7 +56,7 @@
 }
 
 .gal-info .info-card {
-    animation: fadeOut 0.5s ease;
+    animation: fadeOut 0.25s ease;
 }
 
 .info-card {
@@ -107,11 +108,30 @@
 }
 
 .titleButton {
+    // Reset native button chrome, including device-specific focus outlines.
+    -webkit-appearance: none;
+    appearance: none;
     margin: 0;
     height: auto;
     background: transparent;
     padding: 0;
     border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+// Keep keyboard focus visible without drawing a rectangle around the title.
+.titleButton:focus .actual-text {
+    text-decoration: underline;
+    text-decoration-color: var(--heading-color);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.12em;
+}
+
+@supports selector(:focus-visible) {
+    .titleButton:focus:not(:focus-visible) .actual-text {
+        text-decoration: none;
+    }
 }
 
 /* button styling */
@@ -171,8 +191,7 @@
 
 .titleButton.clicked .hover-text {
     width: 100%;
-    -webkit-backdrop-filter: drop-shadow(0 0 23px var(--animation-color));
-    backdrop-filter: drop-shadow(0 0 23px var(--animation-color));
+    // Glow the glyphs themselves, not the rectangular backdrop behind them.
     filter: drop-shadow(0 0 23px var(--animation-color));
     animation: none;
     border-right: 0 solid var(--animation-color);
@@ -222,6 +241,7 @@
 // Image
 .portfolio-item img {
     width: 100%;
+    height: auto;
     border-radius: 15px;
     display: block;
     transition: transform 0.6s;
@@ -237,7 +257,7 @@
 // 悬停的弹出遮罩
 .portfolio-layer {
     width: 100%;
-    height: 0;
+    height: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.3), #171f26);
     position: absolute;
     left: 0;
@@ -249,23 +269,28 @@
     justify-content: center;
     text-align: center;
     padding: 0 40px;
-    transition: height 0.3s ease;
+    transform: translateY(100%);
+    visibility: hidden;
+    transition: transform 0.25s ease, visibility 0s linear 0.25s;
 }
 
 // 悬停显示简介
 .portfolio-item:hover .portfolio-layer {
-    height: 100%;
+    transform: translateY(0);
+    visibility: visible;
+    transition-delay: 0s;
 }
 
 // 悬停放大图片
 .portfolio-item:hover img {
-    transition-duration: 0.3s ease;
+    transition-duration: 0.3s;
     transform: scale(1.05);
 }
 
 // 展示详细资料时禁止悬停
 .portfolio-item .portfolio-layer.deactive {
-    height: 0;
+    transform: translateY(100%);
+    visibility: hidden;
 }
 
 // layer 简介标题
@@ -329,18 +354,32 @@
     right: 0;
     bottom: 0;
     left: 0;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     opacity: 0;
     visibility: hidden;
-    transition: 0.8s;
+    pointer-events: none;
+    transition: opacity 0.28s ease;
+}
+
+// Hidden dialogs do not keep blur surfaces or animations alive.
+.portfolio-item .popup-view.active,
+.portfolio-item .popup-view.closing {
+    display: flex;
+    visibility: visible;
 }
 
 // 触发按钮变为 active
 .portfolio-item .popup-view.active {
     opacity: 1;
-    visibility: visible;
+    pointer-events: auto;
+    animation: galleryBackdropIn 0.28s ease;
+}
+
+@keyframes galleryBackdropIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 // Animation
@@ -414,40 +453,22 @@
 
 // 弹出卡片动画
 
-.portfolio-item .popup-view.red.active .popup-card {
-    opacity: 1;
-    visibility: visible;
-    animation: dropin 0.5s ease;
-}
-
-.portfolio-item .popup-view.yellow.active .popup-card {
-    opacity: 1;
-    visibility: visible;
-    animation: dropin 0.5s ease;
-}
-
-.portfolio-item .popup-view.green.active .popup-card {
-    opacity: 1;
-    visibility: visible;
-    animation: dropin 0.5s ease;
-}
-
 .portfolio-item .popup-view.active .popup-card {
     opacity: 1;
     visibility: visible;
-    animation: dropin 0.5s ease;
+    animation: dropin 0.32s ease;
 }
 
-.portfolio-item .popup-view.red .popup-card {
-    animation: dismiss 0.6s ease;
+.portfolio-item .popup-view.closing.red .popup-card {
+    animation: dismiss 0.32s ease forwards;
 }
 
-.portfolio-item .popup-view.yellow .popup-card {
-    animation: genie 0.6s ease;
+.portfolio-item .popup-view.closing.yellow .popup-card {
+    animation: genie 0.32s ease forwards;
 }
 
-.portfolio-item .popup-view.green .popup-card {
-    animation: scale 0.6s ease;
+.portfolio-item .popup-view.closing.green .popup-card {
+    animation: scale 0.32s ease forwards;
 }
 
 // Popup Card
@@ -470,8 +491,7 @@
     padding: 40px;
     border-radius: 15px;
     border: 1px solid transparent;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    // The full-screen overlay already blurs the background.
     background: var(--gallery-card-bg);
     border-top-color: var(--gallery-card-border-top);
     border-right-color: var(--gallery-card-border-right);
@@ -479,7 +499,23 @@
     border-left-color: var(--gallery-card-border-left);
     // transition: .4s;
     transform: skew(0deg);
-    box-shadow: 0 20px 30px 2px rgba(0, 0, 0, 0.2)
+    box-shadow: 0 20px 30px 2px rgba(0, 0, 0, 0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .portfolio-layer,
+    .portfolio-item img,
+    .portfolio-item video,
+    .portfolio-item .popup-view,
+    .gal-info {
+        transition: none;
+    }
+
+    .portfolio-item .popup-view .popup-card,
+    .portfolio-item .popup-view,
+    .gal-info .info-card {
+        animation: none !important;
+    }
 }
 
 // 仿 macOS 红绿灯按钮

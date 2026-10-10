@@ -51,7 +51,7 @@ layout: compress
 
       <div class="portfolio-container">
         <div class="portfolio-heading">
-          <button class="titleButton" data-text="Awesome">
+          <button type="button" class="titleButton" data-text="Awesome">
             <span class="actual-text">&nbsp;GALLERY&nbsp;</span>
             <span aria-hidden="true" class="hover-text">&nbsp;GALLERY&nbsp;</span>
           </button>
@@ -157,27 +157,30 @@ layout: compress
       '闹钟的案例让我开始对默认渲染器所支持的材质制作有了一定的了解，并熟悉了如何从零进行建模、上材质、打光、渲染静态图片，是我以后学习其他案例的基础',
     ];
     
-    let imageIndex = 0;
+    /* Reserve each image's aspect ratio before lazy loading completes. */
+    const imageDimensions = [
+      [1680, 1680], [1680, 2067], [1680, 1680], [720, 720],
+      [800, 800], [1190, 2100], [800, 800], [1680, 2966],
+      [768, 432], [1080, 1800], [800, 800]
+    ];
 
     for (let i = 0; i < images.length; i++) {
       let item = {
         id: i,
         layerTitle: layerTitle[i],
-        image: images[imageIndex],
+        image: images[i],
+        dimensions: imageDimensions[i],
         infoTitle: infoTitle[i],
         info: info[i],
       };
       portfolioItems.push(item);
-      imageIndex++;
-      if (imageIndex > images.length - 1) {
-        imageIndex = 0;
-      };
     };
 
     const portfolioBox = document.querySelector('.portfolio-box');
+    const itemElements = new Map();
 
     function generateMasonryGrid(columns, portfolioItems) {
-      portfolioBox.innerHTML = '';
+      const grid = document.createDocumentFragment();
 
       /* Store all column arrays which contain the relevant posts */
       let columnWrappers = [];
@@ -199,12 +202,19 @@ layout: compress
         column.classList.add('column');
 
         columnPosts.forEach(portfolioItems => {
+          /* Reuse images and their handlers when changing the column count. */
+          if (itemElements.has(portfolioItems.id)) {
+            column.appendChild(itemElements.get(portfolioItems.id));
+            return;
+          }
           let portfolioItem = document.createElement('div');
           portfolioItem.classList.add('portfolio-item');
           let image = document.createElement('img');
-          image.src = portfolioItems.image;
           image.loading = "lazy";
+          image.decoding = "async";
+          [image.width, image.height] = portfolioItems.dimensions;
           image.alt = portfolioItems.layerTitle;
+          image.src = portfolioItems.image;
           let portfolioLayer = document.createElement('div');
           portfolioLayer.classList.add('portfolio-layer');
           let layerTitle = document.createElement('h4');
@@ -246,86 +256,58 @@ layout: compress
           if (portfolioItems.infoTitle == '') {
             popupBtn.style.display = 'none';
           };
+
+          let closeTimer;
+          const finishClose = () => {
+            clearTimeout(closeTimer);
+            popupView.classList.remove('closing', 'red', 'yellow', 'green');
+          };
+          popupBtn.addEventListener('click', () => {
+            finishClose();
+            popupView.classList.add('active');
+            portfolioLayer.classList.add('deactive');
+          });
+          const closePopup = (color) => {
+            if (!popupView.classList.contains('active')) return;
+            popupView.classList.remove('active');
+            popupView.classList.add('closing', color);
+            portfolioLayer.classList.remove('deactive');
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+              finishClose();
+            } else {
+              /* Fallback if the animation is cancelled or the tab is hidden. */
+              closeTimer = setTimeout(finishClose, 400);
+            }
+          };
+          popupRed.addEventListener('click', () => closePopup('red'));
+          popupYellow.addEventListener('click', () => closePopup('yellow'));
+          popupGreen.addEventListener('click', () => closePopup('green'));
+          popupCard.addEventListener('animationend', (event) => {
+            if (event.target === popupCard && popupView.classList.contains('closing')) {
+              finishClose();
+            }
+          });
+          itemElements.set(portfolioItems.id, portfolioItem);
         });
-        portfolioBox.appendChild(column);
+        grid.appendChild(column);
       }
-
-    var popupViews = document.querySelectorAll('.popup-view');
-    var popupBtns = document.querySelectorAll('.popup-btn');
-    var closeBtns = document.querySelectorAll('.popup-red');
-    var genieBtns = document.querySelectorAll('.popup-yellow');
-    var scaleBtns = document.querySelectorAll('.popup-green');
-    var layerViews = document.querySelectorAll('.portfolio-layer');
-
-    var popup = function (popupClick) {
-      popupViews[popupClick].classList.add('active');
-      layerViews[popupClick].classList.add('deactive');
-    };
-
-    popupBtns.forEach((popupBtn, i) => {
-      popupBtn.addEventListener("click", () => {
-        popup(i);
-      });
-    });
-
-    closeBtns.forEach((closeBtn) => {
-      closeBtn.addEventListener("click", () => {
-        popupViews.forEach((popupView) => {
-          popupView.classList.remove('active', 'red', 'yellow', 'green');
-          popupView.classList.add('red');
-        });
-        layerViews.forEach((layerViews) => {
-          layerViews.classList.remove('deactive');
-        });
-      });
-    });
-    genieBtns.forEach((genieBtn) => {
-      genieBtn.addEventListener("click", () => {
-        popupViews.forEach((popupView) => {
-          popupView.classList.remove('active', 'red', 'yellow', 'green');
-          popupView.classList.add('yellow');
-        });
-        layerViews.forEach((layerViews) => {
-          layerViews.classList.remove('deactive');
-        });
-      });
-    });
-    scaleBtns.forEach((scaleBtn) => {
-      scaleBtn.addEventListener("click", () => {
-        popupViews.forEach((popupView) => {
-          popupView.classList.remove('active', 'red', 'yellow', 'green');
-          popupView.classList.add('green');
-        });
-        layerViews.forEach((layerViews) => {
-          layerViews.classList.remove('deactive');
-        });
-      });
-    });
-
+      portfolioBox.replaceChildren(grid);
     }
 
-    let previousScreenSize = window.innerWidth;
-
+    const getColumnCount = () => window.innerWidth < 600 ? 1 : window.innerWidth < 1000 ? 2 : 3;
+    let currentColumns = getColumnCount();
+    generateMasonryGrid(currentColumns, portfolioItems);
+    let resizeFrame;
     window.addEventListener('resize', () => {
-      imageIndex = 0;
-
-      if (window.innerWidth < 600 && previousScreenSize > 600) {
-        generateMasonryGrid(1, portfolioItems);
-      } else if (window.innerWidth >= 600 && window.innerWidth < 1000 && (previousScreenSize < 600 || previousScreenSize >= 1000)) {
-        generateMasonryGrid(2, portfolioItems);
-      } else if (window.innerWidth >= 1000 && previousScreenSize < 1000) {
-        generateMasonryGrid(3, portfolioItems);
-      }
-      previousScreenSize = window.innerWidth;
+      cancelAnimationFrame(resizeFrame);
+      resizeFrame = requestAnimationFrame(() => {
+        const columns = getColumnCount();
+        if (columns !== currentColumns) {
+          generateMasonryGrid(columns, portfolioItems);
+          currentColumns = columns;
+        }
+      });
     });
-
-    if (previousScreenSize < 600) {
-      generateMasonryGrid(1, portfolioItems);
-    } else if (previousScreenSize >= 600 && previousScreenSize < 1000) {
-      generateMasonryGrid(2, portfolioItems);
-    } else {
-      generateMasonryGrid(3, portfolioItems);
-    }
   </script>
 
   <!-- Info View -->
