@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.heading {
+    position: absolute;
+    top: 100px;
+    left: 400px;
+}
+.model-view {
+    position: relative;
+    height: 100vh;
+}
